@@ -87,6 +87,11 @@
 		</properties>
 	</rule>
 
+  <!-- Allow short open tags. -->
+  <rule ref="Generic.PHP.DisallowShortOpenTag.EchoFound">
+    <severity>0</severity>
+  </rule>
+
 
 	<!--
 	#############################################################################
