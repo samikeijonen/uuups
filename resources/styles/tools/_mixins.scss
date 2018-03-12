@@ -5,7 +5,7 @@
 @mixin typography {
 	color: $color-darkest;
 	font-family: $font-main;
-	font-size: ($global-font-size / 1rem) * 100%;
+	font-size: ($global-font-size / 1rem) * 112.5%;
 	line-height: $global-line-height;
 }
 

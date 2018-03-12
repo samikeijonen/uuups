@@ -11,6 +11,7 @@
 }
 
 .menu__anchor {
+	@include font-size(0.8888888888rem);
 	display: block;
 	text-decoration: none;
 
