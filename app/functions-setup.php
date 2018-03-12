@@ -4,8 +4,8 @@
  *
  * This file holds basic theme setup functions executed on appropriate hooks with
  * some opinionated priorities based on theme dev, particularly working with child
- * theme devs/users, over the years.  I've also decided to use anonymous functions
- * to keep these from being easily unhooked.  WordPress has an appropriate API for
+ * theme devs/users, over the years. I've also decided to use anonymous functions
+ * to keep these from being easily unhooked. WordPress has an appropriate API for
  * unregistering, removing, or modifying all of the things in this file.  Those APIs
  * should be used instead of attempting to use `remove_action()`.
  *
@@ -27,21 +27,19 @@ namespace ABC;
  * @return void
  */
 add_action( 'after_setup_theme', function() {
-
 	// Add title tag support.
-	// @link https://developer.wordpress.org/reference/functions/add_theme_support/#title-tag
+	// @link https://developer.wordpress.org/reference/functions/add_theme_support/#title-tag.
 	add_theme_support( 'title-tag' );
 
 	// Add selective refresh for widgets.
-	// @link https://developer.wordpress.org/reference/functions/add_theme_support/#customize-selective-refresh-widgets
+	// @link https://developer.wordpress.org/reference/functions/add_theme_support/#customize-selective-refresh-widgets.
 	add_theme_support( 'customize-selective-refresh-widgets' );
-
 }, 5 );
 
 /**
  * Adds support for the custom background feature. This is in its own function
- * hooked to `after_setup_theme` so that we can give it a later priority.  This
- * is so that child themes can more easily overwrite this feature.  Note that
+ * hooked to `after_setup_theme` so that we can give it a later priority. This
+ * is so that child themes can more easily overwrite this feature. Note that
  * overwriting the background should be done *before* rather than after.
  *
  * @link   https://developer.wordpress.org/reference/functions/add_theme_support/#custom-background
@@ -50,26 +48,7 @@ add_action( 'after_setup_theme', function() {
  * @return void
  */
 add_action( 'after_setup_theme', function() {
-
 	add_theme_support( 'custom-background' );
-
-}, 15 );
-
-/**
- * Adds support for the custom header feature. This is in its own function
- * hooked to `after_setup_theme` so that we can give it a later priority.  This
- * is so that child themes can more easily overwrite this feature.  Note that
- * overwriting the header should be done *before* rather than after.
- *
- * @link   https://developer.wordpress.org/reference/functions/add_theme_support/#custom-header
- * @since  1.0.0
- * @access public
- * @return void
- */
-add_action( 'after_setup_theme', function() {
-
-	add_theme_support( 'custom-header' );
-
 }, 15 );
 
 /**
@@ -83,7 +62,7 @@ add_action( 'after_setup_theme', function() {
 add_action( 'init', function() {
 
 	register_nav_menus( [
-		'primary' => esc_html_x( 'Primary', 'nav menu location' )
+		'primary' => esc_html_x( 'Primary', 'nav menu location', 'uuups' ),
 	] );
 
 }, 5 );
@@ -96,13 +75,12 @@ add_action( 'init', function() {
  * @return void
  */
 add_action( 'init', function() {
-
 	// Set the `post-thumbnail` size.
-	// @link https://developer.wordpress.org/reference/functions/set_post_thumbnail_size/
+	// @link https://developer.wordpress.org/reference/functions/set_post_thumbnail_size/.
 	set_post_thumbnail_size( 178, 100, true );
 
 	// Register custom image sizes.
-	// @link https://developer.wordpress.org/reference/functions/add_image_size/
+	// @link https://developer.wordpress.org/reference/functions/add_image_size/.
 	add_image_size( app()->namespace . '/medium', 750, 422, true );
 }, 5 );
 
@@ -115,19 +93,17 @@ add_action( 'init', function() {
  * @return void
  */
 add_action( 'widgets_init', function() {
-
 	$args = [
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h3 class="widget__title">',
-		'after_title'   => '</h3>'
+		'after_title'   => '</h3>',
 	];
 
 	register_sidebar( [
 		'id'   => 'primary',
-		'name' => esc_html_x( 'Primary', 'sidebar' )
+		'name' => esc_html_x( 'Primary', 'sidebar', 'uuups' ),
 	] + $args );
-
 }, 5 );
 
 /**
@@ -138,7 +114,7 @@ add_action( 'widgets_init', function() {
  * @return void
  */
 add_action( 'wp_enqueue_scripts', function() {
-
+	// Main scripts.
 	wp_enqueue_script(
 		app()->namespace . '/app',
 		config( 'theme' )->uri . 'resources/dist/scripts/app.js',
@@ -147,6 +123,7 @@ add_action( 'wp_enqueue_scripts', function() {
 		true
 	);
 
+	// Main styles.
 	wp_enqueue_style(
 		app()->namespace . '/screen',
 		config( 'theme' )->uri . 'resources/dist/styles/style.css',
@@ -154,4 +131,28 @@ add_action( 'wp_enqueue_scripts', function() {
 		config( 'theme' )->version
 	);
 
-}, 5 );
+	// Comments JS.
+	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+		wp_enqueue_script( 'comment-reply' );
+	}
+
+	// Dequeue Core block styles.
+	wp_dequeue_style( 'wp-blocks' );
+}, 10 );
+
+/**
+ * Enqueue editor scripts/styles.
+ *
+ * @since  1.0.0
+ * @access public
+ * @return void
+ */
+add_action( 'enqueue_block_editor_assets', function() {
+	// Main block styles.
+	wp_enqueue_style(
+		app()->namespace . '/blocks',
+		config( 'theme' )->uri . 'resources/dist/styles/blocks.css',
+		null,
+		config( 'theme' )->version
+	);
+}, 10 );
