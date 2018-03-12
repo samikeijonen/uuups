@@ -8,9 +8,7 @@
  */
 
 ?>
-	</div><!-- .app-content -->
-
-	<footer class="app-footer">
+	<footer class="app-footer mx-auto max-width-1 px-3 py-4">
 		<p class="app-footer__credit">
 			<?php esc_html_e( 'Powered by crazy ideas and passion.', 'uuups' ); ?>
 		</p>
