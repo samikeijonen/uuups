@@ -1,0 +1,100 @@
+.menu ul {
+	@include reset-list();
+}
+
+.menu__items {
+	display: none;
+
+	&.is-toggled {
+		display: block;
+	}
+}
+
+.menu__anchor {
+	display: block;
+	text-decoration: none;
+
+	& .icon {
+		display: none;
+	}
+}
+
+// Show menu when there is no js, and hide menu toggle.
+.no-js {
+
+	.menu-toggle {
+		display: none;
+	}
+
+	.menu__items {
+		display: block;
+	}
+}
+
+@media screen and (min-width: 42.5em) {
+
+	.menu-toggle {
+		display: none;
+	}
+
+	.menu__item {
+		position: relative;
+	}
+
+	.menu__items {
+
+		&,
+		&.is-toggled {
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		& > li:not(:last-child) {
+			margin-right: $global-spacing-unit;
+		}
+
+		& ul {
+			background-color: $color-lightest;
+			left: -999em;
+			position: absolute;
+			top: 100%;
+			width: $global-spacing-unit-huge * 2;
+			z-index: 99999;
+
+			// Class "focus" is added by Javascript which enables
+			// keyboard focus to submenu items.
+			& li:hover > ul,
+			& .focus > ul {
+				left: 100%;
+				right: auto;
+			}
+
+			& a {
+				padding: $global-spacing-unit-tiny $global-spacing-unit-small;
+			}
+
+			& ul {
+				top: 0;
+			}
+
+			& .icon {
+				position: absolute;
+				right: $global-spacing-unit-small;
+				top: calc(50% - 0.5em);
+				transform: rotate(-90deg);
+			}
+		}
+
+		& li:hover > ul,
+		& .focus > ul {
+			left: 0;
+		}
+	}
+
+	.menu__anchor {
+
+		& .icon {
+			display: inline-block;
+		}
+	}
+}

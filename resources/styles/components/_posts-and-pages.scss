@@ -1,0 +1,15 @@
+.sticky {
+	display: block;
+}
+
+.updated:not(.published) {
+	display: none;
+}
+
+.entry,
+.page-content,
+.entry-content,
+.entry-summary,
+.page-links {
+	margin: 0 0 $global-spacing-unit;
+}

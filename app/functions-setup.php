@@ -149,7 +149,7 @@ add_action( 'wp_enqueue_scripts', function() {
 
 	wp_enqueue_style(
 		app()->namespace . '/screen',
-		config( 'theme' )->uri . 'resources/dist/styles/screen.css',
+		config( 'theme' )->uri . 'resources/dist/styles/style.css',
 		null,
 		config( 'theme' )->version
 	);
