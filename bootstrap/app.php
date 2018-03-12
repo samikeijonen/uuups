@@ -18,10 +18,10 @@ namespace ABC;
 
 // Change the Hybrid Core framework directory path and URI.
 define( 'HYBRID_DIR', trailingslashit( get_parent_theme_file_path( 'vendor/justintadlock/hybrid-core' ) ) );
-define( 'HYBRID_URI', trailingslashit( get_parent_theme_file_uri(  'vendor/justintadlock/hybrid-core' ) ) );
+define( 'HYBRID_URI', trailingslashit( get_parent_theme_file_uri( 'vendor/justintadlock/hybrid-core' ) ) );
 
 // Load Hybrid Core.
-require_once( HYBRID_DIR . 'hybrid.php' );
+require_once HYBRID_DIR . 'hybrid.php';
 
 /**
  * The single instance of the app. Use this function for quickly working
@@ -51,12 +51,12 @@ app()->add( 'wrapper', function( $container ) {
 // Add configuration.
 app()->add( 'config.theme', function( $container ) {
 
-	return new Collection( require_once( get_parent_theme_file_path( 'config/theme.php' ) ) );
+	return new Collection( require_once get_parent_theme_file_path( 'config/theme.php' ) );
 } );
 
 app()->add( 'config.view', function() {
 
-	return new Collection( require_once( get_parent_theme_file_path( 'config/view.php' ) ) );
+	return new Collection( require_once get_parent_theme_file_path( 'config/view.php' ) );
 } );
 
 // Use the theme namespace as the overall app namespace.
@@ -68,14 +68,14 @@ app()->get( 'wrapper' );
 // Load functions files.
 array_map(
 	function( $file ) {
-		require_once( get_parent_theme_file_path( "app/{$file}.php" ) );
+		require_once get_parent_theme_file_path( "app/{$file}.php" );
 	},
 	// Add file names of files to auto-load from the `/app` folder.
 	// Classes are auto-loaded, so we only need this for functions-files.
 	[
 		'functions-filters',
 		'functions-setup',
-		'functions-template'
+		'functions-template',
 	]
 );
 
