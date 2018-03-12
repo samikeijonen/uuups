@@ -27,13 +27,35 @@ namespace ABC;
  * @return void
  */
 add_action( 'after_setup_theme', function() {
+	// Add default posts and comments RSS feed links to head.
+	add_theme_support( 'automatic-feed-links' );
+
+	// Switch default core markup for search form, comment form, and comments
+	// to output valid HTML5.
+	add_theme_support( 'html5', [
+		'search-form',
+		'comment-form',
+		'comment-list',
+		'gallery',
+		'caption',
+	] );
+
 	// Add title tag support.
-	// @link https://developer.wordpress.org/reference/functions/add_theme_support/#title-tag.
 	add_theme_support( 'title-tag' );
 
 	// Add selective refresh for widgets.
-	// @link https://developer.wordpress.org/reference/functions/add_theme_support/#customize-selective-refresh-widgets.
 	add_theme_support( 'customize-selective-refresh-widgets' );
+
+	// Add support for editor color palette.
+	add_theme_support( 'editor-color-palette',
+		'#111',
+		'#d0a5db',
+		'#eee',
+		'#fff'
+	);
+
+	// Add support for align wide blocks.
+	add_theme_support( 'align-wide' );
 }, 5 );
 
 /**
