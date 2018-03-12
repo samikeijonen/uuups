@@ -14,7 +14,7 @@ img {
 }
 
 figure {
-	margin: 0 0 $global-spacing-unit;
+	margin: 0 0 $global-spacing-unit-3;
 
 	img {
 		@include center-block();
@@ -23,7 +23,7 @@ figure {
 
 figcaption {
 	@include font-size(0.875rem, $modifier: -0.5);
-	margin-bottom: $global-spacing-unit-tiny;
-	margin-top: $global-spacing-unit-tiny;
+	margin-bottom: $global-spacing-unit-1;
+	margin-top: $global-spacing-unit-1;
 	text-align: center;
 }

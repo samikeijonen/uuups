@@ -50,7 +50,7 @@
 		}
 
 		& > li:not(:last-child) {
-			margin-right: $global-spacing-unit;
+			margin-right: $global-spacing-unit-3;
 		}
 
 		& ul {
@@ -58,7 +58,7 @@
 			left: -999em;
 			position: absolute;
 			top: 100%;
-			width: $global-spacing-unit-huge * 2;
+			width: $global-spacing-unit-13 * 2;
 			z-index: 99999;
 
 			// Class "focus" is added by Javascript which enables
@@ -70,7 +70,7 @@
 			}
 
 			& a {
-				padding: $global-spacing-unit-tiny $global-spacing-unit-small;
+				padding: $global-spacing-unit-1 $global-spacing-unit-2;
 			}
 
 			& ul {
@@ -79,7 +79,7 @@
 
 			& .icon {
 				position: absolute;
-				right: $global-spacing-unit-small;
+				right: $global-spacing-unit-2;
 				top: calc(50% - 0.5em);
 				transform: rotate(-90deg);
 			}

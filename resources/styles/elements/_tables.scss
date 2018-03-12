@@ -1,7 +1,7 @@
 table {
 	border-collapse: separate;
 	border-spacing: 0;
-	margin: 0 0 $global-spacing-unit-small;
+	margin: 0 0 $global-spacing-unit-3;
 	table-layout: fixed;
 	width: 100%;
 }
@@ -12,6 +12,6 @@ tr:nth-child(even) {
 
 th,
 td {
-	padding: $global-spacing-unit-tiny;
+	padding: $global-spacing-unit-1;
 	text-align: left;
 }

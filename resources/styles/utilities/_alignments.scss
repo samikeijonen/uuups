@@ -1,13 +1,13 @@
 .alignleft {
 	float: left;
-	margin-bottom: $global-spacing-unit;
-	margin-right: $global-spacing-unit;
+	margin-bottom: $global-spacing-unit-3;
+	margin-right: $global-spacing-unit-3;
 }
 
 .alignright {
 	float: right;
-	margin-bottom: $global-spacing-unit;
-	margin-left: $global-spacing-unit;
+	margin-bottom: $global-spacing-unit-3;
+	margin-left: $global-spacing-unit-3;
 }
 
 .aligncenter {
@@ -30,8 +30,8 @@
 		margin-right: calc(25% - 25vw);
 
 		&.wp-block-gallery {
-			margin-left: calc(25% - 25vw - #{ $global-spacing-unit-tiny });
-			margin-right: calc(25% - 25vw - #{ $global-spacing-unit-tiny });
+			margin-left: calc(25% - 25vw - #{ $global-spacing-unit-1 });
+			margin-right: calc(25% - 25vw - #{ $global-spacing-unit-1 });
 		}
 	}
 

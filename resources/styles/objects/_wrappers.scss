@@ -1,0 +1,22 @@
+.max-width-1 {
+	max-width: $max-width-1;
+}
+
+.px-3 {
+	padding-left: $global-spacing-unit-3;
+	padding-right: $global-spacing-unit-3;
+}
+
+.py-4 {
+	padding-bottom: $global-spacing-unit-4;
+	padding-top: $global-spacing-unit-4;
+}
+
+.mx-auto {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.mb-0 {
+	margin-bottom: 0;
+}

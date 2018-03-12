@@ -2,8 +2,8 @@ hr {
 	@include center-block;
 	background-color: $color-lighter;
 	border: 0;
-	height: $global-spacing-unit-tiny / 2;
-	margin-bottom: $global-spacing-unit-large;
-	margin-top: $global-spacing-unit-large;
-	max-width: $global-spacing-unit-huge;
+	height: $global-spacing-unit-1 / 2;
+	margin-bottom: $global-spacing-unit-3;
+	margin-top: $global-spacing-unit-3;
+	max-width: $global-spacing-unit-13;
 }

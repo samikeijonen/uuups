@@ -1,6 +1,6 @@
 ul,
 ol {
-	margin: 0 0 $global-spacing-unit $global-spacing-unit-small;
+	margin: 0 0 $global-spacing-unit-3 $global-spacing-unit-2;
 	padding: 0;
 }
 
@@ -17,8 +17,8 @@ li > {
 	ul,
 	ol {
 		margin-bottom: 0;
-		margin-left: $global-spacing-unit-small;
-		padding-left: $global-spacing-unit-small;
+		margin-left: $global-spacing-unit-2;
+		padding-left: $global-spacing-unit-2;
 	}
 }
 
@@ -27,5 +27,5 @@ dt {
 }
 
 dd {
-	margin: 0 $global-spacing-unit $global-spacing-unit;
+	margin: 0 $global-spacing-unit-3 $global-spacing-unit-3;
 }

@@ -1,6 +1,6 @@
 // Button.
 .wp-block-button {
-	margin-bottom: $global-spacing-unit;
+	margin-bottom: $global-spacing-unit-3;
 
 	& .wp-block-button__link {
 		@include button-block;
@@ -28,8 +28,8 @@
 	background-size: cover;
 	display: flex;
 	justify-content: center;
-	margin-bottom: $global-spacing-unit;
-	min-height: $global-spacing-unit * 20;
+	margin-bottom: $global-spacing-unit-3;
+	min-height: $global-spacing-unit-3 * 20;
 	position: relative;
 
 	&.has-left-content {
@@ -54,7 +54,7 @@
 		@include font-size(2rem);
 		color: $color-white;
 		z-index: 1;
-		padding: $global-spacing-unit;
+		padding: $global-spacing-unit-3;
 		text-align: center;
 	}
 
@@ -109,16 +109,16 @@
 	display: flex;
 	flex-wrap: wrap;
 	list-style-type: none;
-	margin-left: -$global-spacing-unit-tiny;
-	margin-right: -$global-spacing-unit-tiny;
-	margin-top: -$global-spacing-unit-tiny;
+	margin-left: -$global-spacing-unit-1;
+	margin-right: -$global-spacing-unit-1;
+	margin-top: -$global-spacing-unit-1;
 
 	.blocks-gallery-item {
 		display: flex;
 		flex-direction: column;
 		flex-grow: 1;
 		justify-content: center;
-		margin: $global-spacing-unit-tiny;
+		margin: $global-spacing-unit-1;
 		position: relative;
 
 		figure {
@@ -135,7 +135,7 @@
 		}
 
 		figcaption {
-			padding: $global-spacing-unit-tiny / 2;
+			padding: $global-spacing-unit-1 / 2;
 			position: absolute;
 			text-align: center;
 			width: 100%;
@@ -163,17 +163,17 @@
 
 	// Responsive fallback value, 2 columns
 	& .blocks-gallery-item {
-		width: calc(100% / 2 - #{ $global-spacing-unit-tiny } * 2);
+		width: calc(100% / 2 - #{ $global-spacing-unit-1 } * 2);
 	}
 
 	&.columns-1 .blocks-gallery-item {
-		width: calc(100% / 1 - #{ $global-spacing-unit-tiny } * 2);
+		width: calc(100% / 1 - #{ $global-spacing-unit-1 } * 2);
 	}
 
 	@media (min-width: 48em) {
 		@for $i from 3 through 8 { /* stylelint-disable-line */
 			&.columns-#{ $i } .blocks-gallery-item {
-				width: calc(100% / #{ $i } - #{ $global-spacing-unit-tiny } * 2);
+				width: calc(100% / #{ $i } - #{ $global-spacing-unit-1 } * 2);
 			}
 		}
 	}
@@ -187,7 +187,7 @@
 		font-style: normal;
 		font-family: serif;
 		font-weight: 700;
-		margin-right: $global-spacing-unit-tiny;
+		margin-right: $global-spacing-unit-3;
 		text-transform: uppercase;
 	}
 }
@@ -197,7 +197,7 @@
 }
 
 .has-background {
-	padding: $global-spacing-unit;
+	padding: $global-spacing-unit-3;
 }
 
 // Quote and pullquote.
@@ -209,6 +209,6 @@
 	border-bottom: 0.25rem solid;
 	border-left: 0;
 	border-top: 0.25rem solid;
-	padding: $global-spacing-unit 0;
+	padding: $global-spacing-unit-3 0;
 	text-align: center;
 }
