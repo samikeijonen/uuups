@@ -27,15 +27,14 @@ add_filter( 'nav_menu_css_class', function( $classes ) {
 
 	foreach ( [ 'item', 'parent', 'ancestor' ] as $type ) {
 
-		if ( in_array( "current-menu-{$type}", $classes ) ) {
-
+		if ( in_array( "current-menu-{$type}", $classes, true ) ) {
 			$_classes[] = "menu__item--{$type}";
 		}
 	}
 
 	return $_classes;
 
-}, PHP_INT_MIN );
+}, 10 );
 
 /**
  * Filters the WP nav menu link attributes.
@@ -46,12 +45,10 @@ add_filter( 'nav_menu_css_class', function( $classes ) {
  * @return array
  */
 add_filter( 'nav_menu_link_attributes', function( $attr ) {
-
 	$attr['class'] = 'menu__anchor';
 
 	return $attr;
-
-}, PHP_INT_MIN );
+}, 10 );
 
 /**
  * Overwrites the HTML classes for the comment form default fields.
@@ -65,7 +62,7 @@ add_filter( 'comment_form_default_fields', function( $fields ) {
 
 	array_walk( $fields, function( &$field, $key ) {
 
-	 	$field = replace_html_class(
+		$field = replace_html_class(
 			"comment-respond__field comment-respond__field--{$key}",
 			$field
 		);
@@ -73,7 +70,7 @@ add_filter( 'comment_form_default_fields', function( $fields ) {
 
 	return $fields;
 
-}, PHP_INT_MIN );
+}, 10 );
 
 /**
  * Overwrites the HTML classes for various comment form elements.
@@ -91,29 +88,28 @@ add_filter( 'comment_form_defaults', function( $defaults ) {
 
 	// Field wrappers.
 	$defaults['comment_field'] = replace_html_class( 'comment-respond__field comment-respond__field--comment', $defaults['comment_field'] );
-	$defaults['submit_field']  = replace_html_class( 'comment-respond__field comment-respond__field--submit',  $defaults['submit_field']  );
+	$defaults['submit_field']  = replace_html_class( 'comment-respond__field comment-respond__field--submit', $defaults['submit_field'] );
 
 	// Other elements.
-	$defaults['must_log_in']          = replace_html_class( 'comment-respond__must-log-in',  $defaults['must_log_in']          );
-	$defaults['logged_in_as']         = replace_html_class( 'comment-respond__logged-in-as', $defaults['logged_in_as']         );
-	$defaults['comment_notes_before'] = replace_html_class( 'comment-respond__notes',        $defaults['comment_notes_before'] );
-	$defaults['title_reply_before']   = replace_html_class( 'comment-respond__reply-title',  $defaults['title_reply_before']   );
+	$defaults['must_log_in']          = replace_html_class( 'comment-respond__must-log-in',  $defaults['must_log_in'] );
+	$defaults['logged_in_as']         = replace_html_class( 'comment-respond__logged-in-as', $defaults['logged_in_as'] );
+	$defaults['comment_notes_before'] = replace_html_class( 'comment-respond__notes', $defaults['comment_notes_before'] );
+	$defaults['title_reply_before']   = replace_html_class( 'comment-respond__reply-title',  $defaults['title_reply_before'] );
 
 	return $defaults;
 
-}, PHP_INT_MIN );
+}, 10 );
 
 /**
  * Helper function for replacing a class in an HTML string.
  *
  * @since  1.0.0
  * @access public
- * @param  string  $class
- * @param  string  $html
+ * @param  string $class Class to add.
+ * @param  string $html HTML markup.
  * @return string
  */
 function replace_html_class( $class, $html ) {
-
 	return preg_replace(
 		"/class=(['\"]).+?(['\"])/i",
 		'class=$1' . esc_attr( $class ) . '$2',

@@ -9,6 +9,23 @@
 	line-height: $global-line-height;
 }
 
+/// Center any element.
+///
+/// @example scss - Basic Usage Sass
+///		.center {
+///			@include center;
+///    }
+///
+/// @example css - Basic Usage CSS Output
+/// 	.center {
+///			margin-left: auto;
+///			margin-right: auto;
+///		}
+@mixin center {
+	margin-left: auto;
+	margin-right: auto;
+}
+
 /// Center any block element.
 ///
 /// @example scss - Basic Usage Sass
@@ -24,8 +41,7 @@
 ///		}
 @mixin center-block {
 	display: block;
-	margin-left: auto;
-	margin-right: auto;
+	@include center;
 }
 
 /// Resets margin and padding on any element.

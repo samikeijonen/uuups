@@ -13,3 +13,8 @@
 .page-links {
 	margin: 0 0 $global-spacing-unit-3;
 }
+
+.entry {
+	@include center;
+	max-width: $max-width-2;
+}
