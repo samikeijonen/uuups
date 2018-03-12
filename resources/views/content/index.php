@@ -1,27 +1,30 @@
-<?php namespace ABC; ?>
+<?php
+/**
+ * Content template.
+ *
+ * @package Uuups
+ */
 
+namespace ABC;
+
+?>
 <main class="app-main">
+	<?php
+	if ( have_posts() ) :
+		while ( have_posts() ) :
+			the_post();
 
-	<?php if ( have_posts() ) : ?>
+			render_view( 'entry', get_post_type() );
 
-		<?php while ( have_posts() ) : the_post(); ?>
+			if ( is_singular() ) :
+				comments_template( '/resources/views/partials/comments.php' );
+			endif;
+		endwhile;
 
-			<?php render_view( 'entry', get_post_type() ) ?>
+		if ( hybrid_is_plural() ) :
+			render_view( 'partials', 'pagination-posts' );
+		endif;
 
-			<?php if ( is_singular() ) : ?>
-
-				<?php comments_template( '/resources/views/partials/comments.php' ) ?>
-
-			<?php endif ?>
-
-		<?php endwhile ?>
-
-		<?php if ( hybrid_is_plural() ) : ?>
-
-			<?php render_view( 'partials', 'pagination-posts' ) ?>
-
-		<?php endif ?>
-
-	<?php endif ?>
-
+	endif;
+	?>
 </main>

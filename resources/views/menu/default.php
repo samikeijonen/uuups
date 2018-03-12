@@ -1,18 +1,26 @@
-<?php if ( has_nav_menu( $data->name ) ) : ?>
+<?php
+/**
+ * Displays navigation.
+ *
+ * @package Uuups
+ */
 
-	<nav class="menu menu--<?= esc_attr( $data->name ) ?>">
+if ( ! has_nav_menu( $data->name ) ) :
+	return;
+endif
+?>
 
-		<h3 class="menu__title screen-reader-text"><?= hybrid_get_menu_name( $data->name ) ?></h3>
+<nav class="menu menu--<?= esc_attr( $data->name ) ?>">
 
-		<?php wp_nav_menu( [
-			'theme_location' => $data->name,
-			'container'      => '',
-			'menu_id'        => '',
-			'menu_class'     => 'menu__items',
-			'items_wrap'     => '<ul class="%2$s">%3$s</ul>',
-			'item_spacing'   => 'discard'
-		] ) ?>
+	<?php
+	wp_nav_menu( [
+		'theme_location' => $data->name,
+		'container'      => '',
+		'menu_id'        => '',
+		'menu_class'     => 'menu__items',
+		'items_wrap'     => '<ul class="%2$s">%3$s</ul>',
+		'item_spacing'   => 'discard',
+	] );
+	?>
 
-	</nav>
-
-<?php endif ?>
+</nav>

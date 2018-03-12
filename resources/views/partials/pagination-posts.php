@@ -1,9 +1,16 @@
-<?php namespace ABC; ?>
+<?php
+/**
+ * Posts pagination.
+ *
+ * @package Uuups
+ */
 
-<?php posts_pagination( [
-	'prev_text'       => __( '&larr; Previous' ),
-	'next_text'       => __( 'Next &rarr;' ),
-	'title_text'      => __( 'Posts Navigation' ),
+namespace ABC;
+
+posts_pagination( [
+	'prev_text'       => __( '&larr; Previous', 'uuups' ),
+	'next_text'       => __( 'Next &rarr;', 'uuups' ),
+	'title_text'      => __( 'Posts Navigation', 'uuups' ),
 	'container_class' => 'pagination pagination--posts',
-	'title_class'     => 'pagination__title screen-reader-text'
-] ) ?>
+	'title_class'     => 'pagination__title screen-reader-text',
+] );

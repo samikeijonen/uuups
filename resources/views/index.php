@@ -1,4 +1,11 @@
-<?php namespace ABC;
+<?php
+/**
+ * Index template.
+ *
+ * @package Uuups
+ */
+
+namespace ABC;
 
 // Load header template.
 render_view( 'header', get_template_hierarchy() );
