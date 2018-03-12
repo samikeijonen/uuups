@@ -14,7 +14,6 @@ const concat = require( 'gulp-concat' );
 const cssnano = require( 'gulp-cssnano' );
 const del = require( 'del' );
 const eslint = require( 'gulp-eslint' );
-const fs = require( 'fs' );
 const gulp = require( 'gulp' );
 const imagemin = require( 'gulp-imagemin' );
 const mqpacker = require( 'css-mqpacker' );
