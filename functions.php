@@ -13,8 +13,8 @@
  */
 
 // Auto-load any projects via the Composer autoloader.
-require_once( get_parent_theme_file_path( 'vendor/autoload.php' ) );
+require_once get_parent_theme_file_path( 'vendor/autoload.php' );
 
 // Bootstrap the theme.
-require_once( get_parent_theme_file_path( 'bootstrap/autoload.php' ) );
-require_once( get_parent_theme_file_path( 'bootstrap/app.php' ) );
+require_once get_parent_theme_file_path( 'bootstrap/autoload.php' );
+require_once get_parent_theme_file_path( 'bootstrap/app.php' );

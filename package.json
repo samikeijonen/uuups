@@ -1,30 +1,53 @@
 {
-  "name": "abc",
+  "name": "uuups",
   "version": "1.0.0",
-  "description": "A starter theme for WordPress.",
-  "main": "index.js",
+  "description": "A theme by Sami Keijonen.",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "babel-core": "~6",
+    "babel-preset-env": "~1",
+    "browser-sync": "~2",
+    "css-mqpacker": "~6",
+    "del": "~3",
+    "eslint": "~4",
+    "eslint-config-wordpress": "~2",
+    "glob": "~7",
+    "gulp": "~3",
+    "gulp-babel": "~7",
+    "gulp-cheerio": "~0",
+    "gulp-concat": "~2",
+    "gulp-cssnano": "~2",
+    "gulp-eslint": "~4",
+    "gulp-imagemin": "~3",
+    "gulp-notify": "~3",
+    "gulp-plumber": "~1",
+    "gulp-postcss": "~7",
+    "gulp-rename": "~1",
+    "gulp-sass": "~3",
+    "gulp-sort": "~2",
+    "gulp-sourcemaps": "~2",
+    "gulp-stylelint": "^7.0.0",
+    "gulp-svgmin": "~1",
+    "gulp-svgstore": "~6",
+    "gulp-uglify": "~3",
+    "gulp-wp-pot": "~2",
+    "sassdoc": "~2",
+    "sassdoc-theme-herman": "^2.0.0",
+    "stylelint": "^9.1.1",
+    "stylelint-config-wordpress": "^12.0.0"
+  },
+  "devDependencies": {},
   "scripts": {
-    "build:styles": "npm run styles:scss && npm run styles:autoprefixer",
-    "build:scripts": "npm run scripts:uglify",
-    "styles:scss": "node-sass --output-style compressed -o resources/dist/styles resources/styles",
-    "styles:autoprefixer": "postcss -u autoprefixer -r resources/dist/styles/*",
-    "scripts:uglify": "make-dir resources/dist/scripts && uglifyjs resources/scripts/*.js -m -o resources/dist/scripts/app.js"
+    "test": "echo \"No test specified\""
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/justintadlock/abc.git"
-  },
-  "author": "Justin Tadlock",
-  "license": "GPL-2.0+",
+  "repository": "git+https://github.com/samikeijonen/uuups.git",
+  "keywords": [
+    "theme"
+  ],
+  "author": "Sami Keijonen",
+  "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/justintadlock/abc/issues"
+    "url": "https://github.com/samikeijonen/uuups/issues"
   },
-  "homepage": "https://github.com/justintadlock/abc#readme",
-  "devDependencies": {
-    "autoprefixer": "^8.1.0",
-    "make-dir-cli": "^1.0.0",
-    "node-sass": "^4.7.2",
-    "postcss-cli": "^5.0.0",
-    "uglify-js": "^3.3.13"
-  }
+  "homepage": "https://github.com/samikeijonen/uuups/#readme"
 }
