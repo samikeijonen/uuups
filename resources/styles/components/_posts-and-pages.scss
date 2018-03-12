@@ -6,15 +6,14 @@
 	display: none;
 }
 
-.entry,
-.page-content,
-.entry-content,
-.entry-summary,
-.page-links {
+.entry {
 	margin: 0 0 $global-spacing-unit-3;
 }
 
-.entry {
+.entry__header,
+.entry__content,
+.entry__summary,
+.entry__footer {
 	@include center;
 	max-width: $max-width-2;
 }
