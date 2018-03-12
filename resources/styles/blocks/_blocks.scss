@@ -1,6 +1,6 @@
 // Button.
 .wp-block-button {
-	margin-bottom: $global-spacing-unit-3;
+	margin-bottom: $global-spacing-unit-4;
 
 	& .wp-block-button__link {
 		@include button-block;
@@ -28,7 +28,7 @@
 	background-size: cover;
 	display: flex;
 	justify-content: center;
-	margin-bottom: $global-spacing-unit-3;
+	margin-bottom: $global-spacing-unit-4;
 	min-height: $global-spacing-unit-3 * 20;
 	position: relative;
 
@@ -209,6 +209,6 @@
 	border-bottom: 0.25rem solid;
 	border-left: 0;
 	border-top: 0.25rem solid;
-	padding: $global-spacing-unit-3 0;
+	padding: $global-spacing-unit-4 0;
 	text-align: center;
 }
