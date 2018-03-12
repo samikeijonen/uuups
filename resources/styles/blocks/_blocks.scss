@@ -1,0 +1,214 @@
+// Button.
+.wp-block-button {
+	margin-bottom: $global-spacing-unit;
+
+	& .wp-block-button__link {
+		@include button-block;
+		display: inline-block;
+
+		&:hover,
+		&:focus,
+		&:active {
+			@include button-block-hover;
+		}
+	}
+
+	&.aligncenter {
+		text-align: center;
+	}
+
+	&.alignright {
+		text-align: right;
+	}
+}
+
+// Cover image.
+.wp-block-cover-image {
+	align-items: center;
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+	margin-bottom: $global-spacing-unit;
+	min-height: $global-spacing-unit * 20;
+	position: relative;
+
+	&.has-left-content {
+		justify-content: flex-start;
+
+		h2 {
+			margin-left: 0;
+			text-align: left;
+		}
+	}
+
+	&.has-right-content {
+		justify-content: flex-end;
+
+		h2 {
+			margin-right: 0;
+			text-align: right;
+		}
+	}
+
+	h2 {
+		@include font-size(2rem);
+		color: $color-white;
+		z-index: 1;
+		padding: $global-spacing-unit;
+		text-align: center;
+	}
+
+	&.has-parallax {
+		background-attachment: fixed;
+	}
+
+	&.has-background-dim:before {
+		background-color: rgba($color-black, 0.5);
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+	}
+
+	@for $i from 1 through 10 {
+		&.has-background-dim.has-background-dim-#{ $i * 10 }:before { /* stylelint-disable-line */
+			background-color: rgba($color-black, $i * 0.1);
+		}
+	}
+
+	&.components-placeholder {
+		height: inherit;
+	}
+
+}
+
+// Embed blocks.
+.wp-block-embed__wrapper {
+	height: 0;
+	overflow: hidden;
+	padding-top: 56.25%;
+	position: relative;
+
+	& iframe {
+		height: 100%;
+		max-width: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+	}
+}
+
+// Gallery.
+.wp-block-gallery,
+.wp-block-gallery.alignleft,
+.wp-block-gallery.alignright,
+.wp-block-gallery.aligncenter {
+	display: flex;
+	flex-wrap: wrap;
+	list-style-type: none;
+	margin-left: -$global-spacing-unit-tiny;
+	margin-right: -$global-spacing-unit-tiny;
+	margin-top: -$global-spacing-unit-tiny;
+
+	.blocks-gallery-item {
+		display: flex;
+		flex-direction: column;
+		flex-grow: 1;
+		justify-content: center;
+		margin: $global-spacing-unit-tiny;
+		position: relative;
+
+		figure {
+			align-items: flex-end;
+			height: 100%;
+			display: flex;
+			margin: 0;
+		}
+
+		img {
+			display: block;
+			max-width: 100%;
+			height: auto;
+		}
+
+		figcaption {
+			padding: $global-spacing-unit-tiny / 2;
+			position: absolute;
+			text-align: center;
+			width: 100%;
+		}
+	}
+
+	// Cropped.
+	&.is-cropped .blocks-gallery-item { /* stylelint-disable-line */
+		& a,
+		& img {
+			flex: 1;
+			height: 100%;
+			object-fit: cover;
+			width: 100%;
+		}
+
+		// Alas, IE11+ doesn't support object-fit
+		/* stylelint-disable-next-line */
+		_:-ms-lang(x),
+		figure {
+			height: auto;
+			width: auto;
+		}
+	}
+
+	// Responsive fallback value, 2 columns
+	& .blocks-gallery-item {
+		width: calc(100% / 2 - #{ $global-spacing-unit-tiny } * 2);
+	}
+
+	&.columns-1 .blocks-gallery-item {
+		width: calc(100% / 1 - #{ $global-spacing-unit-tiny } * 2);
+	}
+
+	@media (min-width: 48em) {
+		@for $i from 3 through 8 { /* stylelint-disable-line */
+			&.columns-#{ $i } .blocks-gallery-item {
+				width: calc(100% / #{ $i } - #{ $global-spacing-unit-tiny } * 2);
+			}
+		}
+	}
+}
+
+// Paragraph.
+.has-drop-cap { /* stylelint-disable-line */
+	&:first-letter {
+		@include font-size(4rem, 1);
+		float: left;
+		font-style: normal;
+		font-family: serif;
+		font-weight: 700;
+		margin-right: $global-spacing-unit-tiny;
+		text-transform: uppercase;
+	}
+}
+
+.has-drop-cap:not(:focus) {
+	overflow: hidden;
+}
+
+.has-background {
+	padding: $global-spacing-unit;
+}
+
+// Quote and pullquote.
+.wp-block-quote.is-large {
+	@include font-size(1.5rem);
+}
+
+.wp-block-pullquote {
+	border-bottom: 0.25rem solid;
+	border-left: 0;
+	border-top: 0.25rem solid;
+	padding: $global-spacing-unit 0;
+	text-align: center;
+}

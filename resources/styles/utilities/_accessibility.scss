@@ -1,0 +1,42 @@
+/* stylelint-disable declaration-no-important */
+
+/// Text meant only for screen readers.
+.screen-reader-text {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute !important;
+	width: 1px;
+	// Many screen reader and browser combinations announce broken words
+	// as they would appear visually.
+	word-wrap: normal !important;
+
+	&:focus {
+		@include font-size(0.875);
+		background-color: $color-darkest;
+		clip: auto !important;
+		clip-path: none;
+		color: $color-white;
+		display: block;
+		font-weight: 700;
+		height: auto;
+		left: $global-spacing-unit-tiny;
+		padding: $global-spacing-unit-tiny $global-spacing-unit-small;
+		text-decoration: none;
+		top: $global-spacing-unit-tiny;
+		width: auto;
+		// Above WP toolbar.
+		z-index: 100000;
+	}
+}
+
+/* stylelint-enable */
+
+// Do not show the outline on the skip link target.
+#main[tabindex="-1"]:focus {
+	outline: 0;
+}

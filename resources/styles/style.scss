@@ -1,0 +1,64 @@
+/**
+ * Main stylesheet for the theme.
+ *
+ * Theme styles follow http://cssguidelin.es/ and are organized according to
+ * Inverted Triangle CSS (ITCSS) principles put forth by Harry Roberts. In
+ * short, each layer of CSS gets more specific as you move down this page.
+ */
+
+/*--------------------------------------------------------------
+# Settings - Global variables, config switches.
+--------------------------------------------------------------*/
+@import "settings/core";
+@import "settings/fonts";
+@import "settings/colors";
+
+/*--------------------------------------------------------------
+# Tools - Default mixins and functions.
+--------------------------------------------------------------*/
+@import "tools/mixins";
+@import "tools/font-size";
+
+/*--------------------------------------------------------------
+# Generic - Ground-zero styles (resets, box-sizing, etc.).
+--------------------------------------------------------------*/
+@import "generic/normalize";
+@import "generic/box-sizing";
+
+/*--------------------------------------------------------------
+# Elements - Unclassed HTML elements (type selectors).
+--------------------------------------------------------------*/
+@import "elements/page";
+@import "elements/blockquote";
+@import "elements/buttons";
+@import "elements/forms";
+@import "elements/headings";
+@import "elements/hr";
+@import "elements/links";
+@import "elements/lists";
+@import "elements/media";
+@import "elements/misc";
+@import "elements/pre-code";
+@import "elements/tables";
+
+/*--------------------------------------------------------------
+# Blocks - editor related styles.
+--------------------------------------------------------------*/
+@import "blocks/blocks";
+
+/*--------------------------------------------------------------
+# Components - specific UI components.
+--------------------------------------------------------------*/
+@import "components/comments";
+@import "components/galleries";
+@import "components/media";
+@import "components/navigation";
+@import "components/posts-and-pages";
+@import "components/widgets";
+
+/*--------------------------------------------------------------
+# Utilities - Helpers and overrides.
+--------------------------------------------------------------*/
+@import "utilities/accessibility";
+@import "utilities/alignments";
+@import "utilities/icons";

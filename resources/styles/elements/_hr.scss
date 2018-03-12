@@ -1,0 +1,9 @@
+hr {
+	@include center-block;
+	background-color: $color-lighter;
+	border: 0;
+	height: $global-spacing-unit-tiny / 2;
+	margin-bottom: $global-spacing-unit-large;
+	margin-top: $global-spacing-unit-large;
+	max-width: $global-spacing-unit-huge;
+}

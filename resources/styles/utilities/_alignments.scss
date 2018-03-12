@@ -1,0 +1,38 @@
+.alignleft {
+	float: left;
+	margin-bottom: $global-spacing-unit;
+	margin-right: $global-spacing-unit;
+}
+
+.alignright {
+	float: right;
+	margin-bottom: $global-spacing-unit;
+	margin-left: $global-spacing-unit;
+}
+
+.aligncenter {
+	@include center-block;
+	clear: both;
+}
+
+// Align full and wide.
+.alignfull {
+	margin-left: calc(50% - 50vw);
+	margin-right: calc(50% - 50vw);
+	max-width: 1000%;
+	width: auto;
+}
+
+@media (min-width: 48em) {
+
+	.alignwide {
+		margin-left: calc(25% - 25vw);
+		margin-right: calc(25% - 25vw);
+
+		&.wp-block-gallery {
+			margin-left: calc(25% - 25vw - #{ $global-spacing-unit-tiny });
+			margin-right: calc(25% - 25vw - #{ $global-spacing-unit-tiny });
+		}
+	}
+
+}

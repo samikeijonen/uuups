@@ -1,0 +1,32 @@
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea,
+select {
+	border: 2px solid $color-light;
+	padding: calc($global-spacing-unit - 2px);
+	width: 100%;
+}
+
+textarea {
+	// Removes empty space under textarea.
+	display: block;
+	min-height: $global-spacing-unit-huge;
+}
+
+label {
+	display: block;
+	font-weight: 700;
+}

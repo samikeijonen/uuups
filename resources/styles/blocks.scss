@@ -1,0 +1,50 @@
+/**
+ * Blocks stylesheet for the theme.
+ *
+ * This is for the editor.
+ */
+
+/*--------------------------------------------------------------
+# Settings - Global variables, config switches.
+--------------------------------------------------------------*/
+@import "settings/core";
+@import "settings/fonts";
+@import "settings/colors";
+
+/*--------------------------------------------------------------
+# Tools - Default mixins and functions.
+--------------------------------------------------------------*/
+@import "tools/mixins";
+@import "tools/font-size";
+
+.edit-post-visual-editor {
+	@include typography;
+	@include font-size(1rem);
+
+	p,
+	p.blocks-rich-text__tinymce.mce-content-body {
+		@include typography;
+		@include font-size(1rem);
+	}
+
+	/*--------------------------------------------------------------
+	# Elements - Unclassed HTML elements (type selectors).
+	--------------------------------------------------------------*/
+	@import "elements/page";
+	@import "elements/blockquote";
+	@import "elements/forms";
+	@import "elements/headings";
+	@import "elements/hr";
+	@import "elements/links";
+	@import "elements/lists";
+	@import "elements/media";
+	@import "elements/misc";
+	@import "elements/pre-code";
+	@import "elements/tables";
+
+	/*--------------------------------------------------------------
+	# Blocks - editor related styles.
+	--------------------------------------------------------------*/
+	@import "blocks/blocks";
+
+}
