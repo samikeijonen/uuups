@@ -29,7 +29,7 @@ namespace ABC;
 			?>
 		</div>
 
-		<footer class="entry__foooter">
+		<footer class="entry__footer">
 			<?php
 			hybrid_post_terms( [ 'taxonomy' => 'category' ] );
 

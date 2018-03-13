@@ -13,7 +13,8 @@
 .entry__header,
 .entry__content,
 .entry__summary,
-.entry__footer {
+.entry__footer,
+.comments-template {
 	@include center;
 	max-width: $max-width-2;
 }
