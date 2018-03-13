@@ -11,7 +11,9 @@
 }
 
 .menu__anchor {
+	color: $color-grey-1;
 	@include font-size(0.8888888888rem);
+	font-weight: 700;
 	display: block;
 	text-decoration: none;
 
