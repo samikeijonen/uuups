@@ -17,6 +17,10 @@
 	display: block;
 	text-decoration: none;
 
+	&.is-active {
+		color: $color-dark;
+	}
+
 	& .icon {
 		display: none;
 	}

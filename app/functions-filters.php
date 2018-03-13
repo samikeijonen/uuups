@@ -22,33 +22,48 @@ namespace ABC;
  * @return array
  */
 add_filter( 'nav_menu_css_class', function( $classes ) {
+	$classes[] = 'menu__item';
 
-	$_classes = [ 'menu__item' ];
-
-	foreach ( [ 'item', 'parent', 'ancestor' ] as $type ) {
-
-		if ( in_array( "current-menu-{$type}", $classes, true ) ) {
-			$_classes[] = "menu__item--{$type}";
-		}
+	if ( in_array( 'current-menu-item', $classes, true ) ) {
+		$classes[] = 'menu__item--active';
 	}
 
-	return $_classes;
+	if ( in_array( 'current-menu-parent', $classes, true ) ) {
+		$classes[] = 'menu__item--parent';
+	}
 
+	if ( in_array( 'current-menu-ancestor', $classes, true ) ) {
+		$classes[] = 'menu__item--ancestor';
+	}
+
+	return $classes;
 }, 10 );
 
 /**
  * Filters the WP nav menu link attributes.
  *
- * @since  1.0.0
- * @access public
- * @param  array  $attr
- * @return array
+ * @param array    $atts {
+ *     The HTML attributes applied to the menu item's `<a>` element, empty strings are ignored.
+ *
+ *     @type string $title  Title attribute.
+ *     @type string $target Target attribute.
+ *     @type string $rel    The rel attribute.
+ *     @type string $href   The href attribute.
+ * }
+ * @param WP_Post  $item  The current menu item.
+ * @param stdClass $args  An object of wp_nav_menu() arguments.
+ * @param int      $depth Depth of menu item. Used for padding.
+ * @return string  $attr
  */
-add_filter( 'nav_menu_link_attributes', function( $attr ) {
-	$attr['class'] = 'menu__anchor';
+add_filter( 'nav_menu_link_attributes', function( $atts, $item, $args, $depth ) {
+	$atts['class'] = 'menu__anchor menu__anchor--' . $args->theme_location;
 
-	return $attr;
-}, 10 );
+	if ( in_array( 'current-menu-item', $item->classes, true ) ) {
+		$atts['class'] .= ' is-active';
+	}
+
+	return $atts;
+}, 10, 4 );
 
 /**
  * Overwrites the HTML classes for the comment form default fields.
@@ -69,7 +84,6 @@ add_filter( 'comment_form_default_fields', function( $fields ) {
 	} );
 
 	return $fields;
-
 }, 10 );
 
 /**
@@ -97,7 +111,6 @@ add_filter( 'comment_form_defaults', function( $defaults ) {
 	$defaults['title_reply_before']   = replace_html_class( 'comment-respond__reply-title', $defaults['title_reply_before'] );
 
 	return $defaults;
-
 }, 10 );
 
 /**
