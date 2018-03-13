@@ -11,7 +11,7 @@ namespace ABC;
 <article <?php hybrid_attr( 'entry' ); ?>>
 	<?php if ( get_the_ID() === get_queried_object_id() ) : ?>
 
-		<header class="entry__header">
+		<header class="entry__header text-center">
 			<h1 class="entry__title"><?php single_post_title(); ?></h1>
 		</header>
 

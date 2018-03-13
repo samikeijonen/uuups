@@ -12,7 +12,7 @@ namespace ABC;
 <article <?php hybrid_attr( 'entry' ); ?>>
 	<?php if ( is_single( get_the_ID() ) ) : ?>
 
-		<header class="entry__header pb-4">
+		<header class="entry__header pb-4 text-center">
 			<h1 class="entry__title"><?php single_post_title(); ?></h1>
 
 			<div class="entry__byline">
