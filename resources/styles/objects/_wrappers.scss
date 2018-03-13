@@ -2,6 +2,11 @@
 	max-width: $max-width-1;
 }
 
+.px-2 {
+	padding-left: $global-spacing-unit-2;
+	padding-right: $global-spacing-unit-2;
+}
+
 .px-3 {
 	padding-left: $global-spacing-unit-3;
 	padding-right: $global-spacing-unit-3;
