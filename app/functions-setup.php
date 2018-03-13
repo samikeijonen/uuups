@@ -118,8 +118,8 @@ add_action( 'widgets_init', function() {
 	$args = [
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
-		'before_title'  => '<h3 class="widget__title">',
-		'after_title'   => '</h3>',
+		'before_title'  => '<h2 class="widget__title h6">',
+		'after_title'   => '</h2>',
 	];
 
 	register_sidebar( [
