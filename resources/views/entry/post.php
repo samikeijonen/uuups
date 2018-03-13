@@ -35,7 +35,6 @@ namespace ABC;
 
 			hybrid_post_terms( [
 				'taxonomy' => 'post_tag',
-				'before'   => esc_attr( get_meta_sep() ),
 			] );
 			?>
 		</footer>
