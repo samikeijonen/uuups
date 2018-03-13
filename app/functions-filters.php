@@ -91,10 +91,10 @@ add_filter( 'comment_form_defaults', function( $defaults ) {
 	$defaults['submit_field']  = replace_html_class( 'comment-respond__field comment-respond__field--submit', $defaults['submit_field'] );
 
 	// Other elements.
-	$defaults['must_log_in']          = replace_html_class( 'comment-respond__must-log-in',  $defaults['must_log_in'] );
+	$defaults['must_log_in']          = replace_html_class( 'comment-respond__must-log-in', $defaults['must_log_in'] );
 	$defaults['logged_in_as']         = replace_html_class( 'comment-respond__logged-in-as', $defaults['logged_in_as'] );
 	$defaults['comment_notes_before'] = replace_html_class( 'comment-respond__notes', $defaults['comment_notes_before'] );
-	$defaults['title_reply_before']   = replace_html_class( 'comment-respond__reply-title',  $defaults['title_reply_before'] );
+	$defaults['title_reply_before']   = replace_html_class( 'comment-respond__reply-title', $defaults['title_reply_before'] );
 
 	return $defaults;
 

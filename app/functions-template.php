@@ -18,9 +18,9 @@ namespace ABC;
  *
  * @since  1.0.0
  * @access public
- * @param  string        $name
- * @param  array|string  $slugs
- * @param  array         $data
+ * @param  string       $name  Name of object.
+ * @param  array|string $slugs Slug of object.
+ * @param  array        $data  Data of objec.
  * @return object
  */
 function get_view( $name, $slugs = [], $data = [] ) {
@@ -33,9 +33,9 @@ function get_view( $name, $slugs = [], $data = [] ) {
  *
  * @since  1.0.0
  * @access public
- * @param  string        $name
- * @param  array|string  $slugs
- * @param  array         $data
+ * @param  string       $name  Name of object.
+ * @param  array|string $slugs Slug of object.
+ * @param  array        $data  Data of object.
  * @return void
  */
 function render_view( $name, $slugs = [], $data = [] ) {
@@ -48,9 +48,9 @@ function render_view( $name, $slugs = [], $data = [] ) {
  *
  * @since  1.0.0
  * @access public
- * @param  string        $name
- * @param  array|string  $slugs
- * @param  array         $data
+ * @param  string       $name  Name of string.
+ * @param  array|string $slugs Slug of string.
+ * @param  array        $data  Data of string.
  * @return string
  */
 function fetch_view( $name, $slugs = [], $data = [] ) {
@@ -64,12 +64,12 @@ function fetch_view( $name, $slugs = [], $data = [] ) {
  *
  * @since  1.0.0
  * @access public
- * @param  array|string  $templates
- * @param  bool          $load
- * @param  bool          $require_once
+ * @param  array|string $templates    Template file(s) to search for, in order.
+ * @param  bool         $load         If true the template file will be loaded if it is found.
+ * @param  bool         $require_once Whether to require_once or require.
  * @return string
  */
-function locate_template( $templates, $load = false, $require_once = true  ) {
+function locate_template( $templates, $load = false, $require_once = true ) {
 
 	return \locate_template( filter_templates( (array) $templates ), $load, $require_once );
 }
@@ -80,7 +80,7 @@ function locate_template( $templates, $load = false, $require_once = true  ) {
  *
  * @since  1.0.0
  * @access public
- * @param  array  $templates
+ * @param  array $templates Template file(s) to search for, in order.
  * @return array
  */
 function filter_templates( $templates ) {
@@ -114,7 +114,7 @@ function get_template_hierarchy() {
  *
  * @since  1.0.0
  * @access public
- * @param  string  $name
+ * @param  string $name Gonfig name.
  * @return object
  */
 function config( $name ) {
@@ -127,7 +127,7 @@ function config( $name ) {
  *
  * @since  1.0.0
  * @access public
- * @param  array   $items
+ * @param  array $items Items collection.
  * @return object
  */
 function collect( $items = [] ) {
@@ -140,7 +140,7 @@ function collect( $items = [] ) {
  *
  * @since  1.0.0
  * @access public
- * @param  string  $sep
+ * @param  string $sep Serarator.
  * @return string
  */
 function get_meta_sep( $sep = '' ) {
@@ -149,7 +149,7 @@ function get_meta_sep( $sep = '' ) {
 		app()->namespace . '/meta_sep',
 		sprintf(
 			'<span class="sep">%s</span>',
-			$sep ? $sep : esc_html_x( '&middot;', 'meta separator' )
+			$sep ? $sep : esc_html_x( '&middot;', 'meta separator', 'uuups' )
 		)
 	);
 }
@@ -159,7 +159,7 @@ function get_meta_sep( $sep = '' ) {
  *
  * @since  1.0.0
  * @access public
- * @param  array  $args
+ * @param  array $args Pagination arguments.
  * @return object
  */
 function pagination( $args = [] ) {
@@ -172,6 +172,7 @@ function pagination( $args = [] ) {
  *
  * @since  1.0.0
  * @access public
+ * @param  array $args Pagination arguments.
  * @return void
  */
 function posts_pagination( $args = [] ) {
@@ -185,11 +186,11 @@ function posts_pagination( $args = [] ) {
  *
  * @since  1.0.0
  * @access public
- * @param  array  $args
- * @global int    $page
- * @global int    $numpages
- * @global bool   $multipage
- * @global bool   $more
+ * @param  array $args Singular pagination arguments.
+ * @global int   $page
+ * @global int   $numpages
+ * @global bool  $multipage
+ * @global bool  $more
  * @global object $wp_rewrite
  * @return void
  */
@@ -210,7 +211,7 @@ function singular_pagination( $args = [] ) {
 		'base'    => $base,
 		'format'  => $format,
 		'current' => ! $more && 1 === $page ? 0 : $page,
-		'total'   => $numpages
+		'total'   => $numpages,
 	];
 
 	echo pagination( $args )->fetch();

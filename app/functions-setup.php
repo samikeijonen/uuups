@@ -145,9 +145,17 @@ add_action( 'wp_enqueue_scripts', function() {
 		true
 	);
 
+	// Add custom fonts.
+	wp_enqueue_style(
+		app()->namespace . '/fonts',
+		fonts_url(),
+		null,
+		config( 'theme' )->version
+	);
+
 	// Main styles.
 	wp_enqueue_style(
-		app()->namespace . '/screen',
+		app()->namespace . '/style',
 		config( 'theme' )->uri . 'resources/dist/styles/style.css',
 		null,
 		config( 'theme' )->version
