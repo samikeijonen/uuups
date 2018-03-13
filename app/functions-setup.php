@@ -49,7 +49,7 @@ add_action( 'after_setup_theme', function() {
 	// Add support for editor color palette.
 	add_theme_support( 'editor-color-palette',
 		'#fff',
-		'#c7c7c7',
+		'#ecebff',
 		'#2516c7',
 		'#06031f'
 	);
