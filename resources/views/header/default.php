@@ -26,7 +26,7 @@
 		<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'uuups' ); ?></a>
 
 		<div class="app-header__branding">
-			<h1 class="app-header__title mb-0 h3"><a href="<?= esc_url( home_url() ) ?>"><?php bloginfo( 'name' ); ?></a></h1>
+			<h1 class="app-header__title mb-0 h3"><a class="decoration-none" href="<?= esc_url( home_url() ) ?>"><?php bloginfo( 'name' ); ?></a></h1>
 			<p class="app-header__description mb-0"><?php bloginfo( 'description' ); ?></p>
 		</div>
 
