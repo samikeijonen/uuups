@@ -34,13 +34,13 @@
 	display: flex;
 	justify-content: center;
 	margin-bottom: $global-spacing-unit-4;
-	min-height: $global-spacing-unit-3 * 20;
+	min-height: $global-spacing-unit-3 * 18;
 	position: relative;
 
 	&.has-left-content {
 		justify-content: flex-start;
 
-		h2 {
+		.wp-block-cover-image-text {
 			margin-left: 0;
 			text-align: left;
 		}
@@ -49,13 +49,13 @@
 	&.has-right-content {
 		justify-content: flex-end;
 
-		h2 {
+		.wp-block-cover-image-text {
 			margin-right: 0;
 			text-align: right;
 		}
 	}
 
-	h2 {
+	.wp-block-cover-image-text {
 		@include font-size(2rem);
 		color: $color-white;
 		z-index: 1;
