@@ -23,7 +23,7 @@
 	width: auto;
 }
 
-@media (min-width: 48em) {
+@media (min-width: $breakpoint-1) {
 
 	.alignwide {
 		margin-left: calc(25% - 25vw);

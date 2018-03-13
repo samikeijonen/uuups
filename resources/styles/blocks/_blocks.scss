@@ -175,7 +175,7 @@
 		width: calc(100% / 1 - #{ $global-spacing-unit-1 } * 2);
 	}
 
-	@media (min-width: 48em) {
+	@media (min-width: $breakpoint-1) {
 		@for $i from 3 through 8 { /* stylelint-disable-line */
 			&.columns-#{ $i } .blocks-gallery-item {
 				width: calc(100% / #{ $i } - #{ $global-spacing-unit-1 } * 2);
