@@ -21,9 +21,12 @@
 	@include typography;
 	@include font-size(1rem);
 
-	p,
-	.blocks-rich-text__tinymce.mce-content-body {
+	p {
 		@include typography;
+		@include font-size(1rem);
+	}
+
+	.blocks-rich-text__tinymce.mce-content-body {
 		@include font-size(1rem);
 	}
 
