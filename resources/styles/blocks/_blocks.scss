@@ -56,7 +56,9 @@
 	}
 
 	.wp-block-cover-image-text {
+		font-family: $font-heading;
 		@include font-size(2rem);
+		font-weight: 700;
 		color: $color-white;
 		z-index: 1;
 		padding: $global-spacing-unit-3;

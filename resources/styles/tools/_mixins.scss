@@ -84,6 +84,21 @@
 	list-style-type: none;
 }
 
+/// Reset all padding and styles on both unordered and ordered lists.
+///
+/// @example scss - Basic Usage Sass
+///		.transition {
+///			@include global-transition;
+///    }
+///
+/// @example css - Basic Usage CSS Output
+/// 	.transition {
+///			transition: all 300ms ease-in-out;
+///		}
+@mixin global-transition {
+	transition: all 300ms ease-in-out;
+}
+
 /// Button styles.
 ///
 /// @example scss - Basic Usage Sass
