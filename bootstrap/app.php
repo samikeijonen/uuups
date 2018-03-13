@@ -76,6 +76,7 @@ array_map(
 		'functions-filters',
 		'functions-setup',
 		'functions-template',
+		'responsive-videos',
 	]
 );
 
