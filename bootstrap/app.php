@@ -77,7 +77,7 @@ array_map(
 		'functions-setup',
 		'functions-template',
 		'functions-fonts',
-		'responsive-videos',
+		'functions-videos',
 	]
 );
 
