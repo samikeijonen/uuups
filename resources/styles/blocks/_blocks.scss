@@ -2,23 +2,28 @@
 .wp-block-button {
 	margin-bottom: $global-spacing-unit-4;
 
-	& .wp-block-button__link {
-		@include button-block;
-		display: inline-block;
-
-		&:hover,
-		&:focus,
-		&:active {
-			@include button-block-hover;
-		}
-	}
-
 	&.aligncenter {
 		text-align: center;
 	}
 
 	&.alignright {
 		text-align: right;
+	}
+}
+
+.wp-block-button__link {
+	@include button-block;
+	display: inline-block;
+	text-decoration: none;
+
+	&:visited {
+		color: $color-white;
+	}
+
+	&:hover,
+	&:focus,
+	&:active {
+		@include button-block-hover;
 	}
 }
 
