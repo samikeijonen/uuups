@@ -17,7 +17,7 @@
 
 	&:focus {
 		@include font-size(0.875);
-		background-color: $color-darkest;
+		background-color: $color-base;
 		clip: auto !important;
 		clip-path: none;
 		color: $color-white;

@@ -3,7 +3,7 @@
 ////
 
 @mixin typography {
-	color: $color-darkest;
+	color: $color-dark;
 	font-family: $font-main;
 	font-size: ($global-font-size / 1rem) * 112.5%;
 	line-height: $global-line-height;
@@ -95,7 +95,7 @@
 ///			padding: 1.5rem;
 ///		}
 @mixin button-block {
-	background-color: $color-darkest;
+	background-color: $color-base;
 	border: none;
 	color: $color-white;
 	padding: $global-spacing-unit-1 $global-spacing-unit-2;

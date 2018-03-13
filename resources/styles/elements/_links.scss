@@ -1,11 +1,11 @@
 a {
-	color: $color-darker;
+	color: $color-base;
 
 	&:visited,
 	&:hover,
 	&:focus,
 	&:active {
-		color: $color-darker;
+		color: $color-dark;
 	}
 
 	&:focus {
