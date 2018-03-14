@@ -56,7 +56,7 @@ function get_svg( $args = [] ) {
 	$args = wp_parse_args( $args, $defaults );
 
 	// Set aria hidden.
-	$aria_hidden = ' aria-hidden="true"';
+	$aria_hidden = ' aria-hidden="true" focusable="false"';
 
 	// Set ARIA.
 	$aria_labelledby = '';

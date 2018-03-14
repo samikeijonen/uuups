@@ -1,7 +1,11 @@
-.sidebar {
-	display: grid;
-	grid-gap: $global-spacing-unit-4;
-	grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+@media screen and (min-width: $breakpoint-1) {
+
+	.sidebar {
+		display: grid;
+		grid-gap: $global-spacing-unit-4;
+		grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+	}
+
 }
 
 .widget {

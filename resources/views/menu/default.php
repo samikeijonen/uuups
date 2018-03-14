@@ -5,6 +5,8 @@
  * @package Uuups
  */
 
+namespace ABC;
+
 if ( ! has_nav_menu( $data->name ) ) :
 	return;
 endif

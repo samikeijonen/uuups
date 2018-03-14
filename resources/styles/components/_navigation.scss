@@ -7,13 +7,24 @@
 
 	&.is-toggled {
 		background-color: $color-white;
-		border: 1px dashed $color-grey-1;
-		display: list-item;
+		border: 1px solid $color-grey-20;
+		display: block;
 		left: $global-spacing-unit-2;
 		margin-top: $global-spacing-unit-2;
 		padding: $global-spacing-unit-2;
 		position: absolute;
 		right: $global-spacing-unit-2;
+
+		&:after {
+			border: $global-spacing-unit-1 solid transparent;
+			border-bottom-color: $color-grey-20;
+			bottom: calc(100% + 1px);
+			content: " ";
+			height: 0;
+			position: absolute;
+			right: $global-spacing-unit-1 * 7 / 3;
+			width: 0;
+		}
 	}
 }
 
@@ -51,6 +62,10 @@
 	&:active {
 		background-color: transparent;
 		color: $color-dark;
+	}
+
+	&:focus {
+		outline: 1px dotted;
 	}
 }
 
