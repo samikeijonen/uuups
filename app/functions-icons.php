@@ -12,7 +12,7 @@ namespace ABC;
  */
 function include_svg_icons() {
 	// Define SVG sprite file.
-	$svg_icons = get_parent_theme_file_path( '/dist/images/svg-icons.svg' );
+	$svg_icons = get_parent_theme_file_path( '/resources/dist/images/svg-icons.svg' );
 
 	// If it exists, include it.
 	if ( file_exists( $svg_icons ) ) {
@@ -150,7 +150,7 @@ add_filter( 'walker_nav_menu_start_el', __NAMESPACE__ . '\nav_menu_social_icons'
  * @return string  $title The menu item's title with dropdown icon.
  */
 function dropdown_icon_to_menu_link( $title, $item, $args, $depth ) {
-	if ( 'top' === $args->theme_location ) {
+	if ( 'primary' === $args->theme_location ) {
 		foreach ( $item->classes as $value ) {
 			if ( 'menu-item-has-children' === $value || 'page_item_has_children' === $value ) {
 				$title = $title . get_svg( [ 'icon' => 'angle-down' ] );
