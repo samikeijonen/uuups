@@ -111,7 +111,7 @@ add_filter( 'comment_form_defaults', function( $defaults ) {
 	// Other elements.
 	$defaults['must_log_in']          = replace_html_class( 'comment-respond__must-log-in text-center', $defaults['must_log_in'] );
 	$defaults['logged_in_as']         = replace_html_class( 'comment-respond__logged-in-as text-center', $defaults['logged_in_as'] );
-	$defaults['comment_notes_before'] = replace_html_class( 'comment-respond__notes color-grey-1 text-center', $defaults['comment_notes_before'] );
+	$defaults['comment_notes_before'] = replace_html_class( 'comment-respond__notes color-grey-60 text-center', $defaults['comment_notes_before'] );
 	$defaults['title_reply_before']   = replace_html_class( 'comment-respond__reply-title text-center', $defaults['title_reply_before'] );
 
 	return $defaults;
