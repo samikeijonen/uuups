@@ -62,6 +62,10 @@ add_filter( 'nav_menu_link_attributes', function( $atts, $item, $args, $depth ) 
 		$atts['class'] .= ' is-active';
 	}
 
+	if ( in_array( 'button', $item->classes, true ) ) {
+		$atts['class'] .= ' menu__anchor--button';
+	}
+
 	return $atts;
 }, 10, 4 );
 

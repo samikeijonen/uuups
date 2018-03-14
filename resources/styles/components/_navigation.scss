@@ -33,7 +33,7 @@
 }
 
 .menu__anchor {
-	color: $color-grey-1;
+	color: $color-grey-60;
 	@include font-size(0.8888888888rem);
 	font-weight: 700;
 	display: block;
@@ -46,6 +46,10 @@
 	& .icon {
 		display: none;
 	}
+}
+
+.menu__anchor.menu__anchor--button {
+	@include button-block;
 }
 
 // Menu toggle.
@@ -126,6 +130,7 @@
 
 		&,
 		&.is-toggled {
+			align-items: center;
 			display: flex;
 			flex-wrap: wrap;
 		}

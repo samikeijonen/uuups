@@ -26,7 +26,7 @@ endif
 		'theme_location' => $data->name,
 		'container'      => '',
 		'menu_id'        => '',
-		'menu_class'     => 'menu__items',
+		'menu_class'     => 'menu__items animated fade-in-down',
 		'items_wrap'     => '<ul class="%2$s">%3$s</ul>',
 		'item_spacing'   => 'discard',
 	] );
