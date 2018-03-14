@@ -6,8 +6,19 @@
 	display: none;
 
 	&.is-toggled {
-		display: block;
+		background-color: $color-white;
+		border: 1px dashed $color-grey-1;
+		display: list-item;
+		left: $global-spacing-unit-2;
+		margin-top: $global-spacing-unit-2;
+		padding: $global-spacing-unit-2;
+		position: absolute;
+		right: $global-spacing-unit-2;
 	}
+}
+
+.menu__item ul {
+	padding-left: $global-spacing-unit-2;
 }
 
 .menu__anchor {
@@ -23,6 +34,50 @@
 
 	& .icon {
 		display: none;
+	}
+}
+
+// Menu toggle.
+.menu-toggle {
+	background-color: transparent;
+	color: $color-dark;
+	cursor: pointer;
+	height: $global-spacing-unit-1 * 7;
+	padding: $global-spacing-unit-1;
+	width: $global-spacing-unit-1 * 7;
+
+	&:hover,
+	&:focus,
+	&:active {
+		background-color: transparent;
+		color: $color-dark;
+	}
+}
+
+.menu-toggle-icon {
+	display: inline-block;
+	fill: currentColor;
+	stroke: $color-dark;
+	stroke-width: 2;
+	transition: all 0.3s;
+}
+
+.line {
+	transition: all 0.3s;
+}
+
+.is-toggled {
+
+	& .line-1 {
+		transform: translateX(14px) translateY(-3px) rotate(45deg);
+	}
+
+	& .line-2 {
+		opacity: 0;
+	}
+
+	& .line-3 {
+		transform: translateX(-14px) translateY(14px) rotate(-45deg);
 	}
 }
 
@@ -46,6 +101,10 @@
 
 	.menu__item {
 		position: relative;
+
+		& ul {
+			padding-left: 0;
+		}
 	}
 
 	.menu__items {
