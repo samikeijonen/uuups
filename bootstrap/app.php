@@ -74,9 +74,10 @@ array_map(
 	// Classes are auto-loaded, so we only need this for functions-files.
 	[
 		'functions-filters',
+		'functions-fonts',
+		'functions-icons',
 		'functions-setup',
 		'functions-template',
-		'functions-fonts',
 		'functions-videos',
 	]
 );
