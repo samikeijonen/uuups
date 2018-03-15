@@ -17,9 +17,16 @@
 @import "tools/mixins";
 @import "tools/font-size";
 
-.edit-post-visual-editor {
+body.gutenberg-editor-page {
 	@include typography;
-	@include font-size(1rem);
+}
+
+.edit-post-visual-editor {
+	font-size: inherit;
+
+	.editor-block-list__block {
+		max-width: calc(#{ $max-width-2 } * 1.25 + 2 * 62px );
+	}
 
 	.editor-post-title .editor-post-title__input {
 		font-family: $font-heading;
@@ -31,11 +38,11 @@
 
 	p {
 		@include typography;
-		@include font-size(1rem);
 	}
 
-	.blocks-rich-text__tinymce.mce-content-body:not(.wp-block-subhead) {
-		@include font-size(1rem);
+	.blocks-rich-text__tinymce.mce-content-body:not(.wp-block-cover-image-text):not(.wp-block-subhead):not(h2):not(h3) {
+		font-size: inherit;
+		line-height: $global-line-height;
 	}
 
 	/*--------------------------------------------------------------
