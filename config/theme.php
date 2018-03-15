@@ -32,7 +32,7 @@ return [
 	 * Theme Directory Path
 	 *-------------------------------------------------------------------------
 	 *
-	 * The absolute path to the theme directory (e.g., `/htdocs/wp-content/themes/abc`).
+	 * The absolute path to the theme directory (e.g., `/htdocs/wp-content/themes/uuups`).
 	 *
 	 */
 	'dir'       => trailingslashit( get_parent_theme_file_path() ),
@@ -42,7 +42,7 @@ return [
 	 * Theme Directory URI
 	 *-------------------------------------------------------------------------
 	 *
-	 * URI to the theme directory (e.g., `http://localhost/wp-content/themes/abc`).
+	 * URI to the theme directory (e.g., `http://localhost/wp-content/themes/uuups`).
 	 *
 	 */
 	'uri'       => trailingslashit( get_parent_theme_file_uri() ),
