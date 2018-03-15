@@ -15,6 +15,7 @@ input[type="datetime-local"],
 input[type="color"],
 textarea,
 select {
+	background-color: $color-white;
 	border: 2px solid $color-base;
 	padding: calc(#{ $global-spacing-unit-1 } - 2px);
 	width: 100%;
