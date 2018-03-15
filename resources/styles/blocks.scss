@@ -21,12 +21,20 @@
 	@include typography;
 	@include font-size(1rem);
 
+	.editor-post-title .editor-post-title__input {
+		font-family: $font-heading;
+		@include font-size($font-size-h1);
+		font-weight: 400;
+		min-height: auto;
+		text-align: center;
+	}
+
 	p {
 		@include typography;
 		@include font-size(1rem);
 	}
 
-	.blocks-rich-text__tinymce.mce-content-body {
+	.blocks-rich-text__tinymce.mce-content-body:not(.wp-block-subhead) {
 		@include font-size(1rem);
 	}
 
@@ -49,5 +57,12 @@
 	# Blocks - editor related styles.
 	--------------------------------------------------------------*/
 	@import "blocks/blocks";
+
+
+	/*--------------------------------------------------------------
+	# Utilities - Helpers and overrides.
+	--------------------------------------------------------------*/
+	@import "utilities/font-sizes";
+	@import "utilities/helpers";
 
 }
