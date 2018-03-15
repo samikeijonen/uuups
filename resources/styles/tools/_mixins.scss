@@ -117,6 +117,7 @@
 @mixin button-block {
 	background-color: $color-base;
 	border: none;
+	border-radius: 0;
 	color: $color-white;
 	padding: $global-spacing-unit-1 $global-spacing-unit-3;
 }
