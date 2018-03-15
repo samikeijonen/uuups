@@ -17,5 +17,9 @@ I have hopes and dreames for the starter theme:
 - Clean semantic HTML without lots of extra DIVs
 - Scalable, modular CSS/SASS architecture. It should guide developers how they write their CSS.
 - Ready for Gutenberg and a maximum WYSIWYG experience.
-- ES6 for JavaScript
-- Gulp, Webpack, or npm scripts for automated tasks like compiling assets, optimising images and SVGs, CSS and JS linting, SVG system, and being design system ready.
+- ES6 for JavaScript.
+- Gulp, Webpack, or npm scripts for automated tasks like    - compiling assets.
+  - optimising images and SVGs.
+  - CSS, JS, and PHPCS linting.
+  - SVG system.
+  - being design system ready.
