@@ -5,7 +5,7 @@
  * @package Uuups
  */
 
-namespace ABC;
+namespace Uuups;
 
 // Load header template.
 render_view( 'header', get_template_hierarchy() );

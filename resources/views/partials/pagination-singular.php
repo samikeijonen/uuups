@@ -5,7 +5,7 @@
  * @package Uuups
  */
 
-namespace ABC;
+namespace Uuups;
 
 singular_pagination( [
 	'show_all'        => true,

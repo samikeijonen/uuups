@@ -5,7 +5,7 @@
  * @package Foxer
  */
 
-namespace ABC;
+namespace Uuups;
 
 /**
  * Wraps embeds with `.embed-wrap` class.

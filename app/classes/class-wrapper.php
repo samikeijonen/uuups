@@ -11,14 +11,14 @@
  * the final template should be respected.  In those cases, the wrapper will
  * attempt to bail and let the plugin do its own thing.
  *
- * @package   ABC
+ * @package   Uuups
  * @author    Justin Tadlock <justintadlock@gmail.com>
  * @copyright Copyright (c) 2018, Justin Tadlock
  * @link      https://themehybrid.com/themes/abc
  * @license   http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
-namespace ABC;
+namespace Uuups;
 
 /**
  * Theme template wrapper based on Koop's modular themes.

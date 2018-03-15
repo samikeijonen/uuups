@@ -9,7 +9,7 @@
  * unregistering, removing, or modifying all of the things in this file.  Those APIs
  * should be used instead of attempting to use `remove_action()`.
  *
- * @package    ABC
+ * @package    Uuups
  * @subpackage Includes
  * @author     Justin Tadlock <justintadlock@gmail.com>
  * @copyright  Copyright (c) 2018, Justin Tadlock
@@ -17,7 +17,7 @@
  * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
-namespace ABC;
+namespace Uuups;
 
 /**
  * Set up theme support.  This is where calls to `add_theme_support()` happen.

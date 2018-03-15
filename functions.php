@@ -5,7 +5,7 @@
  * This file is used to load the autoload and bootstrap files necessary
  * for kick-starting the theme.
  *
- * @package   ABC
+ * @package   Uuups
  * @author    Justin Tadlock <justintadlock@gmail.com>
  * @copyright Copyright (c) 2018, Justin Tadlock
  * @link      https://themehybrid.com/themes/abc

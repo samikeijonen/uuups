@@ -7,14 +7,14 @@
  * array of key/value pairs.  Values can be any type of value.  Keys should
  * be named rather than numeric if you need easy access.
  *
- * @package   ABC
+ * @package   Uuups
  * @author    Justin Tadlock <justintadlock@gmail.com>
  * @copyright Copyright (c) 2018, Justin Tadlock
  * @link      https://themehybrid.com/themes/abc
  * @license   http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
-namespace ABC;
+namespace Uuups;
 
 /**
  * Registry class.

@@ -5,7 +5,7 @@
  * @package Uuups
  */
 
-namespace ABC;
+namespace Uuups;
 
 posts_pagination( [
 	'prev_text'       => __( '&larr; Previous', 'uuups' ),

@@ -13,14 +13,14 @@
  * well as providing compatible action hooks with `get_template_part()` and
  * other `get_*()` functions for templates.
  *
- * @package   ABC
+ * @package   Uuups
  * @author    Justin Tadlock <justintadlock@gmail.com>
  * @copyright Copyright (c) 2018, Justin Tadlock
  * @link      https://themehybrid.com/themes/abc
  * @license   http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
-namespace ABC;
+namespace Uuups;
 
 /**
  * View class.

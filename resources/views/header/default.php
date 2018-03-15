@@ -30,5 +30,5 @@
 			<p class="app-header__description mb-0"><?php bloginfo( 'description' ); ?></p>
 		</div>
 
-		<?php ABC\render_view( 'menu', 'primary', [ 'name' => 'primary' ] ); ?>
+		<?php Uuups\render_view( 'menu', 'primary', [ 'name' => 'primary' ] ); ?>
 	</header>

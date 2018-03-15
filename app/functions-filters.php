@@ -4,14 +4,14 @@
  *
  * This file holds functions that are used for filtering.
  *
- * @package   ABC
+ * @package   Uuups
  * @author    Justin Tadlock <justintadlock@gmail.com>
  * @copyright Copyright (c) 2018, Justin Tadlock
  * @link      https://themehybrid.com/themes/abc
  * @license   http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
-namespace ABC;
+namespace Uuups;
 
 /**
  * Filters the WP nav menu item CSS classes.

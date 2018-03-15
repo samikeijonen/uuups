@@ -5,7 +5,7 @@
  * @package Uuups
  */
 
-namespace ABC;
+namespace Uuups;
 
 ?>
 <li <?php hybrid_attr( 'comment' ); ?>>
