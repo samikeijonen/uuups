@@ -17,8 +17,8 @@
 namespace ABC;
 
 // Change the Hybrid Core framework directory path and URI.
-define( 'HYBRID_DIR', trailingslashit( get_parent_theme_file_path( 'vendor/justintadlock/hybrid-core' ) ) );
-define( 'HYBRID_URI', trailingslashit( get_parent_theme_file_uri( 'vendor/justintadlock/hybrid-core' ) ) );
+define( 'HYBRID_DIR', trailingslashit( get_parent_theme_file_path( 'vendor/justintadlock/hybrid-core' ) ) ); // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedConstantFound
+define( 'HYBRID_URI', trailingslashit( get_parent_theme_file_uri( 'vendor/justintadlock/hybrid-core' ) ) ); // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedConstantFound
 
 // Load Hybrid Core.
 require_once HYBRID_DIR . 'hybrid.php';
@@ -83,4 +83,4 @@ array_map(
 );
 
 // Runs after the app has been bootstrapped.
-do_action( app()->namespace . '/app_bootstrapped', app() );
+do_action( app()->namespace . '_app_bootstrapped', app() ); // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound

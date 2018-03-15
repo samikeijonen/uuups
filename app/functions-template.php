@@ -145,8 +145,8 @@ function collect( $items = [] ) {
  */
 function get_meta_sep( $sep = '' ) {
 
-	return apply_filters(
-		app()->namespace . '/meta_sep',
+	return apply_filters( // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound
+		app()->namespace . '_meta_sep',
 		sprintf(
 			'<span class="sep">%s</span>',
 			$sep ? $sep : esc_html_x( '&middot;', 'meta separator', 'uuups' )
@@ -176,8 +176,7 @@ function pagination( $args = [] ) {
  * @return void
  */
 function posts_pagination( $args = [] ) {
-
-	echo pagination( $args )->fetch();
+	echo pagination( $args )->fetch(); // phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped
 }
 
 /**
@@ -214,5 +213,5 @@ function singular_pagination( $args = [] ) {
 		'total'   => $numpages,
 	];
 
-	echo pagination( $args )->fetch();
+	echo pagination( $args )->fetch(); // phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped
 }

@@ -63,8 +63,8 @@ spl_autoload_register( function( $class ) {
 	// Join all the pieces together by a forward slash. These are directories.
 	$file = join( DIRECTORY_SEPARATOR, $new_pieces );
 
-	// Get the file from the `/app` folder.
-	$file = get_parent_theme_file_path( "app/{$file}" );
+	// Get the file from the `/app/classes` folder.
+	$file = get_parent_theme_file_path( "app/classes/{$file}" );
 
 	// Include the file only if it exists.
 	if ( file_exists( $file ) ) {

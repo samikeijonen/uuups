@@ -31,6 +31,8 @@
 	<!-- Check all files in this directory and the directories below it. -->
 	<file>.</file>
 
+  <exclude-pattern>*/app/classes/*</exclude-pattern>
+
 
 	<!--
 	#############################################################################

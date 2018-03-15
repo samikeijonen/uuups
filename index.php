@@ -9,4 +9,4 @@
  * @package Uuups
  */
 
- ABC\render_view( 'index' );
+ABC\render_view( 'index' );
