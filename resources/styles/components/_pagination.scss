@@ -1,29 +1,25 @@
+.pagination--posts {
+	padding-top: $global-spacing-unit-2;
+}
+
 .pagination__items {
 	@include reset-list();
+	border-bottom: 1px solid $color-light-1;
+	border-top: 1px solid $color-light-1;
+	padding: $global-spacing-unit-4;
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: center;
 }
 
 .pagination__item:not(:last-child) {
-	margin-right: $global-spacing-unit-2;
+
+	&:after {
+		content: "\002F";
+		padding: 0 $global-spacing-unit-2;
+	}
 }
 
 .pagination__anchor {
-	border: 1px solid $color-base;
-	border-radius: 50%;
-	display: block;
-	height: $global-spacing-unit-5;
-	line-height: $global-spacing-unit-5;
-	text-align: center;
 	text-decoration: none;
-	width: $global-spacing-unit-5;
-}
-
-.pagination__anchor--current {
-	background-color: $color-base;
-	color: $color-white;
-}
-
-.pagination__anchor--dots {
-	border: none;
 }
