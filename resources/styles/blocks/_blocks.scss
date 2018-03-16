@@ -27,6 +27,35 @@
 	}
 }
 
+// Columns.
+.wp-block-text-columns {
+	background-color: $color-light-1;
+	margin-bottom: $global-spacing-unit-4;
+	padding: $global-spacing-unit-8 $global-spacing-unit-2;
+
+	.wp-block-column {
+		margin: 0;
+		width: auto;
+	}
+}
+
+@media (min-width: $breakpoint-1) {
+
+	@supports (grid-area: auto) {
+
+		.wp-block-text-columns {
+			display: grid;
+			grid-gap: $global-spacing-unit-3;
+			grid-template-columns: repeat(3, 1fr);
+		}
+
+		.wp-block-column :last-child {
+			margin-bottom: 0;
+		}
+	}
+
+}
+
 // Cover image.
 .wp-block-cover-image {
 	align-items: center;
