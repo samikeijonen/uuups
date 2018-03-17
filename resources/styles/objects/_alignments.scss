@@ -25,13 +25,16 @@
 
 @media (min-width: $breakpoint-1) {
 
+	.alignleft,
+	.alignright {
+		max-width: 50%;
+	}
+
 	.alignwide {
-		margin-left: calc(25% - 25vw);
-		margin-right: calc(25% - 25vw);
+		max-width: 58rem;
 
 		&.wp-block-gallery {
-			margin-left: calc(25% - 25vw - #{ $global-spacing-unit-1 });
-			margin-right: calc(25% - 25vw - #{ $global-spacing-unit-1 });
+			max-width: calc(58rem + 1rem);
 		}
 	}
 

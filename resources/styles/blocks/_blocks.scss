@@ -144,9 +144,8 @@
 	display: flex;
 	flex-wrap: wrap;
 	list-style-type: none;
-	margin-left: -$global-spacing-unit-1;
-	margin-right: -$global-spacing-unit-1;
 	margin-top: -$global-spacing-unit-1;
+	padding-left: 0;
 
 	.blocks-gallery-item {
 		display: flex;
