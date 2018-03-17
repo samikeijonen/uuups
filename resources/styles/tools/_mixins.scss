@@ -85,7 +85,7 @@
 	list-style-type: none;
 }
 
-/// Reset all padding and styles on both unordered and ordered lists.
+/// Global transition.
 ///
 /// @example scss - Basic Usage Sass
 ///		.transition {
@@ -97,7 +97,22 @@
 ///			transition: all 300ms ease-in-out;
 ///		}
 @mixin global-transition {
-	transition: all 300ms ease-in-out;
+	transition: all $transition-duration-1 ease-in-out;
+}
+
+/// Global transition.
+///
+/// @example scss - Basic Usage Sass
+///		.box-shadow {
+///			@include global-box-shadow;
+///    }
+///
+/// @example css - Basic Usage CSS Output
+/// 	.box-shadow {
+///			box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.1);
+///		}
+@mixin global-box-shadow {
+	box-shadow: 0 $global-spacing-unit-1 $global-spacing-unit-4 $color-grey-10;
 }
 
 /// Button styles.

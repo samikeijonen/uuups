@@ -54,6 +54,9 @@ $max-width-2: $global-spacing-unit-3 * 26;
 $breakpoint-1: 48em;
 $breakpoint-2: 62em;
 
+/// Transition
+$transition-duration-1: 300ms;
+
 /// Columns for old gallery markup.
 $columns: (
 	1: 100%,
