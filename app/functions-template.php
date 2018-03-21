@@ -87,7 +87,7 @@ function config( $name ) {
  */
 function get_meta_sep( $sep = '' ) {
 
-	return apply_filters(
+	return apply_filters( // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound
 		app()->namespace . '_meta_sep',
 		sprintf(
 			' <span class="sep">%s</span> ',
