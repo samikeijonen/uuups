@@ -11,10 +11,9 @@
  * the final template should be respected.  In those cases, the wrapper will
  * attempt to bail and let the plugin do its own thing.
  *
- * @package   ABC
+ * @package   Uuups
  * @author    Justin Tadlock <justintadlock@gmail.com>
  * @copyright Copyright (c) 2018, Justin Tadlock
- * @link      https://themehybrid.com/themes/abc
  * @license   http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
@@ -103,7 +102,8 @@ class Wrapper {
 	 *
 	 * @since  1.0.0
 	 * @access public
-	 * @return array
+	 * @param  array $templates Templates.
+	 * @return array $templates
 	 */
 	public function template_hierarchy( $templates ) {
 
@@ -135,8 +135,8 @@ class Wrapper {
 	 *
 	 * @since  1.0.0
 	 * @access public
-	 * @param  string  $template
-	 * @return string
+	 * @param  string $template Template.
+	 * @return string $template
 	 */
 	public function template( $template ) {
 
@@ -153,8 +153,8 @@ class Wrapper {
 	 *
 	 * @since  1.0.0
 	 * @access public
-	 * @param  string  $template
-	 * @return string
+	 * @param  string $template Template.
+	 * @return string $template
 	 */
 	public function template_include( $template ) {
 
