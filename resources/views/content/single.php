@@ -1,6 +1,6 @@
 <?php
 /**
- * Content template.
+ * Content single template.
  *
  * @package Uuups
  */
@@ -12,10 +12,10 @@
 		while ( have_posts() ) :
 			the_post();
 
-			Hybrid\render_view( 'entry/archive', Hybrid\get_post_hierarchy() );
+			Hybrid\render_view( 'entry/single', Hybrid\get_post_hierarchy() );
 		endwhile;
 
-		Hybrid\render_view( 'partials', 'pagination-posts' );
+		comments_template( '/resources/views/partials/comments.php' );
 
 	endif;
 	?>

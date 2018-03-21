@@ -5,9 +5,7 @@
  * @package Uuups
  */
 
-namespace Uuups;
-
-posts_pagination( [
+Hybrid\posts_pagination( [
 	'prev_text'          => __( '&larr; Previous page', 'uuups' ),
 	'next_text'          => __( 'Next page &rarr;', 'uuups' ),
 	'title_text'         => __( 'Posts Navigation', 'uuups' ),

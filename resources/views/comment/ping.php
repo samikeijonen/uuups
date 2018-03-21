@@ -5,8 +5,6 @@
  * @package Uuups
  */
 
-namespace Uuups;
-
 ?>
 <li <?php hybrid_attr( 'comment' ); ?>>
 

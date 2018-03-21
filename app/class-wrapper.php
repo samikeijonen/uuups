@@ -11,7 +11,7 @@
  * the final template should be respected.  In those cases, the wrapper will
  * attempt to bail and let the plugin do its own thing.
  *
- * @package   Uuups
+ * @package   ABC
  * @author    Justin Tadlock <justintadlock@gmail.com>
  * @copyright Copyright (c) 2018, Justin Tadlock
  * @link      https://themehybrid.com/themes/abc
@@ -23,7 +23,7 @@ namespace Uuups;
 /**
  * Theme template wrapper based on Koop's modular themes.
  *
- * @link    https://core.trac.wordpress.org/ticket/12877
+ * @link   https://core.trac.wordpress.org/ticket/12877
  * @since  1.0.0
  * @access public
  */
@@ -54,7 +54,7 @@ class Wrapper {
 		'search',
 		'single',
 		'singular',
-		'attachment'
+		'attachment',
 	];
 
 	/**

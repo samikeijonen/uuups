@@ -5,10 +5,8 @@
  * @package Uuups
  */
 
-namespace Uuups;
-
 ?>
-<li <?php hybrid_attr( 'comment' ); ?>>
+<li <?php Hybrid\attr( 'comment' ); ?>>
 
 	<header class="thread__meta">
 		<?= get_avatar( $data->comment, 96, '', '', [ 'class' => 'thread__avatar' ] ); ?>
@@ -18,7 +16,7 @@ namespace Uuups;
 		<?php /* translators: %s how many days ago. */ ?>
 		<a href="<?php comment_link(); ?>" class="thread__permalink"><time class="thread__published"><?php printf( esc_html__( '%s ago', 'uuups' ), esc_html( human_time_diff( get_comment_time( 'U' ) ), current_time( 'timestamp' ) ) ); ?></time></a>
 		<?php edit_comment_link( null, get_meta_sep() ); ?>
-		<?php hybrid_comment_reply_link( [ 'before' => get_meta_sep() ] ); ?>
+		<?php Hybrid\comment_reply_link( [ 'before' => Uuups\get_meta_sep() ] ); ?>
 	</header>
 
 	<div class="thread__content">

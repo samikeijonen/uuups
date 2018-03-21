@@ -64,7 +64,7 @@ spl_autoload_register( function( $class ) {
 	$file = join( DIRECTORY_SEPARATOR, $new_pieces );
 
 	// Get the file from the `/app/classes` folder.
-	$file = get_parent_theme_file_path( "app/classes/{$file}" );
+	$file = get_parent_theme_file_path( "app/{$file}" );
 
 	// Include the file only if it exists.
 	if ( file_exists( $file ) ) {
