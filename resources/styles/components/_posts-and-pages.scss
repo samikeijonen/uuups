@@ -17,3 +17,7 @@
 	@include center;
 	max-width: $max-width-2;
 }
+
+.entry__byline {
+	@include font-size(0.8rem);
+}
