@@ -136,10 +136,13 @@ add_action( 'widgets_init', function() {
  * @return void
  */
 add_action( 'wp_enqueue_scripts', function() {
+	// Get '.min' suffix.
+	$suffix = get_min_suffix();
+
 	// Main scripts.
 	wp_enqueue_script(
 		app()->namespace . '/app',
-		config( 'theme' )->uri . 'resources/dist/scripts/app.js',
+		config( 'theme' )->uri . 'resources/dist/scripts/app' . $suffix . '.js',
 		null,
 		config( 'theme' )->version,
 		true
@@ -156,7 +159,7 @@ add_action( 'wp_enqueue_scripts', function() {
 	// Main styles.
 	wp_enqueue_style(
 		app()->namespace . '/style',
-		config( 'theme' )->uri . 'resources/dist/styles/style.css',
+		config( 'theme' )->uri . 'resources/dist/styles/style' . $suffix . '.css',
 		null,
 		config( 'theme' )->version
 	);
@@ -178,11 +181,23 @@ add_action( 'wp_enqueue_scripts', function() {
  * @return void
  */
 add_action( 'enqueue_block_editor_assets', function() {
+	// Get '.min' suffix.
+	$suffix = get_min_suffix();
+
 	// Main block styles.
 	wp_enqueue_style(
 		app()->namespace . '/blocks',
-		config( 'theme' )->uri . 'resources/dist/styles/blocks.css',
+		config( 'theme' )->uri . 'resources/dist/styles/blocks' . $suffix . '.css',
 		null,
 		config( 'theme' )->version
 	);
 }, 10 );
+
+/**
+ * Helper function for getting the script/style `.min` suffix for minified files.
+ *
+ * @return string
+ */
+function get_min_suffix() {
+	return defined( 'SCRIPT_DEBUG' ) && true === SCRIPT_DEBUG ? '' : '.min';
+}
