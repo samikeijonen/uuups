@@ -5,7 +5,7 @@
 .menu__items {
 	display: none;
 
-	&.is-toggled {
+	&[aria-expanded="true"] {
 		background-color: $color-white;
 		@include global-box-shadow;
 		display: block;
@@ -73,14 +73,14 @@
 	fill: currentColor;
 	stroke: $color-dark;
 	stroke-width: 2;
-	transition: all 0.3s;
+	transition: all $transition-duration-1;
 }
 
 .line {
-	transition: all 0.3s;
+	transition: all $transition-duration-1;
 }
 
-.is-toggled {
+[aria-expanded="true"] {
 
 	& .line-1 {
 		transform: translateX(14px) translateY(-3px) rotate(45deg);

@@ -48,6 +48,9 @@
 		}
 	} );
 
+	// Remove ARIA when on "desktop".
+	window.addEventListener( 'resize', removeAria );
+
 	// Get all the link elements within the menu.
 	links = menu.getElementsByTagName( 'a' );
 
@@ -62,11 +65,10 @@
 	 */
 	function toggleMenu() {
 		container.classList.toggle( 'is-toggled' );
-		menu.classList.toggle( 'is-toggled' );
-		button.classList.toggle( 'is-toggled' );
 
 		let expanded = ( 'false' === button.getAttribute( 'aria-expanded' ) ) ? 'true' : 'false';
 		button.setAttribute( 'aria-expanded', expanded );
+		menu.setAttribute( 'aria-expanded', expanded );
 	}
 
 	/**
@@ -107,6 +109,18 @@
 				lastFocusableElement.focus(); // Set focus on last element.
 			}
 		} );
+	}
+
+	/**
+	 * Remove ARIA on "desktop".
+	 */
+	function removeAria() {
+
+		// If menu toggle button have display: none css rule, we're on desktop.
+		if ( 'none' === window.getComputedStyle( button, null ).getPropertyValue( 'display' ) ) {
+			button.setAttribute( 'aria-expanded', 'false' );
+			menu.setAttribute( 'aria-expanded', 'false' );
+		}
 	}
 
 	/**
