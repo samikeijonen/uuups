@@ -43,3 +43,18 @@ function get_meta_sep( $sep = '' ) {
 		)
 	);
 }
+
+/**
+ * The site title markup.
+ *
+ * @since  1.0.0
+ * @access public
+ */
+function site_title() {
+	if ( is_front_page() && is_home() ) : ?>
+		<h1 class="app-header__title mb-0 h3 font-main fw-700"><a class="decoration-none color-dark" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+	<?php else : ?>
+		<p class="app-header__title mb-0 h3 font-main fw-700"><a class="decoration-none color-dark" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+	<?php
+	endif;
+}
