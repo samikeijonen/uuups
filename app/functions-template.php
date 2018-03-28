@@ -70,7 +70,7 @@ function site_description() {
 
 	if ( $description || is_customize_preview() ) :
 	?>
-		<p class="app-header__description color-grey-60 text-88 mb-0"><?php echo $description; // phpcs:ignore WordPress.XSS.EscapeOutput ?></p>
+		<p class="app-header__description color-grey-60 font-size-88 mb-0"><?php echo $description; // phpcs:ignore WordPress.XSS.EscapeOutput ?></p>
 	<?php
 	endif;
 }

@@ -8,20 +8,21 @@
 ?>
 <li <?php Hybrid\attr( 'comment' ); ?>>
 
-	<header class="thread__meta">
-		<?= get_avatar( $data->comment, 96, '', '', [ 'class' => 'thread__avatar' ] ); ?>
+<header class="comment__meta flex items-center font-size-88">
+	<?= get_avatar( $data->comment, 120, '', '', [ 'class' => 'comment__avatar' ] ) ?>
 
-		<span class="thread__author"><?php comment_author_link(); ?></span>
+	<div class="comment__info">
+		<span class="comment__author fw-700"><?php comment_author_link(); ?></span>
 		<br />
 		<?php /* translators: %s how many days ago. */ ?>
-		<a href="<?php comment_link(); ?>" class="thread__permalink"><time class="thread__published"><?php printf( esc_html__( '%s ago', 'uuups' ), esc_html( human_time_diff( get_comment_time( 'U' ) ), current_time( 'timestamp' ) ) ); ?></time></a>
-		<?php edit_comment_link( null, get_meta_sep() ); ?>
+		<a href="<?php comment_link(); ?>" class="comment__permalink"><time class="comment__published"><?php printf( __( '%s ago', 'uuups' ), human_time_diff( get_comment_time( 'U' ) ) ); ?></time></a>
+		<?php edit_comment_link( null, Uuups\get_meta_sep() ); ?>
 		<?php Hybrid\comment_reply_link( [ 'before' => Uuups\get_meta_sep() ] ); ?>
-	</header>
-
-	<div class="thread__content">
-		<?php comment_text(); ?>
 	</div>
+</header>
 
-<?php
-/* No closing </li> is needed.  WordPress will know where to add it. */
+<div class="comment__content">
+	<?php comment_text(); ?>
+</div>
+
+<?php /* No closing </li> is needed.  WordPress will know where to add it. */ ?>

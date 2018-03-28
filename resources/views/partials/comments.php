@@ -10,32 +10,44 @@ if ( post_password_required() || ( ! have_comments() && ! comments_open() && ! p
 }
 ?>
 
-<section id="comments" class="comments-template">
-	<?php if ( have_comments() ) : ?>
-		<div class="thread thread--comments">
-			<h2 id="comments-number" class="thread__title"><?php comments_number(); ?></h2>
+<?php if ( post_password_required() || ( ! have_comments() && ! comments_open() && ! pings_open() ) ) {
+	return;
+} ?>
+
+<section class="comments-template">
+	<div id="comments" class="comments">
+
+		<?php if ( have_comments() ) : ?>
+
+			<h2 class="comments__title"><?php comments_number(); ?></h2>
 
 			<?php Hybrid\render_view( 'partials', 'comments-nav' ); ?>
 
-			<ol class="thread__items">
+			<ol class="comments__list">
 				<?php
 				wp_list_comments( [
 					'style'        => 'ol',
 					'callback'     => function( $comment ) {
-						Hybrid\render_view( 'comment', [ get_comment_type( $comment ) ], [ 'comment' => $comment ] );
+						Hybrid\render_view( 'comment', Hybrid\get_comment_hierarchy(), [ 'comment' => $comment ] );
 					},
-					'end-callback' => 'Hybrid\comments_end_callback',
+					'end-callback' => function() {
+						echo '</li>';
+					},
 				] );
 				?>
 			</ol>
-		</div>
-	<?php endif ?>
 
-	<?php if ( ! comments_open() ) : ?>
-		<p class="comments-closed">
-			<?php esc_html_e( 'Comments are closed.', 'uuups' ); ?>
-		</p>
-	<?php endif ?>
+		<?php endif ?>
+
+		<?php if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) : ?>
+
+			<p class="comments__closed">
+				<?php esc_html_e( 'Comments are closed.', 'uuups' ); ?>
+			</p>
+
+		<?php endif; ?>
+	</div>
 
 	<?php comment_form(); ?>
+
 </section>

@@ -7,9 +7,9 @@
 
 if ( get_option( 'page_comments' ) && 1 < get_comment_pages_count() ) : ?>
 
-	<nav class="comments-nav" role="navigation" aria-labelledby="comments-nav-title">
+	<nav class="comments-nav" role="navigation" aria-labelledby="comments-nav__title">
 
-		<h3 id="comments-nav__title" class="screen-reader-text"><?php esc_html_e( 'Comments Navigation', 'uuups' ); ?></h3>
+		<h3 class="comments-nav__title" id="comments-nav__title" class="screen-reader-text"><?php esc_html_e( 'Comments Navigation', 'uuups' ); ?></h3>
 
 		<?php
 		previous_comments_link(
@@ -36,4 +36,5 @@ if ( get_option( 'page_comments' ) && 1 < get_comment_pages_count() ) : ?>
 
 	</nav>
 
-<?php endif ?>
+<?php
+endif;
