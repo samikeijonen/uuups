@@ -2,6 +2,14 @@
 	margin-bottom: $global-spacing-unit-6;
 }
 
+.comments-nav {
+	margin-bottom: $global-spacing-unit-6;
+}
+
+.comments-nav__title {
+	width: 100%;
+}
+
 .comments__list,
 .comments__list .children {
 	@include reset-list();
