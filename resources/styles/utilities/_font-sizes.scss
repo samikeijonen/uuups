@@ -21,3 +21,7 @@
 .h6 {
 	@include font-size($font-size-h6);
 }
+
+.text-88 {
+	@include font-size(0.8888888888rem);
+}
