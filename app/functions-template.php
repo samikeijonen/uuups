@@ -58,3 +58,19 @@ function site_title() {
 	<?php
 	endif;
 }
+
+/**
+ * The site description markup.
+ *
+ * @since  1.0.0
+ * @access public
+ */
+function site_description() {
+	$description = get_bloginfo( 'description', 'display' ); // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound
+
+	if ( $description || is_customize_preview() ) :
+	?>
+		<p class="app-header__description mb-0"><?php echo $description; // phpcs:ignore WordPress.XSS.EscapeOutput ?></p>
+	<?php
+	endif;
+}

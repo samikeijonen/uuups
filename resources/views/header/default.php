@@ -26,8 +26,10 @@
 		<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'uuups' ); ?></a>
 
 		<div class="app-header__branding">
-		<?php Uuups\site_title(); ?>
-			<p class="app-header__description mb-0"><?php bloginfo( 'description' ); ?></p>
+		<?php
+			Uuups\site_title();
+			Uuups\site_description();
+		?>
 		</div>
 
 		<?php Hybrid\render_view( 'menu', 'primary', [ 'name' => 'primary' ] ); ?>
