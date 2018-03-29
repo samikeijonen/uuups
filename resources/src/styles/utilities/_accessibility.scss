@@ -16,7 +16,7 @@
 	word-wrap: normal !important;
 
 	&:focus {
-		@include font-size(0.875);
+		@include font-size(0.875rem);
 		background-color: $color-base;
 		clip: auto !important;
 		clip-path: none;

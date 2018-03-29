@@ -18,9 +18,9 @@ module.exports = {
 
 	// Style options.
 	styleSRC: './resources/src/styles/style.scss', // Path to main .scss file.
-	styleDistAll: [ 'resources/dist/styles/*.css' ], // All CSS dist files.
-	styleDistSRC: [ 'resources/dist/styles/*.css', '!resources/dist/styles/*.min.css' ], // All CSS dist files but not *.min files.
-	styleDestination: './resources/dist/styles/', // Path to place the compiled CSS file.
+	styleDistAll: [ 'dist/styles/*.css' ], // All CSS dist files.
+	styleDistSRC: [ 'dist/styles/*.css', '!dist/styles/*.min.css' ], // All CSS dist files but not *.min files.
+	styleDestination: './dist/styles/', // Path to place the compiled CSS file.
 	outputStyle: 'expanded', // Available options → 'compact' or 'compressed' or 'nested' or 'expanded'
 	errLogToConsole: true,
 	precision: 10,
@@ -34,8 +34,8 @@ module.exports = {
 
 	// JS Vendor options.
 	jsSRC: [ 'resources/src/scripts/*.js', '!resources/src/scripts/*.min.js' ], // All JS files.
-	jsDistSRC: [ 'resources/dist/scripts/*.js', '!resources/dist/scripts/*.min.js' ], // All JS dist files.
-	jsDST: './resources/dist/scripts/', // Path to place the compiled JS vendors file.
+	jsDistSRC: [ 'dist/scripts/*.js', '!dist/scripts/*.min.js' ], // All JS dist files.
+	jsDST: './dist/scripts/', // Path to place the compiled JS vendors file.
 	JSLint: [
 		'resources/src/scripts/concat/*.js',
 		'resources/src/scripts/*.js',
@@ -48,17 +48,17 @@ module.exports = {
 
 	// JS Custom options.
 	jsConcatSRC: './resources/src/scripts/concat/*.js', // Path to JS custom scripts folder.
-	jsConcatDST: './resources/dist/scripts/', // Path to place the compiled JS custom scripts file.
+	jsConcatDST: './dist/scripts/', // Path to place the compiled JS custom scripts file.
 	jsConcatFile: 'project.js', // Compiled JS custom file name. Default set to custom i.e. project.js.
 
 	// Images options.
 	imgSRC: [ 'resources/src/images/*' ], // Source folder of images which should be optimized and watched.
-	imgDST: './resources/dist/images/', // Destination folder of optimized images. Must be different from the imagesSRC folder.
+	imgDST: './dist/images/', // Destination folder of optimized images. Must be different from the imagesSRC folder.
 
 	// SVG options.
-	svgSprite: './resources/dist/images/svg-icons.svg', // SVG sprite file.
+	svgSprite: './dist/images/svg-icons.svg', // SVG sprite file.
 	svgSRC: './resources/src/svg-icons/*.svg', // Source folder of SVG icons.
-	svgDST: './resources/dist/images/', // Destination folder of svg sprite file. Must be different from the svgSRC folder.
+	svgDST: './dist/images/', // Destination folder of svg sprite file. Must be different from the svgSRC folder.
 
 	// Watch files paths.
 	styleWatchFiles: 'resources/src/styles/**/*.scss', // Path to all *.scss files inside css folder and inside them.

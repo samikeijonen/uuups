@@ -142,7 +142,7 @@ add_action( 'wp_enqueue_scripts', function() {
 	// Main scripts.
 	wp_enqueue_script(
 		app()->namespace . '/app',
-		config( 'theme' )->uri . 'resources/dist/scripts/app' . $suffix . '.js',
+		config( 'theme' )->uri . 'dist/scripts/app' . $suffix . '.js',
 		null,
 		config( 'theme' )->version,
 		true
@@ -159,7 +159,7 @@ add_action( 'wp_enqueue_scripts', function() {
 	// Main styles.
 	wp_enqueue_style(
 		app()->namespace . '/style',
-		config( 'theme' )->uri . 'resources/dist/styles/style' . $suffix . '.css',
+		config( 'theme' )->uri . 'dist/styles/style' . $suffix . '.css',
 		null,
 		config( 'theme' )->version
 	);
@@ -187,7 +187,7 @@ add_action( 'enqueue_block_editor_assets', function() {
 	// Main block styles.
 	wp_enqueue_style(
 		app()->namespace . '/blocks',
-		config( 'theme' )->uri . 'resources/dist/styles/blocks' . $suffix . '.css',
+		config( 'theme' )->uri . 'dist/styles/blocks' . $suffix . '.css',
 		null,
 		config( 'theme' )->version
 	);
