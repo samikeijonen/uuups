@@ -17,7 +17,7 @@ module.exports = {
 	injectChanges: true,
 
 	// Style options.
-	styleSRC: './resources/src/styles/style.scss', // Path to main .scss file.
+	styleSRC: './resources/styles/style.scss', // Path to main .scss file.
 	styleDistAll: [ 'dist/styles/*.css' ], // All CSS dist files.
 	styleDistSRC: [ 'dist/styles/*.css', '!dist/styles/*.min.css' ], // All CSS dist files but not *.min files.
 	styleDestination: './dist/styles/', // Path to place the compiled CSS file.
@@ -27,45 +27,45 @@ module.exports = {
 	styleName: 'style.css',
 	styleMinName: 'style.min.css',
 	SassLint: [
-		'resources/src/styles/**/*.scss',
-		'!resources/src/styles/generic/_normalize.scss',
+		'resources/styles/**/*.scss',
+		'!resources/styles/generic/_normalize.scss',
 		'!node_modules/**'
 	],
 
 	// JS Vendor options.
-	jsSRC: [ 'resources/src/scripts/*.js', '!resources/src/scripts/*.min.js' ], // All JS files.
+	jsSRC: [ 'resources/scripts/*.js', '!resources/scripts/*.min.js' ], // All JS files.
 	jsDistSRC: [ 'dist/scripts/*.js', '!dist/scripts/*.min.js' ], // All JS dist files.
 	jsDST: './dist/scripts/', // Path to place the compiled JS vendors file.
 	JSLint: [
-		'resources/src/scripts/concat/*.js',
-		'resources/src/scripts/*.js',
-		'!resources/src/scripts/project.js',
-		'!resources/src/scripts/*.min.js',
+		'resources/scripts/concat/*.js',
+		'resources/scripts/*.js',
+		'!resources/scripts/project.js',
+		'!resources/scripts/*.min.js',
 		'!gruntfile.js',
 		'!gulpfile.js',
 		'!node_modules/**'
 	],
 
 	// JS Custom options.
-	jsConcatSRC: './resources/src/scripts/concat/*.js', // Path to JS custom scripts folder.
+	jsConcatSRC: './resources/scripts/concat/*.js', // Path to JS custom scripts folder.
 	jsConcatDST: './dist/scripts/', // Path to place the compiled JS custom scripts file.
 	jsConcatFile: 'project.js', // Compiled JS custom file name. Default set to custom i.e. project.js.
 
 	// Images options.
-	imgSRC: [ 'resources/src/images/*' ], // Source folder of images which should be optimized and watched.
+	imgSRC: [ 'resources/images/*' ], // Source folder of images which should be optimized and watched.
 	imgDST: './dist/images/', // Destination folder of optimized images. Must be different from the imagesSRC folder.
 
 	// SVG options.
 	svgSprite: './dist/images/svg-icons.svg', // SVG sprite file.
-	svgSRC: './resources/src/svg-icons/*.svg', // Source folder of SVG icons.
+	svgSRC: './resources/svg-icons/*.svg', // Source folder of SVG icons.
 	svgDST: './dist/images/', // Destination folder of svg sprite file. Must be different from the svgSRC folder.
 
 	// Watch files paths.
-	styleWatchFiles: 'resources/src/styles/**/*.scss', // Path to all *.scss files inside css folder and inside them.
-	vendorJSWatchFiles: 'resources/src/scripts/vendor/*.js', // Path to all vendor JS files.
-	customJSWatchFiles: 'resources/src/scripts/custom/*.js', // Path to all custom JS files.
+	styleWatchFiles: 'resources/styles/**/*.scss', // Path to all *.scss files inside css folder and inside them.
+	vendorJSWatchFiles: 'resources/scripts/vendor/*.js', // Path to all vendor JS files.
+	customJSWatchFiles: 'resources/scripts/custom/*.js', // Path to all custom JS files.
 	PHPWatchFiles: '**/*.php', // Path to all PHP files.
-	SVGWatchFiles: 'resources/src/svg-icons/*.svg', // Path to all SVG files.
+	SVGWatchFiles: 'resources/svg-icons/*.svg', // Path to all SVG files.
 
 	// Translation options.
 	textDomain: 'uuups', // Your textdomain here.
