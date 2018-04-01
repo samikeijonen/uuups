@@ -23,7 +23,7 @@ namespace Uuups;
  */
 function get_meta_sep( $sep = '' ) {
 
-	return apply_filters( // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound
+	return apply_filters(
 		'uuups_meta_sep',
 		sprintf(
 			' <span class="sep">%s</span> ',

@@ -21,3 +21,32 @@
 .entry__byline {
 	@include font-size(0.8rem);
 }
+
+.entry__footer {
+	margin-top: $global-spacing-unit-4;
+}
+
+.terms-wrapper {
+	display: block;
+
+	& + .terms-wrapper {
+		margin-top: $global-spacing-unit-2;
+	}
+
+	& .icon {
+		margin-right: $global-spacing-unit-2;
+	}
+
+	& a {
+		color: $color-grey-60;
+		@include font-size(0.88888888rem);
+		text-decoration: none;
+
+		&:hover,
+		&:focus,
+		&:active {
+			color: $color-base;
+			text-decoration: underline;
+		}
+	}
+}
