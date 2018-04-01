@@ -14,18 +14,6 @@
 namespace Uuups;
 
 /**
- * Returns a configuration object.
- *
- * @since  1.0.0
- * @access public
- * @param  string $name Config object.
- * @return object
- */
-function config( $name ) {
-	return app()->get( "config.{$name}" );
-}
-
-/**
  * Returns the metadata separator.
  *
  * @since  1.0.0
@@ -36,7 +24,7 @@ function config( $name ) {
 function get_meta_sep( $sep = '' ) {
 
 	return apply_filters( // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound
-		app()->namespace . '_meta_sep',
+		'uuups_meta_sep',
 		sprintf(
 			' <span class="sep">%s</span> ',
 			$sep ? $sep : esc_html_x( '&middot;', 'meta separator', 'uuups' )

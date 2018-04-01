@@ -53,7 +53,7 @@ function fonts_url() {
  * @return array $urls          URLs to print for resource hints.
  */
 function resource_hints( $urls, $relation_type ) {
-	if ( wp_style_is( app()->namespace . '/style', 'queue' ) && 'preconnect' === $relation_type ) {
+	if ( wp_style_is( 'uuups-style', 'queue' ) && 'preconnect' === $relation_type ) {
 		$urls[] = [
 			'href' => 'https://fonts.gstatic.com',
 			'crossorigin',

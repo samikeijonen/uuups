@@ -179,5 +179,5 @@ function social_links_icons() {
 	 *
 	 * @param array $social_links_icons Array of social links icons.
 	 */
-	return apply_filters( app()->namespace . '_social_links_icons', $social_links_icons ); // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound
+	return apply_filters( 'uuups_social_links_icons', $social_links_icons ); // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound
 }

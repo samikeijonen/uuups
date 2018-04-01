@@ -103,7 +103,7 @@ add_action( 'init', function() {
 
 	// Register custom image sizes.
 	// @link https://developer.wordpress.org/reference/functions/add_image_size/.
-	add_image_size( app()->namespace . '/medium', 750, 422, true );
+	add_image_size( 'uuups/medium', 750, 422, true );
 }, 5 );
 
 /**
@@ -139,29 +139,32 @@ add_action( 'wp_enqueue_scripts', function() {
 	// Get '.min' suffix.
 	$suffix = get_min_suffix();
 
+	// Get version.
+	$version = wp_get_theme( get_template() )->get( 'Version' );
+
 	// Main scripts.
 	wp_enqueue_script(
-		app()->namespace . '/app',
-		config( 'theme' )->uri . 'dist/scripts/app' . $suffix . '.js',
+		'uuups-app',
+		get_parent_theme_file_uri( 'dist/scripts/app' . $suffix . '.js' ),
 		null,
-		config( 'theme' )->version,
+		$version,
 		true
 	);
 
 	// Add custom fonts.
 	wp_enqueue_style(
-		app()->namespace . '/fonts',
+		'uuups-fonts',
 		fonts_url(),
 		null,
-		config( 'theme' )->version
+		null
 	);
 
 	// Main styles.
 	wp_enqueue_style(
-		app()->namespace . '/style',
-		config( 'theme' )->uri . 'dist/styles/style' . $suffix . '.css',
+		'uuups-style',
+		get_parent_theme_file_uri( 'dist/styles/style' . $suffix . '.css' ),
 		null,
-		config( 'theme' )->version
+		$version
 	);
 
 	// Comments JS.
@@ -184,12 +187,15 @@ add_action( 'enqueue_block_editor_assets', function() {
 	// Get '.min' suffix.
 	$suffix = get_min_suffix();
 
+	// Get version.
+	$version = wp_get_theme( get_template() )->get( 'Version' );
+
 	// Main block styles.
 	wp_enqueue_style(
-		app()->namespace . '/blocks',
-		config( 'theme' )->uri . 'dist/styles/blocks' . $suffix . '.css',
+		'uuups-blocks',
+		get_parent_theme_file_uri( 'dist/styles/blocks' . $suffix . '.css' ),
 		null,
-		config( 'theme' )->version
+		$version
 	);
 }, 10 );
 

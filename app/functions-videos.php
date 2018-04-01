@@ -58,7 +58,7 @@ function maybe_wrap_embed( $html, $url ) {
 		'#https?://(www\.|embed\.)?ted\.com/talks/.*#i',
 	];
 
-	$patterns = apply_filters( app()->namespace . '_maybe_wrap_embed_patterns', $patterns ); // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound
+	$patterns = apply_filters( 'uuups_maybe_wrap_embed_patterns', $patterns ); // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound
 
 	foreach ( $patterns as $pattern ) {
 		$do_wrap = preg_match( $pattern, $url );
