@@ -64,13 +64,13 @@ module.exports = {
 	styleWatchFiles: 'resources/styles/**/*.scss', // Path to all *.scss files inside css folder and inside them.
 	vendorJSWatchFiles: 'resources/scripts/vendor/*.js', // Path to all vendor JS files.
 	customJSWatchFiles: 'resources/scripts/custom/*.js', // Path to all custom JS files.
-	PHPWatchFiles: '**/*.php', // Path to all PHP files.
+	PHPWatchFiles: [ '**/*.php', '!vendor/**/*.php' ], // Path to all PHP files.
 	SVGWatchFiles: 'resources/svg-icons/*.svg', // Path to all SVG files.
 
 	// Translation options.
 	textDomain: 'uuups', // Your textdomain here.
 	translationFile: 'uuups.pot', // Name of the transalation file.
-	translationDST: './languages', // Where to save the translation files.
+	translationDST: 'resources/lang', // Where to save the translation files.
 	packageName: 'Uuups', // Package name.
 
 	// Browsers you care about for autoprefixing. Browserlist https://github.com/ai/browserslist
