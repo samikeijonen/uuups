@@ -1,4 +1,4 @@
-resources/dist/scripts/*.js
+dist/scripts/*.js
 docs
 gulpfile.js
 config.js
