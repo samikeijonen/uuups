@@ -27,6 +27,7 @@
 }
 
 .terms-wrapper {
+	color: $color-grey-60;
 	display: block;
 
 	& + .terms-wrapper {
@@ -45,7 +46,7 @@
 		&:hover,
 		&:focus,
 		&:active {
-			color: $color-base;
+			color: $color-dark;
 			text-decoration: underline;
 		}
 	}
