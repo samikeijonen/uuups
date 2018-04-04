@@ -11,7 +11,7 @@
 module.exports = {
 	// Project options.
 	project: 'Uuups', // Project Name.
-	projectURL: 'foxland-products.local/', // Local project URL of your already running WordPress site. Could be something like local.dev or localhost:8888.
+	projectURL: 'foxland-products.test', // Local project URL of your already running WordPress site. Could be something like local.dev or localhost:8888.
 	productURL: './', // Theme/Plugin URL. Leave it like it is, since our gulpfile.js lives in the root folder.
 	browserAutoOpen: true,
 	injectChanges: true,
