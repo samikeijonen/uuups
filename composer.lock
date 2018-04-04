@@ -132,15 +132,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/justintadlock/hybrid-core.git",
-                "reference": "cedb7ed7341899e6385245851944023e3598f338"
+                "reference": "11e89382ef0f1f10a58e9f134803aad0b92260c6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/justintadlock/hybrid-core/zipball/cedb7ed7341899e6385245851944023e3598f338",
-                "reference": "cedb7ed7341899e6385245851944023e3598f338",
+                "url": "https://api.github.com/repos/justintadlock/hybrid-core/zipball/11e89382ef0f1f10a58e9f134803aad0b92260c6",
+                "reference": "11e89382ef0f1f10a58e9f134803aad0b92260c6",
                 "shasum": ""
             },
             "require": {
+                "php": ">=5.6",
                 "psr/container": "^1.0"
             },
             "type": "library",
@@ -151,13 +152,14 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "GPL-2.0+"
+                "GPL-2.0-or-later"
             ],
             "authors": [
                 {
                     "name": "Justin Tadlock",
-                    "email": "justin@justintadlock.com",
-                    "homepage": "http://justintadlock.com"
+                    "email": "justintadlock@gmail.com",
+                    "homepage": "http://justintadlock.com",
+                    "role": "Developer"
                 }
             ],
             "description": "Hybrid Core WordPress theme framework",
@@ -165,7 +167,7 @@
             "keywords": [
                 "wordpress"
             ],
-            "time": "2018-04-02 20:23:47"
+            "time": "2018-04-03 21:11:17"
         },
         {
             "name": "psr/container",

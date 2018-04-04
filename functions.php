@@ -19,5 +19,19 @@ if ( file_exists( get_parent_theme_file_path( 'vendor/autoload.php' ) ) ) {
 	require_once get_parent_theme_file_path( 'vendor/autoload.php' );
 }
 
-// Bootstrap the theme.
-require_once get_parent_theme_file_path( 'bootstrap/app.php' );
+// Bootstrap the theme. This loads any functions-files from the `/app` folder
+// that are needed. If the theme needs a more robust bootstrapping process, it's
+// recommended to create a `/bootstrap` folder and load those files directly.
+array_map(
+	function( $file ) {
+		require_once get_parent_theme_file_path( "app/{$file}.php" );
+	},
+	[
+		'functions-filters',
+		'functions-fonts',
+		'functions-icons',
+		'functions-setup',
+		'functions-template',
+		'functions-videos',
+	]
+);
