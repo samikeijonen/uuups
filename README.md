@@ -47,7 +47,7 @@ Starter theme uses [Composer](https://getcomposer.org/) and [NPM](https://www.np
 
 Theme has [Hybrid Core 5.0](https://github.com/justintadlock/hybrid-core/tree/5.0) as a must have dependency.
 
-## Setup script
+### Setup script
 
 We should have [setup script](https://github.com/justintadlock/abc/issues/6) that handles all the search/replace.
 
@@ -100,6 +100,8 @@ Note that ABC theme have webpack. In this theme experiment I still use [Gulp](ht
 
 Run `gulp watch` to activate build process in the background. You'll get development proxy at http://localhost:3000 where changes to the code will be updated automatically to browser.
 
+Tip: Press `ctrl` + `c` to quit build process.
+
 All tasks:
 
 - `gulp watch` &ndash; Automatically handle changes to CSS, JS, SVGs, and images. Also kicks off BrowserSync.
@@ -116,6 +118,54 @@ from `resources/images/` to `dist/images/`.
 - `gulp` &ndash; Run tasks in this order: `i18n`, `icons`,
 `styles`, `scripts`, `imagemin`, `docs`.
 
-You can configure Gulp related settings in the `gulp-config.js` file.
-It's needed if you want to change files names or folder structure.
+You can configure Gulp related settings
+in the `gulp-config.js` file. It's needed
+if you want to change files names or folder structure.
 
+## SASS and CSS structure
+
+SASS and CSS structure is probably one of
+the biggest aspects of the front-end and theming.
+It should have scalable and modular architecture.
+
+Styles are written in `resources/styles` folder.
+There are two separate stylesheets
+which are automatically compiled to `dist/styles`:
+
+- `style.scss` &ndash; Main stylesheet for the theme.
+- `blocks.scss` &ndash; Stylesheet only for the new editor (Gutenberg).
+
+Actually all the files in `resources/styles/*.scss`
+are outputted in the `dist/styles/*.css` during build process.
+
+### Main stylesheet
+
+Main stylesheet `style.scss` follows [ITCSS](https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/) approach and [BEM](http://getbem.com/) naming convention.
+
+The main point of ITCSS is that it separates
+your CSS codebase to several sections (layers).
+It guides you to write CSS from low-specificity selectors to more specific ones.
+
+It also plays nicely with the new editor (Gutenberg)
+because block styles can be one of the layers.
+
+We should write separate documentation about SASS and CSS,
+it's that important.
+
+### Styles for the editor
+
+`blocks.scss` tries to put all the necessary styles
+to the new editor.
+
+Note a little trick where we prefix all the styles
+with class `edit-post-visual-editor`:
+
+```css
+// Editor styles.
+.edit-post-visual-editor {
+	// Write custom CSS.
+	// Or import parts of the SASS.
+	// @import "elements/blockquote";
+	// @import "elements/hr";
+}
+```
