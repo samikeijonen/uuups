@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/samikeijonen/uuups.svg?branch=master)](https://travis-ci.org/samikeijonen/uuups)
 
-# Uuups WordPress Theme
+# Uuups &ndash; experimental WordPress Theme
 
 Uuups is an experiment how to bring your theme to the next level. This is playground from two starter themes:
 
@@ -23,3 +23,15 @@ I have hopes and dreames for the starter theme:
   - CSS, JS, and PHPCS linting.
   - SVG system.
   - being design system ready.
+
+## Directory structure
+
+Directory structure aims to be modern app-like, what ever that means :)
+
+- `resources` folder for editing theme for your needs. This is where the most of the magic happens.
+	- `resources/views` have all the template structure and partials files.
+	- `resources/styles` have SASS files.
+	- `resources/scripts` have JS files.
+	- `resources/svg-icons` have SVG icons.
+	- `resources/lang` have language files.
+
