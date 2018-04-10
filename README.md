@@ -229,6 +229,23 @@ I also recommend installing ESLint extension to your IDE, for example [VS Code E
 
 Theme has an `.editorconfig` file that sets your code editor settings accordingly. [Download the extension to your editor](http://editorconfig.org/#download). The settings will automatically be applied when you edit code when you have the extension.
 
+### SASS docs
+
+Running `gulp docs` creates [sassdocs](http://sassdoc.com/) in `docs` folder. At the moment I'm
+testing [Herman sassdoc theme](https://github.com/oddbird/sassdoc-theme-herman).
+
+The end [result can be seen in Github pages](https://samikeijonen.github.io/uuups/). This is nowhere near of design system but it's a nice start.
+
+### SVG system
+
+All the main SVG related functions can be found in the `app/functions-icons.php` file. It’s well-documented in the code, but here’s a summary:
+
+- Add SVG icons in `resources/svg-icons` folder. From these icons build tools creates SVG sprite file in `dist/images/svg-icons.svg`.
+- Include the SVG sprite file via the `wp_footer` hook.
+- `get_svg()` function returns the SVG icon markup.
+- For example `get_svg( [ 'icon' => 'angle-down' ] )`.
+- Icons can be used in social links menu, in dropdown menu, you name it.
+
 ## FAQ
 
 > What about sidebars?
