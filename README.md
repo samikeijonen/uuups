@@ -2,7 +2,13 @@
 
 # Uuups &ndash; experimental WordPress Theme
 
-Uuups is an experiment how to bring your theme to the next level. This is playground from two starter themes:
+Uuups is an experiment how to bring your theme to the next level.
+
+1. The theme uses modern PHP, JS, CSS, and other tools.
+
+1. The theme also attempts to stick with WP standards so that it doesn't feel too foreign.
+
+This is playground from two starter themes:
 
 1. [Justin Tadlock's starter theme](https://github.com/justintadlock/abc)
 1. [Mine starter theme called Foxer](https://github.com/justintadlock/abc)
@@ -186,6 +192,43 @@ At the moment support for new editor means these things to me:
 enqueueing block related styles using `enqueue_block_editor_assets` hook.
 
 See previous chapter [styles for the editor](#styles-for-the-editor).
+
+## Coding standards and linting
+
+Theme mostly follows [WordPress coding standards](https://make.wordpress.org/core/handbook/best-practices/coding-standards/). There are couple of things you need to install in your
+machine.
+
+1. [Install PHP CodeSniffer](https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards) to validate code developed for WordPress.
+1. [Install PHP Compatibility](https://github.com/wimg/PHPCompatibility) check for PHP CodeSniffer.
+1. [Install PHPCS and WPCS to your IDE](https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards#using-phpcs-and-wpcs-from-within-your-ide).
+
+In `phpcs.xml` there is custom PHP rulesets (sniffs) which are based on Underscores rulesets.
+
+### Run your code automatically through Travis CI
+
+When you commit changes in Github, let [Travis CI](https://travis-ci.org/) run and test your code.
+
+File `.travis.yml` is the configuration file for setting up Travis. It's also based on Underscores configuration.
+
+### Style linting
+
+Gulp task `gulp sass:lint` checks SASS files using [stylelint](https://github.com/stylelint/stylelint).
+
+File `.stylelintrc` is the configuration file for stylelint.
+
+I also recommend installing stylelint extension to your IDE, for example [vscode-stylelint](https://marketplace.visualstudio.com/items?itemName=shinnn.stylelint).
+
+### JavaScript linting
+
+Gulp task `gulp js:lint` checks SASS files using [ESLint](https://eslint.org/).
+
+File `.eslintrc.js` is the configuration file for ESLint. And `.eslintignore` file for what files to ignore from linting.
+
+I also recommend installing ESLint extension to your IDE, for example [VS Code ESLint extension](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint).
+
+### Editorconfig
+
+Theme has an `.editorconfig` file that sets your code editor settings accordingly. [Download the extension to your editor](http://editorconfig.org/#download). The settings will automatically be applied when you edit code when you have the extension.
 
 ## FAQ
 
