@@ -98,6 +98,13 @@ wp theme activate <theme-name>
 
 Note that ABC theme have webpack. In this theme experiment I still use [Gulp](https://gulpjs.com/) tasks for automated processes.
 
+You can configure Gulp related settings
+in the `gulp-config.js` file. Change at least `projectURL`
+to match your local environment URL. This will be needed
+if you use Browsersync feature by running `gulp watch`.
+
+You can also change files names or folder structure but it's not recommended.
+
 Run `gulp watch` to activate build process in the background. You'll get development proxy at http://localhost:3000 where changes to the code will be updated automatically to browser.
 
 Tip: Press `ctrl` + `c` to quit build process.
@@ -117,10 +124,6 @@ to`resources/lang/` folder.
 from `resources/images/` to `dist/images/`.
 - `gulp` &ndash; Run tasks in this order: `i18n`, `icons`,
 `styles`, `scripts`, `imagemin`, `docs`.
-
-You can configure Gulp related settings
-in the `gulp-config.js` file. It's needed
-if you want to change files names or folder structure.
 
 ## SASS and CSS structure
 
@@ -183,3 +186,13 @@ At the moment support for new editor means these things to me:
 enqueueing block related styles using `enqueue_block_editor_assets` hook.
 
 See previous chapter [styles for the editor](#styles-for-the-editor).
+
+## FAQ
+
+> What about sidebars?
+
+For old themes I probably would not try to add align-wide support if child themes can be broken.
+
+For new themes you can definitely have "wide" and "full-width" blocks even if there is sidebar on the right or left.
+
+Yeah but how? Using CSS :)
