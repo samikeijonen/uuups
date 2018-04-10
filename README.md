@@ -53,6 +53,30 @@ $ cd wp-content/themes
 You can download files from this repo or clone the repository to the `wp-content/themes` directory.
 
 ```
-$ git clone -b master git@github.com:justintadlock/abc.git <theme-name>
+$ git clone -b master git@github.com:samikeijonen/uuups.git <theme-name>
+```
+
+Make sure you’re in the root folder of your theme.
+
+```
+$ cd <theme-name>
+```
+
+1. Install composer dependencies.
+
+```
+$ composer install
+```
+
+1. Install node dependencies.
+
+```
+$ npm install
+```
+
+1. Activate your theme under `Appearance > Themes`. Or use WP-CLI to activate your theme.
+
+```
+wp theme activate <theme-name>
 ```
 
