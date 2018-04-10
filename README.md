@@ -9,6 +9,10 @@ Uuups is an experiment how to bring your theme to the next level. This is playgr
 
 All the ideas are still open and there are no documentation.
 
+## Demo
+
+[Demo can be seen in Foxland site](https://foxland.fi/demo/uuups/).
+
 ## My wishlist
 
 I have hopes and dreames for the starter theme:
