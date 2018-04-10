@@ -35,3 +35,24 @@ Directory structure aims to be modern app-like, what ever that means :)
 	- `resources/svg-icons` have SVG icons.
 	- `resources/lang` have language files.
 
+## Installation and setup
+
+Starter theme uses [Composer](https://getcomposer.org/) and [NPM](https://www.npmjs.com/) to manage its dependencies. Install both on your machine before using this starter theme.
+
+Theme has [Hybrid Core 5.0](https://github.com/justintadlock/hybrid-core/tree/5.0) as a must have dependency.
+
+### Creating new theme
+
+WordPress themes lives in the `wp-content/themes` folder. This is where we fetch our starter theme files.
+
+```
+# Go to the `themes` directory of your WordPress installation.
+$ cd wp-content/themes
+```
+
+You can download files from this repo or clone the repository to the `wp-content/themes` directory.
+
+```
+$ git clone -b master git@github.com:justintadlock/abc.git <theme-name>
+```
+
