@@ -13,6 +13,10 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+#: app/functions-filters.php:62
+msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr ""
+
 #: app/functions-fonts.php:23
 msgctxt "Lora font: on or off"
 msgid "on"
@@ -36,12 +40,12 @@ msgctxt "nav menu location"
 msgid "Primary"
 msgstr ""
 
-#: app/functions-setup.php:127
+#: app/functions-setup.php:125
 msgctxt "sidebar"
 msgid "Primary"
 msgstr ""
 
-#: app/functions-template.php:30
+#: app/template-general.php:30
 msgctxt "meta separator"
 msgid "&middot;"
 msgstr ""
@@ -106,4 +110,12 @@ msgstr ""
 
 #: resources/views/partials/pagination-singular.php:11
 msgid "Pages:"
+msgstr ""
+
+#: resources/views/entry/single/post.php:31
+msgid "Categories:"
+msgstr ""
+
+#: resources/views/entry/single/post.php:37
+msgid "Tags:"
 msgstr ""

@@ -369,4 +369,4 @@ gulp.task( 'styles', [ 'cssnano' ] );
 gulp.task( 'scripts', [ 'uglify' ] );
 gulp.task( 'lint', [ 'sass:lint', 'js:lint' ] );
 gulp.task( 'docs', [ 'sassdoc' ] );
-gulp.task( 'default', [ 'i18n', 'icons', 'styles', 'scripts', 'imagemin' ] );
+gulp.task( 'default', [ 'i18n', 'icons', 'styles', 'scripts', 'imagemin', 'docs' ] );

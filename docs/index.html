@@ -144,6 +144,8 @@
 <li><a href="https://github.com/justintadlock/abc">Mine starter theme called<span class="widont">&nbsp;</span>Foxer</a></li>
 </ol>
 <p>All the ideas are still open and there are no<span class="widont">&nbsp;</span>documentation.</p>
+<h2 id="demo">Demo</h2>
+<p><a href="https://foxland.fi/demo/uuups/">Demo can be seen in Foxland<span class="widont">&nbsp;</span>site</a>.</p>
 <h2 id="my-wishlist">My wishlist</h2>
 <p>I have hopes and dreames for the starter<span class="widont">&nbsp;</span>theme:</p>
 <ul>
@@ -164,7 +166,7 @@
 <h2 id="directory-structure">Directory structure</h2>
 <p>Directory structure aims to be modern app-like, what ever that means<span class="widont">&nbsp;</span>:)</p>
 <ul>
-<li><code>resources</code> folder for editing theme for your needs. This is where the most of the magic happens.
+<li><code>resources</code> folder is for editing theme for your needs. This is where the most of the magic happens.
 <ul>
 <li><code>resources/views</code> have all the template structure and partials<span class="widont">&nbsp;</span>files.</li>
 <li><code>resources/styles</code> have SASS<span class="widont">&nbsp;</span>files.</li>
@@ -173,6 +175,8 @@
 <li><code>resources/lang</code> have language<span class="widont">&nbsp;</span>files.</li>
 </ul>
 </li>
+<li><code>app</code> folder is for theme related functions and classes. Classes are loaded automatically but <code>functions-files</code> needs to be added manually via <code>functions.php</code>.</li>
+<li><code>dist</code> folder has processed and optimized assets ready to be included to theme. Do not edit or add anything to <code>dist</code> folder. It is processed automatically via task tools like Webpack or<span class="widont">&nbsp;</span>Gulp.</li>
 </ul>
 <h2 id="installation-and-setup">Installation and setup</h2>
 <p>Starter theme uses <a href="https://getcomposer.org/">Composer</a> and <a href="https://www.npmjs.com/">NPM</a> to manage its dependencies. Install both on your machine before using this starter<span class="widont">&nbsp;</span>theme.</p>
@@ -203,14 +207,25 @@ $ cd wp-content/themes
 </code></pre>
 <h2 id="gulp-tasks">Gulp tasks</h2>
 <p>Note that ABC theme have webpack. In this theme experiment I still use <a href="https://gulpjs.com/">Gulp</a> tasks for automated<span class="widont">&nbsp;</span>processes.</p>
+<p>Run <code>gulp watch</code> to activate build process in the background. You’ll get development proxy at <a href="http://localhost:3000">http://localhost:3000</a> where changes to the code will be updated automatically to<span class="widont">&nbsp;</span>browser.</p>
+<p>All tasks:</p>
 <ul>
 <li><code>gulp watch</code> – Automatically handle changes to CSS, JS, SVGs, and images. Also kicks off<span class="widont">&nbsp;</span>BrowserSync.</li>
-<li><code>gulp icons</code> – Minify and clean SVG icons and create SVG<span class="widont">&nbsp;</span>sprite.</li>
-<li><code>gulp i18n</code> – Scan the theme and create a POT<span class="widont">&nbsp;</span>file.</li>
+<li><code>gulp scripts</code> – Minify javascript files from <code>resources/scripts/</code> to <code>dist/scripts/</code>.</li>
+<li><code>gulp styles</code> – Compile, prefix, combine media queries, and minify CSS files from <code>resources/styles/</code> to <code>dist/styles/</code>.</li>
+<li><code>gulp icons</code> – Minify and clean SVG icons and create SVG sprite from <code>resources/svg-icons/*.svg</code> to <code>dist/images/svg-icons.svg</code>.</li>
+<li><code>gulp i18n</code> – Scan the theme and create a POT file
+to<code>resources/lang/</code> folder.</li>
 <li><code>gulp sass:lint</code> – Run SASS against WordPress coding<span class="widont">&nbsp;</span>standards.</li>
 <li><code>gulp js:lint</code> – Run Javascript against WordPress coding<span class="widont">&nbsp;</span>standards.</li>
-<li><code>gulp docs</code> – Run Javascript against WordPress coding<span class="widont">&nbsp;</span>standards.</li>
+<li><code>gulp docs</code> – Create SASS docs which can be seen in <a href="https://samikeijonen.github.io/uuups/">Uuups Github<span class="widont">&nbsp;</span>pages</a>.</li>
+<li><code>gulp imagemin</code> – Compress images
+from <code>resources/images/</code> to <code>dist/images/</code>.</li>
+<li><code>gulp</code> – Run tasks in this order: <code>i18n</code>, <code>icons</code>,
+<code>styles</code>, <code>scripts</code>, <code>imagemin</code>, <code>docs</code>.</li>
 </ul>
+<p>You can configure Gulp related settings in the <code>gulp-config.js</code> file.
+It’s needed if you want to change files names or folder<span class="widont">&nbsp;</span>structure.</p>
 
   </div>
 
