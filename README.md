@@ -62,19 +62,20 @@ Make sure you’re in the root folder of your theme.
 $ cd <theme-name>
 ```
 
-1. Install composer dependencies.
+#### Install composer dependencies.
 
 ```
 $ composer install
 ```
 
-1. Install node dependencies.
+#### Install node dependencies.
 
 ```
 $ npm install
 ```
 
-1. Activate your theme under `Appearance > Themes`. Or use WP-CLI to activate your theme.
+#### Active theme
+Activate your theme under `Appearance > Themes`. Or use WP-CLI to activate your theme.
 
 ```
 wp theme activate <theme-name>
