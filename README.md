@@ -41,6 +41,12 @@ Starter theme uses [Composer](https://getcomposer.org/) and [NPM](https://www.np
 
 Theme has [Hybrid Core 5.0](https://github.com/justintadlock/hybrid-core/tree/5.0) as a must have dependency.
 
+## Setup script
+
+We should have [setup script](https://github.com/justintadlock/abc/issues/6) that handles all the search/replace.
+
+Or similar how [Tonik can be installed via composer](http://labs.tonik.pl/theme/docs/installation/).
+
 ### Creating new theme
 
 WordPress themes lives in the `wp-content/themes` folder. This is where we fetch our starter theme files.
@@ -80,4 +86,17 @@ Activate your theme under `Appearance > Themes`. Or use WP-CLI to activate your 
 ```
 wp theme activate <theme-name>
 ```
+
+## Gulp tasks
+
+Note that ABC theme have webpack. In this theme experiment I still use [Gulp](https://gulpjs.com/) tasks for automated processes.
+
+- `gulp watch` &ndash; Automatically handle changes to CSS, JS, SVGs, and images. Also kicks off BrowserSync.
+- `gulp scripts` &ndash; Minify javascript files.
+- `gulp styles` &ndash; Compile, prefix, combine media queries, and minify CSS files.
+- `gulp icons` &ndash; Minify and clean SVG icons and create SVG sprite.
+- `gulp i18n` &ndash; Scan the theme and create a POT file.
+- `gulp sass:lint` &ndash; Run SASS against WordPress coding standards.
+- `gulp js:lint` &ndash; Run Javascript against WordPress coding standards.
+- `gulp docs` &ndash; Run Javascript against WordPress coding standards.
 
