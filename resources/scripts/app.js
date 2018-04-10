@@ -41,7 +41,7 @@
 	// Close menu using Esc key.
 	document.addEventListener( 'keyup', function( event ) {
 		if ( 27 === event.keyCode ) {
-			if ( button.classList.contains( 'is-toggled' ) ) {
+			if ( isMenuOpen() ) {
 				toggleMenu(); // Close menu.
 				button.focus();
 			}
@@ -77,7 +77,7 @@
 	function setFocus() {
 
 		// Bail if menu is not open.
-		if ( ! button.classList.contains( 'is-toggled' ) ) {
+		if ( ! isMenuOpen() ) {
 			return;
 		}
 
@@ -109,6 +109,16 @@
 				lastFocusableElement.focus(); // Set focus on last element.
 			}
 		} );
+	}
+
+	/**
+	 * Is menu open.
+	 *
+	 * @returns {boolean} True or false.
+	 */
+	function isMenuOpen() {
+		let isMenuOpen = ( 'false' === button.getAttribute( 'aria-expanded' ) ) ? false : true;
+		return isMenuOpen;
 	}
 
 	/**
