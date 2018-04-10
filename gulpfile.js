@@ -3,7 +3,7 @@
  *
  * Customize your project in the config.js file
  */
-const config = require( './config.js' );
+const config = require( './gulp-config.js' );
 
 // Require our dependencies
 const autoprefixer = require( 'autoprefixer' );

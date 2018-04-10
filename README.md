@@ -101,3 +101,5 @@ Note that ABC theme have webpack. In this theme experiment I still use [Gulp](ht
 - `gulp js:lint` &ndash; Run Javascript against WordPress coding standards.
 - `gulp docs` &ndash; Run Javascript against WordPress coding standards.
 
+You can configure Gulp related settings in the `gulp-config.js` file.
+
