@@ -306,6 +306,19 @@ enqueueing block related styles using <code>enqueue_block_editor_assets</code> h
 <p>I also recommend installing ESLint extension to your IDE, for example <a href="https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint">VS Code ESLint<span class="widont">&nbsp;</span>extension</a>.</p>
 <h3 id="editorconfig">Editorconfig</h3>
 <p>Theme has an <code>.editorconfig</code> file that sets your code editor settings accordingly. <a href="http://editorconfig.org/#download">Download the extension to your editor</a>. The settings will automatically be applied when you edit code when you have the<span class="widont">&nbsp;</span>extension.</p>
+<h3 id="sass-docs">SASS docs</h3>
+<p>Running <code>gulp docs</code> creates <a href="http://sassdoc.com/">sassdocs</a> in <code>docs</code> folder. At the moment I’m
+testing <a href="https://github.com/oddbird/sassdoc-theme-herman">Herman sassdoc<span class="widont">&nbsp;</span>theme</a>.</p>
+<p>The end <a href="https://samikeijonen.github.io/uuups/">result can be seen in Github pages</a>. This is nowhere near of design system but it’s a nice<span class="widont">&nbsp;</span>start.</p>
+<h3 id="svg-system">SVG system</h3>
+<p>All the main SVG related functions can be found in the <code>app/functions-icons.php</code> file. It’s well-documented in the code, but here’s a<span class="widont">&nbsp;</span>summary:</p>
+<ul>
+<li>Add SVG icons in <code>resources/svg-icons</code> folder. From these icons build tools creates SVG sprite file in <code>dist/images/svg-icons.svg</code>.</li>
+<li>Include the SVG sprite file via the <code>wp_footer</code> hook.</li>
+<li><code>get_svg()</code> function returns the SVG icon<span class="widont">&nbsp;</span>markup.</li>
+<li>For example <code>get_svg( [ 'icon' =&gt; 'angle-down' ] )</code>.</li>
+<li>Icons can be used in social links menu, in dropdown menu, you name<span class="widont">&nbsp;</span>it.</li>
+</ul>
 <h2 id="faq">FAQ</h2>
 <blockquote>
 <p>What about sidebars?</p>
