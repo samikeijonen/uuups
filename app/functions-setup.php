@@ -20,7 +20,7 @@
 namespace Uuups;
 
 /**
- * Set up theme support.  This is where calls to `add_theme_support()` happen.
+ * Set up theme support. This is where calls to `add_theme_support()` happen.
  *
  * @since  1.0.0
  * @access public
@@ -98,12 +98,10 @@ add_action( 'init', function() {
  */
 add_action( 'init', function() {
 	// Set the `post-thumbnail` size.
-	// @link https://developer.wordpress.org/reference/functions/set_post_thumbnail_size/.
 	set_post_thumbnail_size( 178, 100, true );
 
 	// Register custom image sizes.
-	// @link https://developer.wordpress.org/reference/functions/add_image_size/.
-	add_image_size( 'uuups/medium', 750, 422, true );
+	add_image_size( 'uuups-medium', 750, 422, true );
 }, 5 );
 
 /**
@@ -127,83 +125,3 @@ add_action( 'widgets_init', function() {
 		'name' => esc_html_x( 'Primary', 'sidebar', 'uuups' ),
 	] + $args );
 }, 5 );
-
-/**
- * Enqueue scripts/styles.
- *
- * @since  1.0.0
- * @access public
- * @return void
- */
-add_action( 'wp_enqueue_scripts', function() {
-	// Get '.min' suffix.
-	$suffix = get_min_suffix();
-
-	// Get version.
-	$version = wp_get_theme( get_template() )->get( 'Version' );
-
-	// Main scripts.
-	wp_enqueue_script(
-		'uuups-app',
-		get_parent_theme_file_uri( 'dist/scripts/app' . $suffix . '.js' ),
-		null,
-		$version,
-		true
-	);
-
-	// Add custom fonts.
-	wp_enqueue_style(
-		'uuups-fonts',
-		fonts_url(),
-		null,
-		null
-	);
-
-	// Main styles.
-	wp_enqueue_style(
-		'uuups-style',
-		get_parent_theme_file_uri( 'dist/styles/style' . $suffix . '.css' ),
-		null,
-		$version
-	);
-
-	// Comments JS.
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
-
-	// Dequeue Core block styles.
-	wp_dequeue_style( 'wp-blocks' );
-}, 10 );
-
-/**
- * Enqueue editor scripts/styles.
- *
- * @since  1.0.0
- * @access public
- * @return void
- */
-add_action( 'enqueue_block_editor_assets', function() {
-	// Get '.min' suffix.
-	$suffix = get_min_suffix();
-
-	// Get version.
-	$version = wp_get_theme( get_template() )->get( 'Version' );
-
-	// Main block styles.
-	wp_enqueue_style(
-		'uuups-blocks',
-		get_parent_theme_file_uri( 'dist/styles/blocks' . $suffix . '.css' ),
-		null,
-		$version
-	);
-}, 10 );
-
-/**
- * Helper function for getting the script/style `.min` suffix for minified files.
- *
- * @return string
- */
-function get_min_suffix() {
-	return defined( 'SCRIPT_DEBUG' ) && true === SCRIPT_DEBUG ? '' : '.min';
-}

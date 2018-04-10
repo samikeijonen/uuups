@@ -30,6 +30,7 @@ array_map(
 		'functions-filters',
 		'functions-fonts',
 		'functions-icons',
+		'functions-scripts',
 		'functions-setup',
 		'functions-videos',
 		'template-general',
