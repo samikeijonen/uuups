@@ -95,13 +95,14 @@ wp theme activate <theme-name>
 Note that ABC theme have webpack. In this theme experiment I still use [Gulp](https://gulpjs.com/) tasks for automated processes.
 
 - `gulp watch` &ndash; Automatically handle changes to CSS, JS, SVGs, and images. Also kicks off BrowserSync.
-- `gulp scripts` &ndash; Minify javascript files.
-- `gulp styles` &ndash; Compile, prefix, combine media queries, and minify CSS files.
-- `gulp icons` &ndash; Minify and clean SVG icons and create SVG sprite.
-- `gulp i18n` &ndash; Scan the theme and create a POT file.
+- `gulp scripts` &ndash; Minify javascript files from `resources/scripts/` to `dist/scripts/`.
+- `gulp styles` &ndash; Compile, prefix, combine media queries, and minify CSS files from `resources/styles/` to `dist/styles/`.
+- `gulp icons` &ndash; Minify and clean SVG icons and create SVG sprite from `resources/svg-icons/*.svg` to `dist/images/svg-icons.svg`.
+- `gulp i18n` &ndash; Scan the theme and create a POT file to `resources/lang/` folder.
 - `gulp sass:lint` &ndash; Run SASS against WordPress coding standards.
 - `gulp js:lint` &ndash; Run Javascript against WordPress coding standards.
-- `gulp docs` &ndash; Run Javascript against WordPress coding standards.
+- `gulp docs` &ndash; Create SASS docs which can be seen in [Uuups Github pages](https://samikeijonen.github.io/uuups/).
+- `gulp imagemin` &ndash; Compress images from `resources/images/` to `dist/images/`.
 
-You can configure Gulp related settings in the `gulp-config.js` file.
+You can configure Gulp related settings in the `gulp-config.js` file. It's needed if you want to change files names or folder structure.
 
