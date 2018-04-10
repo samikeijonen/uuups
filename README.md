@@ -81,6 +81,7 @@ $ npm install
 ```
 
 #### Active theme
+
 Activate your theme under `Appearance > Themes`. Or use WP-CLI to activate your theme.
 
 ```
