@@ -169,3 +169,17 @@ with class `edit-post-visual-editor`:
 	// @import "elements/hr";
 }
 ```
+
+## New editor (Gutenberg) support
+
+At the moment support for new editor means these things to me:
+
+- Add support `editor-color-palette` to match theme colors.
+- Add support for `align-wide` blocks.
+- Dequeue Core block styles: `wp_dequeue_style( 'wp-blocks' )`.
+	- This is because I don't want to overwrite and add too spesific rules to main stylesheet.
+	- Core blocks have their own CSS layer as mentioned before. It can be found in `recources/styles/blocks`.
+- Get maximum WYSIWYG experience in the editor by
+enqueueing block related styles using `enqueue_block_editor_assets` hook.
+
+See previous chapter [styles for the editor](#styles-for-the-editor).
