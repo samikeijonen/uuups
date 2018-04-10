@@ -28,12 +28,14 @@ I have hopes and dreames for the starter theme:
 
 Directory structure aims to be modern app-like, what ever that means :)
 
-- `resources` folder for editing theme for your needs. This is where the most of the magic happens.
+- `resources` folder is for editing theme for your needs. This is where the most of the magic happens.
 	- `resources/views` have all the template structure and partials files.
 	- `resources/styles` have SASS files.
 	- `resources/scripts` have JS files.
 	- `resources/svg-icons` have SVG icons.
 	- `resources/lang` have language files.
+- `app` folder is for theme related functions and classes. Classes are loaded automatically but `functions-files` needs to be added manually via `functions.php`.
+- `dist` folder has processed and optimized assets ready to be included to theme. Do not edit or add anything to `dist` folder. It is processed automatically via task tools like Webpack or Gulp.
 
 ## Installation and setup
 
