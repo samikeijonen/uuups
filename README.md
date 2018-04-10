@@ -5,7 +5,6 @@
 Uuups is an experiment how to bring your theme to the next level.
 
 1. The theme uses modern PHP, JS, CSS, and other tools.
-
 1. The theme also attempts to stick with WP standards so that it doesn't feel too foreign.
 
 This is playground from two starter themes:
@@ -21,7 +20,7 @@ All the ideas are still open and there are no documentation.
 
 ## My wishlist
 
-I have hopes and dreames for the starter theme:
+I have hopes and dreams for the starter theme:
 
 - Accessibility ready out of the box.
 - Clean semantic HTML without lots of extra DIVs
