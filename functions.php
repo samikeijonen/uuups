@@ -31,7 +31,7 @@ array_map(
 		'functions-fonts',
 		'functions-icons',
 		'functions-setup',
-		'functions-template',
 		'functions-videos',
+		'template-general',
 	]
 );
