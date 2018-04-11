@@ -10,7 +10,7 @@ Uuups is an experiment how to bring your theme to the next level.
 This is playground from two starter themes:
 
 1. [Justin Tadlock's starter theme](https://github.com/justintadlock/abc)
-1. [Mine starter theme called Foxer](https://github.com/justintadlock/abc)
+1. [Mine starter theme called Foxer](https://github.com/samikeijonen/foxer)
 
 All the ideas are still open and there are no documentation.
 
