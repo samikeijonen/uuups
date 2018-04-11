@@ -3,10 +3,10 @@
  * Index template.
  *
  * This template is an absolute fallback template. Ideally, it should not
- * be loaded.  In the off-chance that it is, we're simply going to load
+ * be loaded. In the off-chance that it is, we're simply going to load
  * the default view template.
  *
  * @package Uuups
  */
 
-Uuups\render_view( 'index' );
+Hybrid\render_view( 'index' );
