@@ -195,14 +195,16 @@ See previous chapter [styles for the editor](#styles-for-the-editor).
 ## Template files
 
 We try to avoid having lot's of similar template files
-in the root folder. In fact, there is only `index.php` template file with code `Hybrid\render_view( 'index' )`. This loads `resources/views/index.php` file.
+in the root folder. In fact, in root there is only `index.php` template file but that should never be loaded unless plugins do some weird things.
 
-You could have other top-level templates, like `page.php`, `archive.php`, etc. in the root `resources/views/` folder and get used like they typically would in theme root. But we try to avoid that also by organizing template
-files in different folders.
+Main fallback template file is found in `resources/views/index.php`.
 
-To summarize: All the template files are in `resources/views/` folder. In there template files are
+All the template files are also in `resources/views/` folder. In there template files are
 organized in sub-folder using `Hybrid\render_view()` and
 `Hybrid\get_template_hierarchy()` functions.
+
+You could have other top-level templates, like `page.php`, `archive.php`, etc. in the root of `resources/views/` folder and get used like they typically would in theme root. But we try to avoid that also by organizing template
+files in different folders.
 
 ### Hybrid\render_view() function
 
