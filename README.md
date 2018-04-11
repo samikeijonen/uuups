@@ -194,13 +194,23 @@ See previous chapter [styles for the editor](#styles-for-the-editor).
 
 ## Template files
 
-In the root folder there is only `index.php` template file with code `Hybrid\render_view( 'index' )`. This loads
-`resources/views/index.php` file.
+We try to avoid having lot's of similar template files
+in the root folder. In fact, there is only `index.php` template file with code `Hybrid\render_view( 'index' )`. This loads `resources/views/index.php` file.
+
+You could have other top-level templates, like `page.php`, `archive.php`, etc. in the root `resources/views/` folder and get used like they typically would in theme root. But we try to avoid that also by organizing template
+files in different folders.
+
+To summarize: All the template files are in `resources/views/` folder. In there template files are
+organized in sub-folder using `Hybrid\render_view()` and
+`Hybrid\get_template_hierarchy()` functions.
+
+### Hybrid\render_view() function
 
 `Hybrid\render_view()` is Hybrid Core function which is
 more powerfull version of `get_template_part()` function. You can for example pass variables to it:
 
 ```php
+// Hybrid\render_view( $name, $slugs = [], $data = [] )
 Hybrid\render_view( 'menu', 'primary', [ 'name' => 'primary' ] );
 ```
 
@@ -209,12 +219,30 @@ If it doesn't exists it fallbacks to `resources/views/menu/default.php` file. An
 
 ```php
 // Hybrid\render_view( 'menu', 'primary', [ 'name' => 'primary' ] ) hierarchy.
-resources/views/menu/primary.php
-resources/views/menu/default.php
-resources/views/menu.php
+// 1. resources/views/menu/primary.php
+// 2. resources/views/menu/default.php
+// 3. resources/views/menu.php
 ```
 
 The last parameter `[ 'name' => 'primary' ]` is for passing data in to template file. You can access the data like this `$data->name`.
+
+### Hybrid\get_template_hierarchy() function
+
+Let's look at example line: `Hybrid\render_view( 'content', Hybrid\get_template_hierarchy() );`
+
+This loads template files from `resources/views/content` folder respecting the [template hierarchy](https://developer.wordpress.org/themes/basics/template-hierarchy/).
+
+```php
+// Example hierarchy for single `download` post type.
+// 1. resources/views/content/single-download-{slug}.php
+// 2. resources/views/content/single-download.php
+// 3. resources/views/content/single.php
+// 4. resources/views/content/singular.php
+// 5. resources/views/content/index.php
+// 6. resources/views/index.php
+```
+
+
 
 ## Coding standards and linting
 
