@@ -205,7 +205,14 @@ Hybrid\render_view( 'menu', 'primary', [ 'name' => 'primary' ] );
 ```
 
 Above code loads `resources/views/menu/primary.php` file.
-If it doesn't exists it fallbacks to `resources/views/menu/default.php` file.
+If it doesn't exists it fallbacks to `resources/views/menu/default.php` file. And if it doesn't exists it fallbacks to `resources/views/menu.php` file. Hierarchy looks like this:
+
+```php
+// Hybrid\render_view( 'menu', 'primary', [ 'name' => 'primary' ] ) hierarchy.
+resources/views/menu/primary.php
+resources/views/menu/default.php
+resources/views/menu.php
+```
 
 The last parameter `[ 'name' => 'primary' ]` is for passing data in to template file. You can access the data like this `$data->name`.
 
