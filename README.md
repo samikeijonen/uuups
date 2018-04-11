@@ -192,6 +192,23 @@ enqueueing block related styles using `enqueue_block_editor_assets` hook.
 
 See previous chapter [styles for the editor](#styles-for-the-editor).
 
+## Template files
+
+In the root folder there is only `index.php` template file with code `Hybrid\render_view( 'index' )`. This loads
+`resources/views/index.php` file.
+
+`Hybrid\render_view()` is Hybrid Core function which is
+more powerfull version of `get_template_part()` function. You can for example pass variables to it:
+
+```php
+Hybrid\render_view( 'menu', 'primary', [ 'name' => 'primary' ] );
+```
+
+Above code loads `resources/views/menu/primary.php` file.
+If it doesn't exists it fallbacks to `resources/views/menu/default.php` file.
+
+The last parameter `[ 'name' => 'primary' ]` is for passing data in to template file. You can access the data like this `$data->name`.
+
 ## Coding standards and linting
 
 Theme mostly follows [WordPress coding standards](https://make.wordpress.org/core/handbook/best-practices/coding-standards/). There are couple of things you need to install in your
