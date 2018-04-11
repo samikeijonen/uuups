@@ -285,6 +285,43 @@ with class <code>edit-post-visual-editor</code>:</p>
 enqueueing block related styles using <code>enqueue_block_editor_assets</code> hook.</li>
 </ul>
 <p>See previous chapter <a href="#styles-for-the-editor">styles for the<span class="widont">&nbsp;</span>editor</a>.</p>
+<h2 id="template-files">Template files</h2>
+<p>We try to avoid having lot’s of similar template files
+in the root folder. In fact, there is only <code>index.php</code> template file with code <code>Hybrid\render_view( 'index' )</code>. This loads <code>resources/views/index.php</code> file.</p>
+<p>You could have other top-level templates, like <code>page.php</code>, <code>archive.php</code>, etc. in the root <code>resources/views/</code> folder and get used like they typically would in theme root. But we try to avoid that also by organizing template
+files in different<span class="widont">&nbsp;</span>folders.</p>
+<p>To summarize: All the template files are in <code>resources/views/</code> folder. In there template files are
+organized in sub-folder using <code>Hybrid\render_view()</code> and
+<code>Hybrid\get_template_hierarchy()</code> functions.</p>
+<h3 id="hybrid-render_view-function">Hybrid\render_view() function</h3>
+<p><code>Hybrid\render_view()</code> is Hybrid Core function which is
+more powerfull version of <code>get_template_part()</code> function. You can for example pass variables to<span class="widont">&nbsp;</span>it:</p>
+<pre><code class="lang-php">// Hybrid\render_view( $name, $slugs = [], $data = [] )
+Hybrid\render_view( 'menu', 'primary', [ 'name' =&gt; 'primary' ] );
+</code></pre>
+<ul>
+<li>Above code loads <code>resources/views/menu/primary.php</code> file.</li>
+<li>If it doesn’t exists it fallbacks to <code>resources/views/menu/default.php</code> file.</li>
+<li>And if it doesn’t exists it fallbacks to <code>resources/views/menu.php</code> file.</li>
+</ul>
+<p>Hierarchy looks like<span class="widont">&nbsp;</span>this:</p>
+<pre><code class="lang-php">// Hybrid\render_view( 'menu', 'primary', [ 'name' =&gt; 'primary' ] ) hierarchy.
+// 1. resources/views/menu/primary.php
+// 2. resources/views/menu/default.php
+// 3. resources/views/menu.php
+</code></pre>
+<p>The last parameter <code>[ 'name' =&gt; 'primary' ]</code> is for passing data in to template file. You can access the data like this <code>$data-&gt;name</code>.</p>
+<h3 id="hybrid-get_template_hierarchy-function">Hybrid\get_template_hierarchy() function</h3>
+<p>Let’s look at example line: <code>Hybrid\render_view( 'content', Hybrid\get_template_hierarchy() );</code></p>
+<p>This loads template files from <code>resources/views/content</code> folder respecting the <a href="https://developer.wordpress.org/themes/basics/template-hierarchy/">template<span class="widont">&nbsp;</span>hierarchy</a>.</p>
+<pre><code class="lang-php">// Example hierarchy for single `download` post type.
+// 1. resources/views/content/single-download-{slug}.php
+// 2. resources/views/content/single-download.php
+// 3. resources/views/content/single.php
+// 4. resources/views/content/singular.php
+// 5. resources/views/content/index.php
+// 6. resources/views/index.php
+</code></pre>
 <h2 id="coding-standards-and-linting">Coding standards and<span class="widont">&nbsp;</span>linting</h2>
 <p>Theme mostly follows <a href="https://make.wordpress.org/core/handbook/best-practices/coding-standards/">WordPress coding standards</a>. There are couple of things you need to install in your<span class="widont">&nbsp;</span>machine.</p>
 <ol>
@@ -306,11 +343,11 @@ enqueueing block related styles using <code>enqueue_block_editor_assets</code> h
 <p>I also recommend installing ESLint extension to your IDE, for example <a href="https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint">VS Code ESLint<span class="widont">&nbsp;</span>extension</a>.</p>
 <h3 id="editorconfig">Editorconfig</h3>
 <p>Theme has an <code>.editorconfig</code> file that sets your code editor settings accordingly. <a href="http://editorconfig.org/#download">Download the extension to your editor</a>. The settings will automatically be applied when you edit code when you have the<span class="widont">&nbsp;</span>extension.</p>
-<h3 id="sass-docs">SASS docs</h3>
+<h2 id="sass-docs">SASS docs</h2>
 <p>Running <code>gulp docs</code> creates <a href="http://sassdoc.com/">sassdocs</a> in <code>docs</code> folder. At the moment I’m
 testing <a href="https://github.com/oddbird/sassdoc-theme-herman">Herman sassdoc<span class="widont">&nbsp;</span>theme</a>.</p>
 <p>The end <a href="https://samikeijonen.github.io/uuups/">result can be seen in Github pages</a>. This is nowhere near of design system but it’s a nice<span class="widont">&nbsp;</span>start.</p>
-<h3 id="svg-system">SVG system</h3>
+<h2 id="svg-system">SVG system</h2>
 <p>All the main SVG related functions can be found in the <code>app/functions-icons.php</code> file. It’s well-documented in the code, but here’s a<span class="widont">&nbsp;</span>summary:</p>
 <ul>
 <li>Add SVG icons in <code>resources/svg-icons</code> folder. From these icons build tools creates SVG sprite file in <code>dist/images/svg-icons.svg</code>.</li>
