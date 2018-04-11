@@ -98,10 +98,7 @@ add_action( 'init', function() {
  */
 add_action( 'init', function() {
 	// Set the `post-thumbnail` size.
-	set_post_thumbnail_size( 178, 100, true );
-
-	// Register custom image sizes.
-	add_image_size( 'uuups-medium', 750, 422, true );
+	set_post_thumbnail_size( 972, 600, true );
 }, 5 );
 
 /**

@@ -62,3 +62,40 @@ function site_description() {
 	<?php
 	endif;
 }
+
+/**
+ * Displays an optional post thumbnail.
+ *
+ * Wraps the post thumbnail in an anchor element on index views, or a div
+ * element when on single views.
+ *
+ * @since  1.0.0
+ * @access public
+ */
+function post_thumbnail() {
+	if ( post_password_required() || is_attachment() || ! has_post_thumbnail() ) {
+		return;
+	}
+
+	if ( is_singular() ) :
+	?>
+
+		<div class="entry__thumbnail">
+			<?php the_post_thumbnail(); ?>
+		</div><!-- .entry__thumbnail -->
+
+	<?php else : ?>
+
+		<a class="post-thumbnail block mb-2" href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
+			<?php
+			the_post_thumbnail( 'post-thumbnail', [
+				'alt' => the_title_attribute( [
+					'echo' => false,
+				] ),
+			] );
+			?>
+		</a>
+
+	<?php
+	endif; // End is_singular().
+}

@@ -18,6 +18,10 @@
 	max-width: $max-width-2;
 }
 
+.hide-excerpt .entry__summary {
+	display: none;
+}
+
 .entry__byline {
 	@include font-size(0.8rem);
 }

@@ -1,7 +1,3 @@
-.pagination--posts {
-	padding-top: $global-spacing-unit-2;
-}
-
 .pagination__items {
 	@include reset-list();
 	border-bottom: 1px solid $color-light-1;

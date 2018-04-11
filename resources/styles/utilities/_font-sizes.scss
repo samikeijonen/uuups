@@ -11,7 +11,7 @@
 }
 
 .h4 {
-	@include font-size($font-size-h4);
+	@include font-size($font-size-h4, $modifier: -0.5);
 }
 
 .h5 {

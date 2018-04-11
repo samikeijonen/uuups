@@ -2,6 +2,15 @@
 	text-decoration: none;
 }
 
+.h-decoration-underline {
+
+	&:hover,
+	&:focus,
+	&:active {
+		text-decoration: underline;
+	}
+}
+
 .font-main {
 	font-family: $font-main;
 }
@@ -20,4 +29,8 @@
 
 .text-center {
 	text-align: center;
+}
+
+.block {
+	display: block;
 }
