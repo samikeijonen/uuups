@@ -214,8 +214,11 @@ more powerfull version of `get_template_part()` function. You can for example pa
 Hybrid\render_view( 'menu', 'primary', [ 'name' => 'primary' ] );
 ```
 
-Above code loads `resources/views/menu/primary.php` file.
-If it doesn't exists it fallbacks to `resources/views/menu/default.php` file. And if it doesn't exists it fallbacks to `resources/views/menu.php` file. Hierarchy looks like this:
+- Above code loads `resources/views/menu/primary.php` file.
+- If it doesn't exists it fallbacks to `resources/views/menu/default.php` file.
+- And if it doesn't exists it fallbacks to `resources/views/menu.php` file.
+
+Hierarchy looks like this:
 
 ```php
 // Hybrid\render_view( 'menu', 'primary', [ 'name' => 'primary' ] ) hierarchy.
