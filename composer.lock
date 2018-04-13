@@ -132,12 +132,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/justintadlock/hybrid-core.git",
-                "reference": "1d241d566d7c29dccb716b7261dd26e1ba04e1f2"
+                "reference": "a7a4632ba5e33140822d874b1b5808b6885e353a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/justintadlock/hybrid-core/zipball/1d241d566d7c29dccb716b7261dd26e1ba04e1f2",
-                "reference": "1d241d566d7c29dccb716b7261dd26e1ba04e1f2",
+                "url": "https://api.github.com/repos/justintadlock/hybrid-core/zipball/a7a4632ba5e33140822d874b1b5808b6885e353a",
+                "reference": "a7a4632ba5e33140822d874b1b5808b6885e353a",
                 "shasum": ""
             },
             "require": {
@@ -167,7 +167,7 @@
             "keywords": [
                 "wordpress"
             ],
-            "time": "2018-04-11 16:09:58"
+            "time": "2018-04-12 22:24:33"
         },
         {
             "name": "psr/container",
