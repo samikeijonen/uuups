@@ -7,7 +7,7 @@
 
 ?>
 <article <?php Hybrid\attr( 'entry' ); ?>>
-	<header class="entry__header text-center">
+	<header class="entry__header px-2 text-center">
 		<h1 class="entry__title"><?php single_post_title(); ?></h1>
 
 		<div class="entry__byline pb-2">
@@ -24,7 +24,7 @@
 		?>
 	</div>
 
-	<footer class="entry__footer">
+	<footer class="entry__footer px-2">
 		<?php
 			Hybrid\post_terms( [
 				'taxonomy' => 'category',
