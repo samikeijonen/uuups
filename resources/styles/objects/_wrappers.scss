@@ -9,8 +9,6 @@
 .entry__content > * {
 	@include center;
 	max-width: $max-width-2;
-	padding-left: $global-spacing-unit-2;
-	padding-right: $global-spacing-unit-2;
 }
 
 .entry__content > ul:not(.wp-block-gallery) {

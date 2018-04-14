@@ -17,9 +17,9 @@
 
 // Align full and wide.
 .alignfull {
-	padding-left: 0;
-	padding-right: 0;
-	max-width: 100%;
+	margin-left: -$global-spacing-unit-2;
+	margin-right: -$global-spacing-unit-2;
+	max-width: calc(100% + #{$global-spacing-unit-4});
 }
 
 @media (min-width: $breakpoint-1) {
