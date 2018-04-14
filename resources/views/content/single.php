@@ -6,7 +6,7 @@
  */
 
 ?>
-<main id="main" class="app-main mx-auto max-width-1 px-2 py-4">
+<main id="main" class="app-main py-4">
 	<?php
 	if ( have_posts() ) :
 		while ( have_posts() ) :

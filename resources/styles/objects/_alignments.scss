@@ -17,10 +17,9 @@
 
 // Align full and wide.
 .alignfull {
-	margin-left: calc(50% - 50vw);
-	margin-right: calc(50% - 50vw);
-	max-width: 1000%;
-	width: auto;
+	padding-left: 0;
+	padding-right: 0;
+	max-width: 100%;
 }
 
 @media (min-width: $breakpoint-1) {

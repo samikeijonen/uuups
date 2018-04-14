@@ -137,15 +137,11 @@
 }
 
 // Gallery.
-.wp-block-gallery,
-.wp-block-gallery.alignleft,
-.wp-block-gallery.alignright,
-.wp-block-gallery.aligncenter {
+.wp-block-gallery {
 	display: flex;
 	flex-wrap: wrap;
 	list-style-type: none;
 	margin-top: -$global-spacing-unit-1;
-	padding-left: 0;
 
 	.blocks-gallery-item {
 		display: flex;
