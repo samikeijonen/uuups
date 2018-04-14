@@ -146,7 +146,7 @@
 <p>This is playground from two starter<span class="widont">&nbsp;</span>themes:</p>
 <ol>
 <li><a href="https://github.com/justintadlock/abc">Justin Tadlock’s starter<span class="widont">&nbsp;</span>theme</a></li>
-<li><a href="https://github.com/justintadlock/abc">Mine starter theme called<span class="widont">&nbsp;</span>Foxer</a></li>
+<li><a href="https://github.com/samikeijonen/foxer">Mine starter theme called<span class="widont">&nbsp;</span>Foxer</a></li>
 </ol>
 <p>All the ideas are still open and there are no<span class="widont">&nbsp;</span>documentation.</p>
 <h2 id="demo">Demo</h2>
@@ -287,12 +287,13 @@ enqueueing block related styles using <code>enqueue_block_editor_assets</code> h
 <p>See previous chapter <a href="#styles-for-the-editor">styles for the<span class="widont">&nbsp;</span>editor</a>.</p>
 <h2 id="template-files">Template files</h2>
 <p>We try to avoid having lot’s of similar template files
-in the root folder. In fact, there is only <code>index.php</code> template file with code <code>Hybrid\render_view( 'index' )</code>. This loads <code>resources/views/index.php</code> file.</p>
-<p>You could have other top-level templates, like <code>page.php</code>, <code>archive.php</code>, etc. in the root <code>resources/views/</code> folder and get used like they typically would in theme root. But we try to avoid that also by organizing template
-files in different<span class="widont">&nbsp;</span>folders.</p>
-<p>To summarize: All the template files are in <code>resources/views/</code> folder. In there template files are
+in the root folder. In fact, in root there is only <code>index.php</code> template file but that should never be loaded unless plugins do some weird<span class="widont">&nbsp;</span>things.</p>
+<p>Main fallback template file is found in <code>resources/views/index.php</code>.</p>
+<p>All the template files are also in <code>resources/views/</code> folder. In there template files are
 organized in sub-folder using <code>Hybrid\render_view()</code> and
 <code>Hybrid\get_template_hierarchy()</code> functions.</p>
+<p>You could have other top-level templates, like <code>page.php</code>, <code>archive.php</code>, etc. in the root of <code>resources/views/</code> folder and get used like they typically would in theme root. But we try to avoid that also by organizing template
+files in different<span class="widont">&nbsp;</span>folders.</p>
 <h3 id="hybrid-render_view-function">Hybrid\render_view() function</h3>
 <p><code>Hybrid\render_view()</code> is Hybrid Core function which is
 more powerfull version of <code>get_template_part()</code> function. You can for example pass variables to<span class="widont">&nbsp;</span>it:</p>
