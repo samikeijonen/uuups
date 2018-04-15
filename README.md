@@ -312,3 +312,10 @@ For old themes I probably would not try to add align-wide support if child theme
 For new themes you can definitely have "wide" and "full-width" blocks even if there is sidebar on the right or left.
 
 Yeah but how? Using CSS :)
+
+## Other starter themes
+
+Check out
+
+- [Tonik](https://github.com/tonik/theme/).
+- [Sage](https://github.com/roots/sage/).
