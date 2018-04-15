@@ -1,0 +1,387 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <title>uuups Documentation</title>
+
+  <link href="assets/img/favicon.ico" rel="shortcut icon">
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,600|Source+Sans+Pro:400,400i,700,700i" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/webpack/app_styles.min.css" />
+
+  
+
+  
+</head>
+<body>
+  <svg xmlns="http://www.w3.org/2000/svg" hidden>
+  <symbol id="icon-logo" viewBox="0 0 16 16">
+    <path d="M.2 8L0 7.8v-.2C.8 6.9 1.9 5.9 2.7 5l.4.3c-.5.8-1.1 1.6-1.8 2.3 1 1.2 1 1.3 1.7 2.4l-.4.3c-.4-.4-.5-.6-1-1C1 8.6 1.1 8.7.2 8zM13 10c.6-1.1.7-1.1 1.7-2.4-.6-.6-1.3-1.5-1.7-2.3l.3-.3c.8.8 1.8 1.8 2.7 2.6v.2l-.8.7c-.3.3-1.2 1.1-1.8 1.7L13 10z"/><path d="M2.6 13.1H3c.9 0 1.1-.2 1.1-1.4V4.2c0-1.1-.2-1.4-1.1-1.4h-.4v-.6h4.5v.7h-.3c-.9 0-1.1.2-1.1 1.4v3.2h4.6V4.2c0-1.1-.2-1.4-1.1-1.4h-.3v-.6h4.5v.7H13c-.9 0-1.1.2-1.1 1.4v7.5c0 1.1.2 1.4 1.1 1.4h.4v.7H8.9v-.7h.3c.9 0 1.1-.2 1.1-1.4V8.2H5.7v3.5c0 1.1.2 1.4 1.1 1.4h.3v.7H2.6v-.7z"/>
+  </symbol>
+  <symbol id="icon-menu" viewBox="0 0 24 28">
+    <path d="M24 21v2c0 .547-.453 1-1 1H1c-.547 0-1-.453-1-1v-2c0-.547.453-1 1-1h22c.547 0 1 .453 1 1zm0-8v2c0 .547-.453 1-1 1H1c-.547 0-1-.453-1-1v-2c0-.547.453-1 1-1h22c.547 0 1 .453 1 1zm0-8v2c0 .547-.453 1-1 1H1c-.547 0-1-.453-1-1V5c0-.547.453-1 1-1h22c.547 0 1 .453 1 1z"/>
+  </symbol>
+</svg>
+
+  <div data-region="app">
+    <header data-region="banner">
+      
+  <button data-nav-toggle data-toggle="button" aria-controls="nav" aria-pressed="false" type="button" data-toggle-synced="false">
+    
+  <svg data-icon="menu" data-icon-size="nav-icon" ><title>menu</title><use xlink:href="#icon-menu" />
+  </svg>
+
+  </button>
+
+
+      <div class="project-title">
+        <a href="index.html" rel="home" class="project-name">uuups</a>
+        
+          <span class="project-version">1.0.0</span>
+        
+      </div>
+    </header>
+
+    <div data-region="container">
+      
+  <nav data-region="nav" data-toggle="target" id="nav" data-target-id="nav" aria-expanded="false" data-auto-closing="false" data-auto-closing-on-any-click="false">
+    <form action="search.html">
+      <input type="text" name="q" placeholder="Search…" required minlength="3">
+    </form>
+
+    <div class="nav-subsection">
+      <h3 class="nav-home">
+        
+        <a href="index.html" data-nav="is-active">uuups</a>
+      </h3>
+
+      
+      
+    </div>
+
+    
+    <div class="nav-subsection">
+      <ul>
+  
+    <li class="nav-item">
+      <a href="undefined.html" data-nav="is-not-active">General</a>
+    </li>
+  
+  
+    <li class="nav-item">
+      <a href="icons.html" data-nav="is-not-active">icons</a>
+    </li>
+  
+  
+    <li class="nav-item">
+      <a href="mixins.html" data-nav="is-not-active">mixins</a>
+    </li>
+  
+  
+    <li class="nav-item">
+      <a href="variables.html" data-nav="is-not-active">variables</a>
+    </li>
+  </ul>
+    </div>
+
+    
+    
+
+    
+      <aside class="footer-credit">
+        <a href="http://oddbird.net/herman/" class="footer-icon">
+          
+  <svg data-icon="logo" data-icon-size="footer-logo" ><use xlink:href="#icon-logo" />
+  </svg>
+
+        </a>
+        <span>
+          Documented with
+          <a href="http://oddbird.net/herman/" class="footer-link">
+            Herman
+          </a>
+        </span>
+        <span>
+          by
+          <a href="http://oddbird.net/" class="footer-link">
+            OddBird
+          </a>
+        </span>
+      </aside>
+    
+  </nav>
+
+
+      <main data-region="main">
+        
+
+        <div data-page="index">
+          
+  
+  
+    <ul class="project-links">
+      
+        <li class="project-link-item">
+          <a href="https://github.com/samikeijonen/uuups/#readme" class="project-link">View Project</a>
+        </li>
+      
+      
+    </ul>
+  
+
+  
+    <div class="text-block">
+      <p><a href="https://travis-ci.org/samikeijonen/uuups"><img src="https://travis-ci.org/samikeijonen/uuups.svg?branch=master" alt="Build Status"></a></p>
+<h1 id="uuups-experimental-wordpress-theme">Uuups – experimental WordPress<span class="widont">&nbsp;</span>Theme</h1>
+<p>Uuups is an experiment how to bring your theme to the next<span class="widont">&nbsp;</span>level.</p>
+<ol>
+<li>The theme uses modern PHP, JS, CSS, and other<span class="widont">&nbsp;</span>tools.</li>
+<li>The theme also attempts to stick with WP standards so that it doesn’t feel too<span class="widont">&nbsp;</span>foreign.</li>
+</ol>
+<p>This is playground from two starter<span class="widont">&nbsp;</span>themes:</p>
+<ol>
+<li><a href="https://github.com/justintadlock/abc">Justin Tadlock’s starter<span class="widont">&nbsp;</span>theme</a></li>
+<li><a href="https://github.com/samikeijonen/foxer">Mine starter theme called<span class="widont">&nbsp;</span>Foxer</a></li>
+</ol>
+<p>All the ideas are still open and there are no<span class="widont">&nbsp;</span>documentation.</p>
+<h2 id="demo">Demo</h2>
+<p><a href="https://foxland.fi/demo/uuups/">Demo can be seen in Foxland<span class="widont">&nbsp;</span>site</a>.</p>
+<h2 id="my-wishlist">My wishlist</h2>
+<p>I have hopes and dreams for the starter<span class="widont">&nbsp;</span>theme:</p>
+<ul>
+<li>Accessibility ready out of the<span class="widont">&nbsp;</span>box.</li>
+<li>Clean semantic HTML without lots of extra<span class="widont">&nbsp;</span>DIVs</li>
+<li>Scalable, modular CSS/SASS architecture. It should guide developers how they write their<span class="widont">&nbsp;</span>CSS.</li>
+<li>Ready for Gutenberg and a maximum WYSIWYG<span class="widont">&nbsp;</span>experience.</li>
+<li>ES6 for JavaScript.</li>
+<li>Gulp, Webpack, or npm scripts for automated tasks like    - compiling assets.
+<ul>
+<li>optimising images and<span class="widont">&nbsp;</span>SVGs.</li>
+<li>CSS, JS, and PHPCS<span class="widont">&nbsp;</span>linting.</li>
+<li>SVG system.</li>
+</ul>
+</li>
+<li>being design system<span class="widont">&nbsp;</span>ready.</li>
+</ul>
+<h2 id="directory-structure">Directory structure</h2>
+<p>Directory structure aims to be modern app-like, what ever that means<span class="widont">&nbsp;</span>:)</p>
+<ul>
+<li><code>resources</code> folder is for editing theme for your needs. This is where the most of the magic happens.
+<ul>
+<li><code>resources/views</code> have all the template structure and partials<span class="widont">&nbsp;</span>files.</li>
+<li><code>resources/styles</code> have SASS<span class="widont">&nbsp;</span>files.</li>
+<li><code>resources/scripts</code> have JS<span class="widont">&nbsp;</span>files.</li>
+<li><code>resources/svg-icons</code> have SVG<span class="widont">&nbsp;</span>icons.</li>
+<li><code>resources/lang</code> have language<span class="widont">&nbsp;</span>files.</li>
+</ul>
+</li>
+<li><code>app</code> folder is for theme related functions and classes. Classes are loaded automatically but <code>functions-files</code> needs to be added manually via <code>functions.php</code>.</li>
+<li><code>dist</code> folder has processed and optimized assets ready to be included to theme. Do not edit or add anything to <code>dist</code> folder. It is processed automatically via task tools like Webpack or<span class="widont">&nbsp;</span>Gulp.</li>
+</ul>
+<h2 id="installation-and-setup">Installation and setup</h2>
+<p>Starter theme uses <a href="https://getcomposer.org/">Composer</a> and <a href="https://www.npmjs.com/">NPM</a> to manage its dependencies. Install both on your machine before using this starter<span class="widont">&nbsp;</span>theme.</p>
+<p>Theme has <a href="https://github.com/justintadlock/hybrid-core/tree/5.0">Hybrid Core 5.0</a> as a must have<span class="widont">&nbsp;</span>dependency.</p>
+<h3 id="setup-script">Setup script</h3>
+<p>We should have <a href="https://github.com/justintadlock/abc/issues/6">setup script</a> that handles all the<span class="widont">&nbsp;</span>search/replace.</p>
+<p>Or similar how <a href="http://labs.tonik.pl/theme/docs/installation/">Tonik can be installed via<span class="widont">&nbsp;</span>composer</a>.</p>
+<h3 id="creating-new-theme">Creating new theme</h3>
+<p>WordPress themes lives in the <code>wp-content/themes</code> folder. This is where we fetch our starter theme<span class="widont">&nbsp;</span>files.</p>
+<pre><code># Go to the `themes` directory of your WordPress installation.
+$ cd wp-content/themes
+</code></pre>
+<p>You can download files from this repo or clone the repository to the <code>wp-content/themes</code> directory.</p>
+<pre><code>$ git clone -b master git@github.com:samikeijonen/uuups.git &lt;theme-name&gt;
+</code></pre>
+<p>Make sure you’re in the root folder of your<span class="widont">&nbsp;</span>theme.</p>
+<pre><code>$ cd &lt;theme-name&gt;
+</code></pre>
+<h4 id="install-composer-dependencies-">Install composer dependencies.</h4>
+<pre><code>$ composer install
+</code></pre>
+<h4 id="install-node-dependencies-">Install node dependencies.</h4>
+<pre><code>$ npm install
+</code></pre>
+<h4 id="active-theme">Active theme</h4>
+<p>Activate your theme under <code>Appearance &gt; Themes</code>. Or use WP-CLI to activate your<span class="widont">&nbsp;</span>theme.</p>
+<pre><code>wp theme activate &lt;theme-name&gt;
+</code></pre>
+<h2 id="gulp-tasks">Gulp tasks</h2>
+<p>Note that ABC theme have webpack. In this theme experiment I still use <a href="https://gulpjs.com/">Gulp</a> tasks for automated<span class="widont">&nbsp;</span>processes.</p>
+<p>You can configure Gulp related settings
+in the <code>gulp-config.js</code> file. Change at least <code>projectURL</code>
+to match your local environment URL. This will be needed
+if you use Browsersync feature by running <code>gulp watch</code>.</p>
+<p>You can also change files names or folder structure but it’s not<span class="widont">&nbsp;</span>recommended.</p>
+<p>Run <code>gulp watch</code> to activate build process in the background. You’ll get development proxy at <a href="http://localhost:3000">http://localhost:3000</a> where changes to the code will be updated automatically to<span class="widont">&nbsp;</span>browser.</p>
+<p>Tip: Press <code>ctrl</code> + <code>c</code> to quit build<span class="widont">&nbsp;</span>process.</p>
+<p>All tasks:</p>
+<ul>
+<li><code>gulp watch</code> – Automatically handle changes to CSS, JS, SVGs, and images. Also kicks off<span class="widont">&nbsp;</span>BrowserSync.</li>
+<li><code>gulp scripts</code> – Minify javascript files from <code>resources/scripts/</code> to <code>dist/scripts/</code>.</li>
+<li><code>gulp styles</code> – Compile, prefix, combine media queries, and minify CSS files from <code>resources/styles/</code> to <code>dist/styles/</code>.</li>
+<li><code>gulp icons</code> – Minify and clean SVG icons and create SVG sprite from <code>resources/svg-icons/*.svg</code> to <code>dist/images/svg-icons.svg</code>.</li>
+<li><code>gulp i18n</code> – Scan the theme and create a POT file
+to<code>resources/lang/</code> folder.</li>
+<li><code>gulp sass:lint</code> – Run SASS against WordPress coding<span class="widont">&nbsp;</span>standards.</li>
+<li><code>gulp js:lint</code> – Run Javascript against WordPress coding<span class="widont">&nbsp;</span>standards.</li>
+<li><code>gulp docs</code> – Create SASS docs which can be seen in <a href="https://samikeijonen.github.io/uuups/">Uuups Github<span class="widont">&nbsp;</span>pages</a>.</li>
+<li><code>gulp imagemin</code> – Compress images
+from <code>resources/images/</code> to <code>dist/images/</code>.</li>
+<li><code>gulp</code> – Run tasks in this order: <code>i18n</code>, <code>icons</code>,
+<code>styles</code>, <code>scripts</code>, <code>imagemin</code>, <code>docs</code>.</li>
+</ul>
+<h2 id="sass-and-css-structure">SASS and CSS<span class="widont">&nbsp;</span>structure</h2>
+<p>SASS and CSS structure is probably one of
+the biggest aspects of the front-end and theming.
+It should have scalable and modular<span class="widont">&nbsp;</span>architecture.</p>
+<p>Styles are written in <code>resources/styles</code> folder.
+There are two separate stylesheets
+which are automatically compiled to <code>dist/styles</code>:</p>
+<ul>
+<li><code>style.scss</code> – Main stylesheet for the<span class="widont">&nbsp;</span>theme.</li>
+<li><code>blocks.scss</code> – Stylesheet only for the new editor<span class="widont">&nbsp;</span>(Gutenberg).</li>
+</ul>
+<p>Actually all the files in <code>resources/styles/*.scss</code>
+are outputted in the <code>dist/styles/*.css</code> during build<span class="widont">&nbsp;</span>process.</p>
+<h3 id="main-stylesheet">Main stylesheet</h3>
+<p>Main stylesheet <code>style.scss</code> follows <a href="https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/">ITCSS</a> approach and <a href="http://getbem.com/">BEM</a> naming<span class="widont">&nbsp;</span>convention.</p>
+<p>The main point of ITCSS is that it separates
+your CSS codebase to several sections (layers).
+It guides you to write CSS from low-specificity selectors to more specific<span class="widont">&nbsp;</span>ones.</p>
+<p>It also plays nicely with the new editor (Gutenberg)
+because block styles can be one of the<span class="widont">&nbsp;</span>layers.</p>
+<p>We should write separate documentation about SASS and CSS,
+it’s that<span class="widont">&nbsp;</span>important.</p>
+<h3 id="styles-for-the-editor">Styles for the<span class="widont">&nbsp;</span>editor</h3>
+<p><code>blocks.scss</code> tries to put all the necessary styles
+to the new<span class="widont">&nbsp;</span>editor.</p>
+<p>Note a little trick where we prefix all the styles
+with class <code>edit-post-visual-editor</code>:</p>
+<pre><code class="lang-css">// Editor styles.
+.edit-post-visual-editor {
+	// Write custom CSS.
+	// Or import parts of the SASS.
+	// @import &quot;elements/blockquote&quot;;
+	// @import &quot;elements/hr&quot;;
+}
+</code></pre>
+<h2 id="new-editor-gutenberg-support">New editor (Gutenberg)<span class="widont">&nbsp;</span>support</h2>
+<p>At the moment support for new editor means these things to<span class="widont">&nbsp;</span>me:</p>
+<ul>
+<li>Add support <code>editor-color-palette</code> to match theme<span class="widont">&nbsp;</span>colors.</li>
+<li>Add support for <code>align-wide</code> blocks.</li>
+<li>Dequeue Core block styles: <code>wp_dequeue_style( 'wp-blocks' )</code>.
+<ul>
+<li>This is because I don’t want to overwrite and add too spesific rules to main<span class="widont">&nbsp;</span>stylesheet.</li>
+<li>Core blocks have their own CSS layer as mentioned before. It can be found in <code>recources/styles/blocks</code>.</li>
+</ul>
+</li>
+<li>Get maximum WYSIWYG experience in the editor by
+enqueueing block related styles using <code>enqueue_block_editor_assets</code> hook.</li>
+</ul>
+<p>See previous chapter <a href="#styles-for-the-editor">styles for the<span class="widont">&nbsp;</span>editor</a>.</p>
+<h2 id="template-files">Template files</h2>
+<p>We try to avoid having lot’s of similar template files
+in the root folder. In fact, in root there is only <code>index.php</code> template file but that should never be loaded unless plugins do some weird<span class="widont">&nbsp;</span>things.</p>
+<p>Main fallback template file is found in <code>resources/views/index.php</code>.</p>
+<p>All the template files are also in <code>resources/views/</code> folder. In there template files are
+organized in sub-folder using <code>Hybrid\render_view()</code> and
+<code>Hybrid\get_template_hierarchy()</code> functions.</p>
+<p>You could have other top-level templates, like <code>page.php</code>, <code>archive.php</code>, etc. in the root of <code>resources/views/</code> folder and get used like they typically would in theme root. But we try to avoid that also by organizing template
+files in different<span class="widont">&nbsp;</span>folders.</p>
+<h3 id="hybrid-render_view-function">Hybrid\render_view() function</h3>
+<p><code>Hybrid\render_view()</code> is Hybrid Core function which is
+more powerfull version of <code>get_template_part()</code> function. You can for example pass variables to<span class="widont">&nbsp;</span>it:</p>
+<pre><code class="lang-php">// Hybrid\render_view( $name, $slugs = [], $data = [] )
+Hybrid\render_view( 'menu', 'primary', [ 'name' =&gt; 'primary' ] );
+</code></pre>
+<ul>
+<li>Above code loads <code>resources/views/menu/primary.php</code> file.</li>
+<li>If it doesn’t exists it fallbacks to <code>resources/views/menu/default.php</code> file.</li>
+<li>And if it doesn’t exists it fallbacks to <code>resources/views/menu.php</code> file.</li>
+</ul>
+<p>Hierarchy looks like<span class="widont">&nbsp;</span>this:</p>
+<pre><code class="lang-php">// Hybrid\render_view( 'menu', 'primary', [ 'name' =&gt; 'primary' ] ) hierarchy.
+// 1. resources/views/menu/primary.php
+// 2. resources/views/menu/default.php
+// 3. resources/views/menu.php
+</code></pre>
+<p>The last parameter <code>[ 'name' =&gt; 'primary' ]</code> is for passing data in to template file. You can access the data like this <code>$data-&gt;name</code>.</p>
+<h3 id="hybrid-get_template_hierarchy-function">Hybrid\get_template_hierarchy() function</h3>
+<p>Let’s look at example line: <code>Hybrid\render_view( 'content', Hybrid\get_template_hierarchy() );</code></p>
+<p>This loads template files from <code>resources/views/content</code> folder respecting the <a href="https://developer.wordpress.org/themes/basics/template-hierarchy/">template<span class="widont">&nbsp;</span>hierarchy</a>.</p>
+<pre><code class="lang-php">// Example hierarchy for single `download` post type.
+// 1. resources/views/content/single-download-{slug}.php
+// 2. resources/views/content/single-download.php
+// 3. resources/views/content/single.php
+// 4. resources/views/content/singular.php
+// 5. resources/views/content/index.php
+// 6. resources/views/index.php
+</code></pre>
+<h2 id="coding-standards-and-linting">Coding standards and<span class="widont">&nbsp;</span>linting</h2>
+<p>Theme mostly follows <a href="https://make.wordpress.org/core/handbook/best-practices/coding-standards/">WordPress coding standards</a>. There are couple of things you need to install in your<span class="widont">&nbsp;</span>machine.</p>
+<ol>
+<li><a href="https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards">Install PHP CodeSniffer</a> to validate code developed for<span class="widont">&nbsp;</span>WordPress.</li>
+<li><a href="https://github.com/wimg/PHPCompatibility">Install PHP Compatibility</a> check for PHP<span class="widont">&nbsp;</span>CodeSniffer.</li>
+<li><a href="https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards#using-phpcs-and-wpcs-from-within-your-ide">Install PHPCS and WPCS to your<span class="widont">&nbsp;</span>IDE</a>.</li>
+</ol>
+<p>In <code>phpcs.xml</code> there is custom PHP rulesets (sniffs) which are based on Underscores<span class="widont">&nbsp;</span>rulesets.</p>
+<h3 id="run-your-code-automatically-through-travis-ci">Run your code automatically through Travis<span class="widont">&nbsp;</span>CI</h3>
+<p>When you commit changes in Github, let <a href="https://travis-ci.org/">Travis CI</a> run and test your<span class="widont">&nbsp;</span>code.</p>
+<p>File <code>.travis.yml</code> is the configuration file for setting up Travis. It’s also based on Underscores<span class="widont">&nbsp;</span>configuration.</p>
+<h3 id="style-linting">Style linting</h3>
+<p>Gulp task <code>gulp sass:lint</code> checks SASS files using <a href="https://github.com/stylelint/stylelint">stylelint</a>.</p>
+<p>File <code>.stylelintrc</code> is the configuration file for<span class="widont">&nbsp;</span>stylelint.</p>
+<p>I also recommend installing stylelint extension to your IDE, for example <a href="https://marketplace.visualstudio.com/items?itemName=shinnn.stylelint">vscode-stylelint</a>.</p>
+<h3 id="javascript-linting">JavaScript linting</h3>
+<p>Gulp task <code>gulp js:lint</code> checks SASS files using <a href="https://eslint.org/">ESLint</a>.</p>
+<p>File <code>.eslintrc.js</code> is the configuration file for ESLint. And <code>.eslintignore</code> file for what files to ignore from<span class="widont">&nbsp;</span>linting.</p>
+<p>I also recommend installing ESLint extension to your IDE, for example <a href="https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint">VS Code ESLint<span class="widont">&nbsp;</span>extension</a>.</p>
+<h3 id="editorconfig">Editorconfig</h3>
+<p>Theme has an <code>.editorconfig</code> file that sets your code editor settings accordingly. <a href="http://editorconfig.org/#download">Download the extension to your editor</a>. The settings will automatically be applied when you edit code when you have the<span class="widont">&nbsp;</span>extension.</p>
+<h2 id="sass-docs">SASS docs</h2>
+<p>Running <code>gulp docs</code> creates <a href="http://sassdoc.com/">sassdocs</a> in <code>docs</code> folder. At the moment I’m
+testing <a href="https://github.com/oddbird/sassdoc-theme-herman">Herman sassdoc<span class="widont">&nbsp;</span>theme</a>.</p>
+<p>The end <a href="https://samikeijonen.github.io/uuups/">result can be seen in Github pages</a>. This is nowhere near of design system but it’s a nice<span class="widont">&nbsp;</span>start.</p>
+<h2 id="svg-system">SVG system</h2>
+<p>All the main SVG related functions can be found in the <code>app/functions-icons.php</code> file. It’s well-documented in the code, but here’s a<span class="widont">&nbsp;</span>summary:</p>
+<ul>
+<li>Add SVG icons in <code>resources/svg-icons</code> folder. From these icons build tools creates SVG sprite file in <code>dist/images/svg-icons.svg</code>.</li>
+<li>Include the SVG sprite file via the <code>wp_footer</code> hook.</li>
+<li><code>get_svg()</code> function returns the SVG icon<span class="widont">&nbsp;</span>markup.</li>
+<li>For example <code>get_svg( [ 'icon' =&gt; 'angle-down' ] )</code>.</li>
+<li>Icons can be used in social links menu, in dropdown menu, you name<span class="widont">&nbsp;</span>it.</li>
+</ul>
+<h2 id="faq">FAQ</h2>
+<blockquote>
+<p>What about sidebars?</p>
+</blockquote>
+<p>For old themes I probably would not try to add align-wide support if child themes can be<span class="widont">&nbsp;</span>broken.</p>
+<p>For new themes you can definitely have “wide” and “full-width” blocks even if there is sidebar on the right or<span class="widont">&nbsp;</span>left.</p>
+<p>Yeah but how? Using CSS<span class="widont">&nbsp;</span>:)</p>
+<h2 id="other-starter-themes">Other starter themes</h2>
+<p>Check out</p>
+<ul>
+<li><a href="https://github.com/tonik/theme/">Tonik</a>.</li>
+<li><a href="https://github.com/roots/sage/">Sage</a>.</li>
+</ul>
+
+    </div>
+  
+
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="assets/webpack/runtime.min.js"></script>
+  <script type="text/javascript" src="assets/webpack/common.min.js"></script>
+  <script type="text/javascript" src="assets/webpack/app.min.js"></script>
+  
+</body>
+</html>

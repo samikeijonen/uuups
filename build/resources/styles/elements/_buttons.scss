@@ -1,0 +1,13 @@
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	@include button-block;
+	@include global-transition;
+
+	&:hover,
+	&:active,
+	&:focus {
+		@include button-block-hover;
+	}
+}

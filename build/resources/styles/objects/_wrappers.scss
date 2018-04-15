@@ -1,0 +1,48 @@
+.max-width-1 {
+	max-width: $max-width-1;
+}
+
+.max-width-2 {
+	max-width: $max-width-2;
+}
+
+.entry__content > * {
+	@include center;
+	max-width: $max-width-2;
+}
+
+.mx-auto {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.px-2 {
+	padding-left: $global-spacing-unit-2;
+	padding-right: $global-spacing-unit-2;
+}
+
+.px-3 {
+	padding-left: $global-spacing-unit-3;
+	padding-right: $global-spacing-unit-3;
+}
+
+.py-4 {
+	padding-bottom: $global-spacing-unit-4;
+	padding-top: $global-spacing-unit-4;
+}
+
+.pb-2 {
+	padding-bottom: $global-spacing-unit-2;
+}
+
+.pb-4 {
+	padding-bottom: $global-spacing-unit-4;
+}
+
+.mb-0 {
+	margin-bottom: 0;
+}
+
+.mb-2 {
+	margin-bottom: $global-spacing-unit-2;
+}

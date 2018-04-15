@@ -1,0 +1,121 @@
+# Copyright (C) 2018 Uuups
+# This file is distributed under the same license as the Uuups package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Uuups\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: app/functions-filters.php:62, build/app/functions-filters.php:62
+msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr ""
+
+#: app/functions-fonts.php:23, build/app/functions-fonts.php:23
+msgctxt "Lora font: on or off"
+msgid "on"
+msgstr ""
+
+#: app/functions-fonts.php:32, build/app/functions-fonts.php:32
+msgctxt "Karla font: on or off"
+msgid "on"
+msgstr ""
+
+#: app/functions-icons.php:39, build/app/functions-icons.php:39
+msgid "Please define default parameters in the form of an array."
+msgstr ""
+
+#: app/functions-icons.php:44, build/app/functions-icons.php:44
+msgid "Please define an SVG icon filename."
+msgstr ""
+
+#: app/functions-setup.php:87, build/app/functions-setup.php:87
+msgctxt "nav menu location"
+msgid "Primary"
+msgstr ""
+
+#: app/functions-setup.php:122, build/app/functions-setup.php:122
+msgctxt "sidebar"
+msgid "Primary"
+msgstr ""
+
+#: app/template-general.php:30, build/app/template-general.php:30
+msgctxt "meta separator"
+msgid "&middot;"
+msgstr ""
+
+#: resources/views/comment/default.php:18, resources/views/comment/ping.php:14, build/resources/views/comment/default.php:18, build/resources/views/comment/ping.php:14
+msgid "%s ago"
+msgstr ""
+
+#: resources/views/content/404.php:12, build/resources/views/content/404.php:12
+msgid "Oops! That page can&rsquo;t be found."
+msgstr ""
+
+#: resources/views/content/404.php:16, build/resources/views/content/404.php:16
+msgid "It looks like nothing was found at this location. Maybe try search?"
+msgstr ""
+
+#: resources/views/footer/default.php:13, build/resources/views/footer/default.php:13
+msgid "Powered by crazy ideas and passion."
+msgstr ""
+
+#: resources/views/header/default.php:26, build/resources/views/header/default.php:26
+msgid "Skip to content"
+msgstr ""
+
+#: resources/views/partials/comments-nav.php:12, build/resources/views/partials/comments-nav.php:12
+msgid "Comments Navigation"
+msgstr ""
+
+#: resources/views/partials/comments-nav.php:16, build/resources/views/partials/comments-nav.php:16
+msgctxt "comments navigation"
+msgid "&larr; Previous"
+msgstr ""
+
+#: resources/views/partials/comments-nav.php:23, build/resources/views/partials/comments-nav.php:23
+msgid "Page %1$s of %2$s"
+msgstr ""
+
+#: resources/views/partials/comments-nav.php:31, build/resources/views/partials/comments-nav.php:31
+msgctxt "comments navigation"
+msgid "Next &rarr;"
+msgstr ""
+
+#: resources/views/partials/comments.php:41, build/resources/views/partials/comments.php:41
+msgid "Comments are closed."
+msgstr ""
+
+#: resources/views/partials/pagination-posts.php:9, build/resources/views/partials/pagination-posts.php:9
+msgid "&larr; Previous page"
+msgstr ""
+
+#: resources/views/partials/pagination-posts.php:10, build/resources/views/partials/pagination-posts.php:10
+msgid "Next page &rarr;"
+msgstr ""
+
+#: resources/views/partials/pagination-posts.php:11, build/resources/views/partials/pagination-posts.php:11
+msgid "Posts Navigation"
+msgstr ""
+
+#: resources/views/partials/pagination-posts.php:14, build/resources/views/partials/pagination-posts.php:14
+msgid "Page"
+msgstr ""
+
+#: resources/views/partials/pagination-singular.php:11, build/resources/views/partials/pagination-singular.php:11
+msgid "Pages:"
+msgstr ""
+
+#: resources/views/entry/single/post.php:31, build/resources/views/entry/single/post.php:31
+msgid "Categories:"
+msgstr ""
+
+#: resources/views/entry/single/post.php:37, build/resources/views/entry/single/post.php:37
+msgid "Tags:"
+msgstr ""

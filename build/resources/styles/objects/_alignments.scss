@@ -1,0 +1,40 @@
+.alignleft {
+	float: left;
+	margin-bottom: $global-spacing-unit-3;
+	margin-right: $global-spacing-unit-3;
+}
+
+.alignright {
+	float: right;
+	margin-bottom: $global-spacing-unit-3;
+	margin-left: $global-spacing-unit-3;
+}
+
+.aligncenter {
+	@include center-block;
+	clear: both;
+}
+
+// Align full and wide.
+.alignfull {
+	margin-left: -$global-spacing-unit-2;
+	margin-right: -$global-spacing-unit-2;
+	max-width: calc(100% + #{$global-spacing-unit-4});
+}
+
+@media (min-width: $breakpoint-1) {
+
+	.alignleft,
+	.alignright {
+		max-width: 50%;
+	}
+
+	.alignwide {
+		max-width: 58rem;
+
+		&.wp-block-gallery {
+			max-width: calc(58rem + 1rem);
+		}
+	}
+
+}

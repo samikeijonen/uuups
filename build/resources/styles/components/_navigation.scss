@@ -1,0 +1,183 @@
+.menu ul {
+	@include reset-list();
+}
+
+.menu__items {
+	display: none;
+
+	&[aria-expanded="true"] {
+		background-color: $color-white;
+		@include global-box-shadow;
+		display: block;
+		left: $global-spacing-unit-2;
+		margin-top: $global-spacing-unit-2;
+		padding: $global-spacing-unit-2;
+		position: absolute;
+		right: $global-spacing-unit-2;
+		text-align: center;
+
+		&:after {
+			border: $global-spacing-unit-1 solid transparent;
+			border-bottom-color: $color-grey-20;
+			bottom: calc(100% + 1px);
+			content: " ";
+			height: 0;
+			position: absolute;
+			right: $global-spacing-unit-1 * 7 / 3;
+			width: 0;
+		}
+	}
+}
+
+.menu__anchor {
+	color: $color-grey-60;
+	@include font-size(0.8888888888rem);
+	font-weight: 700;
+	display: block;
+	padding-bottom: $global-spacing-unit-1;
+	padding-top: $global-spacing-unit-1;
+	text-decoration: none;
+
+	&.is-active {
+		color: $color-dark;
+	}
+}
+
+.menu__anchor.menu__anchor--button {
+	@include button-block;
+}
+
+// Menu toggle.
+.menu-toggle {
+	background-color: transparent;
+	color: $color-dark;
+	cursor: pointer;
+	height: $global-spacing-unit-1 * 7;
+	padding: $global-spacing-unit-1;
+	width: $global-spacing-unit-1 * 7;
+
+	&:hover,
+	&:focus,
+	&:active {
+		background-color: transparent;
+		color: $color-dark;
+	}
+
+	&:focus {
+		outline: 1px dotted;
+	}
+}
+
+.menu-toggle-icon {
+	display: inline-block;
+	fill: currentColor;
+	stroke: $color-dark;
+	stroke-width: 2;
+	transition: all $transition-duration-1;
+}
+
+.line {
+	transition: all $transition-duration-1;
+}
+
+[aria-expanded="true"] {
+
+	& .line-1 {
+		transform: translateX(14px) translateY(-3px) rotate(45deg);
+	}
+
+	& .line-2 {
+		opacity: 0;
+	}
+
+	& .line-3 {
+		transform: translateX(-14px) translateY(14px) rotate(-45deg);
+	}
+}
+
+// Show menu when there is no js, and hide menu toggle.
+.no-js {
+
+	.menu-toggle {
+		display: none;
+	}
+
+	.menu__items {
+		display: block;
+	}
+}
+
+@media screen and (min-width: $breakpoint-1) {
+
+	.menu-toggle {
+		display: none;
+	}
+
+	.menu__item {
+		position: relative;
+	}
+
+	.menu__items {
+
+		&,
+		&.is-toggled {
+			align-items: center;
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		& > li:not(:last-child) {
+			margin-right: $global-spacing-unit-3;
+		}
+
+		& ul {
+			background-color: $color-white;
+			@include global-box-shadow;
+			left: -999em;
+			opacity: 0;
+			position: absolute;
+			top: 100%;
+			transform: translateY(-$global-spacing-unit-2);
+			transition: transform $transition-duration-1, opacity $transition-duration-1;
+			width: $global-spacing-unit-13 * 2;
+			z-index: 99999;
+
+			// Class "focus" is added by Javascript which enables
+			// keyboard focus to submenu items.
+			& li:hover > ul,
+			& .focus > ul {
+				left: auto;
+				right: 100%;
+			}
+
+			& a {
+				padding: $global-spacing-unit-1 $global-spacing-unit-2;
+			}
+
+			& ul {
+				top: 0;
+			}
+
+			& .icon {
+				position: absolute;
+				right: $global-spacing-unit-2;
+				top: calc(50% - 0.5em);
+				transform: rotate(-90deg);
+			}
+		}
+
+		& li:hover > ul,
+		& .focus > ul {
+			left: -50%;
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	.menu__anchor {
+
+		& .icon {
+			display: inline-block;
+		}
+	}
+}

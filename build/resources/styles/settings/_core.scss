@@ -1,0 +1,73 @@
+////
+/// @group variables
+////
+
+/// Baseline grid lines height is so called 8 point grid.
+/// Every spacing metric should be based on this.
+/// Inspired by inuitcss.
+/// @link: https://github.com/inuitcss/inuitcss
+
+/* stylelint-disable declaration-bang-space-before */
+
+$global-baseline:       0.5rem  !default;
+$global-baseline-small: 0.25rem !default;
+
+/// How many grid lines should our spacing unit variants span?
+/// Each value should be an unitless integer.
+$global-factor-1:  1  !default;
+$global-factor-2:  2  !default;
+$global-factor-3:  3  !default;
+$global-factor-4:  4  !default;
+$global-factor-5:  5  !default;
+$global-factor-6:  6  !default;
+$global-factor-8:  8  !default;
+$global-factor-13: 13 !default;
+
+/// Spacing values are determined based on your project’s global baseline grid.
+/// It is not recommended that you modify these following variables
+/// (it can break your vertical rhythm), but if you need to, you can.
+$global-spacing-unit-1:  $global-baseline * $global-factor-1 !default;
+$global-spacing-unit-2:  $global-baseline * $global-factor-2 !default;
+$global-spacing-unit-3:  $global-baseline * $global-factor-3 !default;
+$global-spacing-unit-4:  $global-baseline * $global-factor-4 !default;
+$global-spacing-unit-5:  $global-baseline * $global-factor-5 !default;
+$global-spacing-unit-6:  $global-baseline * $global-factor-6 !default;
+$global-spacing-unit-8:  $global-baseline * $global-factor-8 !default;
+$global-spacing-unit-13: $global-baseline * $global-factor-13 !default;
+
+/// Base typographical styles.
+/// Global font size.
+$global-font-size: 1rem !default;
+
+// Global line height calculation.
+$global-lines: ceil($global-font-size / $global-baseline) + 1;
+$line-height: $global-lines * $global-baseline;
+
+/// Global line height.
+$global-line-height: ($line-height / $global-font-size) !default;
+
+/// Max widths.
+$max-width-1: $global-spacing-unit-3 * 42 + 2 * $global-spacing-unit-3;
+$max-width-2: $global-spacing-unit-3 * 26;
+
+/// Breakpoints.
+$breakpoint-1: 48em;
+$breakpoint-2: 62em;
+
+/// Transition
+$transition-duration-1: 300ms;
+
+/// Columns for old gallery markup.
+$columns: (
+	1: 100%,
+	2: 50%,
+	3: 33.33%,
+	4: 25%,
+	5: 20%,
+	6: 16.66%,
+	7: 14.28%,
+	8: 12.5%,
+	9: 11.11%
+);
+
+/* stylelint-enable */

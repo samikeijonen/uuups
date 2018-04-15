@@ -1,0 +1,28 @@
+.flex {
+	display: flex;
+}
+
+.justify-between {
+	justify-content: space-between;
+}
+
+.items-center {
+	align-items: center;
+}
+
+@media screen and (min-width: $breakpoint-1) {
+
+	@supports (grid-area: auto) {
+
+		.grid {
+			display: grid;
+			grid-gap: $global-spacing-unit-4;
+			grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+
+			&--bigger {
+				grid-template-columns: repeat(auto-fill, minmax(24rem, 1fr));
+			}
+		}
+
+	}
+}

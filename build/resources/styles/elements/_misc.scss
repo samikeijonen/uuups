@@ -1,0 +1,32 @@
+dfn,
+cite,
+em,
+i {
+	font-style: italic;
+}
+
+cite {
+	color: $color-grey-60;
+}
+
+address {
+	margin: 0 0 $global-spacing-unit-4;
+}
+
+abbr,
+abbr[title],
+acronym {
+	border-bottom: none;
+	cursor: help;
+	text-decoration: underline dotted;
+}
+
+mark,
+ins {
+	background-color: $color-light-1;
+	text-decoration: none;
+}
+
+big {
+	font-size: 134%;
+}
