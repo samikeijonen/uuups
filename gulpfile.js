@@ -63,7 +63,7 @@ gulp.task( 'clean:styles', () =>
  * https://www.npmjs.com/package/gulp-autoprefixer
  * https://www.npmjs.com/package/css-mqpacker
  */
-gulp.task( 'postcss', [ 'clean:styles' ], () =>
+gulp.task( 'postcss', gulp.parallel( 'clean:styles' ), () =>
 	gulp.src( config.styleWatchFiles )
 
 		// Deal with errors.
@@ -102,7 +102,7 @@ gulp.task( 'postcss', [ 'clean:styles' ], () =>
  *
  * https://www.npmjs.com/package/gulp-cssnano
  */
-gulp.task( 'cssnano', [ 'postcss' ], () =>
+gulp.task( 'cssnano', gulp.parallel( 'postcss' ), () =>
 	gulp.src( config.styleDistSRC )
 		.pipe( plumber( {'errorHandler': handleErrors} ) )
 		.pipe( cssnano( {
@@ -127,7 +127,7 @@ gulp.task( 'clean:icons', () =>
  * https://www.npmjs.com/package/gulp-svgstore
  * https://www.npmjs.com/package/gulp-cheerio
  */
-gulp.task( 'svg', [ 'clean:icons' ], () =>
+gulp.task( 'svg', gulp.parallel( 'clean:icons' ), () =>
 	gulp.src( config.svgSRC )
 
 		// Deal with errors.
@@ -255,7 +255,7 @@ gulp.task( 'compile', () =>
   *
   * https://www.npmjs.com/package/gulp-uglify
   */
-gulp.task( 'uglify', [ 'concat', 'compile' ], () =>
+gulp.task( 'uglify', gulp.parallel( 'concat', 'compile' ), () =>
 	gulp.src( config.jsDistSRC )
 		.pipe( plumber( {'errorHandler': handleErrors} ) )
 		.pipe( rename( {'suffix': '.min'} ) )
@@ -277,7 +277,7 @@ gulp.task( 'clean:pot', () =>
  *
  * https://www.npmjs.com/package/gulp-wp-pot
  */
-gulp.task( 'wp-pot', [ 'clean:pot' ], () =>
+gulp.task( 'wp-pot', gulp.parallel( 'clean:pot' ), () =>
 	gulp.src( config.PHPWatchFiles )
 		.pipe( plumber( {'errorHandler': handleErrors} ) )
 		.pipe( sort() )
@@ -363,10 +363,10 @@ gulp.task( 'watch', function() {
  * Create individual tasks.
  */
 gulp.task( 'markup', browserSync.reload );
-gulp.task( 'i18n', [ 'wp-pot' ] );
-gulp.task( 'icons', [ 'svg' ] );
-gulp.task( 'styles', [ 'cssnano' ] );
-gulp.task( 'scripts', [ 'uglify' ] );
-gulp.task( 'lint', [ 'sass:lint', 'js:lint' ] );
-gulp.task( 'docs', [ 'sassdoc' ] );
-gulp.task( 'default', [ 'i18n', 'icons', 'styles', 'scripts', 'imagemin', 'docs' ] );
+gulp.task( 'i18n', gulp.parallel( 'wp-pot' ) );
+gulp.task( 'icons', gulp.parallel( 'svg' ) );
+gulp.task( 'styles', gulp.parallel( 'cssnano' ) );
+gulp.task( 'scripts', gulp.parallel( 'uglify' ) );
+gulp.task( 'lint', gulp.parallel( 'sass:lint', 'js:lint' ) );
+gulp.task( 'docs', gulp.parallel( 'sassdoc' ) );
+gulp.task( 'default', gulp.parallel( 'i18n', 'icons', 'styles', 'scripts', 'imagemin', 'docs' ) );
