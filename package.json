@@ -12,7 +12,7 @@
     "eslint": "~4",
     "eslint-config-wordpress": "~2",
     "glob": "~7",
-    "gulp": "~3",
+    "gulp": "^4.0.0",
     "gulp-babel": "~7",
     "gulp-cheerio": "~0",
     "gulp-concat": "~2",
@@ -32,9 +32,9 @@
     "gulp-uglify": "~3",
     "gulp-wp-pot": "~2",
     "sassdoc": "~2",
-    "sassdoc-theme-herman": "^2.0.0",
-    "stylelint": "^9.1.1",
-    "stylelint-config-wordpress": "^12.0.0"
+    "sassdoc-theme-herman": "^2.1.0",
+    "stylelint": "^9.2.0",
+    "stylelint-config-wordpress": "^13.0.0"
   },
   "devDependencies": {},
   "scripts": {
