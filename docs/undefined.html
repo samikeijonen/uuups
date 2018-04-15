@@ -176,8 +176,6 @@ iframe,<span class="widont">&nbsp;</span>object</a>
     
     
   
-
-  
     <div class="code-block">
       
         <div class="code-header">
@@ -308,8 +306,6 @@ object {
     
     
   
-
-  
     <div class="code-block">
       
         <div class="code-header">
@@ -325,9 +321,9 @@ object {
       
       <pre class="hljs-pre"><code class="lang-scss">img {
   height: auto;
-	max-width: 100%;
-	// Removes the whitespace under img, safer than `display: block;`.
-	vertical-align: middle;
+  max-width: 100%;
+  // Removes the whitespace under img, safer than `display: block;`.
+  vertical-align: middle;
 }</code></pre>
     </div>
   
@@ -441,8 +437,6 @@ object {
     
     
   
-
-  
     <div class="code-block">
       
         <div class="code-header">
@@ -458,35 +452,35 @@ object {
       
       <pre class="hljs-pre"><code class="lang-scss">.screen-reader-text {
   border: 0;
-	clip: rect(1px, 1px, 1px, 1px);
-	clip-path: inset(50%);
-	height: 1px;
-	margin: -1px;
-	overflow: hidden;
-	padding: 0;
-	position: absolute;
-	width: 1px;
-	// Many screen reader and browser combinations announce broken words
-	// as they would appear visually.
-	word-wrap: normal !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  // Many screen reader and browser combinations announce broken words
+  // as they would appear visually.
+  word-wrap: normal !important;
 
-	&amp;:focus {
-		@include font-size(0.875rem);
-		background-color: $color-base;
-		clip: auto !important;
-		clip-path: none;
-		color: $color-white;
-		display: block;
-		font-weight: 700;
-		height: auto;
-		left: $global-spacing-unit-1;
-		padding: $global-spacing-unit-1 $global-spacing-unit-2;
-		text-decoration: none;
-		top: $global-spacing-unit-1;
-		width: auto;
-		// Above WP toolbar.
-		z-index: 100000;
-	}
+  &amp;:focus {
+    @include font-size(0.875rem);
+    background-color: $color-base;
+    clip: auto !important;
+    clip-path: none;
+    color: $color-white;
+    display: block;
+    font-weight: 700;
+    height: auto;
+    left: $global-spacing-unit-1;
+    padding: $global-spacing-unit-1 $global-spacing-unit-2;
+    text-decoration: none;
+    top: $global-spacing-unit-1;
+    width: auto;
+    // Above WP toolbar.
+    z-index: 100000;
+  }
 }</code></pre>
     </div>
   
@@ -560,7 +554,8 @@ object {
     </div>
   </div>
 
-  <script type="text/javascript" src="assets/webpack/vendor.min.js"></script>
+  <script type="text/javascript" src="assets/webpack/runtime.min.js"></script>
+  <script type="text/javascript" src="assets/webpack/common.min.js"></script>
   <script type="text/javascript" src="assets/webpack/app.min.js"></script>
   
 </body>
