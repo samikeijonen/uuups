@@ -31,7 +31,7 @@ I have hopes and dreams for the starter theme:
   - optimising images and SVGs.
   - CSS, JS, and PHPCS linting.
   - SVG system.
-  - being design system ready.
+- being design system ready.
 
 ## Directory structure
 
