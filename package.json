@@ -31,6 +31,7 @@
     "gulp-svgstore": "~6",
     "gulp-uglify": "~3",
     "gulp-wp-pot": "~2",
+    "pa11y": "^5.0.3",
     "sassdoc": "~2",
     "sassdoc-theme-herman": "^2.1.0",
     "stylelint": "^9.2.0",
@@ -38,7 +39,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"No test specified\""
+    "test": "echo \"No test specified\"",
+    "pa11y": "pa11y --ignore notice http://foxland-products.test/"
   },
   "repository": "git+https://github.com/samikeijonen/uuups.git",
   "keywords": [
