@@ -72,7 +72,7 @@ add_action( 'enqueue_block_editor_assets', function() {
 	// Main block styles.
 	wp_enqueue_style(
 		'uuups-blocks',
-		get_parent_theme_file_uri( 'dist/styles/blocks' . $suffix . '.css' ),
+		get_parent_theme_file_uri( 'dist/styles/editor' . $suffix . '.css' ),
 		null,
 		$version
 	);
