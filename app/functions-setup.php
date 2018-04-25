@@ -48,10 +48,22 @@ add_action( 'after_setup_theme', function() {
 
 	// Add support for editor color palette.
 	add_theme_support( 'editor-color-palette',
-		'#fff',
-		'#ecebff',
-		'#2516c7',
-		'#06031f'
+		[
+			'name'  => 'main',
+			'color' => '#2516c7',
+		],
+		[
+			'name'  => 'dark',
+			'color' => '#06031f',
+		],
+		[
+			'name'  => 'white',
+			'color' => '#fff',
+		],
+		[
+			'name'  => 'light',
+			'color' => '#ecebff',
+		]
 	);
 
 	// Add support for align wide blocks.
