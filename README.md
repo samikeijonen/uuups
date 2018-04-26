@@ -310,9 +310,9 @@ The end [result can be seen in Github pages](https://samikeijonen.github.io/uuup
 
 All the main SVG related functions can be found in the `app/functions-icons.php` file. It’s well-documented in the code, but here’s a summary:
 
-- Add SVG icons in `resources/svg-icons` folder. From these icons build tools creates SVG sprite file in `dist/images/svg-icons.svg`.
-- Include the SVG sprite file via the `wp_footer` hook.
-- `get_svg()` function returns the SVG icon markup.
+- Add SVG icons in `resources/svg` folder. Build tools copies these icons  SVG files in `dist/svg` folder.
+- `npm run build` cleans all SVG files.
+- `get_svg()` function returns inline SVG icon markup by default.
 - For example `get_svg( [ 'icon' => 'angle-down' ] )`.
 - Icons can be used in social links menu, in dropdown menu, you name it.
 
