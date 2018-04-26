@@ -64,31 +64,37 @@ WordPress themes lives in the `wp-content/themes` folder. This is where we fetch
 
 ```
 # Go to the `themes` directory of your WordPress installation.
-$ cd wp-content/themes
+cd wp-content/themes
 ```
 
 You can download files from this repo or clone the repository to the `wp-content/themes` directory.
 
 ```
-$ git clone -b master git@github.com:samikeijonen/uuups.git <theme-name>
+git clone -b master git@github.com:samikeijonen/uuups.git <theme-name>
 ```
 
 Make sure you’re in the root folder of your theme.
 
 ```
-$ cd <theme-name>
+cd <theme-name>
 ```
 
 #### Install composer dependencies.
 
 ```
-$ composer install
+composer install
 ```
 
-#### Install node dependencies.
+#### Install node dependencies using either NPM or Yarn.
 
+**NPM command:**
 ```
-$ npm install
+npm install
+```
+
+**Yarn command:**
+```
+yarn install
 ```
 
 #### Active theme
@@ -99,36 +105,29 @@ Activate your theme under `Appearance > Themes`. Or use WP-CLI to activate your 
 wp theme activate <theme-name>
 ```
 
-## Gulp tasks
+## Webpack tasks
 
-Note that ABC theme have webpack. In this theme experiment I still use [Gulp](https://gulpjs.com/) tasks for automated processes.
+In this theme experiment I still use [Webpack](https://webpack.js.org/) tasks for automated processes.
 
-You can configure Gulp related settings
-in the `gulp-config.js` file. Change at least `projectURL`
-to match your local environment URL. This will be needed
-if you use Browsersync feature by running `gulp watch`.
+You can configure Webpack related settings
+in the `resources/build/config.js` file. Change at least `proxy`
+setting in browserSync to match your local environment URL. This will be needed if you use Browsersync feature by running `npm run watch`.
 
-You can also change files names or folder structure but it's not recommended.
+You can also change folder structure but it's not recommended.
 
-Run `gulp watch` to activate build process in the background. You'll get development proxy at http://localhost:3000 where changes to the code will be updated automatically to browser.
+Run `npm run watch` to activate build process in the background. You'll get development proxy at http://localhost:3000 where changes to the code will be updated automatically to browser.
 
 Tip: Press `ctrl` + `c` to quit build process.
 
 All tasks:
 
-- `gulp watch` &ndash; Automatically handle changes to CSS, JS, SVGs, and images. Also kicks off BrowserSync.
-- `gulp scripts` &ndash; Minify javascript files from `resources/scripts/` to `dist/scripts/`.
-- `gulp styles` &ndash; Compile, prefix, combine media queries, and minify CSS files from `resources/styles/` to `dist/styles/`.
-- `gulp icons` &ndash; Minify and clean SVG icons and create SVG sprite from `resources/svg-icons/*.svg` to `dist/images/svg-icons.svg`.
-- `gulp i18n` &ndash; Scan the theme and create a POT file
-to`resources/lang/` folder.
-- `gulp sass:lint` &ndash; Run SASS against WordPress coding standards.
-- `gulp js:lint` &ndash; Run Javascript against WordPress coding standards.
-- `gulp docs` &ndash; Create SASS docs which can be seen in [Uuups Github pages](https://samikeijonen.github.io/uuups/).
-- `gulp imagemin` &ndash; Compress images
-from `resources/images/` to `dist/images/`.
-- `gulp` &ndash; Run tasks in this order: `i18n`, `icons`,
-`styles`, `scripts`, `imagemin`, `docs`.
+- `npm run watch` &ndash; Automatically watch changes to CSS, JS, and PHP. Also kicks off BrowserSync.
+- `gulp run dev` &ndash; Output assets like CSS, JS, images, SVGs to `dist` folder.
+- `npm run lint` &ndash; Run SASS and JS against WordPress coding standards.
+	- `npm run lint:styles` &ndash; Run SASS against WordPress coding standards.
+	- `npm run lint:scripts` &ndash; Run Javascript against WordPress coding standards.
+- `nmp run docs` &ndash; Create SASS docs which can be seen in [Uuups Github pages](https://samikeijonen.github.io/uuups/).
+- `npm run build` &ndash; Minify and compress assets like CSS, JS, images, SVGs to `dist` folder. Run this when you're ready for production.
 
 ## SASS and CSS structure
 

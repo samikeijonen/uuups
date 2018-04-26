@@ -1,55 +1,84 @@
 {
-  "name": "uuups",
+  "name": "abc",
   "version": "1.0.0",
-  "description": "A theme by Sami Keijonen.",
-  "main": "gulpfile.js",
-  "dependencies": {
-    "babel-core": "~6",
-    "babel-preset-env": "~1",
-    "browser-sync": "~2",
-    "css-mqpacker": "~6",
-    "del": "~3",
-    "eslint": "~4",
-    "eslint-config-wordpress": "~2",
-    "glob": "~7",
-    "gulp": "^3.0.0",
-    "gulp-babel": "~7",
-    "gulp-cheerio": "~0",
-    "gulp-concat": "~2",
-    "gulp-cssnano": "~2",
-    "gulp-eslint": "~4",
-    "gulp-imagemin": "~3",
-    "gulp-notify": "~3",
-    "gulp-plumber": "~1",
-    "gulp-postcss": "~7",
-    "gulp-rename": "~1",
-    "gulp-sass": "~3",
-    "gulp-sort": "~2",
-    "gulp-sourcemaps": "~2",
-    "gulp-stylelint": "^7.0.0",
-    "gulp-svgmin": "~1",
-    "gulp-svgstore": "~6",
-    "gulp-uglify": "~3",
-    "gulp-wp-pot": "~2",
-    "pa11y": "^5.0.3",
-    "sassdoc": "~2",
-    "sassdoc-theme-herman": "^2.1.0",
-    "stylelint": "^9.2.0",
-    "stylelint-config-wordpress": "^13.0.0"
-  },
-  "devDependencies": {},
+  "description": "A starter theme for WordPress.",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"No test specified\"",
-    "pa11y": "pa11y --ignore notice http://foxland-products.test/"
+    "dev": "webpack --env.development --config ./resources/build/webpack.config.js",
+    "build": "webpack -p --env.production --config ./resources/build/webpack.config.js",
+    "watch": "npm run dev -- --watch && webpack-dev-server",
+    "lint": "npm run lint:styles && npm run lint:scripts",
+    "lint:styles": "stylelint './resources/styles/**/*.scss' --syntax scss",
+    "lint:scripts": "eslint './resources/scripts/**/*.js'"
   },
-  "repository": "git+https://github.com/samikeijonen/uuups.git",
-  "keywords": [
-    "theme"
-  ],
-  "author": "Sami Keijonen",
-  "license": "GPL-3.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/justintadlock/abc.git"
+  },
+  "author": "Justin Tadlock",
+  "license": "GPL-2.0+",
   "bugs": {
-    "url": "https://github.com/samikeijonen/uuups/issues"
+    "url": "https://github.com/justintadlock/abc/issues"
   },
-  "homepage": "https://github.com/samikeijonen/uuups/#readme"
+  "homepage": "https://github.com/justintadlock/abc#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.0.0-beta.46",
+    "@babel/core": "^7.0.0-beta.46",
+    "@babel/plugin-transform-runtime": "^7.0.0-beta.46",
+    "@babel/preset-env": "^7.0.0-beta.46",
+    "babel-loader": "^8.0.0-beta.2",
+    "browser-sync": "^2.23.6",
+    "browser-sync-webpack-plugin": "^2.2.2",
+    "browserslist": "^3.2.5",
+    "clean-webpack-plugin": "^0.1.19",
+    "copy-webpack-plugin": "^4.5.1",
+    "cross-env": "^5.1.4",
+    "css-loader": "^0.28.11",
+    "eslint": "^4.19.1",
+    "eslint-config-wordpress": "^2.0.0",
+    "file-loader": "^1.1.11",
+    "imagemin-mozjpeg": "^7.0.0",
+    "imagemin-webpack-plugin": "^2.1.1",
+    "img-loader": "^2.0.0",
+    "mini-css-extract-plugin": "^0.4.0",
+    "node-sass": "^4.9.0",
+    "npm-run-all": "^4.1.2",
+    "postcss-cli": "^5.0.0",
+    "postcss-cssnext": "^3.1.0",
+    "postcss-import": "^11.1.0",
+    "postcss-loader": "^2.1.4",
+    "postcss-scss": "^1.0.5",
+    "sass-loader": "^6.0.7",
+    "simple-progress-webpack-plugin": "^1.1.2",
+    "stylelint": "^9.2.0",
+    "stylelint-config-wordpress": "^13.0.0",
+    "webpack": "^4.6.0",
+    "webpack-cli": "^2.0.15",
+    "webpack-dev-server": "^2.4.4",
+    "webpack-extraneous-file-cleanup-plugin": "^1.0.5",
+    "webpack-watched-glob-entries-plugin": "^2.1.2"
+  },
+  "browserslist": [
+    "> 1%",
+    "ie >= 11",
+    "last 1 Android versions",
+    "last 1 ChromeAndroid versions",
+    "last 2 Chrome versions",
+    "last 2 Firefox versions",
+    "last 2 Safari versions",
+    "last 2 iOS versions",
+    "last 2 Edge versions",
+    "last 2 Opera versions"
+  ],
+  "stylelint": {
+    "extends": "stylelint-config-wordpress/scss",
+    "rules": {
+      "at-rule-empty-line-before": null,
+      "at-rule-no-unknown": null,
+      "declaration-no-important": true
+    }
+  },
+  "eslintConfig": {
+    "extends": "wordpress"
+  }
 }
