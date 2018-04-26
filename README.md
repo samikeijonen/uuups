@@ -122,7 +122,7 @@ Tip: Press `ctrl` + `c` to quit build process.
 All tasks:
 
 - `npm run watch` &ndash; Automatically watch changes to CSS, JS, and PHP. Also kicks off BrowserSync.
-- `gulp run dev` &ndash; Output assets like CSS, JS, images, SVGs to `dist` folder.
+- `npm run dev` &ndash; Output assets like CSS, JS, images, SVGs to `dist` folder.
 - `npm run lint` &ndash; Run SASS and JS against WordPress coding standards.
 	- `npm run lint:styles` &ndash; Run SASS against WordPress coding standards.
 	- `npm run lint:scripts` &ndash; Run Javascript against WordPress coding standards.
@@ -281,7 +281,7 @@ File `.travis.yml` is the configuration file for setting up Travis. It's also ba
 
 ### Style linting
 
-Gulp task `gulp sass:lint` checks SASS files using [stylelint](https://github.com/stylelint/stylelint).
+NPM task `npm run lint:styles` checks SASS files using [stylelint](https://github.com/stylelint/stylelint).
 
 File `.stylelintrc` is the configuration file for stylelint.
 
@@ -289,7 +289,7 @@ I also recommend installing stylelint extension to your IDE, for example [vscode
 
 ### JavaScript linting
 
-Gulp task `gulp js:lint` checks SASS files using [ESLint](https://eslint.org/).
+NPM task `npm lint:scripts` checks SASS files using [ESLint](https://eslint.org/).
 
 File `.eslintrc.js` is the configuration file for ESLint. And `.eslintignore` file for what files to ignore from linting.
 
@@ -301,7 +301,7 @@ Theme has an `.editorconfig` file that sets your code editor settings accordingl
 
 ## SASS docs
 
-Running `gulp docs` creates [sassdocs](http://sassdoc.com/) in `docs` folder. At the moment I'm
+Running `npm run docs` creates [sassdocs](http://sassdoc.com/) in `docs` folder. At the moment I'm
 testing [Herman sassdoc theme](https://github.com/oddbird/sassdoc-theme-herman).
 
 The end [result can be seen in Github pages](https://samikeijonen.github.io/uuups/). This is nowhere near of design system but it's a nice start.
