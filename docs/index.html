@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <title>uuups Documentation</title>
+  <title>abc Documentation</title>
 
   <link href="assets/img/favicon.ico" rel="shortcut icon">
   <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,600|Source+Sans+Pro:400,400i,700,700i" rel="stylesheet">
@@ -40,7 +40,7 @@
 
 
       <div class="project-title">
-        <a href="index.html" rel="home" class="project-name">uuups</a>
+        <a href="index.html" rel="home" class="project-name">abc</a>
         
           <span class="project-version">1.0.0</span>
         
@@ -57,7 +57,7 @@
     <div class="nav-subsection">
       <h3 class="nav-home">
         
-        <a href="index.html" data-nav="is-active">uuups</a>
+        <a href="index.html" data-nav="is-active">abc</a>
       </h3>
 
       
@@ -127,9 +127,13 @@
     <ul class="project-links">
       
         <li class="project-link-item">
-          <a href="https://github.com/samikeijonen/uuups/#readme" class="project-link">View Project</a>
+          <a href="https://github.com/justintadlock/abc#readme" class="project-link">View Project</a>
         </li>
       
+      
+        <li class="project-link-item">
+          <a href="git+https://github.com/justintadlock/abc.git" class="project-link">View Source</a>
+        </li>
       
     </ul>
   
@@ -192,49 +196,56 @@
 <h3 id="creating-new-theme">Creating new theme</h3>
 <p>WordPress themes lives in the <code>wp-content/themes</code> folder. This is where we fetch our starter theme<span class="widont">&nbsp;</span>files.</p>
 <pre><code># Go to the `themes` directory of your WordPress installation.
-$ cd wp-content/themes
+cd wp-content/themes
 </code></pre>
 <p>You can download files from this repo or clone the repository to the <code>wp-content/themes</code> directory.</p>
-<pre><code>$ git clone -b master git@github.com:samikeijonen/uuups.git &lt;theme-name&gt;
+<pre><code>git clone -b master git@github.com:samikeijonen/uuups.git &lt;theme-name&gt;
 </code></pre>
 <p>Make sure you’re in the root folder of your<span class="widont">&nbsp;</span>theme.</p>
-<pre><code>$ cd &lt;theme-name&gt;
+<pre><code>cd &lt;theme-name&gt;
 </code></pre>
 <h4 id="install-composer-dependencies-">Install composer dependencies.</h4>
-<pre><code>$ composer install
+<pre><code>composer install
 </code></pre>
-<h4 id="install-node-dependencies-">Install node dependencies.</h4>
-<pre><code>$ npm install
+<h4 id="install-node-dependencies-using-either-npm-or-yarn-">Install node dependencies using either NPM or<span class="widont">&nbsp;</span>Yarn.</h4>
+<p><strong>NPM command:</strong></p>
+<pre><code>npm install
+</code></pre>
+<p><strong>Yarn command:</strong></p>
+<pre><code>yarn install
 </code></pre>
 <h4 id="active-theme">Active theme</h4>
 <p>Activate your theme under <code>Appearance &gt; Themes</code>. Or use WP-CLI to activate your<span class="widont">&nbsp;</span>theme.</p>
 <pre><code>wp theme activate &lt;theme-name&gt;
 </code></pre>
-<h2 id="gulp-tasks">Gulp tasks</h2>
-<p>Note that ABC theme have webpack. In this theme experiment I still use <a href="https://gulpjs.com/">Gulp</a> tasks for automated<span class="widont">&nbsp;</span>processes.</p>
-<p>You can configure Gulp related settings
-in the <code>gulp-config.js</code> file. Change at least <code>projectURL</code>
-to match your local environment URL. This will be needed
-if you use Browsersync feature by running <code>gulp watch</code>.</p>
-<p>You can also change files names or folder structure but it’s not<span class="widont">&nbsp;</span>recommended.</p>
-<p>Run <code>gulp watch</code> to activate build process in the background. You’ll get development proxy at <a href="http://localhost:3000">http://localhost:3000</a> where changes to the code will be updated automatically to<span class="widont">&nbsp;</span>browser.</p>
+<h2 id="webpack-tasks">Webpack tasks</h2>
+<p>In this theme experiment I still use <a href="https://webpack.js.org/">Webpack</a> tasks for automated<span class="widont">&nbsp;</span>processes.</p>
+<p>You can configure Webpack related settings
+in the <code>resources/build/config.js</code> file. Change at least <code>proxy</code>
+setting in browserSync to match your local environment URL. This will be needed if you use Browsersync feature by running <code>npm run watch</code>.</p>
+<p>You can also change folder structure but it’s not<span class="widont">&nbsp;</span>recommended.</p>
+<p>Run <code>npm run watch</code> to activate build process in the background. You’ll get development proxy at <a href="http://localhost:3000">http://localhost:3000</a> where changes to the code will be updated automatically to<span class="widont">&nbsp;</span>browser.</p>
 <p>Tip: Press <code>ctrl</code> + <code>c</code> to quit build<span class="widont">&nbsp;</span>process.</p>
 <p>All tasks:</p>
 <ul>
-<li><code>gulp watch</code> – Automatically handle changes to CSS, JS, SVGs, and images. Also kicks off<span class="widont">&nbsp;</span>BrowserSync.</li>
-<li><code>gulp scripts</code> – Minify javascript files from <code>resources/scripts/</code> to <code>dist/scripts/</code>.</li>
-<li><code>gulp styles</code> – Compile, prefix, combine media queries, and minify CSS files from <code>resources/styles/</code> to <code>dist/styles/</code>.</li>
-<li><code>gulp icons</code> – Minify and clean SVG icons and create SVG sprite from <code>resources/svg-icons/*.svg</code> to <code>dist/images/svg-icons.svg</code>.</li>
-<li><code>gulp i18n</code> – Scan the theme and create a POT file
-to<code>resources/lang/</code> folder.</li>
-<li><code>gulp sass:lint</code> – Run SASS against WordPress coding<span class="widont">&nbsp;</span>standards.</li>
-<li><code>gulp js:lint</code> – Run Javascript against WordPress coding<span class="widont">&nbsp;</span>standards.</li>
-<li><code>gulp docs</code> – Create SASS docs which can be seen in <a href="https://samikeijonen.github.io/uuups/">Uuups Github<span class="widont">&nbsp;</span>pages</a>.</li>
-<li><code>gulp imagemin</code> – Compress images
-from <code>resources/images/</code> to <code>dist/images/</code>.</li>
-<li><code>gulp</code> – Run tasks in this order: <code>i18n</code>, <code>icons</code>,
-<code>styles</code>, <code>scripts</code>, <code>imagemin</code>, <code>docs</code>.</li>
+<li><code>npm run watch</code> – Automatically watch changes to CSS, JS, and PHP. Also kicks off<span class="widont">&nbsp;</span>BrowserSync.</li>
+<li><code>gulp run dev</code> – Output assets like CSS, JS, images, SVGs to <code>dist</code> folder.</li>
+<li><code>npm run lint</code> – Run SASS and JS against WordPress coding standards.
+<ul>
+<li><code>npm run lint:styles</code> – Run SASS against WordPress coding<span class="widont">&nbsp;</span>standards.</li>
+<li><code>npm run lint:scripts</code> – Run Javascript against WordPress coding<span class="widont">&nbsp;</span>standards.</li>
 </ul>
+</li>
+<li><code>nmp run docs</code> – Create SASS docs which can be seen in <a href="https://samikeijonen.github.io/uuups/">Uuups Github<span class="widont">&nbsp;</span>pages</a>.</li>
+<li><code>npm run build</code> – Minify and compress assets like CSS, JS, images, SVGs to <code>dist</code> folder. Run this when you’re ready for<span class="widont">&nbsp;</span>production.</li>
+</ul>
+<h2 id="accessibility-testing">Accessibility testing</h2>
+<p><a href="https://github.com/pa11y/pa11y">Pa11y</a> runs your code against <a href="http://squizlabs.github.com/HTML_CodeSniffer/">HTML CodeSniffer</a>. Check documentation from <code>pa11y</code> site.</p>
+<p>On the command line test any local or live<span class="widont">&nbsp;</span>URL:</p>
+<pre><code>pa11y http://example.com/
+</code></pre>
+<p>I recommend also <a href="https://www.deque.com/aXe/">aXe browser add-on</a> or <a href="https://github.com/dequelabs/axe-cli">aXe-CLI</a>.</p>
+<p>More info about <a href="https://make.wordpress.org/accessibility/handbook/best-practices/test-for-web-accessibility/test-for-web-accessibility-frontend-code/">Frontend checks for web<span class="widont">&nbsp;</span>accessibility</a>.</p>
 <h2 id="sass-and-css-structure">SASS and CSS<span class="widont">&nbsp;</span>structure</h2>
 <p>SASS and CSS structure is probably one of
 the biggest aspects of the front-end and theming.

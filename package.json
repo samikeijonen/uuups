@@ -9,7 +9,8 @@
     "watch": "npm run dev -- --watch && webpack-dev-server",
     "lint": "npm run lint:styles && npm run lint:scripts",
     "lint:styles": "stylelint './resources/styles/**/*.scss' --syntax scss",
-    "lint:scripts": "eslint './resources/scripts/**/*.js'"
+    "lint:scripts": "eslint './resources/scripts/**/*.js'",
+    "docs": "sassdoc resources/styles --dest docs --theme herman "
   },
   "repository": {
     "type": "git",
@@ -50,6 +51,8 @@
     "postcss-loader": "^2.1.4",
     "postcss-scss": "^1.0.5",
     "sass-loader": "^6.0.7",
+    "sassdoc": "^2.5.0",
+    "sassdoc-theme-herman": "^3.0.0",
     "simple-progress-webpack-plugin": "^1.1.2",
     "stylelint": "^9.2.0",
     "stylelint-config-wordpress": "^13.0.0",
