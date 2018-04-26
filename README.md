@@ -129,6 +129,20 @@ All tasks:
 - `nmp run docs` &ndash; Create SASS docs which can be seen in [Uuups Github pages](https://samikeijonen.github.io/uuups/).
 - `npm run build` &ndash; Minify and compress assets like CSS, JS, images, SVGs to `dist` folder. Run this when you're ready for production.
 
+## Accessibility testing
+
+[Pa11y](https://github.com/pa11y/pa11y) runs your code against [HTML CodeSniffer](http://squizlabs.github.com/HTML_CodeSniffer/). Check documentation from `pa11y` site.
+
+On the command line test any local or live URL:
+
+```
+pa11y http://example.com/
+```
+
+I recommend also [aXe browser add-on](https://www.deque.com/aXe/) or [aXe-CLI](https://github.com/dequelabs/axe-cli).
+
+More info about [Frontend checks for web accessibility](https://make.wordpress.org/accessibility/handbook/best-practices/test-for-web-accessibility/test-for-web-accessibility-frontend-code/).
+
 ## SASS and CSS structure
 
 SASS and CSS structure is probably one of
