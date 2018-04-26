@@ -46,10 +46,12 @@ function get_svg( $args = [] ) {
 
 	// Set defaults.
 	$defaults = [
-		'icon'     => '',
-		'title'    => '',
+		'class'    => '',
 		'desc'     => '',
 		'fallback' => false,
+		'icon'     => '',
+		'inline'   => true,
+		'title'    => '',
 	];
 
 	// Parse args.
@@ -82,34 +84,55 @@ function get_svg( $args = [] ) {
 		}
 	}
 
-	// Begin SVG markup.
-	$svg = '<svg class="icon icon-' . esc_attr( $args['icon'] ) . '"' . $aria_hidden . $aria_labelledby . ' role="img">';
+	// Sets icon class.
+	$class = $args['class'] ? esc_attr( $args['class'] ) : 'icon icon-' . esc_attr( $args['icon'] );
 
-	// Display the title.
-	if ( $args['title'] ) {
-		$svg .= '<title id="title-' . $unique_id . '">' . esc_html( $args['title'] ) . '</title>';
+	// If our SVG is inline.
+	if ( true === $args['inline'] ) {
+		// Begin SVG markup.
+		$svg = file_get_contents( locate_template( 'dist/svg/' . esc_attr( $args['icon'] ) . '.svg' ) );
 
-		// Display the desc only if the title is already set.
-		if ( $args['desc'] ) {
-			$svg .= '<desc id="desc-' . $unique_id . '">' . esc_html( $args['desc'] ) . '</desc>';
+		// Add ARIA hidden, ARIA labeledby and class markup.
+		$svg = str_replace( '<svg', '<svg class="' . $class . '"' . $aria_hidden . $aria_labelledby . 'role="img"', $svg );
+
+		if ( $aria_labelledby ) {
+			// Get the intro SVG markup and save as $svg_intro.
+			preg_match( '/<svg(.*?)>/', $svg, $svg_intro );
+
+			// Add the title/desc to the markup.
+			$svg = str_replace( $svg_intro[0], $svg_intro[0] . $aria_labelledby, $svg );
 		}
-	}
+	} else {
 
-	/*
-	 * Display the icon.
-	 *
-	 * The whitespace around `<use>` is intentional - it is a work around to a keyboard navigation bug in Safari 10.
-	 *
-	 * See https://core.trac.wordpress.org/ticket/38387.
-	 */
-	$svg .= ' <use href="#icon-' . esc_html( $args['icon'] ) . '" xlink:href="#icon-' . esc_html( $args['icon'] ) . '"></use> ';
+		// Begin SVG markup.
+		$svg = '<svg class="icon icon-' . esc_attr( $args['icon'] ) . '"' . $aria_hidden . $aria_labelledby . ' role="img">';
 
-	// Add some markup to use as a fallback for browsers that do not support SVGs.
-	if ( $args['fallback'] ) {
-		$svg .= '<span class="svg-fallback icon-' . esc_attr( $args['icon'] ) . '"></span>';
-	}
+		// Display the title.
+		if ( $args['title'] ) {
+			$svg .= '<title id="title-' . $unique_id . '">' . esc_html( $args['title'] ) . '</title>';
 
-	$svg .= '</svg>';
+			// Display the desc only if the title is already set.
+			if ( $args['desc'] ) {
+				$svg .= '<desc id="desc-' . $unique_id . '">' . esc_html( $args['desc'] ) . '</desc>';
+			}
+		}
+
+		/*
+		* Display the icon.
+		*
+		* The whitespace around `<use>` is intentional - it is a work around to a keyboard navigation bug in Safari 10.
+		*
+		* See https://core.trac.wordpress.org/ticket/38387.
+		*/
+		$svg .= ' <use href="#icon-' . esc_html( $args['icon'] ) . '" xlink:href="#icon-' . esc_html( $args['icon'] ) . '"></use> ';
+
+		// Add some markup to use as a fallback for browsers that do not support SVGs.
+		if ( $args['fallback'] ) {
+			$svg .= '<span class="svg-fallback icon-' . esc_attr( $args['icon'] ) . '"></span>';
+		}
+
+		$svg .= '</svg>';
+	} // End if.
 
 	return $svg;
 }
