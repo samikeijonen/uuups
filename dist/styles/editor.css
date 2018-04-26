@@ -286,6 +286,14 @@
     margin-bottom: 2rem;
     min-height: 27rem;
     position: relative; }
+.edit-post-visual-editor .wp-block-cover-image .wp-block-cover-image-text {
+      font-family: "Lora", serif;
+      font-size: 2rem;
+      line-height: 1.25;
+      color: #fff;
+      z-index: 1;
+      padding: 1.5rem;
+      text-align: center; }
 .edit-post-visual-editor .wp-block-cover-image.has-left-content {
       justify-content: flex-start; }
 .edit-post-visual-editor .wp-block-cover-image.has-left-content .wp-block-cover-image-text {
@@ -296,17 +304,9 @@
 .edit-post-visual-editor .wp-block-cover-image.has-right-content .wp-block-cover-image-text {
         margin-right: 0;
         text-align: right; }
-.edit-post-visual-editor .wp-block-cover-image .wp-block-cover-image-text {
-      font-family: "Lora", serif;
-      font-size: 2rem;
-      line-height: 1.25;
-      color: #fff;
-      z-index: 1;
-      padding: 1.5rem;
-      text-align: center; }
 .edit-post-visual-editor .wp-block-cover-image.has-parallax {
       background-attachment: fixed; }
-.edit-post-visual-editor .wp-block-cover-image.has-background-dim:before {
+.edit-post-visual-editor .wp-block-cover-image.has-background-dim::before {
       background-color: rgba(0, 0, 0, .5);
       content: "";
       position: absolute;
@@ -368,7 +368,8 @@
       flex-direction: column;
       flex-grow: 1;
       justify-content: center;
-      position: relative; }
+      position: relative;
+      width: calc(50% - 1rem); }
 .edit-post-visual-editor .wp-block-gallery .blocks-gallery-item figure {
         align-items: flex-end;
         height: 100%;
@@ -397,8 +398,6 @@
       .edit-post-visual-editor .wp-block-gallery.is-cropped .blocks-gallery-item figure {
         height: auto;
         width: auto; }
-.edit-post-visual-editor .wp-block-gallery .blocks-gallery-item {
-      width: calc(50% - 1rem); }
 .edit-post-visual-editor .wp-block-gallery.columns-1 .blocks-gallery-item {
       width: calc(100% - 1rem); }
 @media (min-width: 48em) {
@@ -423,7 +422,7 @@
           width: calc(12.5% - 1rem); } }
 .edit-post-visual-editor .has-drop-cap {
     /* stylelint-disable-line */ }
-.edit-post-visual-editor .has-drop-cap:first-letter {
+.edit-post-visual-editor .has-drop-cap::first-letter {
       font-size: 4rem;
       line-height: 1;
       float: left;

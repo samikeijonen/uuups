@@ -34,15 +34,15 @@
 	color: $color-grey-60;
 	display: block;
 
-	& + .terms-wrapper {
+	+ .terms-wrapper {
 		margin-top: $global-spacing-unit-1;
 	}
 
-	& .icon {
+	.icon {
 		margin-right: $global-spacing-unit-2;
 	}
 
-	& a {
+	a {
 		color: $color-grey-60;
 		@include font-size(0.88888888rem);
 		font-weight: 700;

@@ -49,15 +49,11 @@
 		$line-height: $lines * $global-baseline;
 
 		line-height: ($line-height / $font-size);
-	}
-
-	@else {
+	} @else {
 
 		@if (type-of($line-height) == number or $line-height == "inherit" or $line-height == "normal") {
 			line-height: $line-height;
-		}
-
-		@else if ($line-height != "none" and $line-height != false) {
+		} @else if ($line-height != "none" and $line-height != false) {
 			@error "D’oh! `#{$line-height}` is not a valid value for `$line-height`.";
 		}
 

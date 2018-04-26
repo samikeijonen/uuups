@@ -1,6 +1,5 @@
 {
 	"extends": "stylelint-config-wordpress",
-	"ignoreFiles": "./dist/styles/**",
 	"rules": {
 		"at-rule-empty-line-before": null,
 		"at-rule-no-unknown": null,

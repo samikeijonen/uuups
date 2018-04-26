@@ -5,7 +5,7 @@ html {
 // Inherit box-sizing to make it easier to change the property
 // for components that leverage other behavior.
 *,
-*:before,
-*:after {
+*::before,
+*::after {
 	box-sizing: inherit;
 }

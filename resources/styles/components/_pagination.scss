@@ -10,7 +10,7 @@
 
 .pagination__item:not(:last-child) {
 
-	&:after {
+	&::after {
 		content: "\002F";
 		padding: 0 $global-spacing-unit-2;
 	}

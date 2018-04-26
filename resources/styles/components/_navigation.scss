@@ -15,8 +15,9 @@
 		position: absolute;
 		right: $global-spacing-unit-2;
 		text-align: center;
+		z-index: 1000;
 
-		&:after {
+		&::after {
 			border: $global-spacing-unit-1 solid transparent;
 			border-bottom-color: $color-grey-20;
 			bottom: calc(100% + 1px);
@@ -82,15 +83,15 @@
 
 [aria-expanded="true"] {
 
-	& .line-1 {
+	.line-1 {
 		transform: translateX(14px) translateY(-3px) rotate(45deg);
 	}
 
-	& .line-2 {
+	.line-2 {
 		opacity: 0;
 	}
 
-	& .line-3 {
+	.line-3 {
 		transform: translateX(-14px) translateY(14px) rotate(-45deg);
 	}
 }
@@ -117,6 +118,13 @@
 		position: relative;
 	}
 
+	.menu__anchor {
+
+		.icon {
+			display: inline-block;
+		}
+	}
+
 	.menu__items {
 
 		&,
@@ -126,11 +134,11 @@
 			flex-wrap: wrap;
 		}
 
-		& > li:not(:last-child) {
+		> li:not(:last-child) {
 			margin-right: $global-spacing-unit-3;
 		}
 
-		& ul {
+		ul {
 			background-color: $color-white;
 			@include global-box-shadow;
 			left: -999em;
@@ -142,23 +150,23 @@
 			width: $global-spacing-unit-13 * 2;
 			z-index: 99999;
 
+			ul {
+				top: 0;
+			}
+
 			// Class "focus" is added by Javascript which enables
 			// keyboard focus to submenu items.
-			& li:hover > ul,
-			& .focus > ul {
+			.focus > ul,
+			li:hover > ul {
 				left: auto;
 				right: 100%;
 			}
 
-			& a {
+			a {
 				padding: $global-spacing-unit-1 $global-spacing-unit-2;
 			}
 
-			& ul {
-				top: 0;
-			}
-
-			& .icon {
+			.icon {
 				position: absolute;
 				right: $global-spacing-unit-2;
 				top: calc(50% - 0.5em);
@@ -166,18 +174,13 @@
 			}
 		}
 
-		& li:hover > ul,
-		& .focus > ul {
+		/* stylelint-disable no-descending-specificity */
+		.focus > ul,
+		li:hover > ul {
 			left: -50%;
 			opacity: 1;
 			transform: translateY(0);
 		}
-	}
-
-	.menu__anchor {
-
-		& .icon {
-			display: inline-block;
-		}
+		/* stylelint-enable */
 	}
 }

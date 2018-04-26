@@ -4,11 +4,11 @@ blockquote {
 	margin: 0 0 $global-spacing-unit-4;
 	padding-left: $global-spacing-unit-3;
 
-	& p {
+	p {
 		@include font-size(1.25rem);
 	}
 
-	& p:last-child {
+	p:last-child {
 		margin-bottom: 0;
 	}
 }
