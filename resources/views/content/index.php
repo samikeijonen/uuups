@@ -15,13 +15,13 @@
 		while ( have_posts() ) :
 			the_post();
 
-			if ( 0 == $wp_query->current_post ) :
+			if ( 0 === $wp_query->current_post ) :
 				echo '<div class="grid grid--bigger">';
 			endif;
 
 			Hybrid\render_view( 'entry/archive', Hybrid\get_post_hierarchy() );
 
-			if ( 1 == $wp_query->current_post ) :
+			if ( 1 === $wp_query->current_post ) :
 				echo '</div><div class="grid hide-excerpt">';
 			endif;
 		endwhile;

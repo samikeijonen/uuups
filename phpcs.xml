@@ -33,7 +33,6 @@
 
   <exclude-pattern>*/app/classes/*</exclude-pattern>
 
-
 	<!--
 	#############################################################################
 	USE THE WordPress RULESET
