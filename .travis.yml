@@ -76,7 +76,7 @@ script:
     # Run the theme through ESLint.
     - if [[ "$SNIFF" == "1" ]]; then eslint --config ./.eslintrc.js .; fi
     # Run the theme through stylelint.
-    - if [[ "$SNIFF" == "1" ]]; then stylelint './resources/styles/**/*.scss' --syntax scss --config ./.stylelintrc .; fi
+    - if [[ "$SNIFF" == "1" ]]; then stylelint './resources/styles/**/*.scss' --syntax scss .; fi
     # WordPress Coding Standards.
     # @link https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards
     # @link https://pear.php.net/package/PHP_CodeSniffer/
