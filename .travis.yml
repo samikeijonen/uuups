@@ -60,9 +60,12 @@ before_script:
     - if [[ "$SNIFF" == "1" ]]; then $PHPCS_DIR/bin/phpcs --config-set installed_paths $WPCS_DIR,$PHPCOMPAT_DIR; fi
     # After CodeSniffer install you should refresh your path.
     - if [[ "$SNIFF" == "1" ]]; then phpenv rehash; fi
-    # Install eslint and sass-lint.
+    # Install eslint.
     # @link https://eslint.org/
     - if [[ "$SNIFF" == "1" ]]; then npm install -g eslint eslint-config-wordpress; fi
+    # Install stylelint.
+    # @link https://stylelint.io/
+    - if [[ "$SNIFF" == "1" ]]; then npm install -g stylelint stylelint-config-wordpress; fi
 
 # Run test script commands.
 # Default is specific to project language.
