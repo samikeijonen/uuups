@@ -44,10 +44,9 @@
 
   <!-- Include the WordPress ruleset, with exclusions. -->
   <rule ref="WordPress">
-    <!-- Strict intendation rules we want to exclude -->
-    <exclude name="Generic.WhiteSpace.ScopeIndent.IncorrectExact" />
-    <exclude name="Generic.WhiteSpace.ScopeIndent.Incorrect" />
-</rule>
+    <!-- Allow short open tags. -->
+    <exclude name="Generic.PHP.DisallowShortOpenTag.EchoFound" />
+  </rule>
 
 
 	<!--
@@ -99,12 +98,6 @@
 			<property name="prefixes" type="array" value="uuups" />
 		</properties>
 	</rule>
-
-  <!-- Allow short open tags. -->
-  <rule ref="Generic.PHP.DisallowShortOpenTag.EchoFound">
-    <severity>0</severity>
-  </rule>
-
 
 	<!--
 	#############################################################################
