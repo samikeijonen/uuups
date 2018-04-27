@@ -42,7 +42,12 @@
 	#############################################################################
 	-->
 
-	<rule ref="WordPress"/>
+  <!-- Include the WordPress ruleset, with exclusions. -->
+  <rule ref="WordPress">
+    <!-- Strict intendation rules we want to exclude -->
+    <exclude name="Generic.WhiteSpace.ScopeIndent.IncorrectExact" />
+    <exclude name="Generic.WhiteSpace.ScopeIndent.Incorrect" />
+</rule>
 
 
 	<!--
