@@ -71,6 +71,15 @@
 		</properties>
 	</rule>
 
+  <!-- Change error to warning on whitespace rules. -->
+  <rule ref="Generic.WhiteSpace.ScopeIndent.IncorrectExact">
+    <type>warning</type>
+  </rule>
+
+  <rule ref="Generic.WhiteSpace.ScopeIndent.Incorrect">
+    <type>warning</type>
+  </rule>
+
 	<!-- Set the minimum supported WP version. This is used by several sniffs.
 		 The minimum version set here should be in line with the minimum WP version
 		 as set in the "Requires at least" tag in the readme.txt file. -->
