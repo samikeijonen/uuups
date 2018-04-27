@@ -1,5 +1,3 @@
 dist/scripts/*.js
 docs
-gulpfile.js
-gulp-config.js
 .eslintrc.js
