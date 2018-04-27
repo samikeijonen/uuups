@@ -74,7 +74,7 @@ script:
     # Search for PHP syntax errors.
     - find -L . -name '*.php' -print0 | xargs -0 -n 1 -P 4 php -l
     # Run the theme through ESLint.
-    - if [[ "$SNIFF" == "1" ]]; then eslint --config ./.eslintrc.js .; fi
+    - if [[ "$SNIFF" == "1" ]]; then eslint './resources/scripts/**/*.js' --config ./.eslintrc.js .; fi
     # Run the theme through stylelint.
     - if [[ "$SNIFF" == "1" ]]; then stylelint './resources/styles/**/*.scss' --syntax scss --config node_modules/stylelint-config-wordpress/scss.js .; fi
     # WordPress Coding Standards.
