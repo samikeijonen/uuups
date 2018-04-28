@@ -15,16 +15,13 @@ namespace Uuups;
  * @return void
  */
 add_action( 'wp_enqueue_scripts', function() {
-	// Get '.min' suffix.
-	$suffix = get_min_suffix();
-
 	// Get version.
 	$version = wp_get_theme( get_template() )->get( 'Version' );
 
 	// Main scripts.
 	wp_enqueue_script(
 		'uuups-app',
-		get_parent_theme_file_uri( 'dist/scripts/app' . $suffix . '.js' ),
+		get_parent_theme_file_uri( 'dist/scripts/app.js' ),
 		null,
 		$version,
 		true
@@ -41,7 +38,7 @@ add_action( 'wp_enqueue_scripts', function() {
 	// Main styles.
 	wp_enqueue_style(
 		'uuups-style',
-		get_parent_theme_file_uri( 'dist/styles/style' . $suffix . '.css' ),
+		get_parent_theme_file_uri( 'dist/styles/style.css' ),
 		null,
 		$version
 	);
@@ -63,16 +60,13 @@ add_action( 'wp_enqueue_scripts', function() {
  * @return void
  */
 add_action( 'enqueue_block_editor_assets', function() {
-	// Get '.min' suffix.
-	$suffix = get_min_suffix();
-
 	// Get version.
 	$version = wp_get_theme( get_template() )->get( 'Version' );
 
 	// Main block styles.
 	wp_enqueue_style(
 		'uuups-blocks',
-		get_parent_theme_file_uri( 'dist/styles/editor' . $suffix . '.css' ),
+		get_parent_theme_file_uri( 'dist/styles/editor.css' ),
 		null,
 		$version
 	);
