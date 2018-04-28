@@ -49,7 +49,7 @@ add_action( 'wp_enqueue_scripts', function() {
 	}
 
 	// Dequeue Core block styles.
-	wp_dequeue_style( 'wp-blocks' );
+	wp_dequeue_style( 'wp-core-blocks' );
 }, 10 );
 
 /**
