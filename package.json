@@ -1,5 +1,5 @@
 {
-  "name": "abc",
+  "name": "uuups",
   "version": "1.0.0",
   "description": "A starter theme for WordPress.",
   "main": "index.js",
@@ -14,14 +14,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/justintadlock/abc.git"
+    "url": "git+https://github.com/samikeijonen/uuups.git"
   },
   "author": "Justin Tadlock",
   "license": "GPL-2.0+",
   "bugs": {
-    "url": "https://github.com/justintadlock/abc/issues"
+    "url": "https://github.com/samikeijonen/uuups/issues"
   },
-  "homepage": "https://github.com/justintadlock/abc#readme",
+  "homepage": "https://github.com/samikeijonen/uuups#readme",
   "devDependencies": {
     "@babel/cli": "^7.0.0-beta.46",
     "@babel/core": "^7.0.0-beta.46",

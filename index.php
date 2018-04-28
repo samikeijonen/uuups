@@ -7,7 +7,7 @@
  * leaving the below code as an absolue fallback in case this file is loaded.
  * All it does is correctly load up our `resources/views/index.php` template.
  *
- * @package    Uuups
+ * @package Uuups
  */
 
 Hybrid\render_view( 'index' );
