@@ -2,9 +2,9 @@
 # Theme setup based on aucor-starter. https://github.com/aucor/aucor-starter
 
 # Defaults
-default_name="Test"
-default_id="test"
-default_url="fox.test/"
+default_name="Uuups"
+default_id="uuups"
+default_url="foxland-products.test/"
 default_locale="fi"
 
 # Directories
