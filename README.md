@@ -52,10 +52,6 @@ Starter theme uses [Composer](https://getcomposer.org/) and [NPM](https://www.np
 
 Theme has [Hybrid Core 5.0](https://github.com/justintadlock/hybrid-core/tree/5.0) as a must have dependency.
 
-### Setup script
-
-We should have [setup script](https://github.com/justintadlock/abc/issues/6) that handles all the search/replace.
-
 Or similar how [Tonik can be installed via composer](http://labs.tonik.pl/theme/docs/installation/).
 
 ### Creating new theme
@@ -78,6 +74,20 @@ Make sure you’re in the root folder of your theme.
 ```
 cd <theme-name>
 ```
+
+#### Run setup script
+
+Run setup wizard in theme root with bash command
+
+```
+sh setup.sh
+```
+
+You'll be asked three questions:
+
+1. Theme name (Default: "Uuups").
+1. Unique id for your theme name. Like `uuups` or `super-cool`. Use only lowercase `a-z` and `-`. (Default: uuups).
+1. Local development url is used by Browsersync and can be manually changed in `/resources/build/config.js`.
 
 #### Install composer dependencies.
 
