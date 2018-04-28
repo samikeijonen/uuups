@@ -19,7 +19,6 @@ setup_script="$basedir/setup.sh"
 # Text styles
 bold=$(tput bold)
 white=$(tput setaf 7)
-pink=$(tput setaf 198)
 green=$(tput setaf 2)
 txtreset=$(tput sgr0)
 
@@ -59,9 +58,9 @@ fi
 while true; do
 read -p "4) Is following information correct?
 
-name: ${bold}${pink}$name${txtreset} (Default: $default_name)
-id: ${bold}${pink}$id${txtreset} (Default: $default_id)
-url: ${bold}${pink}$url${txtreset} (Default: $default_url)
+name: ${bold}${green}$name${txtreset} (Default: $default_name)
+id: ${bold}${green}$id${txtreset} (Default: $default_id)
+url: ${bold}${green}$url${txtreset} (Default: $default_url)
 
 Proceed to install? [y/N]
 " yn
