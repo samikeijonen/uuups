@@ -176,7 +176,8 @@ module.exports = env => {
 				svgo: {
 					plugins: [
                                                 { removeUnknownsAndDefaults: false },
-                                                { cleanupIDs: false }
+						{ cleanupIDs: false },
+						{ removeViewBox: false }
                                         ],
 				},
 				plugins: [
