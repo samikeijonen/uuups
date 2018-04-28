@@ -3,44 +3,74 @@
 }
 
 .menu__items {
-	display: none;
+	// Primary menu.
+	&--primary {
+		display: none;
 
-	&[aria-expanded="true"] {
-		background-color: $color-white;
-		@include global-box-shadow;
-		display: block;
-		left: $global-spacing-unit-2;
-		margin-top: $global-spacing-unit-2;
-		padding: $global-spacing-unit-2;
-		position: absolute;
-		right: $global-spacing-unit-2;
-		text-align: center;
-		z-index: 1000;
-
-		&::after {
-			border: $global-spacing-unit-1 solid transparent;
-			border-bottom-color: $color-grey-20;
-			bottom: calc(100% + 1px);
-			content: " ";
-			height: 0;
+		&[aria-expanded="true"] {
+			background-color: $color-white;
+			@include global-box-shadow;
+			display: block;
+			left: $global-spacing-unit-2;
+			margin-top: $global-spacing-unit-2;
+			padding: $global-spacing-unit-2;
 			position: absolute;
-			right: $global-spacing-unit-1 * 7 / 3;
-			width: 0;
+			right: $global-spacing-unit-2;
+			text-align: center;
+			z-index: 1000;
+
+			&::after {
+				border: $global-spacing-unit-1 solid transparent;
+				border-bottom-color: $color-grey-20;
+				bottom: calc(100% + 1px);
+				content: " ";
+				height: 0;
+				position: absolute;
+				right: $global-spacing-unit-1 * 7 / 3;
+				width: 0;
+			}
 		}
+	}
+
+	// Social links menu.
+	&--social {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
 	}
 }
 
 .menu__anchor {
-	color: $color-grey-60;
-	@include font-size(0.8888888888rem);
-	font-weight: 700;
-	display: block;
-	padding-bottom: $global-spacing-unit-1;
-	padding-top: $global-spacing-unit-1;
-	text-decoration: none;
+	// Primary menu links.
+	&--primary {
+		color: $color-grey-60;
+		@include font-size(0.8888888888rem);
+		font-weight: 700;
+		display: block;
+		padding-bottom: $global-spacing-unit-1;
+		padding-top: $global-spacing-unit-1;
+		text-decoration: none;
 
-	&.is-active {
+		&.is-active {
+			color: $color-dark;
+		}
+	}
+
+	// Social menu links.
+	&--social {
 		color: $color-dark;
+		padding: $global-spacing-unit-1;
+
+		&:hover,
+		&:focus,
+		&:active {
+			color: $color-grey-60;
+		}
+
+		.icon {
+			height: 1.5em;
+			width: 1.5em;
+		}
 	}
 }
 
@@ -82,7 +112,6 @@
 }
 
 [aria-expanded="true"] {
-
 	.line-1 {
 		transform: translateX(14px) translateY(-3px) rotate(45deg);
 	}
@@ -98,7 +127,6 @@
 
 // Show menu when there is no js, and hide menu toggle.
 .no-js {
-
 	.menu-toggle {
 		display: none;
 	}
@@ -118,69 +146,63 @@
 		position: relative;
 	}
 
-	.menu__anchor {
-
-		.icon {
-			display: inline-block;
-		}
-	}
-
 	.menu__items {
+		&--primary {
+			&,
+			&.is-toggled {
+				align-items: center;
+				display: flex;
+				flex-wrap: wrap;
+			}
 
-		&,
-		&.is-toggled {
-			align-items: center;
-			display: flex;
-			flex-wrap: wrap;
-		}
-
-		> li:not(:last-child) {
-			margin-right: $global-spacing-unit-3;
-		}
-
-		ul {
-			background-color: $color-white;
-			@include global-box-shadow;
-			left: -999em;
-			opacity: 0;
-			position: absolute;
-			top: 100%;
-			transform: translateY(-$global-spacing-unit-2);
-			transition: transform $transition-duration-1, opacity $transition-duration-1;
-			width: $global-spacing-unit-13 * 2;
-			z-index: 99999;
+			> li:not(:last-child) {
+				margin-right: $global-spacing-unit-3;
+			}
 
 			ul {
-				top: 0;
+				background-color: $color-white;
+				@include global-box-shadow;
+				left: -999em;
+				opacity: 0;
+				position: absolute;
+				top: 100%;
+				transform: translateY(-$global-spacing-unit-2);
+				transition: transform $transition-duration-1, opacity $transition-duration-1;
+				width: $global-spacing-unit-13 * 2;
+				z-index: 99999;
+
+				ul {
+					top: 0;
+				}
+
+				// Class "focus" is added by Javascript which enables
+				// keyboard focus to submenu items.
+				.focus > ul,
+				li:hover > ul {
+					left: auto;
+					right: 100%;
+				}
+
+				a {
+					padding: $global-spacing-unit-1 $global-spacing-unit-2;
+				}
+
+				.icon {
+					position: absolute;
+					right: $global-spacing-unit-2;
+					top: calc(50% - 0.5em);
+					transform: rotate(-90deg);
+				}
 			}
 
-			// Class "focus" is added by Javascript which enables
-			// keyboard focus to submenu items.
+			/* stylelint-disable no-descending-specificity */
 			.focus > ul,
 			li:hover > ul {
-				left: auto;
-				right: 100%;
+				left: -50%;
+				opacity: 1;
+				transform: translateY(0);
 			}
-
-			a {
-				padding: $global-spacing-unit-1 $global-spacing-unit-2;
-			}
-
-			.icon {
-				position: absolute;
-				right: $global-spacing-unit-2;
-				top: calc(50% - 0.5em);
-				transform: rotate(-90deg);
-			}
+			/* stylelint-enable */
 		}
-
-		/* stylelint-disable no-descending-specificity */
-		.focus > ul,
-		li:hover > ul {
-			left: -50%;
-			opacity: 1;
-			transform: translateY(0);
-		}
-		/* stylelint-enable */
 	}
 }

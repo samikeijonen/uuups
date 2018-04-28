@@ -3,6 +3,7 @@
 	"rules": {
 		"at-rule-empty-line-before": null,
 		"at-rule-no-unknown": null,
+		"rule-empty-line-before": null,
 		"declaration-no-important": true,
 	}
 }

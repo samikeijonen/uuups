@@ -97,6 +97,7 @@ add_action( 'init', function() {
 
 	register_nav_menus( [
 		'primary' => esc_html_x( 'Primary', 'nav menu location', 'uuups' ),
+		'social'  => esc_html_x( 'Social Links', 'nav menu location', 'uuups' ),
 	] );
 
 }, 5 );

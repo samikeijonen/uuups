@@ -48,10 +48,11 @@
 /*--------------------------------------------------------------
 # Objects - Undecorated design patterns.
 --------------------------------------------------------------*/
-@import "objects/wrappers";
 @import "objects/alignments";
-@import "objects/layouts";
 @import "objects/animations";
+@import "objects/icons";
+@import "objects/layouts";
+@import "objects/wrappers";
 
 
 /*--------------------------------------------------------------
@@ -78,6 +79,5 @@
 # Utilities - Helpers and overrides.
 --------------------------------------------------------------*/
 @import "utilities/accessibility";
-@import "utilities/icons";
 @import "utilities/font-sizes";
 @import "utilities/helpers";
