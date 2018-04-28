@@ -10,12 +10,10 @@ default_locale="fi"
 # Directories
 basedir="$( cd "$( dirname "$0" )" && pwd )/."
 assetsdir="$basedir/resources"
-sassdir="$assetsdir/styles"
 builddir="$assetsdir/build"
 basedir_all_files="$basedir/."
 
 # Files
-style="$basedir/style.css"
 setup_script="$basedir/setup.sh"
 
 # Text styles
