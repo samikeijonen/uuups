@@ -33,6 +33,12 @@ I have hopes and dreams for the starter theme:
   - SVG system.
 - being design system ready.
 
+## My workflow
+
+I'll work on `dev` branch where I keep un-minified CSS, JS, SVGs etc. In `master` all assets are cleaned and compile when running `npm run build`.
+
+In other words `master` branch is ready for production.
+
 ## Directory structure
 
 Directory structure aims to be modern app-like, what ever that means :)
@@ -126,7 +132,7 @@ wp theme activate <theme-name>
 
 ## Webpack tasks
 
-In this theme experiment I still use [Webpack](https://webpack.js.org/) tasks for automated processes.
+In this theme experiment I use [Webpack](https://webpack.js.org/) tasks for automated processes.
 
 You can configure Webpack related settings
 in the `resources/build/config.js` file. Change at least `proxy`
