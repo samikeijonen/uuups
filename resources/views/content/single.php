@@ -15,7 +15,7 @@
 			Hybrid\render_view( 'entry/single', Hybrid\get_post_hierarchy() );
 		endwhile;
 
-		comments_template( '/resources/views/partials/comments.php' );
+		comments_template();
 
 	endif;
 	?>
