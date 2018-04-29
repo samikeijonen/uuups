@@ -76,6 +76,12 @@
 
 .menu__anchor.menu__anchor--button {
 	@include button-block;
+
+	&:hover,
+	&:active,
+	&:focus {
+		@include button-block-hover;
+	}
 }
 
 // Menu toggle.

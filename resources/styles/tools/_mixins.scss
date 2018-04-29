@@ -153,6 +153,7 @@
 @mixin button-block-hover {
 	background-color: $color-dark;
 	color: $color-white;
+	outline-offset: -2px;
 }
 
 @mixin subheading {
