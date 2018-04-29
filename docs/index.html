@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <title>abc Documentation</title>
+  <title>uuups Documentation</title>
 
   <link href="assets/img/favicon.ico" rel="shortcut icon">
   <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,600|Source+Sans+Pro:400,400i,700,700i" rel="stylesheet">
@@ -40,7 +40,7 @@
 
 
       <div class="project-title">
-        <a href="index.html" rel="home" class="project-name">abc</a>
+        <a href="index.html" rel="home" class="project-name">uuups</a>
         
           <span class="project-version">1.0.0</span>
         
@@ -57,7 +57,7 @@
     <div class="nav-subsection">
       <h3 class="nav-home">
         
-        <a href="index.html" data-nav="is-active">abc</a>
+        <a href="index.html" data-nav="is-active">uuups</a>
       </h3>
 
       
@@ -127,12 +127,12 @@
     <ul class="project-links">
       
         <li class="project-link-item">
-          <a href="https://github.com/justintadlock/abc#readme" class="project-link">View Project</a>
+          <a href="https://github.com/samikeijonen/uuups#readme" class="project-link">View Project</a>
         </li>
       
       
         <li class="project-link-item">
-          <a href="git+https://github.com/justintadlock/abc.git" class="project-link">View Source</a>
+          <a href="git+https://github.com/samikeijonen/uuups.git" class="project-link">View Source</a>
         </li>
       
     </ul>
@@ -172,6 +172,9 @@
 </li>
 <li>being design system<span class="widont">&nbsp;</span>ready.</li>
 </ul>
+<h2 id="my-workflow">My workflow</h2>
+<p>I’ll work on <code>dev</code> branch where I keep un-minified CSS, JS, SVGs etc. In <code>master</code> all assets are cleaned and compile when running <code>npm run build</code>.</p>
+<p>In other words <code>master</code> branch is ready for<span class="widont">&nbsp;</span>production.</p>
 <h2 id="directory-structure">Directory structure</h2>
 <p>Directory structure aims to be modern app-like, what ever that means<span class="widont">&nbsp;</span>:)</p>
 <ul>
@@ -190,9 +193,6 @@
 <h2 id="installation-and-setup">Installation and setup</h2>
 <p>Starter theme uses <a href="https://getcomposer.org/">Composer</a> and <a href="https://www.npmjs.com/">NPM</a> to manage its dependencies. Install both on your machine before using this starter<span class="widont">&nbsp;</span>theme.</p>
 <p>Theme has <a href="https://github.com/justintadlock/hybrid-core/tree/5.0">Hybrid Core 5.0</a> as a must have<span class="widont">&nbsp;</span>dependency.</p>
-<h3 id="setup-script">Setup script</h3>
-<p>We should have <a href="https://github.com/justintadlock/abc/issues/6">setup script</a> that handles all the<span class="widont">&nbsp;</span>search/replace.</p>
-<p>Or similar how <a href="http://labs.tonik.pl/theme/docs/installation/">Tonik can be installed via<span class="widont">&nbsp;</span>composer</a>.</p>
 <h3 id="creating-new-theme">Creating new theme</h3>
 <p>WordPress themes lives in the <code>wp-content/themes</code> folder. This is where we fetch our starter theme<span class="widont">&nbsp;</span>files.</p>
 <pre><code># Go to the `themes` directory of your WordPress installation.
@@ -204,6 +204,26 @@ cd wp-content/themes
 <p>Make sure you’re in the root folder of your<span class="widont">&nbsp;</span>theme.</p>
 <pre><code>cd &lt;theme-name&gt;
 </code></pre>
+<h4 id="run-setup-script">Run setup script</h4>
+<p>Run setup wizard in theme root with bash<span class="widont">&nbsp;</span>command</p>
+<pre><code>sh setup.sh
+</code></pre>
+<p>You’ll be asked three<span class="widont">&nbsp;</span>questions:</p>
+<ol>
+<li>Theme name (Default:<span class="widont">&nbsp;</span>“Uuups”).</li>
+<li>Unique id for your theme name. Like <code>uuups</code> or <code>super-cool</code>. Use only lowercase <code>a-z</code> and <code>-</code>. (Default: uuups).</li>
+<li>Local development url is used by Browsersync and can be manually changed in <code>/resources/build/config.js</code>.</li>
+</ol>
+<p>In Windows you might need to install <a href="https://www.cygwin.com/">Cygwin</a> or
+similar tool to run <code>sh</code> script.</p>
+<p>Or you can do search and<span class="widont">&nbsp;</span>replace:</p>
+<ol>
+<li>Search for <code>'uuups'</code> (inside single quotations) to capture the text<span class="widont">&nbsp;</span>domain.</li>
+<li>Search for <code>Text Domain: uuups</code> in style.css.</li>
+<li>Search for <code>Uuups</code> (with a space before it) to capture<span class="widont">&nbsp;</span>DocBlocks.</li>
+<li>Search for <code>Uuups</code> to capture all the<span class="widont">&nbsp;</span>namespaces.</li>
+<li>Search for <code>uuups-</code> to capture prefixed<span class="widont">&nbsp;</span>handles.</li>
+</ol>
 <h4 id="install-composer-dependencies-">Install composer dependencies.</h4>
 <pre><code>composer install
 </code></pre>
@@ -219,7 +239,7 @@ cd wp-content/themes
 <pre><code>wp theme activate &lt;theme-name&gt;
 </code></pre>
 <h2 id="webpack-tasks">Webpack tasks</h2>
-<p>In this theme experiment I still use <a href="https://webpack.js.org/">Webpack</a> tasks for automated<span class="widont">&nbsp;</span>processes.</p>
+<p>In this theme experiment I use <a href="https://webpack.js.org/">Webpack</a> tasks for automated<span class="widont">&nbsp;</span>processes.</p>
 <p>You can configure Webpack related settings
 in the <code>resources/build/config.js</code> file. Change at least <code>proxy</code>
 setting in browserSync to match your local environment URL. This will be needed if you use Browsersync feature by running <code>npm run watch</code>.</p>
@@ -229,7 +249,7 @@ setting in browserSync to match your local environment URL. This will be needed 
 <p>All tasks:</p>
 <ul>
 <li><code>npm run watch</code> – Automatically watch changes to CSS, JS, and PHP. Also kicks off<span class="widont">&nbsp;</span>BrowserSync.</li>
-<li><code>gulp run dev</code> – Output assets like CSS, JS, images, SVGs to <code>dist</code> folder.</li>
+<li><code>npm run dev</code> – Output assets like CSS, JS, images, SVGs to <code>dist</code> folder.</li>
 <li><code>npm run lint</code> – Run SASS and JS against WordPress coding standards.
 <ul>
 <li><code>npm run lint:styles</code> – Run SASS against WordPress coding<span class="widont">&nbsp;</span>standards.</li>
@@ -346,25 +366,25 @@ Hybrid\render_view( 'menu', 'primary', [ 'name' =&gt; 'primary' ] );
 <p>When you commit changes in Github, let <a href="https://travis-ci.org/">Travis CI</a> run and test your<span class="widont">&nbsp;</span>code.</p>
 <p>File <code>.travis.yml</code> is the configuration file for setting up Travis. It’s also based on Underscores<span class="widont">&nbsp;</span>configuration.</p>
 <h3 id="style-linting">Style linting</h3>
-<p>Gulp task <code>gulp sass:lint</code> checks SASS files using <a href="https://github.com/stylelint/stylelint">stylelint</a>.</p>
+<p>NPM task <code>npm run lint:styles</code> checks SASS files using <a href="https://github.com/stylelint/stylelint">stylelint</a>.</p>
 <p>File <code>.stylelintrc</code> is the configuration file for<span class="widont">&nbsp;</span>stylelint.</p>
 <p>I also recommend installing stylelint extension to your IDE, for example <a href="https://marketplace.visualstudio.com/items?itemName=shinnn.stylelint">vscode-stylelint</a>.</p>
 <h3 id="javascript-linting">JavaScript linting</h3>
-<p>Gulp task <code>gulp js:lint</code> checks SASS files using <a href="https://eslint.org/">ESLint</a>.</p>
+<p>NPM task <code>npm lint:scripts</code> checks SASS files using <a href="https://eslint.org/">ESLint</a>.</p>
 <p>File <code>.eslintrc.js</code> is the configuration file for ESLint. And <code>.eslintignore</code> file for what files to ignore from<span class="widont">&nbsp;</span>linting.</p>
 <p>I also recommend installing ESLint extension to your IDE, for example <a href="https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint">VS Code ESLint<span class="widont">&nbsp;</span>extension</a>.</p>
 <h3 id="editorconfig">Editorconfig</h3>
 <p>Theme has an <code>.editorconfig</code> file that sets your code editor settings accordingly. <a href="http://editorconfig.org/#download">Download the extension to your editor</a>. The settings will automatically be applied when you edit code when you have the<span class="widont">&nbsp;</span>extension.</p>
 <h2 id="sass-docs">SASS docs</h2>
-<p>Running <code>gulp docs</code> creates <a href="http://sassdoc.com/">sassdocs</a> in <code>docs</code> folder. At the moment I’m
+<p>Running <code>npm run docs</code> creates <a href="http://sassdoc.com/">sassdocs</a> in <code>docs</code> folder. At the moment I’m
 testing <a href="https://github.com/oddbird/sassdoc-theme-herman">Herman sassdoc<span class="widont">&nbsp;</span>theme</a>.</p>
 <p>The end <a href="https://samikeijonen.github.io/uuups/">result can be seen in Github pages</a>. This is nowhere near of design system but it’s a nice<span class="widont">&nbsp;</span>start.</p>
 <h2 id="svg-system">SVG system</h2>
 <p>All the main SVG related functions can be found in the <code>app/functions-icons.php</code> file. It’s well-documented in the code, but here’s a<span class="widont">&nbsp;</span>summary:</p>
 <ul>
-<li>Add SVG icons in <code>resources/svg-icons</code> folder. From these icons build tools creates SVG sprite file in <code>dist/images/svg-icons.svg</code>.</li>
-<li>Include the SVG sprite file via the <code>wp_footer</code> hook.</li>
-<li><code>get_svg()</code> function returns the SVG icon<span class="widont">&nbsp;</span>markup.</li>
+<li>Add SVG icons in <code>resources/svg</code> folder. Build tools copies these icons  SVG files in <code>dist/svg</code> folder.</li>
+<li><code>npm run build</code> cleans all SVG<span class="widont">&nbsp;</span>files.</li>
+<li><code>get_svg()</code> function returns inline SVG icon markup by<span class="widont">&nbsp;</span>default.</li>
 <li>For example <code>get_svg( [ 'icon' =&gt; 'angle-down' ] )</code>.</li>
 <li>Icons can be used in social links menu, in dropdown menu, you name<span class="widont">&nbsp;</span>it.</li>
 </ul>
