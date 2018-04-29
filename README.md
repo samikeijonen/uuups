@@ -89,6 +89,17 @@ You'll be asked three questions:
 1. Unique id for your theme name. Like `uuups` or `super-cool`. Use only lowercase `a-z` and `-`. (Default: uuups).
 1. Local development url is used by Browsersync and can be manually changed in `/resources/build/config.js`.
 
+In Windows you might need to install [Cygwin](https://www.cygwin.com/) or
+similar tool to run `sh` script.
+
+Or you can do search and replace:
+
+1. Search for `'uuups'` (inside single quotations) to capture the text domain.
+1. Search for `Text Domain: uuups` in style.css.
+1. Search for ` Uuups` (with a space before it) to capture DocBlocks.
+1. Search for `Uuups` to capture all the namespaces.
+1. Search for `uuups-` to capture prefixed handles.
+
 #### Install composer dependencies.
 
 ```
