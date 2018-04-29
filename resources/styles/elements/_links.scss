@@ -9,7 +9,7 @@ a {
 	}
 
 	&:focus {
-		outline: thin dotted;
+		@include global-focus-styles;
 	}
 
 	&:hover,

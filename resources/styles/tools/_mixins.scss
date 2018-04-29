@@ -156,6 +156,23 @@
 	outline-offset: -2px;
 }
 
+/// Focu styles.
+///
+/// @example scss - Basic Usage Sass
+///		.button:hover,
+///		.button:focus {
+///			@include global-focus-styles;
+///    }
+///
+/// @example css - Basic Usage CSS Output
+/// 	.button:hover
+///		.button:focus {
+///			outline: thin dotted;
+///		}
+@mixin global-focus-styles {
+	outline: thin dotted;
+}
+
 @mixin subheading {
 	color: $color-grey-60;
 	@include font-size($font-size-h3);
