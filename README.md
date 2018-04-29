@@ -52,8 +52,6 @@ Starter theme uses [Composer](https://getcomposer.org/) and [NPM](https://www.np
 
 Theme has [Hybrid Core 5.0](https://github.com/justintadlock/hybrid-core/tree/5.0) as a must have dependency.
 
-Or similar how [Tonik can be installed via composer](http://labs.tonik.pl/theme/docs/installation/).
-
 ### Creating new theme
 
 WordPress themes lives in the `wp-content/themes` folder. This is where we fetch our starter theme files.
