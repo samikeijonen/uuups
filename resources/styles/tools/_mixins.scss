@@ -175,7 +175,7 @@
 
 @mixin subheading {
 	color: $color-grey-60;
-	@include font-size($font-size-h3);
+	font-size: var(--font-size-h3);
 	font-style: normal;
 	text-align: center;
 }

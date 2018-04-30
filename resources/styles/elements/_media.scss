@@ -23,7 +23,7 @@ figure {
 
 figcaption {
 	color: $color-grey-60;
-	@include font-size(0.875rem, $modifier: -0.5);
+	font-size: var(--font-size-875);
 	margin-bottom: $global-spacing-unit-1;
 	margin-top: $global-spacing-unit-1;
 	text-align: center;

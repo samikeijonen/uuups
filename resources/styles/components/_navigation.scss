@@ -44,7 +44,7 @@
 	// Primary menu links.
 	&--primary {
 		color: $color-grey-60;
-		@include font-size(0.8888888888rem);
+		font-size: var(--font-size-88);
 		font-weight: 700;
 		display: block;
 		padding-bottom: $global-spacing-unit-1;

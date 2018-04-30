@@ -68,7 +68,7 @@
 
 	.wp-block-cover-image-text {
 		font-family: $font-heading;
-		@include font-size(2rem);
+		font-size: var(--font-size-h1);
 		color: $color-white;
 		z-index: 1;
 		padding: $global-spacing-unit-3;
@@ -209,7 +209,7 @@
 // Paragraph.
 .has-drop-cap { /* stylelint-disable-line */
 	&::first-letter {
-		@include font-size(4rem, 1);
+		font-size: var(--font-size-h1);
 		float: left;
 		font-style: normal;
 		font-family: serif;
@@ -229,7 +229,7 @@
 
 // Quote and pullquote.
 .wp-block-quote.is-large p {
-	@include font-size(1.5rem);
+	font-size: var(--font-size-h3);
 }
 
 .wp-block-pullquote {

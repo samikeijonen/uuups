@@ -23,7 +23,7 @@
 }
 
 .entry__byline {
-	@include font-size(0.8rem);
+	font-size: var(--font-size-88);
 }
 
 .entry__footer {
@@ -44,7 +44,7 @@
 
 	a {
 		color: $color-grey-60;
-		@include font-size(0.88888888rem);
+		font-size: var(--font-size-88);
 		font-weight: 700;
 		text-decoration: none;
 		text-transform: capitalize;
