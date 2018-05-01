@@ -31,7 +31,7 @@
 }
 
 .terms-wrapper {
-	color: $color-grey-60;
+	color: var(--color-grey-60);
 	display: block;
 
 	+ .terms-wrapper {
@@ -43,7 +43,7 @@
 	}
 
 	a {
-		color: $color-grey-60;
+		color: var(--color-grey-60);
 		font-size: var(--font-size-88);
 		font-weight: 700;
 		text-decoration: none;
@@ -52,7 +52,7 @@
 		&:hover,
 		&:focus,
 		&:active {
-			color: $color-dark;
+			color: var(--color-dark);
 			text-decoration: underline;
 		}
 	}

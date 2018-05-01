@@ -1,31 +1,31 @@
 .has-main-color {
-	color: $color-base;
+	color: var(--color-base);
 }
 
 .has-main-background-color {
-	background-color: $color-base;
+	background-color: var(--color-base);
 }
 
 .has-dark-color {
-	color: $color-dark;
+	color: var(--color-dark);
 }
 
 .has-dark-background-color {
-	background-color: $color-dark;
+	background-color: var(--color-dark);
 }
 
 .has-white-color {
-	color: $color-white;
+	color: var(--color-white);
 }
 
 .has-white-background-color {
-	background-color: $color-white;
+	background-color: var(--color-white);
 }
 
 .has-light-color {
-	color: $color-light-1;
+	color: var(--color-light);
 }
 
 .has-light-background-color {
-	background-color: $color-light-1;
+	background-color: var(--color-light);
 }

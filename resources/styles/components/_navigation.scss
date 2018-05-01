@@ -8,7 +8,7 @@
 		display: none;
 
 		&[aria-expanded="true"] {
-			background-color: $color-white;
+			background-color: var(--color-white);
 			@include global-box-shadow;
 			display: block;
 			left: $global-spacing-unit-2;
@@ -21,7 +21,7 @@
 
 			&::after {
 				border: $global-spacing-unit-1 solid transparent;
-				border-bottom-color: $color-grey-20;
+				border-bottom-color: var(--color-grey-20);
 				bottom: calc(100% + 1px);
 				content: " ";
 				height: 0;
@@ -43,7 +43,7 @@
 .menu__anchor {
 	// Primary menu links.
 	&--primary {
-		color: $color-grey-60;
+		color: var(--color-grey-60);
 		font-size: var(--font-size-88);
 		font-weight: 700;
 		display: block;
@@ -52,19 +52,19 @@
 		text-decoration: none;
 
 		&.is-active {
-			color: $color-dark;
+			color: var(--color-dark);
 		}
 	}
 
 	// Social menu links.
 	&--social {
-		color: $color-dark;
+		color: var(--color-dark);
 		padding: $global-spacing-unit-1;
 
 		&:hover,
 		&:focus,
 		&:active {
-			color: $color-grey-60;
+			color: var(--color-grey-60);
 		}
 
 		.icon {
@@ -87,7 +87,7 @@
 // Menu toggle.
 .menu-toggle {
 	background-color: transparent;
-	color: $color-dark;
+	color: var(--color-dark);
 	cursor: pointer;
 	height: $global-spacing-unit-1 * 7;
 	padding: $global-spacing-unit-1;
@@ -97,7 +97,7 @@
 	&:focus,
 	&:active {
 		background-color: transparent;
-		color: $color-dark;
+		color: var(--color-dark);
 	}
 
 	&:focus {
@@ -108,7 +108,7 @@
 .menu-toggle-icon {
 	display: inline-block;
 	fill: currentColor;
-	stroke: $color-dark;
+	stroke: var(--color-dark);
 	stroke-width: 2;
 	transition: all $transition-duration-1;
 }
@@ -166,7 +166,7 @@
 			}
 
 			ul {
-				background-color: $color-white;
+				background-color: var(--color-white);
 				@include global-box-shadow;
 				left: -999em;
 				opacity: 0;

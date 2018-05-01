@@ -20,11 +20,11 @@
 }
 
 .color-dark {
-	color: $color-dark;
+	color: var(--color-dark);
 }
 
 .color-grey-60 {
-	color: $color-grey-60;
+	color: var(--color-grey-60);
 }
 
 .text-center {

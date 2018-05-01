@@ -22,7 +22,7 @@ figure {
 }
 
 figcaption {
-	color: $color-grey-60;
+	color: var(--color-grey-60);
 	font-size: var(--font-size-875);
 	margin-bottom: $global-spacing-unit-1;
 	margin-top: $global-spacing-unit-1;
