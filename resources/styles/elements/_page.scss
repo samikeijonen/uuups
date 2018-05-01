@@ -14,7 +14,7 @@ textarea {
 
 // Fallback for when there is no custom background color defined.
 body {
-	background: $color-white;
+	background: var(--color-white);
 }
 
 p {

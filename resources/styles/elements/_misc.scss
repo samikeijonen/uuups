@@ -6,7 +6,7 @@ i {
 }
 
 cite {
-	color: $color-grey-60;
+	color: var(--color-grey-60);
 }
 
 address {
@@ -23,7 +23,7 @@ acronym {
 
 mark,
 ins {
-	background-color: $color-light-1;
+	background-color: var(--color-light);
 	text-decoration: none;
 }
 

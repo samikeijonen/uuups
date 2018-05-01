@@ -27,7 +27,7 @@
 
 	.editor-post-title .editor-post-title__input {
 		font-family: $font-heading;
-		@include font-size($font-size-h1);
+		font-size: var(--font-size-h1);
 		min-height: auto;
 		text-align: center;
 	}

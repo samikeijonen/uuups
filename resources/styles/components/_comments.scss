@@ -27,7 +27,7 @@
 	margin-bottom: $global-spacing-unit-4;
 
 	a {
-		color: $color-dark;
+		color: var(--color-dark);
 		text-decoration: none;
 
 		&:hover,

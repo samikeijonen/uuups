@@ -16,12 +16,12 @@
 	word-wrap: normal !important;
 
 	&:focus {
-		@include font-size(0.875rem);
-		background-color: $color-base;
+		background-color: var(--color-base);
 		clip: auto !important;
 		clip-path: none;
-		color: $color-white;
+		color: var(--color-white);
 		display: block;
+		font-size: var(--font-size-875);
 		font-weight: 700;
 		height: auto;
 		left: $global-spacing-unit-1;
