@@ -176,34 +176,20 @@
     font-size: var(--font-size-h1); }
 .edit-post-visual-editor h2,
   .edit-post-visual-editor h2.blocks-rich-text__tinymce.mce-content-body {
-<<<<<<< HEAD
-    font-size: 1.5rem;
-    line-height: 1.33333333; }
-=======
     font-size: 1.25rem;
     font-size: var(--font-size-h2); }
->>>>>>> css-variables
 .edit-post-visual-editor h3,
   .edit-post-visual-editor h3.blocks-rich-text__tinymce.mce-content-body {
     font-size: 1.125rem;
     font-size: var(--font-size-h3); }
 .edit-post-visual-editor h4,
   .edit-post-visual-editor h4.blocks-rich-text__tinymce.mce-content-body {
-<<<<<<< HEAD
-    font-size: 1.125rem;
-    line-height: 1.55555556; }
-.edit-post-visual-editor h5,
-  .edit-post-visual-editor h5.blocks-rich-text__tinymce.mce-content-body {
-    font-size: 1.125rem;
-    line-height: 1.77777778; }
-=======
     font-size: 1rem;
     font-size: var(--font-size-h4); }
 .edit-post-visual-editor h5,
   .edit-post-visual-editor h5.blocks-rich-text__tinymce.mce-content-body {
     font-size: 1rem;
     font-size: var(--font-size-h5); }
->>>>>>> css-variables
 .edit-post-visual-editor h6,
   .edit-post-visual-editor h6.blocks-rich-text__tinymce.mce-content-body {
     font-size: 1rem;
@@ -266,11 +252,7 @@
     color: rgba(0, 0, 0, .6);
     color: var(--color-grey-60);
     font-size: 0.875rem;
-<<<<<<< HEAD
-    line-height: 1.42857143;
-=======
     font-size: var(--font-size-875);
->>>>>>> css-variables
     margin-bottom: 0.5rem;
     margin-top: 0.5rem;
     text-align: center; }
@@ -526,13 +508,8 @@
 .edit-post-visual-editor .has-background {
     padding: 1.5rem; }
 .edit-post-visual-editor .wp-block-quote.is-large p {
-<<<<<<< HEAD
-    font-size: 1.5rem;
-    line-height: 1.33333333; }
-=======
     font-size: 1.125rem;
     font-size: var(--font-size-h3); }
->>>>>>> css-variables
 .edit-post-visual-editor .wp-block-pullquote {
     border-bottom: 0.25rem solid;
     border-left: 0;
@@ -572,23 +549,12 @@
     background-color: var(--color-light); }
 .edit-post-visual-editor .h1 {
     font-size: 1.5rem;
-<<<<<<< HEAD
-    line-height: 1.33333333; }
-.edit-post-visual-editor .h3 {
-=======
     font-size: var(--font-size-h1); }
 .edit-post-visual-editor .h2 {
->>>>>>> css-variables
     font-size: 1.25rem;
     font-size: var(--font-size-h2); }
 .edit-post-visual-editor .h3 {
     font-size: 1.125rem;
-<<<<<<< HEAD
-    line-height: 1.55555556; }
-.edit-post-visual-editor .h5 {
-    font-size: 1.125rem;
-    line-height: 1.77777778; }
-=======
     font-size: var(--font-size-h3); }
 .edit-post-visual-editor .h4 {
     font-size: 1rem;
@@ -596,18 +562,12 @@
 .edit-post-visual-editor .h5 {
     font-size: 1rem;
     font-size: var(--font-size-h5); }
->>>>>>> css-variables
 .edit-post-visual-editor .h6 {
     font-size: 1rem;
     font-size: var(--font-size-h6); }
 .edit-post-visual-editor .font-size-88 {
-<<<<<<< HEAD
-    font-size: 0.88888889rem;
-    line-height: 1.6875; }
-=======
     font-size: var(var);
     font-size: var(var(--font-size-88)); }
->>>>>>> css-variables
 .edit-post-visual-editor .decoration-none {
     text-decoration: none; }
 .edit-post-visual-editor .h-decoration-underline:hover, .edit-post-visual-editor .h-decoration-underline:focus, .edit-post-visual-editor .h-decoration-underline:active {

@@ -450,34 +450,20 @@ h1.blocks-rich-text__tinymce.mce-content-body {
   font-size: var(--font-size-h1); }
 h2,
 h2.blocks-rich-text__tinymce.mce-content-body {
-<<<<<<< HEAD
-  font-size: 1.5rem;
-  line-height: 1.33333333; }
-=======
   font-size: 1.25rem;
   font-size: var(--font-size-h2); }
->>>>>>> css-variables
 h3,
 h3.blocks-rich-text__tinymce.mce-content-body {
   font-size: 1.125rem;
   font-size: var(--font-size-h3); }
 h4,
 h4.blocks-rich-text__tinymce.mce-content-body {
-<<<<<<< HEAD
-  font-size: 1.125rem;
-  line-height: 1.55555556; }
-h5,
-h5.blocks-rich-text__tinymce.mce-content-body {
-  font-size: 1.125rem;
-  line-height: 1.77777778; }
-=======
   font-size: 1rem;
   font-size: var(--font-size-h4); }
 h5,
 h5.blocks-rich-text__tinymce.mce-content-body {
   font-size: 1rem;
   font-size: var(--font-size-h5); }
->>>>>>> css-variables
 h6,
 h6.blocks-rich-text__tinymce.mce-content-body {
   font-size: 1rem;
@@ -540,11 +526,7 @@ figcaption {
   color: rgba(0, 0, 0, .6);
   color: var(--color-grey-60);
   font-size: 0.875rem;
-<<<<<<< HEAD
-  line-height: 1.42857143;
-=======
   font-size: var(--font-size-875);
->>>>>>> css-variables
   margin-bottom: 0.5rem;
   margin-top: 0.5rem;
   text-align: center; }
@@ -868,13 +850,8 @@ td {
 .has-background {
   padding: 1.5rem; }
 .wp-block-quote.is-large p {
-<<<<<<< HEAD
-  font-size: 1.5rem;
-  line-height: 1.33333333; }
-=======
   font-size: 1.125rem;
   font-size: var(--font-size-h3); }
->>>>>>> css-variables
 .wp-block-pullquote {
   border-bottom: 0.25rem solid;
   border-left: 0;
@@ -1024,14 +1001,9 @@ p.wp-block-subhead {
   justify-content: center; }
 .menu__anchor--primary {
   color: rgba(0, 0, 0, .6);
-<<<<<<< HEAD
-  font-size: 0.88888889rem;
-  line-height: 1.6875;
-=======
   color: var(--color-grey-60);
   font-size: 0.88888888rem;
   font-size: var(--font-size-88);
->>>>>>> css-variables
   font-weight: 700;
   display: block;
   padding-bottom: 0.5rem;
@@ -1189,14 +1161,9 @@ p.wp-block-subhead {
     margin-right: 1rem; }
 .terms-wrapper a {
     color: rgba(0, 0, 0, .6);
-<<<<<<< HEAD
-    font-size: 0.88888888rem;
-    line-height: 1.68750002;
-=======
     color: var(--color-grey-60);
     font-size: 0.88888888rem;
     font-size: var(--font-size-88);
->>>>>>> css-variables
     font-weight: 700;
     text-decoration: none;
     text-transform: capitalize; }
@@ -1231,11 +1198,6 @@ p.wp-block-subhead {
   width: 1px;
   word-wrap: normal !important; }
 .screen-reader-text:focus {
-<<<<<<< HEAD
-    font-size: 0.875rem;
-    line-height: 1.71428571;
-=======
->>>>>>> css-variables
     background-color: #2516c7;
     background-color: var(--color-base);
     clip: auto !important;
@@ -1284,23 +1246,12 @@ p.wp-block-subhead {
       max-width: 59rem; } }
 .h1 {
   font-size: 1.5rem;
-<<<<<<< HEAD
-  line-height: 1.33333333; }
-.h3 {
-=======
   font-size: var(--font-size-h1); }
 .h2 {
->>>>>>> css-variables
   font-size: 1.25rem;
   font-size: var(--font-size-h2); }
 .h3 {
   font-size: 1.125rem;
-<<<<<<< HEAD
-  line-height: 1.55555556; }
-.h5 {
-  font-size: 1.125rem;
-  line-height: 1.77777778; }
-=======
   font-size: var(--font-size-h3); }
 .h4 {
   font-size: 1rem;
@@ -1308,18 +1259,12 @@ p.wp-block-subhead {
 .h5 {
   font-size: 1rem;
   font-size: var(--font-size-h5); }
->>>>>>> css-variables
 .h6 {
   font-size: 1rem;
   font-size: var(--font-size-h6); }
 .font-size-88 {
-<<<<<<< HEAD
-  font-size: 0.88888889rem;
-  line-height: 1.6875; }
-=======
   font-size: var(var);
   font-size: var(var(--font-size-88)); }
->>>>>>> css-variables
 .decoration-none {
   text-decoration: none; }
 .h-decoration-underline:hover, .h-decoration-underline:focus, .h-decoration-underline:active {
