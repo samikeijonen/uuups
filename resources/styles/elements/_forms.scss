@@ -27,7 +27,7 @@ select {
 	width: 100%;
 
 	&:focus {
-		box-shadow: 0 0 4px rgba(var(--color-base), 0.75);
+		box-shadow: 0 0 4px rgba(var(--color-base-rgb), 0.75);
 		// Use transparent outline for Windows high contrast mode.
 		outline: 2px solid transparent;
 	}

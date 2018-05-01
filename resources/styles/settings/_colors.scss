@@ -7,8 +7,10 @@
 	--color-black: #000;
 	--color-light: #ecebff;
 	--color-base: #2516c7;
+	// #2516c7 in RGB
+	--color-base-rgb: 37, 22, 199;
 	--color-dark: #06031f;
-	--color-grey-60: rgba(var(--color-black), 0.6);
-	--color-grey-20: rgba(var(--color-black), 0.2);
-	--color-grey-10: rgba(var(--color-black), 0.1);
+	--color-grey-60: rgba(0, 0, 0, 0.6);
+	--color-grey-20: rgba(0, 0, 0, 0.2);
+	--color-grey-10: rgba(0, 0, 0, 0.1);
 }
