@@ -79,7 +79,7 @@ module.exports = env => {
                                                 {
                                                         loader: 'css-loader',
                                                         options: {
-                                                                sourceMap: ! env.production
+								sourceMap: ! env.production
                                                         }
                                                 },
                                                 {
@@ -94,7 +94,8 @@ module.exports = env => {
                                                 {
                                                         loader: 'sass-loader',
                                                         options: {
-                                                                sourceMap: ! env.production
+								sourceMap: ! env.production,
+								precision: 8,
                                                         }
                                                 }
                                         ]

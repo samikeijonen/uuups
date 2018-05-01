@@ -8,11 +8,41 @@
 --------------------------------------------------------------*/
 /* stylelint-disable declaration-bang-space-before */
 /* stylelint-enable */
+:root {
+  --global-font-size: 1rem;
+  --global-baseline: 0.5rem;
+  --font-size-h1: 1.5rem;
+  --font-size-h2: 1.25rem;
+  --font-size-h3: 1.125rem;
+  --font-size-h4: 1rem;
+  --font-size-h5: 1rem;
+  --font-size-h6: 1rem;
+  --font-size-88: 0.88888888rem;
+  --font-size-875: 0.875rem; }
+@media screen and (min-width: 48em) {
+    :root {
+      --font-size-h1: 2rem;
+      --font-size-h2: 1.5rem;
+      --font-size-h3: 1.25rem;
+      --font-size-h4: 1.125rem;
+      --font-size-h5: 1.125rem;
+      --font-size-h6: 1rem; } }
+:root {
+  --color-white: #fff;
+  --color-black: #000;
+  --color-light: #ecebff;
+  --color-base: #2516c7;
+  --color-base-rgb: 37, 22, 199;
+  --color-dark: #06031f;
+  --color-grey-60: rgba(0, 0, 0, .6);
+  --color-grey-20: rgba(0, 0, 0, .2);
+  --color-grey-10: rgba(0, 0, 0, .1); }
 /*--------------------------------------------------------------
 # Tools - Default mixins and functions.
 --------------------------------------------------------------*/
 .edit-post-visual-editor {
   color: #06031f;
+  color: var(--color-dark);
   font-family: "Karla", sans-serif;
   font-size: 112.5%;
   line-height: 1.5;
@@ -33,12 +63,13 @@
     max-width: calc(43.875rem + 100px); }
 .edit-post-visual-editor .editor-post-title .editor-post-title__input {
     font-family: "Lora", serif;
-    font-size: 2rem;
-    line-height: 1.25;
+    font-size: 1.5rem;
+    font-size: var(--font-size-h1);
     min-height: auto;
     text-align: center; }
 .edit-post-visual-editor p {
     color: #06031f;
+    color: var(--color-dark);
     font-family: "Karla", sans-serif;
     font-size: 112.5%;
     line-height: 1.5;
@@ -50,6 +81,7 @@
     line-height: 1.5; }
 .edit-post-visual-editor html {
     color: #06031f;
+    color: var(--color-dark);
     font-family: "Karla", sans-serif;
     font-size: 112.5%;
     line-height: 1.5;
@@ -66,7 +98,8 @@
     font-size: inherit;
     line-height: inherit; }
 .edit-post-visual-editor body {
-    background: #fff; }
+    background: #fff;
+    background: var(--color-white); }
 .edit-post-visual-editor p {
     margin: 0 0 2rem; }
 .edit-post-visual-editor blockquote {
@@ -100,7 +133,9 @@
   .edit-post-visual-editor textarea,
   .edit-post-visual-editor select {
     background-color: #fff;
+    background-color: var(--color-white);
     border: 2px solid #2516c7;
+    border: 2px solid var(--color-base);
     padding: calc(0.5rem - 2px);
     width: 100%; }
 .edit-post-visual-editor input[type="text"]:focus,
@@ -121,6 +156,7 @@
     .edit-post-visual-editor textarea:focus,
     .edit-post-visual-editor select:focus {
       box-shadow: 0 0 4px rgba(37, 22, 199, .75);
+      box-shadow: 0 0 4px rgba(var(--color-base-rgb), 0.75);
       outline: 2px solid transparent; }
 .edit-post-visual-editor label {
     display: block;
@@ -132,36 +168,52 @@
   .edit-post-visual-editor h5,
   .edit-post-visual-editor h6 {
     font-family: "Lora", serif;
+    line-height: 1.25;
     margin: 0 0 1rem; }
 .edit-post-visual-editor h1,
   .edit-post-visual-editor h1.blocks-rich-text__tinymce.mce-content-body {
-    font-size: 2rem;
-    line-height: 1.25; }
+    font-size: 1.5rem;
+    font-size: var(--font-size-h1); }
 .edit-post-visual-editor h2,
   .edit-post-visual-editor h2.blocks-rich-text__tinymce.mce-content-body {
+<<<<<<< HEAD
     font-size: 1.5rem;
     line-height: 1.33333333; }
+=======
+    font-size: 1.25rem;
+    font-size: var(--font-size-h2); }
+>>>>>>> css-variables
 .edit-post-visual-editor h3,
   .edit-post-visual-editor h3.blocks-rich-text__tinymce.mce-content-body {
-    font-size: 1.25rem;
-    line-height: 1.6; }
+    font-size: 1.125rem;
+    font-size: var(--font-size-h3); }
 .edit-post-visual-editor h4,
   .edit-post-visual-editor h4.blocks-rich-text__tinymce.mce-content-body {
+<<<<<<< HEAD
     font-size: 1.125rem;
     line-height: 1.55555556; }
 .edit-post-visual-editor h5,
   .edit-post-visual-editor h5.blocks-rich-text__tinymce.mce-content-body {
     font-size: 1.125rem;
     line-height: 1.77777778; }
+=======
+    font-size: 1rem;
+    font-size: var(--font-size-h4); }
+.edit-post-visual-editor h5,
+  .edit-post-visual-editor h5.blocks-rich-text__tinymce.mce-content-body {
+    font-size: 1rem;
+    font-size: var(--font-size-h5); }
+>>>>>>> css-variables
 .edit-post-visual-editor h6,
   .edit-post-visual-editor h6.blocks-rich-text__tinymce.mce-content-body {
     font-size: 1rem;
-    line-height: 1.5; }
+    font-size: var(--font-size-h6); }
 .edit-post-visual-editor hr {
     display: block;
     margin-left: auto;
     margin-right: auto;
     background-color: #ecebff;
+    background-color: var(--color-light);
     border: 0;
     height: 0.25rem;
     margin-bottom: 3rem;
@@ -170,9 +222,11 @@
     width: 6.5rem; }
 .edit-post-visual-editor a {
     color: #2516c7;
+    color: var(--color-base);
     transition: all 300ms ease-in-out; }
 .edit-post-visual-editor a:hover, .edit-post-visual-editor a:focus, .edit-post-visual-editor a:active {
-      color: #06031f; }
+      color: #06031f;
+      color: var(--color-dark); }
 .edit-post-visual-editor a:focus {
       outline: thin dotted; }
 .edit-post-visual-editor a:hover, .edit-post-visual-editor a:active {
@@ -210,8 +264,13 @@
       margin-right: auto; }
 .edit-post-visual-editor figcaption {
     color: rgba(0, 0, 0, .6);
+    color: var(--color-grey-60);
     font-size: 0.875rem;
+<<<<<<< HEAD
     line-height: 1.42857143;
+=======
+    font-size: var(--font-size-875);
+>>>>>>> css-variables
     margin-bottom: 0.5rem;
     margin-top: 0.5rem;
     text-align: center; }
@@ -221,7 +280,8 @@
   .edit-post-visual-editor i {
     font-style: italic; }
 .edit-post-visual-editor cite {
-    color: rgba(0, 0, 0, .6); }
+    color: rgba(0, 0, 0, .6);
+    color: var(--color-grey-60); }
 .edit-post-visual-editor address {
     margin: 0 0 2rem; }
 .edit-post-visual-editor abbr,
@@ -234,6 +294,7 @@
 .edit-post-visual-editor mark,
   .edit-post-visual-editor ins {
     background-color: #ecebff;
+    background-color: var(--color-light);
     text-decoration: none; }
 .edit-post-visual-editor big {
     font-size: 134%; }
@@ -241,6 +302,7 @@
     font-size: 1.125rem;
     line-height: 1.77777778;
     background-color: #ecebff;
+    background-color: var(--color-light);
     font-family: "Courier 10 Pitch", "Courier", monospace;
     margin: 0 0 2rem;
     max-width: 100%;
@@ -258,7 +320,8 @@
     table-layout: fixed;
     width: 100%; }
 .edit-post-visual-editor tr:nth-child(even) {
-    background-color: #ecebff; }
+    background-color: #ecebff;
+    background-color: var(--color-light); }
 .edit-post-visual-editor th,
   .edit-post-visual-editor td {
     padding: 0.5rem;
@@ -271,20 +334,26 @@
       text-align: right; }
 .edit-post-visual-editor .wp-block-button__link {
     background-color: #2516c7;
+    background-color: var(--color-base);
     border: none;
     border-radius: 0;
     color: #fff;
+    color: var(--color-white);
     padding: 0.5rem 1.5rem;
     display: inline-block;
     text-decoration: none; }
 .edit-post-visual-editor .wp-block-button__link:visited {
-      color: #fff; }
+      color: #fff;
+      color: var(--color-white); }
 .edit-post-visual-editor .wp-block-button__link:hover, .edit-post-visual-editor .wp-block-button__link:focus, .edit-post-visual-editor .wp-block-button__link:active {
       background-color: #06031f;
+      background-color: var(--color-dark);
       color: #fff;
+      color: var(--color-white);
       outline-offset: -2px; }
 .edit-post-visual-editor .wp-block-text-columns {
     background-color: #ecebff;
+    background-color: var(--color-light);
     margin-bottom: 2rem;
     padding: 4rem 1rem; }
 .edit-post-visual-editor .wp-block-text-columns .wp-block-column {
@@ -308,9 +377,10 @@
     position: relative; }
 .edit-post-visual-editor .wp-block-cover-image .wp-block-cover-image-text {
       font-family: "Lora", serif;
-      font-size: 2rem;
-      line-height: 1.25;
+      font-size: 1.5rem;
+      font-size: var(--font-size-h1);
       color: #fff;
+      color: var(--color-white);
       z-index: 1;
       padding: 1.5rem;
       text-align: center; }
@@ -443,8 +513,8 @@
 .edit-post-visual-editor .has-drop-cap {
     /* stylelint-disable-line */ }
 .edit-post-visual-editor .has-drop-cap::first-letter {
-      font-size: 4rem;
-      line-height: 1;
+      font-size: 1.5rem;
+      font-size: var(--font-size-h1);
       float: left;
       font-style: normal;
       font-family: serif;
@@ -456,8 +526,13 @@
 .edit-post-visual-editor .has-background {
     padding: 1.5rem; }
 .edit-post-visual-editor .wp-block-quote.is-large p {
+<<<<<<< HEAD
     font-size: 1.5rem;
     line-height: 1.33333333; }
+=======
+    font-size: 1.125rem;
+    font-size: var(--font-size-h3); }
+>>>>>>> css-variables
 .edit-post-visual-editor .wp-block-pullquote {
     border-bottom: 0.25rem solid;
     border-left: 0;
@@ -466,47 +541,73 @@
     text-align: center; }
 .edit-post-visual-editor p.wp-block-subhead {
     color: rgba(0, 0, 0, .6);
-    font-size: 1.25rem;
-    line-height: 1.6;
+    color: var(--color-grey-60);
+    font-size: 1.125rem;
+    font-size: var(--font-size-h3);
     font-style: normal;
     text-align: center; }
 .edit-post-visual-editor .has-main-color {
-    color: #2516c7; }
+    color: #2516c7;
+    color: var(--color-base); }
 .edit-post-visual-editor .has-main-background-color {
-    background-color: #2516c7; }
+    background-color: #2516c7;
+    background-color: var(--color-base); }
 .edit-post-visual-editor .has-dark-color {
-    color: #06031f; }
+    color: #06031f;
+    color: var(--color-dark); }
 .edit-post-visual-editor .has-dark-background-color {
-    background-color: #06031f; }
+    background-color: #06031f;
+    background-color: var(--color-dark); }
 .edit-post-visual-editor .has-white-color {
-    color: #fff; }
+    color: #fff;
+    color: var(--color-white); }
 .edit-post-visual-editor .has-white-background-color {
-    background-color: #fff; }
+    background-color: #fff;
+    background-color: var(--color-white); }
 .edit-post-visual-editor .has-light-color {
-    color: #ecebff; }
+    color: #ecebff;
+    color: var(--color-light); }
 .edit-post-visual-editor .has-light-background-color {
-    background-color: #ecebff; }
+    background-color: #ecebff;
+    background-color: var(--color-light); }
 .edit-post-visual-editor .h1 {
-    font-size: 2rem;
-    line-height: 1.25; }
-.edit-post-visual-editor .h2 {
     font-size: 1.5rem;
+<<<<<<< HEAD
     line-height: 1.33333333; }
 .edit-post-visual-editor .h3 {
+=======
+    font-size: var(--font-size-h1); }
+.edit-post-visual-editor .h2 {
+>>>>>>> css-variables
     font-size: 1.25rem;
-    line-height: 1.6; }
-.edit-post-visual-editor .h4 {
+    font-size: var(--font-size-h2); }
+.edit-post-visual-editor .h3 {
     font-size: 1.125rem;
+<<<<<<< HEAD
     line-height: 1.55555556; }
 .edit-post-visual-editor .h5 {
     font-size: 1.125rem;
     line-height: 1.77777778; }
+=======
+    font-size: var(--font-size-h3); }
+.edit-post-visual-editor .h4 {
+    font-size: 1rem;
+    font-size: var(--font-size-h4); }
+.edit-post-visual-editor .h5 {
+    font-size: 1rem;
+    font-size: var(--font-size-h5); }
+>>>>>>> css-variables
 .edit-post-visual-editor .h6 {
     font-size: 1rem;
-    line-height: 1.5; }
+    font-size: var(--font-size-h6); }
 .edit-post-visual-editor .font-size-88 {
+<<<<<<< HEAD
     font-size: 0.88888889rem;
     line-height: 1.6875; }
+=======
+    font-size: var(var);
+    font-size: var(var(--font-size-88)); }
+>>>>>>> css-variables
 .edit-post-visual-editor .decoration-none {
     text-decoration: none; }
 .edit-post-visual-editor .h-decoration-underline:hover, .edit-post-visual-editor .h-decoration-underline:focus, .edit-post-visual-editor .h-decoration-underline:active {
@@ -516,9 +617,11 @@
 .edit-post-visual-editor .fw-700 {
     font-weight: 700; }
 .edit-post-visual-editor .color-dark {
-    color: #06031f; }
+    color: #06031f;
+    color: var(--color-dark); }
 .edit-post-visual-editor .color-grey-60 {
-    color: rgba(0, 0, 0, .6); }
+    color: rgba(0, 0, 0, .6);
+    color: var(--color-grey-60); }
 .edit-post-visual-editor .text-center {
     text-align: center; }
 .edit-post-visual-editor .block {

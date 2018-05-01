@@ -1,27 +1,27 @@
 .h1 {
-	@include font-size($font-size-h1);
+	font-size: var(--font-size-h1);
 }
 
 .h2 {
-	@include font-size($font-size-h2);
+	font-size: var(--font-size-h2);
 }
 
 .h3 {
-	@include font-size($font-size-h3);
+	font-size: var(--font-size-h3);
 }
 
 .h4 {
-	@include font-size($font-size-h4, $modifier: -0.5);
+	font-size: var(--font-size-h4);
 }
 
 .h5 {
-	@include font-size($font-size-h5);
+	font-size: var(--font-size-h5);
 }
 
 .h6 {
-	@include font-size($font-size-h6);
+	font-size: var(--font-size-h6);
 }
 
 .font-size-88 {
-	@include font-size(0.8888888888rem);
+	font-size: var(var(--font-size-88));
 }

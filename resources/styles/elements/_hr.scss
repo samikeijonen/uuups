@@ -1,6 +1,6 @@
 hr {
 	@include center-block;
-	background-color: $color-light-1;
+	background-color: var(--color-light);
 	border: 0;
 	height: $global-spacing-unit-1 / 2;
 	margin-bottom: $global-spacing-unit-6;

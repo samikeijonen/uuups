@@ -17,7 +17,7 @@
 	text-decoration: none;
 
 	&:visited {
-		color: $color-white;
+		color: var(--color-white);
 	}
 
 	&:hover,
@@ -29,7 +29,7 @@
 
 // Columns.
 .wp-block-text-columns {
-	background-color: $color-light-1;
+	background-color: var(--color-light);
 	margin-bottom: $global-spacing-unit-4;
 	padding: $global-spacing-unit-8 $global-spacing-unit-2;
 
@@ -68,8 +68,8 @@
 
 	.wp-block-cover-image-text {
 		font-family: $font-heading;
-		@include font-size(2rem);
-		color: $color-white;
+		font-size: var(--font-size-h1);
+		color: var(--color-white);
 		z-index: 1;
 		padding: $global-spacing-unit-3;
 		text-align: center;
@@ -98,7 +98,7 @@
 	}
 
 	&.has-background-dim::before {
-		background-color: rgba($color-black, 0.5);
+		background-color: rgba(0, 0, 0, 0.5);
 		content: "";
 		position: absolute;
 		top: 0;
@@ -109,7 +109,7 @@
 
 	@for $i from 1 through 10 {
 		&.has-background-dim.has-background-dim-#{ $i * 10 }:before { /* stylelint-disable-line */
-			background-color: rgba($color-black, $i * 0.1);
+			background-color: rgba(0, 0, 0, $i * 0.1);
 		}
 	}
 
@@ -209,7 +209,7 @@
 // Paragraph.
 .has-drop-cap { /* stylelint-disable-line */
 	&::first-letter {
-		@include font-size(4rem, 1);
+		font-size: var(--font-size-h1);
 		float: left;
 		font-style: normal;
 		font-family: serif;
@@ -229,7 +229,7 @@
 
 // Quote and pullquote.
 .wp-block-quote.is-large p {
-	@include font-size(1.5rem);
+	font-size: var(--font-size-h3);
 }
 
 .wp-block-pullquote {
