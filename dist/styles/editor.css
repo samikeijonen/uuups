@@ -140,7 +140,7 @@
 .edit-post-visual-editor h2,
   .edit-post-visual-editor h2.blocks-rich-text__tinymce.mce-content-body {
     font-size: 1.5rem;
-    line-height: 1.33333; }
+    line-height: 1.33333333; }
 .edit-post-visual-editor h3,
   .edit-post-visual-editor h3.blocks-rich-text__tinymce.mce-content-body {
     font-size: 1.25rem;
@@ -148,11 +148,11 @@
 .edit-post-visual-editor h4,
   .edit-post-visual-editor h4.blocks-rich-text__tinymce.mce-content-body {
     font-size: 1.125rem;
-    line-height: 1.55556; }
+    line-height: 1.55555556; }
 .edit-post-visual-editor h5,
   .edit-post-visual-editor h5.blocks-rich-text__tinymce.mce-content-body {
     font-size: 1.125rem;
-    line-height: 1.77778; }
+    line-height: 1.77777778; }
 .edit-post-visual-editor h6,
   .edit-post-visual-editor h6.blocks-rich-text__tinymce.mce-content-body {
     font-size: 1rem;
@@ -211,7 +211,7 @@
 .edit-post-visual-editor figcaption {
     color: rgba(0, 0, 0, .6);
     font-size: 0.875rem;
-    line-height: 1.42857;
+    line-height: 1.42857143;
     margin-bottom: 0.5rem;
     margin-top: 0.5rem;
     text-align: center; }
@@ -239,7 +239,7 @@
     font-size: 134%; }
 .edit-post-visual-editor pre {
     font-size: 1.125rem;
-    line-height: 1.77778;
+    line-height: 1.77777778;
     background-color: #ecebff;
     font-family: "Courier 10 Pitch", "Courier", monospace;
     margin: 0 0 2rem;
@@ -457,7 +457,7 @@
     padding: 1.5rem; }
 .edit-post-visual-editor .wp-block-quote.is-large p {
     font-size: 1.5rem;
-    line-height: 1.33333; }
+    line-height: 1.33333333; }
 .edit-post-visual-editor .wp-block-pullquote {
     border-bottom: 0.25rem solid;
     border-left: 0;
@@ -491,21 +491,21 @@
     line-height: 1.25; }
 .edit-post-visual-editor .h2 {
     font-size: 1.5rem;
-    line-height: 1.33333; }
+    line-height: 1.33333333; }
 .edit-post-visual-editor .h3 {
     font-size: 1.25rem;
     line-height: 1.6; }
 .edit-post-visual-editor .h4 {
     font-size: 1.125rem;
-    line-height: 1.55556; }
+    line-height: 1.55555556; }
 .edit-post-visual-editor .h5 {
     font-size: 1.125rem;
-    line-height: 1.77778; }
+    line-height: 1.77777778; }
 .edit-post-visual-editor .h6 {
     font-size: 1rem;
     line-height: 1.5; }
 .edit-post-visual-editor .font-size-88 {
-    font-size: 0.88889rem;
+    font-size: 0.88888889rem;
     line-height: 1.6875; }
 .edit-post-visual-editor .decoration-none {
     text-decoration: none; }
