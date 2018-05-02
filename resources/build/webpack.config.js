@@ -178,8 +178,7 @@ module.exports = env => {
 					plugins: [
                                                 { removeUnknownsAndDefaults: false },
 						{ cleanupIDs: false },
-						{ removeViewBox: false },
-						{ removeDimensions: true }
+						{ removeViewBox: false }
                                         ],
 				},
 				plugins: [
