@@ -92,6 +92,11 @@ function get_svg( $args = [] ) {
 		// Begin SVG markup.
 		$svg = file_get_contents( get_theme_file_path( '/dist/svg/' . esc_attr( $args['icon'] ) . '.svg' ) );
 
+		// Bail if there is no icon.
+		if ( ! $svg ) {
+			return '';
+		}
+
 		// Add ARIA hidden, ARIA labeledby and class markup.
 		$svg = str_replace( '<svg', '<svg class="' . $class . '"' . $aria_hidden . $aria_labelledby . 'role="img"', $svg );
 
