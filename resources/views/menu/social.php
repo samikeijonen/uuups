@@ -12,7 +12,6 @@ endif
 
 <nav class="menu menu--<?= esc_attr( $data->name ) ?> pb-2">
 	<?php
-	echo Hybrid\get_svg( 'angle-down.svg', [ 'title' => 'This is title', 'desc' => 'This is desc' ] );
 	wp_nav_menu( [
 		'theme_location' => $data->name,
 		'container'      => '',
