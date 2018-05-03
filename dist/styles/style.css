@@ -597,7 +597,7 @@ td {
     transform: translate3d(0, 0, 0); } }
 .fade-in-down {
   animation-name: fadeInDown; }
-.icon {
+.svg {
   display: inline-block;
   fill: currentColor;
   height: 1em;
@@ -1019,7 +1019,7 @@ p.wp-block-subhead {
 .menu__anchor--social:hover, .menu__anchor--social:focus, .menu__anchor--social:active {
     color: rgba(0, 0, 0, .6);
     color: var(--color-grey-60); }
-.menu__anchor--social .icon {
+.menu__anchor--social .svg {
     height: 1.5em;
     width: 1.5em; }
 .menu__anchor.menu__anchor--button {
@@ -1104,7 +1104,7 @@ p.wp-block-subhead {
         right: 100%; }
       .menu__items--primary ul a {
         padding: 0.5rem 1rem; }
-      .menu__items--primary ul .icon {
+      .menu__items--primary ul .svg {
         position: absolute;
         right: 1rem;
         top: calc(50% - 0.5em);
@@ -1157,7 +1157,7 @@ p.wp-block-subhead {
   display: block; }
 .terms-wrapper + .terms-wrapper {
     margin-top: 0.5rem; }
-.terms-wrapper .icon {
+.terms-wrapper .svg {
     margin-right: 1rem; }
 .terms-wrapper a {
     color: rgba(0, 0, 0, .6);
