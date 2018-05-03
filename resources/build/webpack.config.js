@@ -176,9 +176,25 @@ module.exports = env => {
                                 },
 				svgo: {
 					plugins: [
-                                                { removeUnknownsAndDefaults: false },
-						{ cleanupIDs: false },
-						{ removeViewBox: false }
+                                                {
+							removeUnknownsAndDefaults: false
+						},
+						{
+							cleanupIDs: false
+						},
+						{
+							removeViewBox: false
+						},
+						/*
+						{
+							addAttributesToSVGElement: {
+								attributes: [
+									{ 'focusable': 'false' },
+									{ 'aria-hidden': 'true' }
+								]
+							},
+						},
+						*/
                                         ],
 				},
 				plugins: [
