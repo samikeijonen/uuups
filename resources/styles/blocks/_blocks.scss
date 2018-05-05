@@ -46,7 +46,15 @@
 		.wp-block-text-columns {
 			display: grid;
 			grid-gap: $global-spacing-unit-3;
-			grid-template-columns: repeat(3, 1fr);
+			grid-template-columns: repeat(2, 1fr);
+
+			&.columns-3 {
+				grid-template-columns: repeat(3, 1fr);
+			}
+
+			&.columns-4 {
+				grid-template-columns: repeat(4, 1fr);
+			}
 		}
 
 		.wp-block-column :last-child {

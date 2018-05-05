@@ -694,7 +694,11 @@ td {
     .wp-block-text-columns {
       display: grid;
       grid-gap: 1.5rem;
-      grid-template-columns: repeat(3, 1fr); }
+      grid-template-columns: repeat(2, 1fr); }
+      .wp-block-text-columns.columns-3 {
+        grid-template-columns: repeat(3, 1fr); }
+      .wp-block-text-columns.columns-4 {
+        grid-template-columns: repeat(4, 1fr); }
     .wp-block-column :last-child {
       margin-bottom: 0; } } }
 .wp-block-cover-image {
