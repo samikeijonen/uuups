@@ -30,11 +30,7 @@
 	}
 
 	.alignwide {
-		max-width: 58rem;
-
-		&.wp-block-gallery {
-			max-width: calc(58rem + 1rem);
-		}
+		max-width: $max-width-wide;
 	}
 
 }
