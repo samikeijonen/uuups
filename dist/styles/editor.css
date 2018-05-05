@@ -566,8 +566,8 @@
     font-size: 1rem;
     font-size: var(--font-size-h6); }
 .edit-post-visual-editor .font-size-88 {
-    font-size: var(var);
-    font-size: var(var(--font-size-88)); }
+    font-size: 0.88888888rem;
+    font-size: var(--font-size-88); }
 .edit-post-visual-editor .decoration-none {
     text-decoration: none; }
 .edit-post-visual-editor .h-decoration-underline:hover, .edit-post-visual-editor .h-decoration-underline:focus, .edit-post-visual-editor .h-decoration-underline:active {

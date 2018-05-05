@@ -19,8 +19,21 @@
 			grid-gap: $global-spacing-unit-4;
 			grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
 
-			&--bigger {
-				grid-template-columns: repeat(auto-fill, minmax(24rem, 1fr));
+			&--blog {
+				grid-template-columns: repeat(6, 1fr);
+
+				> .entry {
+					grid-column: span 2;
+
+					&:first-child,
+					&:nth-child(2) {
+						grid-column: span 3;
+					}
+				}
+
+				> .pagination {
+					grid-column: 1/ -1;
+				}
 			}
 		}
 
