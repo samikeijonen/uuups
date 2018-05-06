@@ -7,18 +7,126 @@
 
 namespace Uuups;
 
-use Hybrid;
-
 /**
- * Set the path to our SVGs.
- * Used for the `Hybrid\svg` and `Hybrid\get_svg` functions.
+ * Return SVG markup.
  *
- * @return string Path to our SVGs.
+ * @param array $args {
+ *     Parameters needed to display an SVG.
+ *
+ *     @type string $icon  Required SVG icon filename.
+ *     @type string $title Optional SVG title.
+ *     @type string $desc  Optional SVG description.
+ * }
+ * @return string SVG markup.
  */
-function hybrid_svg_path() {
-	return '/dist/svg/';
+function get_svg( $args = [] ) {
+	// Make sure $args are an array.
+	if ( empty( $args ) ) {
+		return esc_html__( 'Please define default parameters in the form of an array.', 'uuups' );
+	}
+
+	// Define an icon.
+	if ( false === array_key_exists( 'icon', $args ) ) {
+		return esc_html__( 'Please define an SVG icon filename.', 'uuups' );
+	}
+
+	// Set defaults.
+	$defaults = [
+		'class'    => '',
+		'desc'     => '',
+		'fallback' => false,
+		'icon'     => '',
+		'inline'   => true,
+		'title'    => '',
+	];
+
+	// Parse args.
+	$args = wp_parse_args( $args, $defaults );
+
+	// Set aria hidden.
+	$aria_hidden = ' aria-hidden="true" focusable="false"';
+
+	// Set ARIA.
+	$aria_labelledby = '';
+
+	/*
+	 * SVGs doesn't use the SVG title or description attributes; non-decorative icons are described with .screen-reader-text.
+	 *
+	 * However, themes can use the title and description to add information to non-decorative SVG icons to improve accessibility.
+	 *
+	 * Example 1 with title: <?php echo get_svg( [ 'icon' => 'arrow-right', 'title' => __( 'This is the title', 'textdomain' ) ] ); ?>
+	 *
+	 * Example 2 with title and description: <?php echo get_svg( [ 'icon' => 'arrow-right', 'title' => __( 'This is the title', 'textdomain' ), 'desc' => __( 'This is the description', 'textdomain' ) ] ); ?>
+	 *
+	 * See https://www.paciellogroup.com/blog/2013/12/using-aria-enhance-svg-accessibility/.
+	 */
+	if ( $args['title'] ) {
+		$aria_hidden     = '';
+		$unique_id       = uniqid();
+		$aria_labelledby = ' aria-labelledby="title-' . $unique_id . '"';
+
+		if ( $args['desc'] ) {
+			$aria_labelledby = ' aria-labelledby="title-' . $unique_id . ' desc-' . $unique_id . '"';
+		}
+	}
+
+	// Sets icon class.
+	$class = $args['class'] ? esc_attr( $args['class'] ) : 'svg svg-' . esc_attr( $args['icon'] );
+
+	// If our SVG is inline.
+	if ( true === $args['inline'] ) {
+		// Begin SVG markup.
+		$svg = file_get_contents( get_theme_file_path( '/dist/svg/' . esc_attr( $args['icon'] ) . '.svg' ) );
+
+		// Bail if there is no icon.
+		if ( ! $svg ) {
+			return '';
+		}
+
+		// Add ARIA hidden, ARIA labeledby and class markup.
+		$svg = str_replace( '<svg', '<svg class="' . $class . '"' . $aria_hidden . $aria_labelledby . 'role="img"', $svg );
+
+		if ( $aria_labelledby ) {
+			// Get the intro SVG markup and save as $svg_intro.
+			preg_match( '/<svg(.*?)>/', $svg, $svg_intro );
+
+			// Add the title/desc to the markup.
+			$svg = str_replace( $svg_intro[0], $svg_intro[0] . $aria_labelledby, $svg );
+		}
+	} else {
+
+		// Begin SVG markup.
+		$svg = '<svg class="svg svg-' . esc_attr( $args['icon'] ) . '"' . $aria_hidden . $aria_labelledby . ' role="img">';
+
+		// Display the title.
+		if ( $args['title'] ) {
+			$svg .= '<title id="title-' . $unique_id . '">' . esc_html( $args['title'] ) . '</title>';
+
+			// Display the desc only if the title is already set.
+			if ( $args['desc'] ) {
+				$svg .= '<desc id="desc-' . $unique_id . '">' . esc_html( $args['desc'] ) . '</desc>';
+			}
+		}
+
+		/*
+		* Display the icon.
+		*
+		* The whitespace around `<use>` is intentional - it is a work around to a keyboard navigation bug in Safari 10.
+		*
+		* See https://core.trac.wordpress.org/ticket/38387.
+		*/
+		$svg .= ' <use href="#icon-' . esc_html( $args['icon'] ) . '" xlink:href="#icon-' . esc_html( $args['icon'] ) . '"></use> ';
+
+		// Add some markup to use as a fallback for browsers that do not support SVGs.
+		if ( $args['fallback'] ) {
+			$svg .= '<span class="svg-fallback icon-' . esc_attr( $args['icon'] ) . '"></span>';
+		}
+
+		$svg .= '</svg>';
+	} // End if.
+
+	return $svg;
 }
-add_filter( 'hybrid/svg/path', __NAMESPACE__ . '\hybrid_svg_path' );
 
 /**
  * Display SVG icons in social links menu.
@@ -37,7 +145,7 @@ function nav_menu_social_icons( $item_output, $item, $depth, $args ) {
 	if ( 'social' === $args->theme_location ) {
 		foreach ( $social_icons as $attr => $value ) {
 			if ( false !== strpos( $item_output, $attr ) ) {
-				$item_output = str_replace( $args->link_after, '</span>' . Hybrid\get_svg( esc_attr( $value ) ), $item_output );
+				$item_output = str_replace( $args->link_after, '</span>' . get_svg( [ 'icon' => esc_attr( $value ) ] ), $item_output );
 			}
 		}
 	}
@@ -59,7 +167,7 @@ function dropdown_icon_to_menu_link( $title, $item, $args, $depth ) {
 	if ( 'primary' === $args->theme_location ) {
 		foreach ( $item->classes as $value ) {
 			if ( 'menu-item-has-children' === $value || 'page_item_has_children' === $value ) {
-				$title = $title . Hybrid\get_svg( 'angle-down.svg' );
+				$title = $title . get_svg( [ 'icon' => 'angle-down' ] );
 			}
 		}
 	}

@@ -18,7 +18,7 @@ endif
 		'menu_id'        => '',
 		'menu_class'     => 'menu__items menu__items--' . esc_attr( $data->name ),
 		'link_before'    => '<span class="screen-reader-text">',
-		'link_after'     => '</span>' . Hybrid\get_svg( 'chain.svg' ),
+		'link_after'     => '</span>' . Uuups\get_svg( array( 'icon' => 'chain' ) ),
 		'item_spacing'   => 'discard',
 		'depth'          => 1,
 	] );

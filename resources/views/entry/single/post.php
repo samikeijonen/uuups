@@ -28,13 +28,13 @@
 		<?php
 			Hybrid\post_terms( [
 				'taxonomy' => 'category',
-				'before'   => '<span class="terms-wrapper"><span class="screen-reader-text">' . esc_html__( 'Categories:', 'uuups' ) . ' </span>' . Hybrid\get_svg( 'folder-open.svg' ),
+				'before'   => '<span class="terms-wrapper"><span class="screen-reader-text">' . esc_html__( 'Categories:', 'uuups' ) . ' </span>' . Uuups\get_svg( [ 'icon' => 'folder-open' ] ),
 				'after'    => '</span>',
 			] );
 
 			Hybrid\post_terms( [
 				'taxonomy' => 'post_tag',
-				'before'   => '<span class="terms-wrapper"><span class="screen-reader-text">' . esc_html__( 'Tags:', 'uuups' ) . ' </span>' . Hybrid\get_svg( 'hashtag.svg' ),
+				'before'   => '<span class="terms-wrapper"><span class="screen-reader-text">' . esc_html__( 'Tags:', 'uuups' ) . ' </span>' . Uuups\get_svg( [ 'icon' => 'hashtag' ] ),
 				'after'    => '</span>',
 			] );
 		?>
