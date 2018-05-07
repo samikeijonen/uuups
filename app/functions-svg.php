@@ -84,7 +84,7 @@ function get_svg( $args = [] ) {
 		}
 
 		// Add ARIA hidden, ARIA labeledby and class markup.
-		$svg = str_replace( '<svg', '<svg class="' . $class . '"' . $aria_hidden . $aria_labelledby . 'role="img"', $svg );
+		//$svg = str_replace( '<svg', '<svg class="' . $class . '"' . $aria_hidden . $aria_labelledby . 'role="img"', $svg );
 
 		if ( $aria_labelledby ) {
 			// Get the intro SVG markup and save as $svg_intro.
