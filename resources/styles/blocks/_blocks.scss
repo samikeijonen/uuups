@@ -46,7 +46,15 @@
 		.wp-block-text-columns {
 			display: grid;
 			grid-gap: $global-spacing-unit-3;
-			grid-template-columns: repeat(3, 1fr);
+			grid-template-columns: repeat(2, 1fr);
+
+			&.columns-3 {
+				grid-template-columns: repeat(3, 1fr);
+			}
+
+			&.columns-4 {
+				grid-template-columns: repeat(4, 1fr);
+			}
 		}
 
 		.wp-block-column :last-child {
@@ -148,6 +156,7 @@
 		flex-direction: column;
 		flex-grow: 1;
 		justify-content: center;
+		margin: $global-spacing-unit-1;
 		position: relative;
 
 		figure {
@@ -175,7 +184,7 @@
 	}
 
 	// Cropped.
-	&.is-cropped .blocks-gallery-item { /* stylelint-disable-line */
+	&.is-cropped .blocks-gallery-item {
 		a,
 		img {
 			flex: 1;
@@ -198,16 +207,20 @@
 	}
 
 	@media (min-width: $breakpoint-1) {
-		@for $i from 3 through 8 { /* stylelint-disable-line */
+		@for $i from 3 through 8 {
 			&.columns-#{ $i } .blocks-gallery-item {
 				width: calc(100% / #{ $i } - #{ $global-spacing-unit-1 } * 2);
 			}
 		}
 	}
+
+	&.alignwide {
+		max-width: calc(#{ $max-width-wide + #{ $global-spacing-unit-1 } * 2 });
+	}
 }
 
 // Paragraph.
-.has-drop-cap { /* stylelint-disable-line */
+.has-drop-cap {
 	&::first-letter {
 		font-size: var(--font-size-h1);
 		float: left;

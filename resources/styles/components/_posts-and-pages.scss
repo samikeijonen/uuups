@@ -18,10 +18,6 @@
 	max-width: $max-width-2;
 }
 
-.hide-excerpt .entry__summary {
-	display: none;
-}
-
 .entry__byline {
 	font-size: var(--font-size-88);
 }
@@ -38,7 +34,7 @@
 		margin-top: $global-spacing-unit-1;
 	}
 
-	.icon {
+	.svg {
 		margin-right: $global-spacing-unit-2;
 	}
 

@@ -176,16 +176,35 @@ module.exports = env => {
                                 },
 				svgo: {
 					plugins: [
-                                                { removeUnknownsAndDefaults: false },
-						{ cleanupIDs: false },
-						{ removeViewBox: false },
-						{ removeDimensions: true }
+                                                {
+							removeUnknownsAndDefaults: false
+						},
+						{
+							cleanupIDs: false
+						},
+						{
+							removeViewBox: false
+						},
+						{
+							addAttributesToSVGElement: {
+								attributes: [
+									{ 'focusable': 'false' },
+									{ 'aria-hidden': 'true' },
+									{ 'role': 'img' },
+								]
+							},
+						},
+						{
+							addClassesToSVGElement: {
+								classNames: ['svg']
+							},
+						},
                                         ],
 				},
 				plugins: [
                                         imageminMozjpeg( { quality: 75 } )
                                 ],
-				disable: ! env.production
+				//disable: ! env.production
 			} ),
 
                         // Run BrowserSync.

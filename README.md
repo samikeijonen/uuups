@@ -333,13 +333,14 @@ The end [result can be seen in Github pages](https://samikeijonen.github.io/uuup
 
 ## SVG system
 
-All the main SVG related functions can be found in the `app/functions-icons.php` file. It’s well-documented in the code, but here’s a summary:
+All the main SVG related functions can be found in the `app/functions-svg.php` file. It’s well-documented in the code, but here’s a summary:
 
-- Add SVG icons in `resources/svg` folder. Build tools copies these icons  SVG files in `dist/svg` folder.
-- `npm run build` cleans all SVG files.
-- `get_svg()` function returns inline SVG icon markup by default.
-- For example `get_svg( [ 'icon' => 'angle-down' ] )`.
-- Icons can be used in social links menu, in dropdown menu, you name it.
+- Add SVG icons in `resources/svg` folder. `npm run dev` copies these SVG files in `dist/svg` folder.
+- When ready for production, `npm run build` cleans all the SVG files.
+- `Hybrid\get_svg()` function returns inline SVG icon markup by default.
+- For example `Hybrid\get_svg( 'angle-down.svg' )`.
+- Or with arguments: `Hybrid\get_svg( 'angle-down.svg', [ 'title' => 'This is title', 'desc' => 'This is desc' ] );`.
+- SVG icons are automatically used in Social links menu.
 
 ## FAQ
 

@@ -29,7 +29,7 @@ array_map(
 	[
 		'functions-filters',
 		'functions-fonts',
-		'functions-icons',
+		'functions-svg',
 		'functions-scripts',
 		'functions-setup',
 		'functions-videos',

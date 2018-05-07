@@ -8,28 +8,16 @@
 namespace Uuups;
 
 /**
- * Add SVG definitions to the footer.
- */
-function include_svg_icons() {
-	// Define SVG sprite file.
-	$svg_icons = get_parent_theme_file_path( '/dist/images/svg-icons.svg' );
-
-	// If it exists, include it.
-	if ( file_exists( $svg_icons ) ) {
-		require_once $svg_icons;
-	}
-}
-add_action( 'wp_footer', __NAMESPACE__ . '\include_svg_icons', 9999 );
-
-/**
  * Return SVG markup.
+ *
+ * This function is only for decorative SVG icons.
+ * Put SVG markup in template file directly if there needs to
+ * be custom markup or classes.
  *
  * @param array $args {
  *     Parameters needed to display an SVG.
  *
  *     @type string $icon  Required SVG icon filename.
- *     @type string $title Optional SVG title.
- *     @type string $desc  Optional SVG description.
  * }
  * @return string SVG markup.
  */
@@ -46,95 +34,18 @@ function get_svg( $args = [] ) {
 
 	// Set defaults.
 	$defaults = [
-		'class'    => '',
-		'desc'     => '',
 		'fallback' => false,
 		'icon'     => '',
-		'inline'   => true,
-		'title'    => '',
 	];
 
 	// Parse args.
 	$args = wp_parse_args( $args, $defaults );
 
-	// Set aria hidden.
-	$aria_hidden = ' aria-hidden="true" focusable="false"';
+	// Get SVG markup. Classes and other markup is added in build process.
+	$svg = file_get_contents( get_theme_file_path( '/dist/svg/' . esc_attr( $args['icon'] ) . '.svg' ) );
 
-	// Set ARIA.
-	$aria_labelledby = '';
-
-	/*
-	 * SVGs doesn't use the SVG title or description attributes; non-decorative icons are described with .screen-reader-text.
-	 *
-	 * However, themes can use the title and description to add information to non-decorative SVG icons to improve accessibility.
-	 *
-	 * Example 1 with title: <?php echo get_svg( [ 'icon' => 'arrow-right', 'title' => __( 'This is the title', 'textdomain' ) ] ); ?>
-	 *
-	 * Example 2 with title and description: <?php echo get_svg( [ 'icon' => 'arrow-right', 'title' => __( 'This is the title', 'textdomain' ), 'desc' => __( 'This is the description', 'textdomain' ) ] ); ?>
-	 *
-	 * See https://www.paciellogroup.com/blog/2013/12/using-aria-enhance-svg-accessibility/.
-	 */
-	if ( $args['title'] ) {
-		$aria_hidden     = '';
-		$unique_id       = uniqid();
-		$aria_labelledby = ' aria-labelledby="title-' . $unique_id . '"';
-
-		if ( $args['desc'] ) {
-			$aria_labelledby = ' aria-labelledby="title-' . $unique_id . ' desc-' . $unique_id . '"';
-		}
-	}
-
-	// Sets icon class.
-	$class = $args['class'] ? esc_attr( $args['class'] ) : 'icon icon-' . esc_attr( $args['icon'] );
-
-	// If our SVG is inline.
-	if ( true === $args['inline'] ) {
-		// Begin SVG markup.
-		$svg = file_get_contents( get_theme_file_path( '/dist/svg/' . esc_attr( $args['icon'] ) . '.svg' ) );
-
-		// Add ARIA hidden, ARIA labeledby and class markup.
-		$svg = str_replace( '<svg', '<svg class="' . $class . '"' . $aria_hidden . $aria_labelledby . 'role="img"', $svg );
-
-		if ( $aria_labelledby ) {
-			// Get the intro SVG markup and save as $svg_intro.
-			preg_match( '/<svg(.*?)>/', $svg, $svg_intro );
-
-			// Add the title/desc to the markup.
-			$svg = str_replace( $svg_intro[0], $svg_intro[0] . $aria_labelledby, $svg );
-		}
-	} else {
-
-		// Begin SVG markup.
-		$svg = '<svg class="icon icon-' . esc_attr( $args['icon'] ) . '"' . $aria_hidden . $aria_labelledby . ' role="img">';
-
-		// Display the title.
-		if ( $args['title'] ) {
-			$svg .= '<title id="title-' . $unique_id . '">' . esc_html( $args['title'] ) . '</title>';
-
-			// Display the desc only if the title is already set.
-			if ( $args['desc'] ) {
-				$svg .= '<desc id="desc-' . $unique_id . '">' . esc_html( $args['desc'] ) . '</desc>';
-			}
-		}
-
-		/*
-		* Display the icon.
-		*
-		* The whitespace around `<use>` is intentional - it is a work around to a keyboard navigation bug in Safari 10.
-		*
-		* See https://core.trac.wordpress.org/ticket/38387.
-		*/
-		$svg .= ' <use href="#icon-' . esc_html( $args['icon'] ) . '" xlink:href="#icon-' . esc_html( $args['icon'] ) . '"></use> ';
-
-		// Add some markup to use as a fallback for browsers that do not support SVGs.
-		if ( $args['fallback'] ) {
-			$svg .= '<span class="svg-fallback icon-' . esc_attr( $args['icon'] ) . '"></span>';
-		}
-
-		$svg .= '</svg>';
-	} // End if.
-
-	return $svg;
+	// Return emppty if there is no icon.
+	return $svg ? $svg : '';
 }
 
 /**

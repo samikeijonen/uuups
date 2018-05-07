@@ -47,8 +47,9 @@ $line-height: $global-lines * $global-baseline;
 $global-line-height: ($line-height / $global-font-size) !default;
 
 /// Max widths.
-$max-width-1: $global-spacing-unit-3 * 42 + 2 * $global-spacing-unit-3;
-$max-width-2: $global-spacing-unit-3 * 26;
+$max-width-1: $global-spacing-unit-2 * 66;
+$max-width-2: $global-spacing-unit-2 * 39;
+$max-width-wide: $global-spacing-unit-2 * 58;
 
 /// Breakpoints.
 $breakpoint-1: 48em;

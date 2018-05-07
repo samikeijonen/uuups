@@ -67,7 +67,7 @@
 			color: var(--color-grey-60);
 		}
 
-		.icon {
+		.svg {
 			height: 1.5em;
 			width: 1.5em;
 		}
@@ -193,7 +193,7 @@
 					padding: $global-spacing-unit-1 $global-spacing-unit-2;
 				}
 
-				.icon {
+				.svg {
 					position: absolute;
 					right: $global-spacing-unit-2;
 					top: calc(50% - 0.5em);
