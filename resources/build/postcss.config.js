@@ -4,7 +4,7 @@
 module.exports = ( { file, options, env } ) => ( {
         plugins : {
                 'postcss-import' : {},
-                'postcss-cssnext' : {
+                'postcss-preset-env' : {
 			features: {
 				customProperties: {
 					// Preserve custom properties.
