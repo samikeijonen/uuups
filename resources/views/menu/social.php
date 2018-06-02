@@ -10,7 +10,7 @@ if ( ! has_nav_menu( $data->name ) ) :
 endif
 ?>
 
-<nav class="menu menu--<?= esc_attr( $data->name ) ?> pb-2">
+<nav class="menu menu--<?= esc_attr( $data->name ) ?> pb-2" aria-label="<?php esc_attr_e( 'Social', 'uuups' ); ?>">
 	<?php
 	wp_nav_menu( [
 		'theme_location' => $data->name,
