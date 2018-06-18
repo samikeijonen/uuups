@@ -816,11 +816,9 @@ td {
 																.grid--blog > .entry {
 																								grid-column: span 2;
 																}
-																.grid--blog > .entry:first-child, .grid--blog > .entry:nth-child(2) {
-																								grid-column: span 3;
-																}
-																.grid--blog > .pagination {
-																								grid-column: 1/ -1;
+																.grid--blog > .archive-header,
+																.grid--blog .pagination {
+																								grid-column: 1 / -1;
 																}
 								}
 }
