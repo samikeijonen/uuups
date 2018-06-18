@@ -342,12 +342,14 @@ The end [result can be seen in Github pages](https://samikeijonen.github.io/uuup
 
 All the main SVG related functions can be found in the `app/functions-svg.php` file. It’s well-documented in the code, but here’s a summary:
 
-- Add SVG icons in `resources/svg` folder. `npm run dev` copies these SVG files in `dist/svg` folder.
-- When ready for production, `npm run build` cleans all the SVG files.
-- `Hybrid\get_svg()` function returns inline SVG icon markup by default.
-- For example `Hybrid\get_svg( 'angle-down.svg' )`.
-- Or with arguments: `Hybrid\get_svg( 'angle-down.svg', [ 'title' => 'This is title', 'desc' => 'This is desc' ] );`.
+- Add SVG icons in `resources/svg` folder. `npm run dev` or `npm run build` copies these SVG files in `dist/svg` folder.
+	- In the same cleans them up.
+	- Adds attributes and classes for using these icons as decorative only.
+- `Uuups\get_svg()` function returns inline SVG icon markup by default.
+- For example `Uuups\get_svg( [ 'icon' => 'folder-open' ]`.
 - SVG icons are automatically used in Social links menu.
+
+If the SVG is not decorative, add SVG markup directly in the markup.
 
 ## FAQ
 
