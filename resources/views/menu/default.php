@@ -10,7 +10,7 @@ if ( ! has_nav_menu( $data->name ) ) :
 endif
 ?>
 
-<nav class="menu menu--<?= esc_attr( $data->name ) ?>" id="js-menu--<?= esc_attr( $data->name ) ?>">
+<nav class="menu menu--<?= esc_attr( $data->name ) ?>" id="js-menu--<?= esc_attr( $data->name ) ?>" aria-label="<?php esc_attr_e( 'Top', 'uuups' ); ?>">
 	<button id="menu-toggle" class="menu-toggle" aria-label=<?= esc_html( 'Menu', 'uuups' ); ?> aria-expanded="false">
 		<svg class="menu-toggle-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 40">
 			<line class="line line-1" x1="0" y1="12" x2="40" y2="12"></line>

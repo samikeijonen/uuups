@@ -14,34 +14,14 @@ namespace Uuups;
  * @access public
  * @return void
  */
-add_action( 'wp_enqueue_scripts', function() {
-	// Get version.
-	$version = wp_get_theme( get_template() )->get( 'Version' );
-
-	// Main scripts.
-	wp_enqueue_script(
-		'uuups-app',
-		get_parent_theme_file_uri( 'dist/scripts/app.js' ),
-		null,
-		$version,
-		true
-	);
+add_action( 'wp_enqueue_scripts', function() {// Main scripts.
+	wp_enqueue_script( 'uuups-app', asset( 'scripts/app.js' ), null, false, true );
 
 	// Add custom fonts.
-	wp_enqueue_style(
-		'uuups-fonts',
-		fonts_url(),
-		null,
-		null
-	);
+	wp_enqueue_style( 'uuups-fonts', fonts_url(), null, null );
 
 	// Main styles.
-	wp_enqueue_style(
-		'uuups-style',
-		get_parent_theme_file_uri( 'dist/styles/style.css' ),
-		null,
-		$version
-	);
+	wp_enqueue_style( 'uuups-style', asset( 'styles/style.css' ), null );
 
 	// Comments JS.
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -60,16 +40,8 @@ add_action( 'wp_enqueue_scripts', function() {
  * @return void
  */
 add_action( 'enqueue_block_editor_assets', function() {
-	// Get version.
-	$version = wp_get_theme( get_template() )->get( 'Version' );
-
 	// Main block styles.
-	wp_enqueue_style(
-		'uuups-blocks',
-		get_parent_theme_file_uri( 'dist/styles/editor.css' ),
-		null,
-		$version
-	);
+	wp_enqueue_style( 'uuups-blocks', asset( 'styles/editor.css' ), null );
 }, 10 );
 
 /**

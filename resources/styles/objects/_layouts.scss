@@ -24,15 +24,11 @@
 
 				> .entry {
 					grid-column: span 2;
-
-					&:first-child,
-					&:nth-child(2) {
-						grid-column: span 3;
-					}
 				}
 
-				> .pagination {
-					grid-column: 1/ -1;
+				> .archive-header,
+				.pagination {
+					grid-column: 1 / -1;
 				}
 			}
 		}
