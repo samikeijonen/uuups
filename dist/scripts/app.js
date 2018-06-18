@@ -72,6 +72,13 @@ eval("/**\n * File navigation.js.\n *\n * Handles toggling the navigation menu f
 
 /***/ }),
 
+/***/ "./resources/styles/editor.scss":
+/***/ (function(module, exports) {
+
+eval("// removed by extract-text-webpack-plugin//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9yZXNvdXJjZXMvc3R5bGVzL2VkaXRvci5zY3NzPzhjZGQiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEiLCJmaWxlIjoiLi9yZXNvdXJjZXMvc3R5bGVzL2VkaXRvci5zY3NzLmpzIiwic291cmNlc0NvbnRlbnQiOlsiLy8gcmVtb3ZlZCBieSBleHRyYWN0LXRleHQtd2VicGFjay1wbHVnaW5cblxuXG4vLy8vLy8vLy8vLy8vLy8vLy9cbi8vIFdFQlBBQ0sgRk9PVEVSXG4vLyAuL3Jlc291cmNlcy9zdHlsZXMvZWRpdG9yLnNjc3Ncbi8vIG1vZHVsZSBpZCA9IC4vcmVzb3VyY2VzL3N0eWxlcy9lZGl0b3Iuc2Nzc1xuLy8gbW9kdWxlIGNodW5rcyA9IDAiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./resources/styles/editor.scss\n");
+
+/***/ }),
+
 /***/ "./resources/styles/style.scss":
 /***/ (function(module, exports) {
 
@@ -83,7 +90,8 @@ eval("// removed by extract-text-webpack-plugin//# sourceURL=[module]\n//# sourc
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__("./resources/scripts/app.js");
-module.exports = __webpack_require__("./resources/styles/style.scss");
+__webpack_require__("./resources/styles/style.scss");
+module.exports = __webpack_require__("./resources/styles/editor.scss");
 
 
 /***/ })

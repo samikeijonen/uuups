@@ -40,16 +40,8 @@ add_action( 'wp_enqueue_scripts', function() {// Main scripts.
  * @return void
  */
 add_action( 'enqueue_block_editor_assets', function() {
-	// Get version.
-	$version = wp_get_theme( get_template() )->get( 'Version' );
-
 	// Main block styles.
-	wp_enqueue_style(
-		'uuups-blocks',
-		get_parent_theme_file_uri( 'dist/styles/editor.css' ),
-		null,
-		$version
-	);
+	wp_enqueue_style( 'uuups-blocks', asset( 'styles/editor.css' ), null );
 }, 10 );
 
 /**
