@@ -47,7 +47,7 @@ Directory structure aims to be modern app-like, what ever that means :)
 	- `resources/views` have all the template structure and partials files.
 	- `resources/styles` have SASS files.
 	- `resources/scripts` have JS files.
-	- `resources/svg-icons` have SVG icons.
+	- `resources/svg` have SVG icons.
 	- `resources/lang` have language files.
 - `app` folder is for theme related functions and classes. Classes are loaded automatically but `functions-files` needs to be added manually via `functions.php`.
 - `dist` folder has processed and optimized assets ready to be included to theme. Do not edit or add anything to `dist` folder. It is processed automatically via task tools like Webpack or Gulp.
@@ -130,29 +130,39 @@ Activate your theme under `Appearance > Themes`. Or use WP-CLI to activate your 
 wp theme activate <theme-name>
 ```
 
-## Webpack tasks
+## Build process
 
-In this theme experiment I use [Webpack](https://webpack.js.org/) tasks for automated processes.
+This theme utilizes [Laravel Mix](https://laravel.com/docs/5.6/mix) for most of the build process with the theme.
 
-You can configure Webpack related settings
-in the `resources/build/config.js` file. Change at least `proxy`
-setting in browserSync to match your local environment URL. This will be needed if you use Browsersync feature by running `npm run watch`.
+Laravel Mix is a layer built on top of Webpack that makes defining your build process much easier than attempting to write out a custom `webpack.config.js` configuration file.  It simplifies most of the complexity while still allowing you to define custom Webpack config options for more advanced uses.
 
-You can also change folder structure but it's not recommended.
+You may configure the build process to your liking by editing `webpack.mix.js`.
 
-Run `npm run watch` to activate build process in the background. You'll get development proxy at http://localhost:3000 where changes to the code will be updated automatically to browser.
+The following is a list of commands you can run from the command line:
 
-Tip: Press `ctrl` + `c` to quit build process.
+```
+# Processes all of your assets for a development environment.
+npm run dev
 
-All tasks:
+# Watches for changes to any files and rebuilds for a development environment.
+npm run watch
 
-- `npm run watch` &ndash; Automatically watch changes to CSS, JS, and PHP. Also kicks off BrowserSync.
-- `npm run dev` &ndash; Output assets like CSS, JS, images, SVGs to `dist` folder.
-- `npm run lint` &ndash; Run SASS and JS against WordPress coding standards.
-	- `npm run lint:styles` &ndash; Run SASS against WordPress coding standards.
-	- `npm run lint:scripts` &ndash; Run Javascript against WordPress coding standards.
-- `nmp run docs` &ndash; Create SASS docs which can be seen in [Uuups Github pages](https://samikeijonen.github.io/uuups/).
-- `npm run build` &ndash; Minify and compress assets like CSS, JS, images, SVGs to `dist` folder. Run this when you're ready for production.
+# Watches for changes to files and syncs with the browser using BrowserSync.
+npm run hot
+
+# Processes all of your assets for a production environment.
+npm run build
+
+# Lint JavaScript and/or SCSS files.
+npm run lint
+npm run lint:styles
+npm run lint:scripts
+
+# Auto-adds a textdomain and/or creates a POT file.
+npm run i18n
+npm run i18n:textdomain
+npm run i18n:pot
+```
 
 ## Accessibility testing
 

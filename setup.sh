@@ -109,8 +109,8 @@ echo "--> Search & replace id ..... ${green}done${txtreset}"
 # Replace URL
 ##############
 
-# config.js
-find "$builddir" -name 'config.js' -type f -exec perl -p -i -e "s|$default_url|$url|g" {} \;
+# webpack.mix.js
+find "$basedir" -name 'webpack.mix.js' -type f -exec perl -p -i -e "s|$default_url|$url|g" {} \;
 
 echo "--> Change url .............. ${green}done${txtreset}"
 
