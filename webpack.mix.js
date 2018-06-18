@@ -33,12 +33,7 @@ mix.options( {
 // Builds sources maps for assets.
 //
 // @link https://laravel.com/docs/5.6/mix#css-source-maps
-if ( ! mix.inProduction() ) {
-    mix.webpackConfig( {
-        devtool: 'source-map'
-    } )
-    .sourceMaps();
-}
+mix.sourceMaps();
 
 // Versioning and cache busting. Append a unique hash for production assets.
 //
@@ -76,6 +71,7 @@ mix.sass( 'resources/styles/style.scss', 'styles', sassConfig )
 // @link https://laravel.com/docs/5.6/mix#custom-webpack-configuration
 mix.webpackConfig( {
 	stats: 'minimal',
+	devtool: mix.inProduction() ? false : 'source-map',
 	performance: { hints: false    },
 	externals: { jquery: 'jQuery' },
 	plugins: [
