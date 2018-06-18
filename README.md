@@ -189,10 +189,7 @@ There are two separate stylesheets
 which are automatically compiled to `dist/styles`:
 
 - `style.scss` &ndash; Main stylesheet for the theme.
-- `blocks.scss` &ndash; Stylesheet only for the new editor (Gutenberg).
-
-Actually all the files in `resources/styles/*.scss`
-are outputted in the `dist/styles/*.css` during build process.
+- `editor.scss` &ndash; Stylesheet only for the new editor (Gutenberg).
 
 ### Main stylesheet
 
@@ -210,7 +207,7 @@ it's that important.
 
 ### Styles for the editor
 
-`blocks.scss` tries to put all the necessary styles
+`editor.scss` tries to put all the necessary styles
 to the new editor.
 
 Note a little trick where we prefix all the styles
