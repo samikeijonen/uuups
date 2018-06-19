@@ -14,7 +14,8 @@ namespace Uuups;
  * @access public
  * @return void
  */
-add_action( 'wp_enqueue_scripts', function() {// Main scripts.
+add_action( 'wp_enqueue_scripts', function() {
+	// Main scripts.
 	wp_enqueue_script( 'uuups-app', asset( 'scripts/app.js' ), null, false, true );
 
 	// Add custom fonts.

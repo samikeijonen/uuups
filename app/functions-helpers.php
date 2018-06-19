@@ -19,7 +19,7 @@ use function Hybrid\app;
  * @link   https://laravel.com/docs/5.6/mix#versioning-and-cache-busting
  * @since  1.0.0
  * @access public
- * @param  string  $path
+ * @param  string $path Path to asset.
  * @return string
  */
 function asset( $path ) {
