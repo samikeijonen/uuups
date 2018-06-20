@@ -18,7 +18,7 @@
     "precommit": "lint-staged"
   },
   "lint-staged": {
-    "*.js": ["npm run lint:scripts"]
+    "./resources/scripts/**/*.js": ["npm run lint:scripts"]
   },
   "repository": {
     "type": "git",
