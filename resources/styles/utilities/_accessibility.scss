@@ -37,6 +37,6 @@
 /* stylelint-enable */
 
 // Do not show the outline on the skip link target.
-#main[tabindex="-1"]:focus {
+#main[tabindex="-1"]:focus { /* stylelint-disable-line a11y/no-outline-none */
 	outline: 0;
 }

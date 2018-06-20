@@ -183,11 +183,13 @@
 
 				// Class "focus" is added by Javascript which enables
 				// keyboard focus to submenu items.
+				/* stylelint-disable a11y/selector-pseudo-class-focus */
 				.focus > ul,
 				li:hover > ul {
 					left: auto;
 					right: 100%;
 				}
+				/* stylelint-enable */
 
 				a {
 					padding: $global-spacing-unit-1 $global-spacing-unit-2;
@@ -201,7 +203,8 @@
 				}
 			}
 
-			/* stylelint-disable no-descending-specificity */
+			/* stylelint-disable no-descending-specificity,
+			a11y/selector-pseudo-class-focus */
 			.focus > ul,
 			li:hover > ul {
 				left: -50%;

@@ -1513,7 +1513,8 @@ p.wp-block-subhead {
 		position: relative;
 	}
 	.menu__items--primary {
-		/* stylelint-disable no-descending-specificity */
+		/* stylelint-disable no-descending-specificity,
+			a11y/selector-pseudo-class-focus */
 		/* stylelint-enable */
 	}
 	.menu__items--primary, .menu__items--primary.is-toggled {
@@ -1537,6 +1538,8 @@ p.wp-block-subhead {
 		transition: transform 300ms, opacity 300ms;
 		width: 13rem;
 		z-index: 99999;
+		/* stylelint-disable a11y/selector-pseudo-class-focus */
+		/* stylelint-enable */
 	}
 	.menu__items--primary ul ul {
 		top: 0;
@@ -1705,6 +1708,7 @@ p.wp-block-subhead {
 
 /* stylelint-enable */
 #main[tabindex="-1"]:focus {
+	/* stylelint-disable-line a11y/no-outline-none */
 	outline: 0;
 }
 
