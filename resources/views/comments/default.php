@@ -17,7 +17,7 @@ if ( post_password_required() || ( ! have_comments() && ! comments_open() && ! p
 
 			<h2 class="comments__title"><?php comments_number(); ?></h2>
 
-			<?php Hybrid\render_view( 'partials', 'comments-nav' ); ?>
+			<?php Hybrid\render_view( 'partials', 'pagination-comments' ); ?>
 
 			<ol class="comments__list">
 				<?php

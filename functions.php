@@ -17,6 +17,7 @@
 // a different directory.
 if ( file_exists( get_parent_theme_file_path( 'vendor/autoload.php' ) ) ) {
 	require_once get_parent_theme_file_path( 'vendor/autoload.php' );
+	Hybrid\app();
 }
 
 // Bootstrap the theme. This loads any functions-files from the `/app` folder
