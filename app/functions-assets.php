@@ -42,7 +42,11 @@ add_action( 'wp_enqueue_scripts', function() {
  */
 add_action( 'enqueue_block_editor_assets', function() {
 	// Main block styles.
-	wp_enqueue_style( 'uuups-blocks', asset( 'styles/editor.css' ), null );
+	wp_enqueue_style( 'uuups-blocks', asset( 'styles/editor.css' ), null, null );
+
+	// Overwrite Core theme styles with empty styles.
+	wp_deregister_style( 'wp-core-blocks-theme' );
+	wp_register_style( 'wp-core-blocks-theme', asset( 'styles/theme.css' ), null, null );
 }, 10 );
 
 /**
