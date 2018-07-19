@@ -16,18 +16,13 @@ namespace Uuups;
  */
 add_action( 'wp_enqueue_scripts', function() {
 	// Main scripts.
-	wp_enqueue_script( 'uuups-app', asset( 'scripts/app.js' ), null, false, true );
+	wp_enqueue_script( 'uuups-app', asset( 'scripts/app.js' ), null, null, true );
 
 	// Add custom fonts.
 	wp_enqueue_style( 'uuups-fonts', fonts_url(), null, null );
 
 	// Main styles.
-	wp_enqueue_style( 'uuups-style', asset( 'styles/style.css' ), null );
-
-	// Comments JS.
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
+	wp_enqueue_style( 'uuups-style', asset( 'styles/style.css' ), null, null );
 
 	// Dequeue Core block styles.
 	wp_dequeue_style( 'wp-core-blocks' );
