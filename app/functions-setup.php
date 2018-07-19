@@ -49,19 +49,23 @@ add_action( 'after_setup_theme', function() {
 	// Add support for editor color palette.
 	add_theme_support( 'editor-color-palette',
 		[
-			'name'  => 'main',
+			'name'  => esc_html__( 'Main', 'uuups' ),
+			'slug'  => 'main',
 			'color' => '#2516c7',
 		],
 		[
-			'name'  => 'dark',
+			'name'  => esc_html__( 'Dark', 'uuups' ),
+			'slug'  => 'dark',
 			'color' => '#06031f',
 		],
 		[
-			'name'  => 'white',
+			'name'  => esc_html__( 'White', 'uuups' ),
+			'slug'  => 'white',
 			'color' => '#fff',
 		],
 		[
-			'name'  => 'light',
+			'name'  => esc_html__( 'Light', 'uuups' ),
+			'slug'  => 'light',
 			'color' => '#ecebff',
 		]
 	);
