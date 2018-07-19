@@ -19,7 +19,7 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php Hybrid\attr( 'body' ); ?>>
+<body <?php Hybrid\Attr\render( 'body' ); ?>>
 
 <div class="app">
 	<header class="app-header flex justify-between items-center mx-auto max-width-1 px-2 py-4">
@@ -32,5 +32,5 @@
 		?>
 		</div>
 
-		<?php Hybrid\render_view( 'menu', 'primary', [ 'name' => 'primary' ] ); ?>
+		<?php Hybrid\View\render( 'menu', 'primary', [ 'name' => 'primary' ] ); ?>
 	</header>

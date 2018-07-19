@@ -10,4 +10,4 @@
  * @package Uuups
  */
 
-Hybrid\render_view( 'index' );
+Hybrid\View\render( 'index' );
