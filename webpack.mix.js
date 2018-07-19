@@ -60,7 +60,8 @@ var sassConfig = {
 
 // Compile SASS/CSS.
 mix.sass( 'resources/styles/style.scss', 'styles', sassConfig )
-   .sass( 'resources/styles/editor.scss', 'styles', sassConfig );
+   .sass( 'resources/styles/editor.scss', 'styles', sassConfig )
+   .sass( 'resources/styles/theme.scss', 'styles', sassConfig );
 
 // Add custom Webpack configuration.
 //
@@ -129,8 +130,8 @@ mix.webpackConfig( {
 mix.browserSync( {
 	proxy: 'foxland-products.test/',
 	files: [
-		"**/*.{jpg,jpeg,png,gif,svg,eot,ttf,woff,woff2}",
-		"resources/views/**/*.php",
-		"app/**/*.php"
+		'**/*.{css,js,jpg,jpeg,png,gif,svg,eot,ttf,woff,woff2}',
+		'resources/views/**/*.php',
+		'app/**/*.php'
 	]
 } );
