@@ -104,3 +104,14 @@ function mix() {
 
 	return $manifest;
 }
+
+/**
+ * Handles JavaScript detection.
+ *
+ * Adds a `js` class to the root `<html>` element when JavaScript is detected.
+ *
+ * @since 1.0.0
+ */
+add_action( 'wp_head', function() {
+	echo "<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>\n";
+}, 0 );

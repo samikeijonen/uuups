@@ -9,7 +9,7 @@
 
 ?>
 <!DOCTYPE html>
-<html <?php language_attributes(); ?>>
+<html <?php language_attributes(); ?> class="no-js">
 
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
