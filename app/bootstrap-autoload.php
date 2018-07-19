@@ -57,7 +57,6 @@ array_map(
 		'functions-assets',
 		'functions-filters',
 		'functions-fonts',
-		'functions-helpers',
 		'functions-svg',
 		'functions-setup',
 		'functions-videos',
