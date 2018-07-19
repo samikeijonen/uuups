@@ -1,0 +1,25 @@
+// Latests posts.
+.wp-block-latest-posts {
+	&.is-grid {
+		list-style-type: none;
+		padding-left: 0;
+
+		li {
+			margin-bottom: $global-spacing-unit-1 * 3;
+		}
+
+		@supports (grid-area: auto) {
+			display: grid;
+			grid-gap: $global-spacing-unit-3;
+			grid-template-columns: repeat(auto-fill, minmax($global-spacing-unit-1 * 30, 1fr));
+
+			li {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	&__post-date {
+		display: block;
+	}
+}

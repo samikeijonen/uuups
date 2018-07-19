@@ -1,3 +1,7 @@
+cite {
+	color: var(--color-grey-60);
+}
+
 blockquote {
 	border-left: 0.25rem solid;
 	font-style: italic;
@@ -5,10 +9,15 @@ blockquote {
 	padding-left: $global-spacing-unit-3;
 
 	p {
-		@include font-size(1.25rem);
+		font-size: var(--font-size-h3);
 	}
 
-	p:last-child {
+	p:last-of-type {
 		margin-bottom: 0;
+	}
+
+	cite {
+		display: block;
+		margin-top: $global-spacing-unit-1 * 3;
 	}
 }

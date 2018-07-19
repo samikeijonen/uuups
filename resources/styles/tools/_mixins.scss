@@ -156,7 +156,19 @@
 	outline-offset: -2px;
 }
 
-/// Focu styles.
+@mixin button-block-outline {
+	background-color: transparent;
+	border: 2px solid;
+	color: var(--color-dark);
+}
+
+@mixin button-block-outline-hover {
+	background-color: var(--color-dark);
+	border-color: var(--color-dark);
+	color: var(--color-white);
+}
+
+/// Focus styles.
 ///
 /// @example scss - Basic Usage Sass
 ///		.button:hover,

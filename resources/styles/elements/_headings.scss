@@ -5,18 +5,19 @@ h4,
 h5,
 h6 {
 	font-family: $font-heading;
-	line-height: 1.25;
 	margin: 0 0 $global-spacing-unit-2;
 }
 
 h1,
 h1.blocks-rich-text__tinymce.mce-content-body {
 	font-size: var(--font-size-h1);
+	line-height: var(--line-height-heading);
 }
 
 h2,
 h2.blocks-rich-text__tinymce.mce-content-body {
 	font-size: var(--font-size-h2);
+	line-height: var(--line-height-heading);
 }
 
 h3,

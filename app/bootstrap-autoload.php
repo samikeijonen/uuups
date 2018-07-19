@@ -59,7 +59,6 @@ array_map(
 		'functions-fonts',
 		'functions-svg',
 		'functions-setup',
-		'functions-videos',
 		'template-general',
 	]
 );
