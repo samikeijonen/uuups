@@ -54,11 +54,11 @@ array_map(
 		require_once get_parent_theme_file_path( "app/{$file}.php" );
 	},
 	[
+		'functions-assets',
 		'functions-filters',
 		'functions-fonts',
 		'functions-helpers',
 		'functions-svg',
-		'functions-scripts',
 		'functions-setup',
 		'functions-videos',
 		'template-general',
