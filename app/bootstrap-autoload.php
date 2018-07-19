@@ -22,7 +22,7 @@ namespace Uuups;
  * a different directory.
  */
 if ( file_exists( get_parent_theme_file_path( 'vendor/autoload.php' ) ) ) {
-	require_once( get_parent_theme_file_path( 'vendor/autoload.php' ) );
+	require_once get_parent_theme_file_path( 'vendor/autoload.php' );
 }
 
 /**
@@ -39,7 +39,7 @@ spl_autoload_register( function( $class ) {
 
 	\Hybrid\autoload( $class, [
 		'namespace' => __NAMESPACE__,
-		'path'      => get_parent_theme_file_path( 'app' )
+		'path'      => get_parent_theme_file_path( 'app' ),
 	] );
 } );
 
