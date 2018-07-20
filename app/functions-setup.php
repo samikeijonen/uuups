@@ -28,7 +28,7 @@ namespace Uuups;
  */
 add_action( 'after_setup_theme', function() {
 	// Load theme translations.
-	// @link https://developer.wordpress.org/reference/functions/load_theme_textdomain/
+	// @link https://developer.wordpress.org/reference/functions/load_theme_textdomain/.
 	load_theme_textdomain( 'uuups', get_parent_theme_file_path( 'resources/lang' ) );
 
 	// Add default posts and comments RSS feed links to head.

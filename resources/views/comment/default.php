@@ -13,15 +13,18 @@
 
 		<div class="comment__info">
 		<?php
-			Hybrid\Comment\render_author( [ 'class' => 'comment__author fw-700', 'after' => '<br />' ] );
+			Hybrid\Comment\render_author( [
+				'class' => 'comment__author fw-700',
+				'after' => '<br />',
+			] );
 
 			Hybrid\Comment\render_permalink( [
 				'text' => sprintf(
 					// Translators: 1 is the comment date and 2 is the time.
-					esc_html__( '%1$s at %2$s' ),
+					esc_html__( '%1$s at %2$s', 'uuups' ),
 					Hybrid\Comment\fetch_date(),
 					Hybrid\Comment\fetch_time()
-				)
+				),
 			] );
 
 			Hybrid\Comment\render_edit_link( [ 'before' => Uuups\sep() ] );
