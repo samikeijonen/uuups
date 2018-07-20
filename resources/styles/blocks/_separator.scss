@@ -1,6 +1,7 @@
 .wp-block-separator {
 	&.is-style-wide {
 		max-width: $global-spacing-unit-1 * 28;
+		width: $global-spacing-unit-1 * 28;
 	}
 
 	// Dots style.
@@ -9,6 +10,7 @@
 		max-width: none;
 		height: auto;
 		text-align: center;
+		width: auto;
 
 		&::before {
 			content: "\00b7 \00b7 \00b7";
