@@ -46,9 +46,13 @@ add_action( 'enqueue_block_editor_assets', function() {
 	// Main block styles.
 	wp_enqueue_style( 'uuups-blocks', asset( 'styles/editor.css' ), null, null );
 
+	// Overwrite Core block styles with empty styles.
+	wp_deregister_style( 'wp-core-blocks' );
+	wp_register_style( 'wp-core-blocks', '' );
+
 	// Overwrite Core theme styles with empty styles.
 	wp_deregister_style( 'wp-core-blocks-theme' );
-	wp_register_style( 'wp-core-blocks-theme', asset( 'styles/theme.css' ), null, null );
+	wp_register_style( 'wp-core-blocks-theme', '' );
 }, 10 );
 
 /**

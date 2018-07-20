@@ -60,8 +60,7 @@ var sassConfig = {
 
 // Compile SASS/CSS.
 mix.sass( 'resources/styles/style.scss', 'styles', sassConfig )
-   .sass( 'resources/styles/editor.scss', 'styles', sassConfig )
-   .sass( 'resources/styles/theme.scss', 'styles', sassConfig );
+   .sass( 'resources/styles/editor.scss', 'styles', sassConfig );
 
 // Add custom Webpack configuration.
 //
