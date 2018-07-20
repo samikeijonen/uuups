@@ -51,7 +51,7 @@ add_action( 'after_setup_theme', function() {
 	add_theme_support( 'customize-selective-refresh-widgets' );
 
 	// Add support for editor color palette.
-	add_theme_support( 'editor-color-palette',
+	add_theme_support( 'editor-color-palette', [
 		[
 			'name'  => esc_html__( 'Main', 'uuups' ),
 			'slug'  => 'main',
@@ -72,7 +72,7 @@ add_action( 'after_setup_theme', function() {
 			'slug'  => 'light',
 			'color' => '#ecebff',
 		]
-	);
+	] );
 
 	// Add support for align wide blocks.
 	add_theme_support( 'align-wide' );
