@@ -16,8 +16,8 @@
 			<br />
 			<?php /* translators: %s how many days ago. */ ?>
 			<a href="<?php comment_link(); ?>" class="comment__permalink"><time class="comment__published"><?php printf( __( '%s ago', 'uuups' ), esc_attr( human_time_diff( get_comment_time( 'U' ) ) ) ); // phpcs:ignore WordPress.XSS.EscapeOutput ?></time></a>
-			<?php edit_comment_link( null, Uuups\get_meta_sep() ); ?>
-			<?php Hybrid\Comment\render_reply_link( [ 'before' => Uuups\get_meta_sep() ] ); ?>
+			<?php edit_comment_link( null, Uuups\sep() ); ?>
+			<?php Hybrid\Comment\render_reply_link( [ 'before' => Uuups\sep() ] ); ?>
 		</div>
 	</header>
 

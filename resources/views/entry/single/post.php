@@ -12,8 +12,8 @@
 
 		<div class="entry__byline pb-2">
 			<?php Hybrid\Post\render_author(); ?>
-			<?php Hybrid\Post\render_date( [ 'before' => Uuups\get_meta_sep() ] ); ?>
-			<?php Hybrid\Post\render_comments_link( [ 'before' => Uuups\get_meta_sep() ] ); ?>
+			<?php Hybrid\Post\render_date( [ 'before' => Uuups\sep() ] ); ?>
+			<?php Hybrid\Post\render_comments_link( [ 'before' => Uuups\sep() ] ); ?>
 		</div>
 	</header>
 

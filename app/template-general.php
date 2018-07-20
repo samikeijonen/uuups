@@ -21,10 +21,10 @@ namespace Uuups;
  * @param  string $sep Separator for metadata.
  * @return string
  */
-function get_meta_sep( $sep = '' ) {
+function sep( $sep = '' ) {
 
 	return apply_filters(
-		'uuups_meta_sep',
+		'uuups/sep',
 		sprintf(
 			' <span class="sep">%s</span> ',
 			$sep ? $sep : esc_html_x( '&middot;', 'meta separator', 'uuups' )
