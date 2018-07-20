@@ -26,6 +26,11 @@ add_action( 'wp_enqueue_scripts', function() {
 	// Main styles.
 	wp_enqueue_style( 'uuups-style', asset( 'styles/style.css' ), null, null );
 
+	// Comment script.
+	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+		wp_enqueue_script( 'comment-reply' );
+	}
+
 	// Dequeue Core block styles.
 	wp_dequeue_style( 'wp-core-blocks' );
 }, 10 );
