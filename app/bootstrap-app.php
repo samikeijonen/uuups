@@ -24,7 +24,6 @@ $uuups = new \Hybrid\Core\Application();
 
 /**
  * Perform bootstrap actions.
- * ------------------------------------------------------------------------------
  *
  * Creates an action hook for child themes (or even plugins) to hook into the
  * bootstrapping process and add their own bindings before the app is booted by
@@ -34,7 +33,6 @@ do_action( 'uuups/bootstrap', $uuups );
 
 /**
  * Bootstrap the application.
- * ------------------------------------------------------------------------------
  *
  * Calls the application `boot()` method, which launches the application. Pat
  * yourself on the back for a job well done.
