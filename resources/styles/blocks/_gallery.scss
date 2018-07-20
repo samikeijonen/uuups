@@ -1,15 +1,23 @@
 .wp-block-gallery {
-	display: flex;
-	flex-wrap: wrap;
+	display: grid;
+	grid-gap: $global-spacing-unit-1;
+	grid-template-columns: repeat(1, 1fr);
 	list-style-type: none;
 	padding-left: 0;
+
+	@media (min-width: $breakpoint-1) {
+		@for $i from 2 through 8 {
+			&.columns-#{ $i } {
+				grid-template-columns: repeat(#{ $i }, 1fr);
+			}
+		}
+	}
 
 	.blocks-gallery-item {
 		display: flex;
 		flex-direction: column;
 		flex-grow: 1;
 		justify-content: center;
-		margin: $global-spacing-unit-1;
 		position: relative;
 
 		figure {
@@ -31,9 +39,6 @@
 			text-align: center;
 			width: 100%;
 		}
-
-		// Responsive fallback value, 2 columns.
-		width: calc(100% / 2 - #{ $global-spacing-unit-1 } * 2);
 	}
 
 	// Cropped.
@@ -45,21 +50,5 @@
 			object-fit: cover;
 			width: 100%;
 		}
-	}
-
-	&.columns-1 .blocks-gallery-item {
-		width: calc(100% / 1 - #{ $global-spacing-unit-1 } * 2);
-	}
-
-	@media (min-width: $breakpoint-1) {
-		@for $i from 3 through 8 {
-			&.columns-#{ $i } .blocks-gallery-item {
-				width: calc(100% / #{ $i } - #{ $global-spacing-unit-1 } * 2);
-			}
-		}
-	}
-
-	&.alignwide {
-		max-width: calc(#{ $max-width-wide + #{ $global-spacing-unit-1 } * 2 });
 	}
 }

@@ -15,7 +15,6 @@
 # Tools - Default mixins and functions.
 --------------------------------------------------------------*/
 @import "tools/mixins";
-@import "tools/font-size";
 
 // Editor styles.
 .edit-post-visual-editor {
@@ -45,7 +44,6 @@
 	# Editor related styles which overwrites above styles.
 	--------------------------------------------------------------*/
 	@include typography;
-	font-size: 1rem;
 
 	p {
 		@include typography;

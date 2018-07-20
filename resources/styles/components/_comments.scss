@@ -1,9 +1,9 @@
 .comments__title {
-	margin-bottom: $global-spacing-unit-6;
+	margin-bottom: $global-spacing-unit-1 * 6;
 }
 
 .comments-nav {
-	margin-bottom: $global-spacing-unit-6;
+	margin-bottom: $global-spacing-unit-1 * 6;
 }
 
 .comments-nav__title {
@@ -20,11 +20,11 @@
 }
 
 .comment--depth-1 {
-	padding-bottom: $global-spacing-unit-4;
+	padding-bottom: $global-spacing-unit-1 * 4;
 }
 
 .comment__meta {
-	margin-bottom: $global-spacing-unit-4;
+	margin-bottom: $global-spacing-unit-1 * 4;
 
 	a {
 		color: var(--color-dark);

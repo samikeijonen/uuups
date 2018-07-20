@@ -14,7 +14,7 @@ img {
 }
 
 figure {
-	margin: 0 0 $global-spacing-unit-4;
+	margin: 0 0 $global-spacing-unit-1 * 4;
 
 	img {
 		@include center-block();

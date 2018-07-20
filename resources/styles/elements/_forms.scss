@@ -1,7 +1,7 @@
 textarea {
 	// Removes empty space under textarea.
 	display: block;
-	min-height: $global-spacing-unit-13;
+	min-height: $global-spacing-unit-1 * 13;
 }
 
 input[type="text"],

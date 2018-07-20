@@ -1,5 +1,5 @@
 .wp-block-button {
-	margin-bottom: $global-spacing-unit-4;
+	margin-bottom: $global-spacing-unit-1 * 4;
 
 	&.aligncenter {
 		text-align: center;
@@ -23,19 +23,22 @@
 		&:active {
 			@include button-block-hover;
 		}
+	}
+}
 
-		.is-style-squared & {
-			border-radius: $global-spacing-unit-1 * 10;
-		}
+// Need these outside, otherwise nesting in Gutenberg doesn't work.
+// .is-style-outline & outputs wrong nesting.
+// .is-style-outline .edit-post-visual-editor .wp-block-button__link.
+.is-style-squared .wp-block-button__link {
+	border-radius: $global-spacing-unit-1 * 10;
+}
 
-		.is-style-outline & {
-			@include button-block-outline;
+.is-style-outline .wp-block-button__link {
+	@include button-block-outline;
 
-			&:hover,
-			&:focus,
-			&:active {
-				@include button-block-outline-hover;
-			}
-		}
+	&:hover,
+	&:focus,
+	&:active {
+		@include button-block-outline-hover;
 	}
 }

@@ -1,11 +1,10 @@
 pre {
-	@include font-size(1.125rem);
 	background-color: var(--color-light);
 	font-family: $font-pre;
-	margin: 0 0 $global-spacing-unit-4;
+	margin: 0 0 $global-spacing-unit-1 * 4;
 	max-width: 100%;
 	overflow: auto;
-	padding: $global-spacing-unit-4;
+	padding: $global-spacing-unit-1 * 4;
 }
 
 code,

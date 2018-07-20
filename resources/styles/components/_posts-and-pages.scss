@@ -7,7 +7,7 @@
 }
 
 .entry {
-	margin-bottom: $global-spacing-unit-8;
+	margin-bottom: $global-spacing-unit-1 * 8;
 }
 
 .entry__header,
@@ -23,7 +23,7 @@
 }
 
 .entry__footer {
-	margin-top: $global-spacing-unit-4;
+	margin-top: $global-spacing-unit-1 * 4;
 }
 
 .terms-wrapper {

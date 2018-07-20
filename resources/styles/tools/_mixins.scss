@@ -5,13 +5,9 @@
 @mixin typography {
 	color: var(--color-dark);
 	font-family: $font-main;
-	font-size: ($global-font-size / 1rem) * 112.5%;
+	font-size: var(--global-font-size);
 	line-height: $global-line-height;
 	word-wrap: break-word;
-
-	@media (min-width: $breakpoint-1) {
-		font-size: ($global-font-size / 1rem) * 125%;
-	}
 }
 
 /// Center any element.
@@ -112,7 +108,7 @@
 ///			box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.1);
 ///		}
 @mixin global-box-shadow {
-	box-shadow: 0 $global-spacing-unit-1 $global-spacing-unit-4 var(--color-grey-10);
+	box-shadow: 0 $global-spacing-unit-1 $global-spacing-unit-1 * 4 var(--color-grey-10);
 }
 
 /// Button styles.
@@ -134,7 +130,7 @@
 	border: none;
 	border-radius: 0;
 	color: var(--color-white);
-	padding: $global-spacing-unit-1 $global-spacing-unit-3;
+	padding: $global-spacing-unit-1 $global-spacing-unit-1 * 3;
 }
 
 /// Button hover styles.
