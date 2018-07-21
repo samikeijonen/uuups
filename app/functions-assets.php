@@ -1,8 +1,6 @@
 <?php
 /**
- * Helper functions.
- *
- * This file holds basic helper functions used within the theme.
+ * Styles and scripts related functions, hooks, and filters.
  *
  * @package    Uuups
  */
@@ -12,6 +10,52 @@ namespace Uuups;
 use function Hybrid\app;
 
 /**
+ * Enqueue scripts/styles.
+ *
+ * @since  1.0.0
+ * @access public
+ * @return void
+ */
+add_action( 'wp_enqueue_scripts', function() {
+	// Main scripts.
+	wp_enqueue_script( 'uuups-app', asset( 'scripts/app.js' ), null, null, true );
+
+	// Add custom fonts.
+	wp_enqueue_style( 'uuups-fonts', fonts_url(), null, null );
+
+	// Main styles.
+	wp_enqueue_style( 'uuups-style', asset( 'styles/style.css' ), null, null );
+
+	// Comment script.
+	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+		wp_enqueue_script( 'comment-reply' );
+	}
+
+	// Dequeue Core block styles.
+	wp_dequeue_style( 'wp-core-blocks' );
+}, 10 );
+
+/**
+ * Enqueue editor scripts/styles.
+ *
+ * @since  1.0.0
+ * @access public
+ * @return void
+ */
+add_action( 'enqueue_block_editor_assets', function() {
+	// Main block styles.
+	wp_enqueue_style( 'uuups-blocks', asset( 'styles/editor.css' ), null, null );
+
+	// Overwrite Core block styles with empty styles.
+	wp_deregister_style( 'wp-core-blocks' );
+	wp_register_style( 'wp-core-blocks', '' );
+
+	// Overwrite Core theme styles with empty styles.
+	wp_deregister_style( 'wp-core-blocks-theme' );
+	wp_register_style( 'wp-core-blocks-theme', '' );
+}, 10 );
+
+/**
  * Helper function for outputting an asset URL in the theme. This integrates
  * with Laravel Mix for handling cache busting. If used when you enqueue a script
  * or style, it'll append an ID to the file name in a production build.
@@ -19,7 +63,7 @@ use function Hybrid\app;
  * @link   https://laravel.com/docs/5.6/mix#versioning-and-cache-busting
  * @since  1.0.0
  * @access public
- * @param  string  $path
+ * @param  string $path Path to asset.
  * @return string
  */
 function asset( $path ) {
@@ -69,3 +113,14 @@ function mix() {
 
 	return $manifest;
 }
+
+/**
+ * Handles JavaScript detection.
+ *
+ * Adds a `js` class to the root `<html>` element when JavaScript is detected.
+ *
+ * @since 1.0.0
+ */
+add_action( 'wp_head', function() {
+	echo "<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>\n";
+}, 0 );

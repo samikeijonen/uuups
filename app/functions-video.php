@@ -2,7 +2,7 @@
 /**
  * Create responsive videos by wrapping them in a div.
  *
- * @package Foxer
+ * @package Uuups
  */
 
 namespace Uuups;

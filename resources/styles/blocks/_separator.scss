@@ -1,0 +1,24 @@
+.wp-block-separator {
+	&.is-style-wide {
+		max-width: $global-spacing-unit-1 * 28;
+		width: $global-spacing-unit-1 * 28;
+	}
+
+	// Dots style.
+	&.is-style-dots {
+		background-color: transparent;
+		max-width: none;
+		height: auto;
+		text-align: center;
+		width: auto;
+
+		&::before {
+			content: "\00b7 \00b7 \00b7";
+			color: var(--color-base);
+			font-family: serif;
+			font-size: calc(var(--global-baseline) * 3);
+			letter-spacing: $global-spacing-unit-1 * 4;
+			padding-left: $global-spacing-unit-1 * 4;
+		}
+	}
+}

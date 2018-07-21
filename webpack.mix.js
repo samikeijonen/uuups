@@ -71,6 +71,7 @@ mix.sass( 'resources/styles/style.scss', 'styles', sassConfig )
 // @link https://laravel.com/docs/5.6/mix#custom-webpack-configuration
 mix.webpackConfig( {
 	stats: 'minimal',
+	devtool: mix.inProduction() ? false : 'source-map',
 	performance: { hints: false    },
 	externals: { jquery: 'jQuery' },
 	plugins: [
@@ -128,8 +129,8 @@ mix.webpackConfig( {
 mix.browserSync( {
 	proxy: 'foxland-products.test/',
 	files: [
-		"**/*.{jpg,jpeg,png,gif,svg,eot,ttf,woff,woff2}",
-		"resources/views/**/*.php",
-		"app/**/*.php"
+		'**/*.{css,js,jpg,jpeg,png,gif,svg,eot,ttf,woff,woff2}',
+		'resources/views/**/*.php',
+		'app/**/*.php'
 	]
 } );

@@ -27,6 +27,10 @@ namespace Uuups;
  * @return void
  */
 add_action( 'after_setup_theme', function() {
+	// Load theme translations.
+	// @link https://developer.wordpress.org/reference/functions/load_theme_textdomain/.
+	load_theme_textdomain( 'uuups', get_parent_theme_file_path( 'resources/lang' ) );
+
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
 
@@ -47,24 +51,28 @@ add_action( 'after_setup_theme', function() {
 	add_theme_support( 'customize-selective-refresh-widgets' );
 
 	// Add support for editor color palette.
-	add_theme_support( 'editor-color-palette',
+	add_theme_support( 'editor-color-palette', [
 		[
-			'name'  => 'main',
+			'name'  => esc_html__( 'Main', 'uuups' ),
+			'slug'  => 'main',
 			'color' => '#2516c7',
 		],
 		[
-			'name'  => 'dark',
+			'name'  => esc_html__( 'Dark', 'uuups' ),
+			'slug'  => 'dark',
 			'color' => '#06031f',
 		],
 		[
-			'name'  => 'white',
+			'name'  => esc_html__( 'White', 'uuups' ),
+			'slug'  => 'white',
 			'color' => '#fff',
 		],
 		[
-			'name'  => 'light',
+			'name'  => esc_html__( 'Light', 'uuups' ),
+			'slug'  => 'light',
 			'color' => '#ecebff',
-		]
-	);
+		],
+	] );
 
 	// Add support for align wide blocks.
 	add_theme_support( 'align-wide' );

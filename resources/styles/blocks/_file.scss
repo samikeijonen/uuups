@@ -1,0 +1,18 @@
+.wp-block-file {
+	margin-bottom: $global-spacing-unit-1 * 4;
+
+	&__button {
+		@include button-block();
+		margin-left: $global-spacing-unit-1 * 2;
+
+		&:visited {
+			color: var(--color-white);
+		}
+
+		&:hover,
+		&:focus,
+		&:active {
+			@include button-block-hover;
+		}
+	}
+}

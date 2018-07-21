@@ -6,23 +6,41 @@
  */
 
 ?>
-<li <?php Hybrid\attr( 'comment' ); ?>>
+<li <?php Hybrid\Attr\render( 'comment' ); ?>>
 
-<header class="comment__meta flex items-center font-size-88">
-	<?= get_avatar( $data->comment, 120, '', '', [ 'class' => 'comment__avatar' ] ) ?>
+	<header class="comment__meta flex items-center font-size-88">
+		<?= get_avatar( $data->comment, 120, '', '', [ 'class' => 'comment__avatar' ] ) ?>
 
-	<div class="comment__info">
-		<span class="comment__author fw-700"><?php comment_author_link(); ?></span>
-		<br />
-		<?php /* translators: %s how many days ago. */ ?>
-		<a href="<?php comment_link(); ?>" class="comment__permalink"><time class="comment__published"><?php printf( __( '%s ago', 'uuups' ), esc_attr( human_time_diff( get_comment_time( 'U' ) ) ) ); // phpcs:ignore WordPress.XSS.EscapeOutput ?></time></a>
-		<?php edit_comment_link( null, Uuups\get_meta_sep() ); ?>
-		<?php Hybrid\comment_reply_link( [ 'before' => Uuups\get_meta_sep() ] ); ?>
+		<div class="comment__info">
+		<?php
+			Hybrid\Comment\render_author( [
+				'class' => 'comment__author fw-700',
+				'after' => '<br />',
+			] );
+
+			Hybrid\Comment\render_permalink( [
+				'text' => sprintf(
+					// Translators: 1 is the comment date and 2 is the time.
+					esc_html__( '%1$s at %2$s', 'uuups' ),
+					Hybrid\Comment\fetch_date(),
+					Hybrid\Comment\fetch_time()
+				),
+			] );
+
+			Hybrid\Comment\render_edit_link( [ 'before' => Uuups\sep() ] );
+			Hybrid\Comment\render_reply_link( [ 'before' => Uuups\sep() ] );
+		?>
+		</div>
+	</header>
+
+	<div class="comment__content">
+		<?php if ( ! Hybrid\Comment\is_approved() ) : ?>
+			<p class="comment__moderation">
+				<?php esc_html_e( 'Your comment is awaiting moderation.', 'uuups' ); ?>
+			</p>
+		<?php endif; ?>
+
+		<?php comment_text(); ?>
 	</div>
-</header>
-
-<div class="comment__content">
-	<?php comment_text(); ?>
-</div>
 
 <?php /* No closing </li> is needed.  WordPress will know where to add it. */ ?>

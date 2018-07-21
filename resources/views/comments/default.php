@@ -17,14 +17,14 @@ if ( post_password_required() || ( ! have_comments() && ! comments_open() && ! p
 
 			<h2 class="comments__title"><?php comments_number(); ?></h2>
 
-			<?php Hybrid\render_view( 'partials', 'comments-nav' ); ?>
+			<?php Hybrid\View\render( 'partials', 'pagination-comments' ); ?>
 
 			<ol class="comments__list">
 				<?php
 				wp_list_comments( [
 					'style'        => 'ol',
-					'callback'     => function( $comment ) {
-						Hybrid\render_view( 'comment', Hybrid\get_comment_hierarchy(), [ 'comment' => $comment ] );
+					'callback'     => function( $comment, $args, $depth ) {
+						Hybrid\View\render( 'comment', Hybrid\Comment\hierarchy(), compact( 'comment', 'args', 'depth' ) );
 					},
 					'end-callback' => function() {
 						echo '</li>';

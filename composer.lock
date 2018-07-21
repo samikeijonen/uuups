@@ -132,17 +132,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/justintadlock/hybrid-core.git",
-                "reference": "9a674773f422d7a7761ef1725ebe6151336ff96e"
+                "reference": "17bc0c80cc9b7bdfe74bdda4a49ef2e1619026eb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/justintadlock/hybrid-core/zipball/9a674773f422d7a7761ef1725ebe6151336ff96e",
-                "reference": "9a674773f422d7a7761ef1725ebe6151336ff96e",
+                "url": "https://api.github.com/repos/justintadlock/hybrid-core/zipball/17bc0c80cc9b7bdfe74bdda4a49ef2e1619026eb",
+                "reference": "17bc0c80cc9b7bdfe74bdda4a49ef2e1619026eb",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.6",
-                "psr/container": "^1.0"
+                "php": ">=5.6"
             },
             "type": "library",
             "autoload": {
@@ -167,56 +166,7 @@
             "keywords": [
                 "wordpress"
             ],
-            "time": "2018-06-16 15:01:24"
-        },
-        {
-            "name": "psr/container",
-            "version": "1.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/php-fig/container.git",
-                "reference": "b7ce3b176482dbbc1245ebf52b181af44c2cf55f"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/container/zipball/b7ce3b176482dbbc1245ebf52b181af44c2cf55f",
-                "reference": "b7ce3b176482dbbc1245ebf52b181af44c2cf55f",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Psr\\Container\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "PHP-FIG",
-                    "homepage": "http://www.php-fig.org/"
-                }
-            ],
-            "description": "Common Container Interface (PHP FIG PSR-11)",
-            "homepage": "https://github.com/php-fig/container",
-            "keywords": [
-                "PSR-11",
-                "container",
-                "container-interface",
-                "container-interop",
-                "psr"
-            ],
-            "time": "2017-02-14T16:28:37+00:00"
+            "time": "2018-07-20 22:14:56"
         }
     ],
     "packages-dev": [],

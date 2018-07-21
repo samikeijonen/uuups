@@ -15,30 +15,9 @@
 # Tools - Default mixins and functions.
 --------------------------------------------------------------*/
 @import "tools/mixins";
-@import "tools/font-size";
 
 // Editor styles.
 .edit-post-visual-editor {
-	@include typography;
-
-	.editor-block-list__block {
-		max-width: calc(#{ $max-width-2 } * 1.125 + 2 * 50px);
-	}
-
-	.editor-post-title .editor-post-title__input {
-		font-family: $font-heading;
-		font-size: var(--font-size-h1);
-		min-height: auto;
-		text-align: center;
-	}
-
-	p {
-		@include typography;
-	}
-
-	.blocks-rich-text__tinymce.mce-content-body:not(.wp-block-cover-image-text):not(.wp-block-subhead):not(h2):not(h3) {
-		line-height: $global-line-height;
-	}
 
 	/*--------------------------------------------------------------
 	# Elements - Unclassed HTML elements (type selectors).
@@ -60,6 +39,39 @@
 	--------------------------------------------------------------*/
 	@import "blocks/blocks";
 	@import "blocks/color-palette";
+
+	/*--------------------------------------------------------------
+	# Editor related styles which overwrites above styles.
+	--------------------------------------------------------------*/
+	@include typography;
+
+	p {
+		@include typography;
+		margin-bottom: 0;
+	}
+
+	// Post title.
+	.editor-post-title {
+		&__block {
+			max-width: calc(#{$max-width-2} + 86px);
+		}
+
+		&__input {
+			font-family: $font-heading;
+			font-size: var(--font-size-h1);
+			min-height: auto;
+			text-align: center;
+		}
+	}
+
+	.editor-block-list__block,
+	.editor-default-block-appender {
+		max-width: calc(#{$max-width-2} + 86px);
+	}
+
+	.editor-rich-text__tinymce.mce-content-body:not(.wp-block-cover-image-text):not(.wp-block-subhead):not(h2):not(h3) {
+		line-height: $global-line-height;
+	}
 
 
 	/*--------------------------------------------------------------
