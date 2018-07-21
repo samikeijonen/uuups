@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/samikeijonen/uuups.svg?branch=master)](https://travis-ci.org/samikeijonen/uuups)
+[![Build Status](https://travis-ci.org/samikeijonen/uuups.svg?branch=dev)](https://travis-ci.org/samikeijonen/uuups)
 
 # Uuups &ndash; experimental WordPress Theme
 
