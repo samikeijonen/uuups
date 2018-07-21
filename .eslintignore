@@ -2,3 +2,4 @@ dist/scripts/*.js
 resources/build/
 docs
 .eslintrc.js
+webpack.mix.js
