@@ -71,7 +71,7 @@ add_action( 'after_setup_theme', function() {
 			'name'  => esc_html__( 'Light', 'uuups' ),
 			'slug'  => 'light',
 			'color' => '#ecebff',
-		]
+		],
 	] );
 
 	// Add support for align wide blocks.
