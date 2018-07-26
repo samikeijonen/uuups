@@ -12,7 +12,7 @@
 		<?= get_avatar( $data->comment, 120, '', '', [ 'class' => 'comment__avatar' ] ) ?>
 
 		<div class="comment__info">
-		<?php
+			<?php
 			Hybrid\Comment\render_author( [
 				'class' => 'comment__author fw-700',
 				'after' => '<br />',
@@ -29,7 +29,7 @@
 
 			Hybrid\Comment\render_edit_link( [ 'before' => Uuups\sep() ] );
 			Hybrid\Comment\render_reply_link( [ 'before' => Uuups\sep() ] );
-		?>
+			?>
 		</div>
 	</header>
 
