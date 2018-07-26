@@ -27,7 +27,7 @@ function sep( $sep = '' ) {
 		'uuups/sep',
 		sprintf(
 			' <span class="sep">%s</span> ',
-			$sep ? $sep : esc_html_x( '&middot;', 'meta separator', 'uuups' )
+			$sep ?: esc_html_x( '&middot;', 'meta separator', 'uuups' )
 		)
 	);
 }
