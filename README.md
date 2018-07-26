@@ -153,10 +153,11 @@ npm run hot
 # Processes all of your assets for a production environment.
 npm run build
 
-# Lint JavaScript and/or SCSS files.
+# Lint JavaScript, CSS, and PHP files.
 npm run lint
 npm run lint:styles
 npm run lint:scripts
+npm run lint:php
 
 # Auto-adds a textdomain and/or creates a POT file.
 npm run i18n
