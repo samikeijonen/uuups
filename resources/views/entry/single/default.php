@@ -14,7 +14,7 @@
 	<div class="entry__content">
 		<?php
 		the_content();
-		Hybrid\View\render( 'partials', 'pagination-singular' );
+		Hybrid\View\render( 'nav/pagination', 'post' );
 		?>
 	</div>
 </article>

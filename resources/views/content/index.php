@@ -17,7 +17,7 @@
 			Hybrid\View\render( 'entry/archive', Hybrid\Post\hierarchy() );
 		endwhile;
 
-		Hybrid\View\render( 'partials', 'pagination-posts' );
+		Hybrid\View\render( 'nav/pagination', 'posts' );
 	endif;
 	?>
 </main>
