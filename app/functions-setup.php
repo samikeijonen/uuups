@@ -74,6 +74,34 @@ add_action( 'after_setup_theme', function() {
 		],
 	] );
 
+	// Add support for editor font sizes.
+	add_theme_support( 'editor-font-sizes', [
+		[
+			'name'      => esc_html__( 'Small', 'uuups' ),
+			'shortName' => esc_html__( 'S', 'uuups' ),
+			'size'      => 14,
+			'slug'      => 'small',
+		],
+		[
+			'name'      => esc_html__( 'Regular', 'uuups' ),
+			'size'      => 18,
+			'shortName' => esc_html__( 'M', 'uuups' ),
+			'slug'      => 'regular',
+		],
+		[
+			'name'      => esc_html__( 'Large', 'uuups' ),
+			'size'      => 24,
+			'shortName' => esc_html__( 'L', 'uuups' ),
+			'slug'      => 'large',
+		],
+		[
+			'name'      => esc_html__( 'Larger', 'uuups' ),
+			'size'      => 32,
+			'shortName' => esc_html__( 'XL', 'uuups' ),
+			'slug'      => 'larger',
+		],
+	] );
+
 	// Add support for align wide blocks.
 	add_theme_support( 'align-wide' );
 }, 5 );
