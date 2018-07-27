@@ -28,6 +28,9 @@
     ],
     "./resources/styles/**/*.scss": [
       "npm run lint:styles"
+    ],
+    "*.php": [
+      "npm run lint:php"
     ]
   },
   "repository": {
