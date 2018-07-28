@@ -27,15 +27,8 @@
 
 		<div class="app-header__branding">
 		<?php
-			Hybrid\Site\render_title( [
-				'class' => 'app-header__title mb-0 h3 font-main fw-700',
-				'tag'   => is_front_page() && is_home() ? 'h1' : 'p',
-			] );
-
-			Hybrid\Site\render_description( [
-				'class' => 'app-header__title mb-0 h3 font-main fw-700',
-				'tag'   => 'p',
-			] );
+			Uuups\site_title();
+			Uuups\site_description();
 		?>
 		</div>
 
