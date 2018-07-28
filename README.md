@@ -228,7 +228,8 @@ with class `edit-post-visual-editor`:
 
 At the moment support for new editor means these things to me:
 
-- Add support `editor-color-palette` to match theme colors.
+- Add support for `editor-color-palette` to match theme colors.
+- Add support for `editor-font-sizes` to match theme font sizes.
 - Add support for `align-wide` blocks.
 - Dequeue Core block styles: `wp_dequeue_style( 'wp-blocks' )`.
 	- This is because I don't want to overwrite and add too spesific rules to main stylesheet.
@@ -293,24 +294,25 @@ This loads template files from `resources/views/content` folder respecting the [
 // 6. resources/views/index.php
 ```
 
-
-
 ## Coding standards and linting
 
-Theme mostly follows [WordPress coding standards](https://make.wordpress.org/core/handbook/best-practices/coding-standards/). There are couple of things you need to install in your
-machine.
+Theme mostly follows [WordPress coding standards](https://make.wordpress.org/core/handbook/best-practices/coding-standards/).
 
-1. [Install PHP CodeSniffer](https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards) to validate code developed for WordPress.
-1. [Install PHP Compatibility](https://github.com/wimg/PHPCompatibility) check for PHP CodeSniffer.
-1. [Install PHPCS and WPCS to your IDE](https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards#using-phpcs-and-wpcs-from-within-your-ide).
+There is `pre-commit` hook which runs PHP, Style, and JavaScript linting before new commits can be pushed to repo.
 
-In `phpcs.xml` there is custom PHP rulesets (sniffs) which are based on Underscores rulesets.
+For example if there are changes in CSS files, it runs `npm run lint:styles` before the commit.
 
-### Run your code automatically through Travis CI
+You can use `--no-verify` flag to bypass linting check:
 
-When you commit changes in Github, let [Travis CI](https://travis-ci.org/) run and test your code.
+```bash
+git commit --no-verify -m "Your commit message."
+```
 
-File `.travis.yml` is the configuration file for setting up Travis. It's also based on Underscores configuration.
+All lints can be run by command `npm run lint`. Or use any of the following lint commands.
+
+### PHP linting
+
+NPM task `npm run lint:php` checks PHP files using [WordPress coding standars](https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards). In `phpcs.xml` there is custom PHP rulesets (sniffs) which are based on Underscores rulesets.
 
 ### Style linting
 
@@ -327,6 +329,12 @@ NPM task `npm lint:scripts` checks SASS files using [ESLint](https://eslint.org/
 File `.eslintrc.js` is the configuration file for ESLint. And `.eslintignore` file for what files to ignore from linting.
 
 I also recommend installing ESLint extension to your IDE, for example [VS Code ESLint extension](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint).
+
+### Run your code automatically through Travis CI
+
+When you commit changes in Github, let [Travis CI](https://travis-ci.org/) run and test your code.
+
+File `.travis.yml` is the configuration file for setting up Travis. It's also based on Underscores configuration.
 
 ### Editorconfig
 
