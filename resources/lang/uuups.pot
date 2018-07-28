@@ -1,121 +1,300 @@
-# Copyright (C) 2018 Uuups
-# This file is distributed under the same license as the Uuups package.
+# <!=Copyright (C) 2018 Sami Keijonen
+# This file is distributed under the GNU General Public License v2.0 or later.=!>
 msgid ""
 msgstr ""
-"Project-Id-Version: Uuups\n"
+"Project-Id-Version: Uuups 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/style\n"
+"POT-Creation-Date: 2018-07-28 08:48:24+00:00\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-Basepath: ..\n"
-"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
-"X-Poedit-SearchPath-0: .\n"
-"X-Poedit-SearchPathExcluded-0: *.js\n"
-"X-Poedit-SourceCharset: UTF-8\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"PO-Revision-Date: 2018-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"X-Generator: node-wp-i18n 1.2.0\n"
 
-#: app/functions-filters.php:62, build/app/functions-filters.php:62
+#: app/functions-filters.php:62
+#. translators: %s: Name of current post
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr ""
 
-#: app/functions-fonts.php:23, build/app/functions-fonts.php:23
+#: app/functions-setup.php:56
+msgid "Main"
+msgstr ""
+
+#: app/functions-setup.php:61
+msgid "Dark"
+msgstr ""
+
+#: app/functions-setup.php:66
+msgid "White"
+msgstr ""
+
+#: app/functions-setup.php:71
+msgid "Light"
+msgstr ""
+
+#: app/functions-setup.php:80
+msgid "Small"
+msgstr ""
+
+#: app/functions-setup.php:81
+msgid "S"
+msgstr ""
+
+#: app/functions-setup.php:86
+msgid "Regular"
+msgstr ""
+
+#: app/functions-setup.php:88
+msgid "M"
+msgstr ""
+
+#: app/functions-setup.php:92
+msgid "Large"
+msgstr ""
+
+#: app/functions-setup.php:94
+msgid "L"
+msgstr ""
+
+#: app/functions-setup.php:98
+msgid "Larger"
+msgstr ""
+
+#: app/functions-setup.php:100
+msgid "XL"
+msgstr ""
+
+#: app/functions-svg.php:27
+msgid "Please define default parameters in the form of an array."
+msgstr ""
+
+#: app/functions-svg.php:32
+msgid "Please define an SVG icon filename."
+msgstr ""
+
+#: resources/views/comment/default.php:24
+#. Translators: 1 is the comment date and 2 is the time.
+msgid "%1$s at %2$s"
+msgstr ""
+
+#: resources/views/comment/default.php:39
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: resources/views/comment/ping.php:14
+#. translators: %s how many days ago.
+msgid "%s ago"
+msgstr ""
+
+#: resources/views/comments/default.php:41
+msgid "Comments are closed."
+msgstr ""
+
+#: resources/views/content/404.php:12
+msgid "Oops! That page can&rsquo;t be found."
+msgstr ""
+
+#: resources/views/content/404.php:16
+msgid "It looks like nothing was found at this location. Maybe try search?"
+msgstr ""
+
+#: resources/views/entry/single/post.php:31
+msgid "Categories:"
+msgstr ""
+
+#: resources/views/entry/single/post.php:37
+msgid "Tags:"
+msgstr ""
+
+#: resources/views/footer/default.php:15
+msgid "Powered by crazy ideas and passion"
+msgstr ""
+
+#: resources/views/footer/default.php:19
+#. translators: %1$s is theme name, and %2$s is link to theme site.
+msgid "Theme %1$s by %2$s"
+msgstr ""
+
+#: resources/views/header/default.php:26
+msgid "Skip to content"
+msgstr ""
+
+#: resources/views/nav/menu/default.php:13
+msgid "Top"
+msgstr ""
+
+#: resources/views/nav/menu/social.php:13
+msgid "Social"
+msgstr ""
+
+#: resources/views/nav/pagination/comments.php:9
+#: resources/views/nav/pagination/posts.php:9
+msgid "Previous page"
+msgstr ""
+
+#: resources/views/nav/pagination/comments.php:10
+#: resources/views/nav/pagination/posts.php:10
+msgid "Next page"
+msgstr ""
+
+#: resources/views/nav/pagination/comments.php:11
+#: resources/views/nav/pagination/posts.php:11
+msgid "Page"
+msgstr ""
+
+#: resources/views/nav/pagination/posts.php:12
+msgid "Posts Navigation"
+msgstr ""
+
+#: vendor/justintadlock/hybrid-core/src/comment/functions-comment.php:227
+msgid "Edit"
+msgstr ""
+
+#: vendor/justintadlock/hybrid-core/src/functions-filters.php:163
+#. Translators: Used as a placeholder for untitled posts on non-singular views.
+msgid "(Untitled)"
+msgstr ""
+
+#: vendor/justintadlock/hybrid-core/src/functions-utility.php:238
+msgid "Archives"
+msgstr ""
+
+#: vendor/justintadlock/hybrid-core/src/functions-utility.php:276
+#. Translators: 1 is the week number and 2 is the year.
+msgid "Week %1$s of %2$s"
+msgstr ""
+
+#: vendor/justintadlock/hybrid-core/src/functions-utility.php:317
+#. Translators: Minute archive title. %s is the minute time format.
+msgid "Minute %s"
+msgstr ""
+
+#: vendor/justintadlock/hybrid-core/src/functions-utility.php:345
+#. Translators: %s is the search query.
+msgid "Search results for: %s"
+msgstr ""
+
+#: vendor/justintadlock/hybrid-core/src/functions-utility.php:359
+msgid "404 Not Found"
+msgstr ""
+
+#: vendor/justintadlock/hybrid-core/src/media/class-meta.php:179
+#: vendor/justintadlock/hybrid-core/src/media/functions-media.php:203
+#. Translators: Media dimensions - 1 is width and 2 is height.
+msgid "%1$s &#215; %2$s"
+msgstr ""
+
+#: vendor/justintadlock/hybrid-core/src/media/class-meta.php:272
+#. Translators: %s is the focal length of a camera.
+msgid "%s mm"
+msgstr ""
+
+#: vendor/justintadlock/hybrid-core/src/media/class-meta.php:364
+#. Translators: %s is the shutter speed of a camera.
+msgid "%s sec"
+msgstr ""
+
+#: vendor/justintadlock/hybrid-core/src/pagination/class-pagination.php:527
+msgid "&hellip;"
+msgstr ""
+
+#: vendor/justintadlock/hybrid-core/src/site/functions-site.php:180
+msgid "https://wordpress.org"
+msgstr ""
+
+#: vendor/justintadlock/hybrid-core/src/site/functions-site.php:181
+msgid "WordPress"
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "Uuups"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+msgid "https://github.com/samikeijonen/uuups"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "An awesome and simple theme for WordPress."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Sami Keijonen"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://foxland.fi/"
+msgstr ""
+
+#: app/functions-fonts.php:23
+#. Translators: If there are characters in your language that are not supported
+#. by Lora, translate this to 'off'. Do not translate into your own language.
 msgctxt "Lora font: on or off"
 msgid "on"
 msgstr ""
 
-#: app/functions-fonts.php:32, build/app/functions-fonts.php:32
+#: app/functions-fonts.php:32
+#. Translators: If there are characters in your language that are not supported
+#. by Karla, translate this to 'off'. Do not translate into your own language.
 msgctxt "Karla font: on or off"
 msgid "on"
 msgstr ""
 
-#: app/functions-icons.php:39, build/app/functions-icons.php:39
-msgid "Please define default parameters in the form of an array."
-msgstr ""
-
-#: app/functions-icons.php:44, build/app/functions-icons.php:44
-msgid "Please define an SVG icon filename."
-msgstr ""
-
-#: app/functions-setup.php:87, build/app/functions-setup.php:87
+#: app/functions-setup.php:135
 msgctxt "nav menu location"
 msgid "Primary"
 msgstr ""
 
-#: app/functions-setup.php:122, build/app/functions-setup.php:122
+#: app/functions-setup.php:136
+msgctxt "nav menu location"
+msgid "Social Links"
+msgstr ""
+
+#: app/functions-setup.php:171
 msgctxt "sidebar"
 msgid "Primary"
 msgstr ""
 
-#: app/template-general.php:30, build/app/template-general.php:30
+#: app/template-general.php:30
 msgctxt "meta separator"
 msgid "&middot;"
 msgstr ""
 
-#: resources/views/comment/default.php:18, resources/views/comment/ping.php:14, build/resources/views/comment/default.php:18, build/resources/views/comment/ping.php:14
-msgid "%s ago"
+#: vendor/justintadlock/hybrid-core/src/functions-utility.php:262
+#: vendor/justintadlock/hybrid-core/src/functions-utility.php:278
+msgctxt "yearly archives date format"
+msgid "Y"
 msgstr ""
 
-#: resources/views/content/404.php:12, build/resources/views/content/404.php:12
-msgid "Oops! That page can&rsquo;t be found."
+#: vendor/justintadlock/hybrid-core/src/functions-utility.php:277
+msgctxt "weekly archives date format"
+msgid "W"
 msgstr ""
 
-#: resources/views/content/404.php:16, build/resources/views/content/404.php:16
-msgid "It looks like nothing was found at this location. Maybe try search?"
+#: vendor/justintadlock/hybrid-core/src/functions-utility.php:291
+msgctxt "daily archives date format"
+msgid "F j, Y"
 msgstr ""
 
-#: resources/views/footer/default.php:13, build/resources/views/footer/default.php:13
-msgid "Powered by crazy ideas and passion."
+#: vendor/justintadlock/hybrid-core/src/functions-utility.php:303
+msgctxt "hour archives time format"
+msgid "g a"
 msgstr ""
 
-#: resources/views/header/default.php:26, build/resources/views/header/default.php:26
-msgid "Skip to content"
+#: vendor/justintadlock/hybrid-core/src/functions-utility.php:318
+msgctxt "minute archives time format"
+msgid "i"
 msgstr ""
 
-#: resources/views/partials/comments-nav.php:12, build/resources/views/partials/comments-nav.php:12
-msgid "Comments Navigation"
+#: vendor/justintadlock/hybrid-core/src/functions-utility.php:331
+msgctxt "minute and hour archives time format"
+msgid "g:i a"
 msgstr ""
 
-#: resources/views/partials/comments-nav.php:16, build/resources/views/partials/comments-nav.php:16
-msgctxt "comments navigation"
-msgid "&larr; Previous"
-msgstr ""
-
-#: resources/views/partials/comments-nav.php:23, build/resources/views/partials/comments-nav.php:23
-msgid "Page %1$s of %2$s"
-msgstr ""
-
-#: resources/views/partials/comments-nav.php:31, build/resources/views/partials/comments-nav.php:31
-msgctxt "comments navigation"
-msgid "Next &rarr;"
-msgstr ""
-
-#: resources/views/partials/comments.php:41, build/resources/views/partials/comments.php:41
-msgid "Comments are closed."
-msgstr ""
-
-#: resources/views/partials/pagination-posts.php:9, build/resources/views/partials/pagination-posts.php:9
-msgid "&larr; Previous page"
-msgstr ""
-
-#: resources/views/partials/pagination-posts.php:10, build/resources/views/partials/pagination-posts.php:10
-msgid "Next page &rarr;"
-msgstr ""
-
-#: resources/views/partials/pagination-posts.php:11, build/resources/views/partials/pagination-posts.php:11
-msgid "Posts Navigation"
-msgstr ""
-
-#: resources/views/partials/pagination-posts.php:14, build/resources/views/partials/pagination-posts.php:14
-msgid "Page"
-msgstr ""
-
-#: resources/views/partials/pagination-singular.php:11, build/resources/views/partials/pagination-singular.php:11
-msgid "Pages:"
-msgstr ""
-
-#: resources/views/entry/single/post.php:31, build/resources/views/entry/single/post.php:31
-msgid "Categories:"
-msgstr ""
-
-#: resources/views/entry/single/post.php:37, build/resources/views/entry/single/post.php:37
-msgid "Tags:"
+#: vendor/justintadlock/hybrid-core/src/post/functions-post.php:327
+#. Translators: Separates tags, categories, etc. when displaying a post.
+msgctxt "taxonomy terms separator"
+msgid ", "
 msgstr ""
