@@ -9,7 +9,7 @@
 
 ?>
 	<footer class="app-footer mx-auto max-width-1 px-2 py-4">
-		<?php Hybrid\View\render( 'menu', 'social', [ 'name' => 'social' ] ); ?>
+		<?php Hybrid\View\render( 'nav/menu', 'social', [ 'name' => 'social' ] ); ?>
 
 		<p class="app-footer__credit text-center color-grey-60 mb-0">
 			<?php esc_html_e( 'Powered by crazy ideas and passion', 'uuups' ); ?>

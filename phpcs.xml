@@ -8,9 +8,11 @@
 	<!-- Set a description for this ruleset. -->
 	<description>A custom set of code standard rules to check for WordPress themes.</description>
 
+	<config name="installed_paths" value="vendor/wp-coding-standards/wpcs,vendor/wimg/php-compatibility" />
+
 	<!--
 	#############################################################################
-	COMMAND LINE ARGUMENTS
+	Command line arguments
 	https://github.com/squizlabs/PHP_CodeSniffer/wiki/Annotated-ruleset.xml
 	#############################################################################
 	-->
@@ -33,23 +35,28 @@
 	<!-- Check all files in this directory and the directories below it. -->
 	<file>.</file>
 
-  <exclude-pattern>*/app/classes/*</exclude-pattern>
+	<!-- Exclude folders. -->
+  	<exclude-pattern>*/vendor/*</exclude-pattern>
+	<exclude-pattern>*/node_modules/*</exclude-pattern>
 
 	<!--
 	#############################################################################
-	USE THE WordPress RULESET
+	Use the WordPress ruleset
 	#############################################################################
 	-->
 
-  <!-- Include the WordPress ruleset, with exclusions. -->
-  <rule ref="WordPress">
-    <!-- Allow short open tags. -->
-    <exclude name="Generic.PHP.DisallowShortOpenTag.EchoFound" />
-  </rule>
+	<!-- Include the WordPress ruleset, with exclusions. -->
+	<rule ref="WordPress">
+		<!-- Allow short open tags. -->
+		<exclude name="Generic.PHP.DisallowShortOpenTag.EchoFound" />
+
+    <!-- We have cache busting via dist/mix-manifest.json file. -->
+		<exclude name="WordPress.WP.EnqueuedResourceParameters.MissingVersion" />
+	</rule>
 
 	<!--
 	#############################################################################
-	SNIFF SPECIFIC CONFIGURATION
+	Sniff specific configuration
 	#############################################################################
 	-->
 
@@ -86,19 +93,21 @@
 	<rule ref="WordPress.Arrays.MultipleStatementAlignment">
 		<properties>
 			<!-- No need to adjust alignment of large arrays when
-      the item with the largest key is removed. -->
+      			 the item with the largest key is removed. -->
 			<property name="exact" value="false"/>
+
 			<!-- Don't align multi-line items if ALL items
-       in the array are multi-line. -->
+       			 in the array are multi-line. -->
 			<property name="alignMultilineItems" value="!=100"/>
+
 			<!-- Array assignment operator should always be on
-       the same line as the array key. -->
+       			 the same line as the array key. -->
 			<property name="ignoreNewlines" value="false"/>
 		</properties>
 	</rule>
 
 	<!-- Verify that everything in the global namespace is prefixed
-   with a theme specific prefix.
+   		 with a theme specific prefix.
 		 Multiple valid prefixes can be provided as a comma-delimited list. -->
 	<rule ref="WordPress.NamingConventions.PrefixAllGlobals">
 		<properties>
@@ -108,11 +117,11 @@
 
 	<!--
 	#############################################################################
-	USE THE PHPCompatibility RULESET
+	Use the PHPCompatibility ruleset
 	#############################################################################
 	-->
 
-	<config name="uuupsVersion" value="5.6-99.0"/>
+	<config name="testVersion" value="5.6-99.0"/>
 	<rule ref="PHPCompatibility">
 		<!-- Whitelist PHP native classes, interfaces, functions and constants which
 			 are back-filled by WP.

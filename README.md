@@ -153,10 +153,11 @@ npm run hot
 # Processes all of your assets for a production environment.
 npm run build
 
-# Lint JavaScript and/or SCSS files.
+# Lint JavaScript, CSS, and PHP files.
 npm run lint
 npm run lint:styles
 npm run lint:scripts
+npm run lint:php
 
 # Auto-adds a textdomain and/or creates a POT file.
 npm run i18n
@@ -330,13 +331,6 @@ I also recommend installing ESLint extension to your IDE, for example [VS Code E
 ### Editorconfig
 
 Theme has an `.editorconfig` file that sets your code editor settings accordingly. [Download the extension to your editor](http://editorconfig.org/#download). The settings will automatically be applied when you edit code when you have the extension.
-
-## SASS docs
-
-Running `npm run docs` creates [sassdocs](http://sassdoc.com/) in `docs` folder. At the moment I'm
-testing [Herman sassdoc theme](https://github.com/oddbird/sassdoc-theme-herman).
-
-The end [result can be seen in Github pages](https://samikeijonen.github.io/uuups/). This is nowhere near of design system but it's a nice start.
 
 ## SVG system
 

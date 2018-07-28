@@ -17,6 +17,11 @@ const ImageminPlugin    = require( 'imagemin-webpack-plugin' ).default;
 const CopyWebpackPlugin = require( 'copy-webpack-plugin' );
 const imageminMozjpeg   = require( 'imagemin-mozjpeg' );
 
+
+// Sets the development path to assets.
+// By default, this is the `/resources` folder in the theme.
+const devPath  = 'resources';
+
 // Sets the path to the generated assets. By default, this is the `/dist` folder
 // in the theme. If doing something custom, make sure to change this everywhere.
 mix.setPublicPath( 'dist' );
@@ -43,7 +48,7 @@ mix.version();
 // Compile JavaScript.
 //
 // @link https://laravel.com/docs/5.6/mix#working-with-scripts
-mix.js( 'resources/scripts/app.js', 'scripts' );
+mix.js( `${devPath}/scripts/app.js`, 'scripts' );
 
 // Compile SASS and CSS.
 //
@@ -59,8 +64,8 @@ var sassConfig = {
 };
 
 // Compile SASS/CSS.
-mix.sass( 'resources/styles/style.scss', 'styles', sassConfig )
-   .sass( 'resources/styles/editor.scss', 'styles', sassConfig );
+mix.sass( `${devPath}/styles/style.scss`, 'styles', sassConfig )
+   .sass( `${devPath}/styles/editor.scss`, 'styles', sassConfig );
 
 // Add custom Webpack configuration.
 //
@@ -74,13 +79,20 @@ mix.webpackConfig( {
 	devtool: mix.inProduction() ? false : 'source-map',
 	performance: { hints: false    },
 	externals: { jquery: 'jQuery' },
+	resolve     : {
+		alias : {
+			// Alias for Hybrid Core assets.
+			// Import from `hybrid/scripts` or `~hybrid/styles`.
+			hybrid : path.resolve( __dirname, 'vendor/justintadlock/hybrid-core/src/resources/' )
+		}
+	},
 	plugins: [
 
 		// @link https://github.com/webpack-contrib/copy-webpack-plugin
 		new CopyWebpackPlugin( [
-			{ from: 'resources/img',   to: 'img' },
-			{ from: 'resources/svg',   to: 'svg' },
-			{ from: 'resources/fonts', to: 'fonts' }
+			{ from: `${devPath}/img`,   to: 'img' },
+			{ from: `${devPath}/svg`,   to: 'svg' },
+			{ from: `${devPath}/fonts`, to: 'fonts' }
 		] ),
 
 		// @link https://github.com/Klathmon/imagemin-webpack-plugin
@@ -130,7 +142,7 @@ mix.browserSync( {
 	proxy: 'foxland-products.test/',
 	files: [
 		'**/*.{css,js,jpg,jpeg,png,gif,svg,eot,ttf,woff,woff2}',
-		'resources/views/**/*.php',
+		`${devPath}/views/**/*.php`,
 		'app/**/*.php'
 	]
 } );
