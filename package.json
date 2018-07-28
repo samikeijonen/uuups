@@ -30,7 +30,7 @@
       "npm run lint:styles"
     ],
     "*.php": [
-      "npm run lint:php"
+      "cross-env ./vendor/bin/phpcs . --warning-severity=8"
     ]
   },
   "repository": {
