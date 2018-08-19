@@ -31,7 +31,7 @@ const rimraf            = require( 'rimraf' );
 if ( process.env.bundle ) {
 
 	// Folder name to bundle the files in.
-	let bundlePath = 'uuups';
+	let bundlePath = 'bundle/uuups';
 
 	// Theme root-level files to include.
 	let files = [
@@ -48,10 +48,10 @@ if ( process.env.bundle ) {
 		'app',
 		'dist',
 		'resources/lang',
-		'resources/js',    // Required for WordPress.org.
-		'resources/scss',  // Required for WordPress.org.
+		'resources/js',        // Required for WordPress.org.
+		'resources/css',       // Required for WordPress.org.
 		'resources/views',
-		'vendor'
+		'vendor/justintadlock'
 	];
 
 	// Delete the previous bundle to start clean.
