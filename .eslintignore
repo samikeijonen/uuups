@@ -1,3 +1,4 @@
+bundle
 dist/js/*.js
 docs
 .eslintrc.js
