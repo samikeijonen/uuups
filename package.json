@@ -3,21 +3,31 @@
   "version": "1.0.0",
   "description": "A starter theme for WordPress.",
   "author": "Sami Keijonen",
-	"license": "GPL-2.0+",
+  "license": "GPL-2.0+",
+  "homepage": "https://github.com/samikeijonen/uuups#readme",
   "main": "resources/js/app.js",
   "scripts": {
     "build": "npm run prod && npm run i18n",
+    "bundle": "cross-env bundle=1 NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js && npx rimraf mix-manifest.json",
     "dev": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "watch": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
     "hot": "cross-env NODE_ENV=development webpack-dev-server --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "prod": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "i18n": "npm run i18n:textdomain && npm run i18n:pot",
+    "i18n:textdomain": "npx wpi18n addtextdomain --exclude=vendor,node_modules",
+    "i18n:pot": "npx wpi18n makepot",
     "lint": "npm run lint:styles && npm run lint:scripts && npm run lint:php",
     "lint:styles": "cross-env stylelint './resources/styles/**/*.scss' --syntax scss",
     "lint:scripts": "cross-env eslint './resources/scripts/**/*.js'",
     "lint:php": "cross-env ./vendor/bin/phpcs .",
-    "i18n": "npm run i18n:textdomain && npm run i18n:pot",
-    "i18n:textdomain": "npx wpi18n addtextdomain --exclude=vendor,node_modules",
-    "i18n:pot": "npx wpi18n makepot"
+    "prod": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "rename": "theme-claim",
+    "watch": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samikeijonen/uuups.git"
+  },
+  "bugs": {
+    "url": "https://github.com/samikeijonen/uuups/issues"
   },
   "husky": {
     "hooks": {
@@ -35,32 +45,26 @@
       "cross-env ./vendor/bin/phpcs . --warning-severity=8"
     ]
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/samikeijonen/uuups.git"
-  },
-  "bugs": {
-    "url": "https://github.com/samikeijonen/uuups/issues"
-  },
-  "homepage": "https://github.com/samikeijonen/uuups#readme",
   "devDependencies": {
     "browser-sync": "^2.24.6",
     "browser-sync-webpack-plugin": "^2.2.2",
     "copy-webpack-plugin": "^4.5.2",
     "cross-env": "^5.2.0",
-    "eslint": "^5.2.0",
+    "eslint": "^5.4.0",
     "eslint-config-wordpress": "^2.0.0",
     "husky": "^1.0.0-rc.13",
     "imagemin-mozjpeg": "^7.0.0",
     "imagemin-webpack-plugin": "^2.2.0",
     "laravel-mix": "^2.1.11",
-    "lint-staged": "^7.2.0",
-    "node-wp-i18n": "github:cedaro/node-wp-i18n#develop",
+    "lint-staged": "^7.2.2",
+    "node-wp-i18n": "^1.2.0",
     "pa11y": "^5.0.4",
     "postcss-preset-env": "^5.3.0",
+    "rimraf": "^2.6.2",
     "stylelint": "^9.4.0",
     "stylelint-a11y": "^1.1.7",
-    "stylelint-config-wordpress": "^13.0.0"
+    "stylelint-config-wordpress": "^13.0.0",
+    "theme-claim": "^0.1.5"
   },
   "browserslist": [
     "> 1%",
