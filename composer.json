@@ -7,9 +7,9 @@
 	"license"     : "GPL-2.0-or-later",
 	"authors"     : [
 		{
-			"name"    : "Justin Tadlock",
-			"email"   : "justintadlock@gmail.com",
-			"homepage": "http://justintadlock.com"
+			"name"    : "Sami Keijonen",
+			"email"   : "sami.keijonen@foxnet.fi",
+			"homepage": "https://foxland.fi"
 		}
 	],
         "require": {
