@@ -9,12 +9,7 @@
  * unregistering, removing, or modifying all of the things in this file.  Those APIs
  * should be used instead of attempting to use `remove_action()`.
  *
- * @package    Uuups
- * @subpackage Includes
- * @author     Justin Tadlock <justintadlock@gmail.com>
- * @copyright  Copyright (c) 2018, Justin Tadlock
- * @link       https://github.com/samikeijonen/uuups/
- * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+ * @package Uuups
  */
 
 namespace Uuups;

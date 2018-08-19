@@ -1,9 +1,9 @@
 {
-	"name"        : "justintadlock/abc",
+	"name"        : "samikeijonen/uuups",
         "type"        : "wordpress-theme",
 	"description" : "A WordPress starter theme.",
 	"keywords"    : ["wordpress"],
-	"homepage"    : "https://themehybrid.com/themes/abc",
+	"homepage"    : "https://github.com/samikeijonen/uuups",
 	"license"     : "GPL-2.0-or-later",
 	"authors"     : [
 		{

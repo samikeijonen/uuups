@@ -6,29 +6,29 @@
  */
 
 ?>
-<li <?php Hybrid\Attr\render( 'comment' ); ?>>
+<li <?php Hybrid\Attr\display( 'comment' ); ?>>
 
 	<header class="comment__meta flex items-center font-size-88">
 		<?= get_avatar( $data->comment, 120, '', '', [ 'class' => 'comment__avatar' ] ) ?>
 
 		<div class="comment__info">
 			<?php
-			Hybrid\Comment\render_author( [
+			Hybrid\Comment\display_author( [
 				'class' => 'comment__author fw-700',
 				'after' => '<br />',
 			] );
 
-			Hybrid\Comment\render_permalink( [
+			Hybrid\Comment\display_permalink( [
 				'text' => sprintf(
 					// Translators: 1 is the comment date and 2 is the time.
 					esc_html__( '%1$s at %2$s', 'uuups' ),
-					Hybrid\Comment\fetch_date(),
-					Hybrid\Comment\fetch_time()
+					Hybrid\Comment\display_date(),
+					Hybrid\Comment\display_time()
 				),
 			] );
 
-			Hybrid\Comment\render_edit_link( [ 'before' => Uuups\sep() ] );
-			Hybrid\Comment\render_reply_link( [ 'before' => Uuups\sep() ] );
+			Hybrid\Comment\display_edit_link( [ 'before' => Uuups\sep() ] );
+			Hybrid\Comment\display_reply_link( [ 'before' => Uuups\sep() ] );
 			?>
 		</div>
 	</header>

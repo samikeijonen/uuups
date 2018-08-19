@@ -5,11 +5,7 @@
  * This file is used to autoload classes and functions necessary for the theme
  * to run.
  *
- * @package   Uuups
- * @author    Justin Tadlock <justintadlock@gmail.com>
- * @copyright Copyright (c) 2018, Justin Tadlock
- * @link      https://themehybrid.com/themes/uuups
- * @license   http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+ * @package Uuups
  */
 
 namespace Uuups;
@@ -59,7 +55,7 @@ array_map(
 		'functions-fonts',
 		'functions-svg',
 		'functions-setup',
+		'functions-template',
 		'functions-video',
-		'template-general',
 	]
 );

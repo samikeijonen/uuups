@@ -247,20 +247,20 @@ in the root folder. In fact, in root there is only `index.php` template file but
 Main fallback template file is found in `resources/views/index.php`.
 
 All the template files are also in `resources/views/` folder. In there template files are
-organized in sub-folder using `Hybrid\render_view()` and
+organized in sub-folder using `Hybrid\display_view()` and
 `Hybrid\get_template_hierarchy()` functions.
 
 You could have other top-level templates, like `page.php`, `archive.php`, etc. in the root of `resources/views/` folder and get used like they typically would in theme root. But we try to avoid that also by organizing template
 files in different folders.
 
-### Hybrid\render_view() function
+### Hybrid\display_view() function
 
-`Hybrid\render_view()` is Hybrid Core function which is
+`Hybrid\display_view()` is Hybrid Core function which is
 more powerfull version of `get_template_part()` function. You can for example pass variables to it:
 
 ```php
-// Hybrid\render_view( $name, $slugs = [], $data = [] )
-Hybrid\render_view( 'menu', 'primary', [ 'name' => 'primary' ] );
+// Hybrid\display_view( $name, $slugs = [], $data = [] )
+Hybrid\display_view( 'menu', 'primary', [ 'name' => 'primary' ] );
 ```
 
 - Above code loads `resources/views/menu/primary.php` file.
@@ -270,7 +270,7 @@ Hybrid\render_view( 'menu', 'primary', [ 'name' => 'primary' ] );
 Hierarchy looks like this:
 
 ```php
-// Hybrid\render_view( 'menu', 'primary', [ 'name' => 'primary' ] ) hierarchy.
+// Hybrid\display_view( 'menu', 'primary', [ 'name' => 'primary' ] ) hierarchy.
 // 1. resources/views/menu/primary.php
 // 2. resources/views/menu/default.php
 // 3. resources/views/menu.php
@@ -280,7 +280,7 @@ The last parameter `[ 'name' => 'primary' ]` is for passing data in to template 
 
 ### Hybrid\get_template_hierarchy() function
 
-Let's look at example line: `Hybrid\render_view( 'content', Hybrid\get_template_hierarchy() );`
+Let's look at example line: `Hybrid\display_view( 'content', Hybrid\get_template_hierarchy() );`
 
 This loads template files from `resources/views/content` folder respecting the [template hierarchy](https://developer.wordpress.org/themes/basics/template-hierarchy/).
 

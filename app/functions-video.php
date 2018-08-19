@@ -8,7 +8,7 @@
 namespace Uuups;
 
 /**
- * Wraps embeds with `.embed-wrap` class.
+ * Wraps embeds with `.wp-block-embed__wrapper` class.
  *
  * @since  1.0.0
  * @access public
