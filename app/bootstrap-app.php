@@ -5,11 +5,7 @@
  * This file is used to create a new application instance and bind items to the
  * container. This is the heart of the application.
  *
- * @package   Uuups
- * @author    Justin Tadlock <justintadlock@gmail.com>
- * @copyright Copyright (c) 2018, Justin Tadlock
- * @link      https://themehybrid.com/themes/uuups
- * @license   http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+ * @package Uuups
  */
 
 /**

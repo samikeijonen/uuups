@@ -1,0 +1,11 @@
+{
+	"from": {
+		"Name": "Uuups",
+		"Description": "An awesome starter theme for WordPress.",
+		"Namespace": "Uuups",
+		"Uri": "https://github.com/samikeijonen/uuups",
+		"Author": "Sami Keijonen",
+		"AuthorEmail": "sami.keijonen@foxnet.fi",
+		"AuthorUri": "https://foxland.fi"
+	}
+}

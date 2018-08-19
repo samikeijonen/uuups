@@ -4,11 +4,7 @@
  *
  * This file holds functions that are used for filtering.
  *
- * @package   Uuups
- * @author    Justin Tadlock <justintadlock@gmail.com>
- * @copyright Copyright (c) 2018, Justin Tadlock
- * @link      https://github.com/samikeijonen/uuups/
- * @license   http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+ * @package Uuups
  */
 
 namespace Uuups;

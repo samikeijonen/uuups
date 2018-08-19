@@ -5,7 +5,7 @@
  * @package Uuups
  */
 
-Hybrid\Pagination\render( 'singular', [
+Hybrid\Pagination\display( 'post', [
 	'show_all'  => true,
 	'prev_next' => false,
 ] );

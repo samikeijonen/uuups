@@ -1,4 +1,5 @@
-dist/scripts/*.js
+bundle
+dist/js/*.js
 docs
 .eslintrc.js
 webpack.mix.js

@@ -6,13 +6,23 @@
  */
 
 ?>
-<li <?php Hybrid\Attr\render( 'comment' ); ?>>
+<li <?php Hybrid\Attr\display( 'comment' ); ?>>
 
 <div class="comment__meta">
-	<span class="comment__author"><?php comment_author_link(); ?></span><br />
-	<?php /* translators: %s how many days ago. */ ?>
-	<a href="<?php comment_link(); ?>" class="comment__permalink"><time class="comment__published"><?php printf( __( '%s ago', 'uuups' ), esc_attr( human_time_diff( get_comment_time( 'U' ), current_time( 'timestamp' ) ) ) ); // phpcs:ignore WordPress.XSS.EscapeOutput ?></time></a>
-	<?php edit_comment_link( null, Uuups\sep() ); ?>
+	<?php
+	Hybrid\Comment\display_author( [ 'after' => '<br />' ] );
+
+	Hybrid\Comment\display_permalink( [
+		'text' => sprintf(
+			// Translators: 1 is the comment date and 2 is the time.
+			esc_html__( '%1$s at %2$s', 'uuups' ),
+			Hybrid\Comment\render_date(),
+			Hybrid\Comment\render_time()
+		),
+	] );
+
+	Hybrid\Comment\display_edit_link( [ 'before' => Uuups\sep() ] );
+	?>
 </div>
 
 <?php /* No closing </li> is needed.  WordPress will know where to add it. */ ?>

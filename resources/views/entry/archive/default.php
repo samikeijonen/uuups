@@ -6,7 +6,7 @@
  */
 
 ?>
-<article <?php Hybrid\Attr\render( 'entry' ); ?>>
+<article <?php Hybrid\Attr\display( 'entry' ); ?>>
 	<?php Uuups\post_thumbnail(); ?>
 
 	<header class="entry__header">
