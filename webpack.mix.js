@@ -41,7 +41,6 @@ if ( process.env.bundle ) {
 		'license.md',
 		'readme.md',
 		'screenshot.png',
-		'vendor/autoload.php',
 	];
 
 	// Folders to include.
@@ -52,8 +51,7 @@ if ( process.env.bundle ) {
 		'resources/js',        // Required for WordPress.org.
 		'resources/css',       // Required for WordPress.org.
 		'resources/views',
-		'vendor/composer',
-		'vendor/justintadlock'
+		'vendor'
 	];
 
 	// Delete the previous bundle to start clean.
