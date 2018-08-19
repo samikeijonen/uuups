@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Uuups 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2018-08-19 12:56:30+00:00\n"
+"POT-Creation-Date: 2018-08-19 19:14:30+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -12,6 +12,21 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "X-Generator: node-wp-i18n 1.2.0\n"
+
+#: app/bootstrap-compat.php:32
+#. translators: %1$s is supported WordPress version, and %2$s is WordPress
+#. version used.
+msgid ""
+"Theme requires at least WordPress version %1$s. You are running version "
+"%2$s. Please upgrade and try again."
+msgstr ""
+
+#: app/bootstrap-compat.php:40
+#. translators: %1$s is supported PHP version, and %2$s is PHP version used.
+msgid ""
+"Theme requires at least PHP version %1$s. You are running version %2$s. "
+"Please upgrade and try again."
+msgstr ""
 
 #: app/functions-filters.php:58 bundle/uuups/app/functions-filters.php:58
 #. translators: %s: Name of current post
