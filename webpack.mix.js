@@ -33,14 +33,15 @@ if ( process.env.bundle ) {
 	// Folder name to bundle the files in.
 	let bundlePath = 'bundle/uuups';
 
-	// Theme root-level files to include.
+	// Theme files to include.
 	let files = [
 		'style.css',
 		'functions.php',
 		'index.php',
 		'license.md',
 		'readme.md',
-		'screenshot.png'
+		'screenshot.png',
+		'vendor/autoload.php',
 	];
 
 	// Folders to include.
@@ -51,6 +52,7 @@ if ( process.env.bundle ) {
 		'resources/js',        // Required for WordPress.org.
 		'resources/css',       // Required for WordPress.org.
 		'resources/views',
+		'vendor/composer',
 		'vendor/justintadlock'
 	];
 
