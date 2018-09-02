@@ -1,0 +1,14 @@
+{
+	"extends": "wordpress",
+	"env": {
+		"es6": true,
+		"jquery": true
+	},
+	"parserOptions": {
+		"sourceType": "module"
+	},
+	"rules": {
+		"space-in-parens": 0,
+		"wrap-iife": 0
+	}
+}
