@@ -16,7 +16,7 @@
  * that meets these requirements, this code is unnecessary.
  */
 if ( version_compare( $GLOBALS['wp_version'], '4.9', '<' ) || version_compare( PHP_VERSION, '5.6', '<' ) ) {
-	require_once( get_parent_theme_file_path( 'app/bootstrap-compat.php' ) );
+	require_once get_parent_theme_file_path( 'app/bootstrap-compat.php' );
 	return;
 }
 
