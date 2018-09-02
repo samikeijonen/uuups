@@ -1,7 +1,7 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
     "content-hash": "cb6246f88af7143a372297a99b412781",
@@ -132,12 +132,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/justintadlock/hybrid-core.git",
-                "reference": "f6174457aa61a3283c3418f1cd64c475760312b5"
+                "reference": "b907909bf452dfa800b9263c903022c3cdb5b16a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/justintadlock/hybrid-core/zipball/f6174457aa61a3283c3418f1cd64c475760312b5",
-                "reference": "f6174457aa61a3283c3418f1cd64c475760312b5",
+                "url": "https://api.github.com/repos/justintadlock/hybrid-core/zipball/b907909bf452dfa800b9263c903022c3cdb5b16a",
+                "reference": "b907909bf452dfa800b9263c903022c3cdb5b16a",
                 "shasum": ""
             },
             "require": {
@@ -166,7 +166,7 @@
             "keywords": [
                 "wordpress"
             ],
-            "time": "2018-08-17 19:32:44"
+            "time": "2018-08-30T17:51:45+00:00"
         }
     ],
     "packages-dev": [
