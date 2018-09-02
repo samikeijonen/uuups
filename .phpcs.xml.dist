@@ -54,6 +54,11 @@
 	<!-- Include the WordPress Docs ruleset. -->
 	<rule ref="WordPress-Docs"/>
 
+	<!-- Set the minimum supported WP version. This is used by several sniffs.
+			The minimum version set here should be in line with the minimum WP version
+			as set in the "Requires at least" tag in the readme.txt file. -->
+	<config name="minimum_supported_wp_version" value="4.9"/>
+
 	<!-- Verify that the text_domain is set to the desired text-domain.
 			Multiple valid text domains can be provided as a new element. -->
 	<rule ref="WordPress.WP.I18n">
@@ -79,35 +84,5 @@
 
 	<rule ref="Generic.WhiteSpace.ScopeIndent.Incorrect">
 		<type>warning</type>
-	</rule>
-
-	<!-- Set the minimum supported WP version. This is used by several sniffs.
-			The minimum version set here should be in line with the minimum WP version
-			as set in the "Requires at least" tag in the readme.txt file. -->
-	<config name="minimum_supported_wp_version" value="4.9"/>
-
-	<rule ref="WordPress.Arrays.MultipleStatementAlignment">
-		<properties>
-			<!-- No need to adjust alignment of large arrays when
-					the item with the largest key is removed. -->
-			<property name="exact" value="false"/>
-
-			<!-- Don't align multi-line items if ALL items
-					in the array are multi-line. -->
-			<property name="alignMultilineItems" value="!=100"/>
-
-			<!-- Array assignment operator should always be on
-					the same line as the array key. -->
-			<property name="ignoreNewlines" value="false"/>
-		</properties>
-	</rule>
-
-	<!-- Verify that everything in the global namespace is prefixed
-			with a theme specific prefix.
-			Multiple valid prefixes can be provided as a comma-delimited list. -->
-	<rule ref="WordPress.NamingConventions.PrefixAllGlobals">
-		<properties>
-			<property name="prefixes" type="array" value="uuups"/>
-		</properties>
 	</rule>
 </ruleset>
