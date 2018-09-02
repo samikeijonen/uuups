@@ -16,8 +16,8 @@
 	<exclude-pattern>*/bundle/*</exclude-pattern>
 
 	<!-- Pass some flags to PHPCS:
-		p flag: Show progress of the run.
-		s flag: Show sniff codes in all reports.
+			p flag: Show progress of the run.
+			s flag: Show sniff codes in all reports.
 	-->
 	<arg value="ps"/>
 
@@ -33,6 +33,14 @@
 	<!-- Only check the PHP files. -->
 	<arg name="extensions" value="php"/>
 
+	<!-- Rules: Check PHP version compatibility:
+			https://github.com/PHPCompatibility/PHPCompatibilityWP -->
+	<rule ref="PHPCompatibilityWP"/>
+
+	<!-- For help in understanding this testVersion:
+			https://github.com/PHPCompatibility/PHPCompatibility#sniffing-your-code-for-compatibility-with-specific-php-versions -->
+	<config name="testVersion" value="5.6-"/>
+
 	<!-- Include the WordPress ruleset, with exclusions. WordPress-Extra Includes WordPress-Core. -->
 	<!-- See: https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards -->
 	<rule ref="WordPress-Extra">
@@ -43,11 +51,16 @@
 		<exclude name="WordPress.WP.EnqueuedResourceParameters.MissingVersion"/>
 	</rule>
 
+	<!-- Include the WordPress Docs ruleset. -->
+	<rule ref="WordPress-Docs"/>
+
 	<!-- Verify that the text_domain is set to the desired text-domain.
-			Multiple valid text domains can be provided as a comma-delimited list. -->
+			Multiple valid text domains can be provided as a new element. -->
 	<rule ref="WordPress.WP.I18n">
 		<properties>
-			<property name="text_domain" type="array" value="uuups"/>
+			<property name="text_domain" type="array">
+				<element value="uuups"/>
+			</property>
 		</properties>
 	</rule>
 
@@ -97,12 +110,4 @@
 			<property name="prefixes" type="array" value="uuups"/>
 		</properties>
 	</rule>
-
-	<!-- Rules: Check PHP version compatibility:
-			https://github.com/PHPCompatibility/PHPCompatibilityWP -->
-	<rule ref="PHPCompatibilityWP"/>
-
-	<!-- For help in understanding this testVersion:
-			https://github.com/PHPCompatibility/PHPCompatibility#sniffing-your-code-for-compatibility-with-specific-php-versions -->
-	<config name="testVersion" value="5.6-"/>
 </ruleset>
