@@ -1,4 +1,9 @@
-bundle/
-node_modules/
-vendor/
+/bundle/
+/logs/
+/node_modules/
+/vendor/
 .vscode
+/composer.lock
+/phpcs.xml
+/.phpcs.xml
+/phpunit.xml
