@@ -224,7 +224,7 @@ mix.webpackConfig( {
 mix.browserSync( {
 	proxy: 'foxland-products.test/',
 	files: [
-		'dist/**/*',
+		'dist/**/*.{css,js,jpg,jpeg,png,gif,svg,eot,ttf,woff,woff2}',
 		`${devPath}/views/**/*.php`,
 		'app/**/*.php',
 		'functions.php',
