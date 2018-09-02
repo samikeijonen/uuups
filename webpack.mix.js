@@ -48,8 +48,8 @@ if ( process.env.bundle ) {
 		'app',
 		'dist',
 		'resources/lang',
-		'resources/js',        // Required for WordPress.org.
-		'resources/css',       // Required for WordPress.org.
+		'resources/js',    // Required for WordPress.org.
+		'resources/css',   // Required for WordPress.org.
 		'resources/views',
 		'vendor'
 	];
@@ -224,9 +224,10 @@ mix.webpackConfig( {
 mix.browserSync( {
 	proxy: 'foxland-products.test/',
 	files: [
-		'**/*.{css,js,jpg,jpeg,png,gif,svg,eot,ttf,woff,woff2}',
+		'dist/**/*.{css,js,jpg,jpeg,png,gif,svg,eot,ttf,woff,woff2}',
 		`${devPath}/views/**/*.php`,
 		'app/**/*.php',
-		'functions.php'
+		'functions.php',
+		'index.php'
 	]
 } );

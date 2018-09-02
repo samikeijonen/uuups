@@ -14,5 +14,5 @@ if ( ! is_front_page() ) : ?>
 		?>
 	</div>
 
-<?php
+	<?php
 endif;
