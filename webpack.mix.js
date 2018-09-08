@@ -126,7 +126,9 @@ mix.version();
  *
  * @link https://laravel.com/docs/5.6/mix#working-with-scripts
  */
-mix.js( `${devPath}/js/app.js`, 'js' );
+mix.js( `${devPath}/js/app.js`, 'js' )
+   .js( `${devPath}/js/customize-controls.js`, 'js' )
+   .js( `${devPath}/js/customize-preview.js`, 'js' );;
 
 /*
  * Compile CSS. Mix supports Sass, Less, Stylus, and plain CSS, and has functions
@@ -146,7 +148,8 @@ var sassConfig = {
 
 // Compile SASS/CSS.
 mix.sass( `${devPath}/css/style.scss`, 'css', sassConfig )
-   .sass( `${devPath}/css/editor.scss`, 'css', sassConfig );
+   .sass( `${devPath}/css/editor.scss`, 'css', sassConfig )
+   .sass( `${devPath}/css/customize-controls.scss`, 'css', sassConfig );
 
 /*
  * Add custom Webpack configuration.
@@ -166,8 +169,8 @@ mix.webpackConfig( {
 	resolve     : {
 		alias : {
 			// Alias for Hybrid Core assets.
-			// Import from `hybrid/scripts` or `~hybrid/styles`.
-			hybrid : path.resolve( __dirname, 'vendor/justintadlock/hybrid-core/src/resources/' )
+			// Import from `hybrid-customize/js` or `~hybrid-customize/scss`.
+			'hybrid-customize' : path.resolve( __dirname, 'vendor/justintadlock/hybrid-customize/resources/' )
 		}
 	},
 	plugins: [

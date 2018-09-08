@@ -41,7 +41,7 @@
 		"./resources/css/**/*.scss": [
 			"npm run lint:style"
 		],
-		"*.php": [
+		"./resources/**/*.php": [
 			"npm run lint:php"
 		]
 	},
