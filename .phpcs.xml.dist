@@ -77,12 +77,16 @@
 		</properties>
 	</rule>
 
-	<!-- Change error to warning on whitespace rules. -->
+	<!-- Change some errors to warnings. -->
 	<rule ref="Generic.WhiteSpace.ScopeIndent.IncorrectExact">
 		<type>warning</type>
 	</rule>
 
 	<rule ref="Generic.WhiteSpace.ScopeIndent.Incorrect">
+		<type>warning</type>
+	</rule>
+
+	<rule ref="WordPress.Files.FileName.InvalidClassFileName">
 		<type>warning</type>
 	</rule>
 </ruleset>

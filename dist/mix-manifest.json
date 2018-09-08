@@ -1,5 +1,8 @@
 {
-    "/js/app.js": "/js/app.js?id=25b450379cfbfff6d4b5",
+    "/js/app.js": "/js/app.js?id=3ad8b46362a8a6c9e6ac",
     "/css/style.css": "/css/style.css?id=2b4dd0a301779398a01e",
-    "/css/editor.css": "/css/editor.css?id=d54370b08a89d32c4558"
+    "/css/editor.css": "/css/editor.css?id=d54370b08a89d32c4558",
+    "/css/customize-controls.css": "/css/customize-controls.css?id=d41d8cd98f00b204e980",
+    "/js/customize-preview.js": "/js/customize-preview.js?id=97e2187576340f212585",
+    "/js/customize-controls.js": "/js/customize-controls.js?id=af2d188bc20a7b1c773d"
 }

@@ -39,9 +39,9 @@
 			"npm run lint:scripts"
 		],
 		"./resources/css/**/*.scss": [
-			"npm run lint:style"
+			"npm run lint:styles"
 		],
-		"*.php": [
+		"./*.php": [
 			"npm run lint:php"
 		]
 	},

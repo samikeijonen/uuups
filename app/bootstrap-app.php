@@ -18,17 +18,14 @@
 $uuups = new \Hybrid\Core\Application();
 
 /**
- * Add bindings to the container.
+ * Register service providers with the application.
  *
- * Before booting the application, add any bindings to the container that are
- * necessary to run the theme.
+ * Before booting the application, add any service providers that are necessary
+ * for running the theme. Service providers are essentially the backbone of the
+ * bootstrapping process.
  */
 
-// Register the Laravel Mix manifest for cache-busting.
-$uuups->singleton( 'uuups/mix', function() {
-	$file = get_theme_file_path( 'dist/mix-manifest.json' );
-	return file_exists( $file ) ? json_decode( file_get_contents( $file ), true ) : null;
-} );
+$uuups->provider( \Uuups\Providers\AppServiceProvider::class );
 
 /**
  * Perform bootstrap actions.
