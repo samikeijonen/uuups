@@ -19,10 +19,5 @@
 	},
 	"require-dev": {
 		"samikeijonen/phpcs-composer": "dev-master"
-	},
-	"scripts": {
-		"install-codestandards": "\"vendor/bin/phpcs\" --config-set default_standard Foxland-Default",
-		"post-install-cmd": "@install-codestandards",
-		"post-update-cmd" : "@install-codestandards"
 	}
 }
