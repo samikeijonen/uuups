@@ -1,3 +1,12 @@
+/**
+ * Custom header preview.
+ *
+ * This file handles the JavaScript for the live preview of the `custom-header`
+ * feature in the customizer.
+ *
+ * @package Uuups
+ */
+
 // Site title.
 wp.customize( 'blogname', value => {
 	value.bind( to => {
