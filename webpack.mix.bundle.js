@@ -30,9 +30,9 @@ let files = [
 let folders = [
 	'app',
 	'dist',
+	'resources/css',   // Required for WordPress.org theme review.
 	'resources/lang',
 	'resources/js',    // Required for WordPress.org theme review.
-	'resources/scss',  // Required for WordPress.org theme review.
 	'resources/views',
 	'vendor'
 ];
