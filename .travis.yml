@@ -32,7 +32,7 @@ matrix:
 before_install:
   # Install PHP CodeSniffer.
   - if [[ "$SNIFF" == "1" ]]; then composer self-update; fi
-  - if [[ "$SNIFF" == "1" ]]; then composer require samikeijonen/php-composer:dev-master; fi
+  - if [[ "$SNIFF" == "1" ]]; then composer require samikeijonen/phpcs-composer:dev-master; fi
   - if [[ "$SNIFF" == "1" ]]; then composer install; fi
   - phpenv rehash
 
