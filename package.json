@@ -8,8 +8,8 @@
 	"main": "resources/js/app.js",
 	"scripts": {
 		"build": "npm run prod && npm run i18n && npm run export",
-		"export": "composer install --no-dev && cross-env export=1 NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js && composer install",
 		"dev": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+		"export": "composer install --no-dev && cross-env export=1 NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js && composer install",
 		"hot": "cross-env NODE_ENV=development webpack-dev-server --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
 		"i18n": "npm run i18n:textdomain && npm run i18n:pot",
 		"i18n:textdomain": "npx wpi18n addtextdomain --exclude=vendor,node_modules",
