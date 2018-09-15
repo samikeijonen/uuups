@@ -1,0 +1,15 @@
+pre {
+	background-color: var(--color-light);
+	font-family: $font-pre;
+	margin: 0 0 var(--spacing-unit-4x);
+	max-width: 100%;
+	overflow: auto;
+	padding: var(--spacing-unit-4x);
+}
+
+code,
+kbd,
+tt,
+var {
+	font-family: var(--font-code);
+}

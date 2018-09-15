@@ -1,0 +1,85 @@
+/**
+ * Blocks stylesheet for the theme.
+ *
+ * This is for the editor.
+ */
+
+/*--------------------------------------------------------------
+# Settings - Global variables, config switches.
+--------------------------------------------------------------*/
+@import url("settings/core.css");
+@import url("settings/fonts.css");
+@import url("settings/colors.css");
+
+/*--------------------------------------------------------------
+# Tools - Default mixins and functions.
+--------------------------------------------------------------*/
+@import url("tools/mixins.css");
+
+/* Editor styles. */
+
+/*--------------------------------------------------------------
+# Elements - Unclassed HTML elements (type selectors).
+--------------------------------------------------------------*/
+@import url("elements/page.css");
+@import url("elements/blockquote.css");
+@import url("elements/forms.css");
+@import url("elements/headings.css");
+@import url("elements/hr.css");
+@import url("elements/links.css");
+@import url("elements/lists.css");
+@import url("elements/media.css");
+@import url("elements/misc.css");
+@import url("elements/pre-code.css");
+@import url("elements/tables.css");
+
+/*--------------------------------------------------------------
+# Blocks - editor related styles.
+--------------------------------------------------------------*/
+@import url("blocks/core/button.css");
+@import url("blocks/core/columns.css");
+@import url("blocks/core/cover-image.css");
+@import url("blocks/core/embeds.css");
+@import url("blocks/core/file.css");
+@import url("blocks/core/gallery.css");
+@import url("blocks/core/latest-posts.css");
+@import url("blocks/core/paragraph.css");
+@import url("blocks/core/pullquote.css");
+@import url("blocks/core/quote.css");
+@import url("blocks/core/separator.css");
+@import url("blocks/core/subhead.css");
+@import url("blocks/blocks.css");
+@import url("blocks/color-palette.css");
+
+/*--------------------------------------------------------------
+# Editor related styles which overwrites above styles.
+--------------------------------------------------------------*/
+
+/* Post title. */
+.editor-post-title {
+	&__block {
+		max-width: calc(--max-width-2 + 86px);
+	}
+
+	&__input {
+		font-family: var(--font-heading);
+		font-size: var(--font-size-h1);
+		min-height: auto;
+		text-align: center;
+	}
+}
+
+.editor-block-list__block,
+.editor-default-block-appender {
+	max-width: calc(var(--max-width-2) + 86px);
+}
+
+.editor-rich-text__tinymce.mce-content-body:not(.wp-block-cover-image-text):not(.wp-block-subhead):not(h2):not(h3) {
+	line-height: var(--line-height-global);
+}
+
+
+/*--------------------------------------------------------------
+# Utilities - Helpers and overrides.
+--------------------------------------------------------------*/
+@import url("utilities/helpers.css");

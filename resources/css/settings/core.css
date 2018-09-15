@@ -1,0 +1,31 @@
+/**
+ * Baseline grid lines height is so called 8 point grid.
+ * Every spacing metric should be based on this.
+ * Inspired by inuitcss.
+ * @link: https://github.com/inuitcss/inuitcss
+ */
+
+:root {
+	--spacing-unit: 0.5rem;
+	--spacing-unit-2x: 1rem;
+	--spacing-unit-3x: 1.5rem;
+	--spacing-unit-4x: 2rem;
+	--spacing-unit-small: 4px;
+
+	/* Base typographical styles. */
+	--font-size-global: 1rem;
+	--line-height-global: 1.5;
+	--line-height-heading: 1.25;
+
+	/* Max widths. */
+	--max-width-1: 66rem;
+	--max-width-2: 39rem;
+	--max-width-wide: 58rem;
+
+	/* Breakpoints. */
+	@custom-media --breakpoint-1 (min-width: 48em);
+	@custom-media --breakpoint-2 (min-width: 62em);
+
+	/* Transition. */
+	--transition-duration-1: 300ms;
+}

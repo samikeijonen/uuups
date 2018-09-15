@@ -1,0 +1,17 @@
+table {
+	border-collapse: separate;
+	border-spacing: 0;
+	margin: 0 0 var(--spacing-unit-4x);
+	table-layout: fixed;
+	width: 100%;
+}
+
+tr:nth-child(even) {
+	background-color: var(--color-light);
+}
+
+th,
+td {
+	padding: var(--spacing-unit-2x);
+	text-align: left;
+}

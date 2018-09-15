@@ -1,0 +1,48 @@
+.max-width-1 {
+	max-width: var(--max-width-1);
+}
+
+.max-width-2 {
+	max-width: var(--max-width-2);
+}
+
+.entry__content > * {
+	@mixin center;
+	max-width: var(--max-width-2);
+}
+
+.mx-auto {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.px-2 {
+	padding-left: var(--spacing-unit-2x);
+	padding-right: var(--spacing-unit-2x);
+}
+
+.px-3 {
+	padding-left: var(--spacing-unit-3x);
+	padding-right: var(--spacing-unit-3x);
+}
+
+.py-4 {
+	padding-bottom: var(--spacing-unit-4x);
+	padding-top: var(--spacing-unit-4x);
+}
+
+.pb-2 {
+	padding-bottom: var(--spacing-unit-2x);
+}
+
+.pb-4 {
+	padding-bottom: var(--spacing-unit-4x);
+}
+
+.mb-0 {
+	margin-bottom: 0;
+}
+
+.mb-2 {
+	margin-bottom: var(--spacing-unit-2x);
+}

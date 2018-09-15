@@ -1,0 +1,10 @@
+hr {
+	@mixin center-block;
+	background-color: var(--color-light);
+	border: 0;
+	height: var(--spacing-unit-small);
+	margin-bottom: calc(var(--spacing-unit) * 8);
+	margin-top: calc(var(--spacing-unit) * 8);
+	max-width: calc(var(--spacing-unit-2x) * 13);
+	width: calc(var(--spacing-unit-2x) * 13);
+}

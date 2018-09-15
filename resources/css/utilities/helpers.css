@@ -1,0 +1,40 @@
+.decoration-none {
+	text-decoration: none;
+}
+
+.h-decoration-underline {
+
+	&:hover,
+	&:focus,
+	&:active {
+		text-decoration: underline;
+	}
+}
+
+.font-main {
+	font-family: var(--font-main);
+}
+
+.fw-700 {
+	font-weight: 700;
+}
+
+.color-dark {
+	color: var(--color-dark);
+}
+
+.font-size-88 {
+	font-size: var(--font-size-88);
+}
+
+.color-grey-60 {
+	color: var(--color-grey-60);
+}
+
+.text-center {
+	text-align: center;
+}
+
+.block {
+	display: block;
+}

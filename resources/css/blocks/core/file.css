@@ -1,0 +1,18 @@
+.wp-block-file {
+	margin-bottom: var(--spacing-unit-4x);
+
+	&__button {
+		@mixin button-block;
+		margin-left: var(--spacing-unit-2x);
+
+		&:visited {
+			color: var(--color-white);
+		}
+
+		&:hover,
+		&:focus,
+		&:active {
+			@mixin button-block-hover;
+		}
+	}
+}

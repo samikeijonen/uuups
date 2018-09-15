@@ -12,7 +12,7 @@
  */
 
 // Import required packages.
-const { mix }           = require( 'laravel-mix' );
+const mix               = require( 'laravel-mix' );
 const ImageminPlugin    = require( 'imagemin-webpack-plugin' ).default;
 const CopyWebpackPlugin = require( 'copy-webpack-plugin' );
 const imageminMozjpeg   = require( 'imagemin-mozjpeg' );
@@ -55,17 +55,6 @@ const devPath  = 'resources';
 mix.setPublicPath( 'dist' );
 
 /*
- * Set Laravel Mix options.
- *
- * @link https://laravel.com/docs/5.6/mix#postcss
- * @link https://laravel.com/docs/5.6/mix#url-processing
- */
-mix.options( {
-	postCss: [ require( 'postcss-preset-env' )() ],
-	processCssUrls: false
-} );
-
-/*
  * Builds sources maps for assets.
  *
  * @link https://laravel.com/docs/5.6/mix#css-source-maps
@@ -88,7 +77,27 @@ mix.version();
  */
 mix.js( `${devPath}/js/app.js`, 'js' )
    .js( `${devPath}/js/customize-controls.js`, 'js' )
-   .js( `${devPath}/js/customize-preview.js`, 'js' );;
+   .js( `${devPath}/js/customize-preview.js`, 'js' );
+
+/*
+ * Set Laravel Mix options.
+ *
+ * @link https://laravel.com/docs/5.6/mix#postcss
+ * @link https://laravel.com/docs/5.6/mix#url-processing
+ */
+const cssOptions = {
+	stage: 0
+};
+
+mix.options( {
+	postCss: [
+		require( 'postcss-import' ),
+		require( 'postcss-preset-env' )( cssOptions ),
+		require( 'postcss-mixins' ),
+		require( 'postcss-nested' )
+	],
+	processCssUrls: false
+} );
 
 /*
  * Compile CSS. Mix supports Sass, Less, Stylus, and plain CSS, and has functions
@@ -99,17 +108,10 @@ mix.js( `${devPath}/js/app.js`, 'js' )
  * @link https://github.com/sass/node-sass#options
  */
 
-// Sass configuration.
-var sassConfig = {
-	outputStyle: 'expanded',
-	indentType: 'tab',
-	indentWidth: 1
-};
-
 // Compile SASS/CSS.
-mix.sass( `${devPath}/css/style.scss`, 'css', sassConfig )
-   .sass( `${devPath}/css/editor.scss`, 'css', sassConfig )
-   .sass( `${devPath}/css/customize-controls.scss`, 'css', sassConfig );
+mix.postCss( `${devPath}/css/style.css`, 'css' );
+  // .postCss( `${devPath}/css/editor.css`, 'css' )
+   //.postCss( `${devPath}/css/customize-controls.css`, 'css' );
 
 /*
  * Add custom Webpack configuration.

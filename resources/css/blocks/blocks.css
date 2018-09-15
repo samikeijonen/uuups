@@ -1,0 +1,23 @@
+/* Font sizes. */
+.is-small-text {
+	font-size: var(--font-size-875);
+}
+
+.is-regular-text {
+	font-size: var(--font-size-global);
+}
+
+.is-large-text {
+	font-size: var(--font-size-h2);
+	line-height: var(--line-height-heading);
+}
+
+.is-larger-text {
+	font-size: var(--font-size-h1);
+	line-height: var(--line-height-heading);
+}
+
+/* Has background blocks. */
+.has-background:not(.wp-block-button__link) {
+	padding: var(--spacing-unit-3x);
+}

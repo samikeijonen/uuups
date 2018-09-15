@@ -1,0 +1,45 @@
+.wp-block-gallery {
+	display: grid;
+	grid-gap: var(--spacing-unit);
+	grid-template-columns: repeat(1, 1fr);
+	list-style-type: none;
+	padding-left: 0;
+
+	.blocks-gallery-item {
+		display: flex;
+		flex-direction: column;
+		flex-grow: 1;
+		justify-content: center;
+		position: relative;
+
+		figure {
+			align-items: flex-end;
+			height: 100%;
+			display: flex;
+			margin: 0;
+		}
+
+		img {
+			display: block;
+			max-width: 100%;
+			height: auto;
+		}
+
+		figcaption {
+			padding: var(--spacing-unit-small);
+			position: absolute;
+			text-align: center;
+			width: 100%;
+		}
+	}
+
+	&.is-cropped .blocks-gallery-item {
+		a,
+		img {
+			flex: 1;
+			height: 100%;
+			object-fit: cover;
+			width: 100%;
+		}
+	}
+}
