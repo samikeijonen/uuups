@@ -1,18 +1,17 @@
 /* Font sizes. */
-.is-small-text {
+.has-small-font-size {
 	font-size: var(--font-size-875);
 }
 
-.is-regular-text {
-	font-size: var(--font-size-global);
+.has-medium-font-size {
+	font-size: var(--font-size-125);
 }
 
-.is-large-text {
-	font-size: var(--font-size-h2);
-	line-height: var(--line-height-heading);
+.has-large-font-size {
+	font-size: var(--font-size-h3);
 }
 
-.is-larger-text {
+.has-larger-font-size {
 	font-size: var(--font-size-h1);
 	line-height: var(--line-height-heading);
 }

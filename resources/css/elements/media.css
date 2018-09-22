@@ -23,8 +23,8 @@ figure {
 
 figcaption {
 	color: var(--color-grey-60);
-	font-size: var(--font-size-875);
-	margin-bottom: var(--spacing-unit-2x);
-	margin-top: var(--spacing-unit-2x);
+	font-size: var(--font-size-1);
+	margin: var(--spacing-unit-2x) auto;
+	max-width: var(--max-width-2);
 	text-align: center;
 }

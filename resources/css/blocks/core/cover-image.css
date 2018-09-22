@@ -4,7 +4,7 @@
 	display: flex;
 	justify-content: center;
 	margin-bottom: var(--spacing-unit-4x);
-	min-height: calc(var(--spacing-unit) * 54);
+	min-height: calc(var(--spacing-unit) * 60);
 	position: relative;
 
 	&-text {

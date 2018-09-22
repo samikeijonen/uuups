@@ -109,9 +109,9 @@ mix.options( {
  */
 
 // Compile SASS/CSS.
-mix.postCss( `${devPath}/css/style.css`, 'css' );
-  // .postCss( `${devPath}/css/editor.css`, 'css' )
-   //.postCss( `${devPath}/css/customize-controls.css`, 'css' );
+mix.postCss( `${devPath}/css/style.css`, 'css' )
+   .postCss( `${devPath}/css/style-editor.css`, 'css' )
+   .postCss( `${devPath}/css/customize-controls.css`, 'css' );
 
 /*
  * Add custom Webpack configuration.

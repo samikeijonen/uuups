@@ -19,7 +19,7 @@
 }
 
 .entry__byline {
-	font-size: var(--font-size-88);
+	font-size: var(--font-size-1);
 }
 
 .entry__footer {
@@ -40,7 +40,7 @@
 
 	a {
 		color: var(--color-grey-60);
-		font-size: var(--font-size-88);
+		font-size: var(--font-size-1);
 		font-weight: 700;
 		text-decoration: none;
 		text-transform: capitalize;

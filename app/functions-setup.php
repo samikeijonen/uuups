@@ -67,6 +67,11 @@ add_action( 'after_setup_theme', function() {
 			'slug'  => 'light',
 			'color' => '#ecebff',
 		],
+		[
+			'name'  => esc_html__( 'Grey', 'uuups' ),
+			'slug'  => 'grey',
+			'color' => '#666',
+		],
 	] );
 
 	// Add support for editor font sizes.
@@ -78,10 +83,10 @@ add_action( 'after_setup_theme', function() {
 			'slug'      => 'small',
 		],
 		[
-			'name'      => esc_html__( 'Regular', 'uuups' ),
-			'size'      => 18,
+			'name'      => esc_html__( 'Medium', 'uuups' ),
+			'size'      => 20,
 			'shortName' => esc_html__( 'M', 'uuups' ),
-			'slug'      => 'regular',
+			'slug'      => 'medium',
 		],
 		[
 			'name'      => esc_html__( 'Large', 'uuups' ),
@@ -91,7 +96,7 @@ add_action( 'after_setup_theme', function() {
 		],
 		[
 			'name'      => esc_html__( 'Larger', 'uuups' ),
-			'size'      => 32,
+			'size'      => 40,
 			'shortName' => esc_html__( 'XL', 'uuups' ),
 			'slug'      => 'larger',
 		],
@@ -99,6 +104,10 @@ add_action( 'after_setup_theme', function() {
 
 	// Add support for align wide blocks.
 	add_theme_support( 'align-wide' );
+
+	// Add support for editor styles.
+	add_theme_support( 'editor-styles' );
+	add_editor_style( 'dist/css/style-editor.css' );
 }, 5 );
 
 /**

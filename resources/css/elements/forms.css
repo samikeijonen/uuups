@@ -23,7 +23,7 @@ textarea,
 select {
 	background-color: var(--color-white);
 	border: 2px solid var(--color-base);
-	padding: var(--spacing-unit-2x);
+	padding: var(--spacing-unit);
 	width: 100%;
 
 	&:focus {

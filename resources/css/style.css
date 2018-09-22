@@ -40,6 +40,7 @@
 @import url("elements/lists.css");
 @import url("elements/media.css");
 @import url("elements/misc.css");
+@import url("elements/paragraph.css");
 @import url("elements/pre-code.css");
 @import url("elements/tables.css");
 
@@ -62,6 +63,7 @@
 @import url("blocks/core/embeds.css");
 @import url("blocks/core/file.css");
 @import url("blocks/core/gallery.css");
+@import url("blocks/core/latest-comments.css");
 @import url("blocks/core/latest-posts.css");
 @import url("blocks/core/paragraph.css");
 @import url("blocks/core/pullquote.css");

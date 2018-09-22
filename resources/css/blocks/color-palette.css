@@ -10,6 +10,10 @@
 	color: var(--color-dark);
 }
 
+.has-grey-color {
+	color: var(--color-grey-60);
+}
+
 .has-dark-background-color {
 	background-color: var(--color-dark);
 }

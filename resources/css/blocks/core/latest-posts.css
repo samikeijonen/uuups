@@ -10,7 +10,7 @@
 		@supports (grid-area: auto) {
 			display: grid;
 			grid-gap: var(--spacing-unit-3x);
-			grid-template-columns: repeat(auto-fill, minmax(calc(var(--spacing-unit) * 30), 1fr));
+			grid-template-columns: repeat(auto-fill, minmax(calc(var(--spacing-unit) * 34), 1fr));
 
 			li {
 				margin-bottom: 0;

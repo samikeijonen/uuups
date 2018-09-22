@@ -2,7 +2,7 @@
 	@mixin reset-list;
 	border-bottom: 1px solid var(--color-light);
 	border-top: 1px solid var(--color-light);
-	padding: var(--spacing-unit-2x) * 4;
+	padding: var(--spacing-unit-4x);
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;

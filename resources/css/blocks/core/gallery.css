@@ -5,6 +5,22 @@
 	list-style-type: none;
 	padding-left: 0;
 
+	&.columns-2 {
+		grid-template-columns: repeat(1, 1fr);
+	}
+
+	&.columns-3 {
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	&.columns-4 {
+		grid-template-columns: repeat(4, 1fr);
+	}
+
+	&.columns-5 {
+		grid-template-columns: repeat(1, 1fr);
+	}
+
 	.blocks-gallery-item {
 		display: flex;
 		flex-direction: column;

@@ -30,7 +30,7 @@
 /* .is-style-outline & outputs wrong nesting. */
 /* .is-style-outline .edit-post-visual-editor .wp-block-button__link. */
 .is-style-squared .wp-block-button__link {
-	border-radius: calc(var(--spacing-unit) * 10);
+	border-radius: calc(var(--spacing-unit) * 12);
 }
 
 .is-style-outline .wp-block-button__link {

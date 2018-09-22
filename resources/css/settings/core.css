@@ -13,14 +13,33 @@
 	--spacing-unit-small: 4px;
 
 	/* Base typographical styles. */
-	--font-size-global: 1rem;
+	--font-size-global: 1.125rem;
 	--line-height-global: 1.5;
 	--line-height-heading: 1.25;
 
+	/* Headings. */
+	--font-size-h1: 2rem;
+	--font-size-h2: 1.5rem;
+	--font-size-h3: 1.25rem;
+	--font-size-h4: 1rem;
+	--font-size-h5: 1rem;
+	--font-size-h6: 1rem;
+	--font-size-1: 1rem;
+	--font-size-125: 1.25rem;
+	--font-size-875: 0.875rem;
+
+	@media (--breakpoint-1) {
+		--font-size-h1: 2.5rem;
+		--font-size-h2: 2rem;
+		--font-size-h3: 1.5rem;
+		--font-size-h4: 1.125rem;
+		--font-size-h5: 1.125rem;
+	}
+
 	/* Max widths. */
-	--max-width-1: 66rem;
-	--max-width-2: 39rem;
-	--max-width-wide: 58rem;
+	--max-width-1: 78rem;
+	--max-width-2: 44rem;
+	--max-width-wide: 65rem;
 
 	/* Breakpoints. */
 	@custom-media --breakpoint-1 (min-width: 48em);

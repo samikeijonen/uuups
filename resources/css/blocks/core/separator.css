@@ -1,7 +1,7 @@
 .wp-block-separator {
 	&.is-style-wide {
-		max-width: calc(var(--spacing-unit) * 28);
-		width: calc(var(--spacing-unit) * 28);
+		max-width: var(--max-width-2);
+		width: var(--max-width-2);
 	}
 
 	&.is-style-dots {

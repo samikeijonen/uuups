@@ -44,7 +44,7 @@
 	/* Primary menu links. */
 	&--primary {
 		color: var(--color-grey-60);
-		font-size: var(--font-size-88);
+		font-size: var(--font-size-1);
 		font-weight: 700;
 		display: block;
 		padding-bottom: var(--spacing-unit);
@@ -174,7 +174,7 @@
 				top: 100%;
 				transform: translateY(-var(--spacing-unit-2x));
 				transition: transform var(--transition-duration-1), opacity var(--transition-duration-1);
-				width: calc(var(--spacing-unit) * 22);
+				width: calc(var(--spacing-unit) * 25);
 				z-index: 99999;
 
 				& ul {
