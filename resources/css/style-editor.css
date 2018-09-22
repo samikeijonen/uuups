@@ -7,50 +7,50 @@
 /*--------------------------------------------------------------
 # Settings - Global variables, config switches.
 --------------------------------------------------------------*/
-@import url("settings/core.css");
-@import url("settings/fonts.css");
-@import url("settings/colors.css");
+@import "settings/core.css";
+@import "settings/fonts.css";
+@import "settings/colors.css";
 
 
 /*--------------------------------------------------------------
 # Tools - Default mixins and functions.
 --------------------------------------------------------------*/
-@import url("tools/mixins.css");
+@import "tools/mixins.css";
 
 
 /*--------------------------------------------------------------
 # Elements - Unclassed HTML elements (type selectors).
 --------------------------------------------------------------*/
-@import url("elements/blockquote.css");
-@import url("elements/headings.css");
-@import url("elements/hr.css");
-@import url("elements/links.css");
-@import url("elements/lists.css");
-@import url("elements/media.css");
-@import url("elements/misc.css");
-@import url("elements/paragraph.css");
-@import url("elements/pre-code.css");
-@import url("elements/tables.css");
+@import "elements/blockquote.css";
+@import "elements/headings.css";
+@import "elements/hr.css";
+@import "elements/links.css";
+@import "elements/lists.css";
+@import "elements/media.css";
+@import "elements/misc.css";
+@import "elements/paragraph.css";
+@import "elements/pre-code.css";
+@import "elements/tables.css";
 
 
 /*--------------------------------------------------------------
 # Blocks - editor related styles.
 --------------------------------------------------------------*/
-@import url("blocks/core/button.css");
-@import url("blocks/core/columns.css");
-@import url("blocks/core/cover-image.css");
-@import url("blocks/core/embeds.css");
-@import url("blocks/core/file.css");
-@import url("blocks/core/gallery.css");
-@import url("blocks/core/latest-comments.css");
-@import url("blocks/core/latest-posts.css");
-@import url("blocks/core/paragraph.css");
-@import url("blocks/core/pullquote.css");
-@import url("blocks/core/quote.css");
-@import url("blocks/core/separator.css");
-@import url("blocks/core/subhead.css");
-@import url("blocks/blocks.css");
-@import url("blocks/color-palette.css");
+@import "blocks/core/button.css";
+@import "blocks/core/columns.css";
+@import "blocks/core/cover-image.css";
+@import "blocks/core/embeds.css";
+@import "blocks/core/file.css";
+@import "blocks/core/gallery.css";
+@import "blocks/core/latest-comments.css";
+@import "blocks/core/latest-posts.css";
+@import "blocks/core/paragraph.css";
+@import "blocks/core/pullquote.css";
+@import "blocks/core/quote.css";
+@import "blocks/core/separator.css";
+@import "blocks/core/subhead.css";
+@import "blocks/blocks.css";
+@import "blocks/color-palette.css";
 
 
 /*--------------------------------------------------------------

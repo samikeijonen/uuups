@@ -9,15 +9,15 @@
 /*--------------------------------------------------------------
 # Settings - Global variables, config switches.
 --------------------------------------------------------------*/
-@import url("settings/core.css");
-@import url("settings/fonts.css");
-@import url("settings/colors.css");
+@import "settings/core.css";
+@import "settings/fonts.css";
+@import "settings/colors.css";
 
 
 /*--------------------------------------------------------------
 # Tools - Default mixins and functions.
 --------------------------------------------------------------*/
-@import url("tools/mixins.css");
+@import "tools/mixins.css";
 
 
 /*--------------------------------------------------------------
@@ -25,73 +25,73 @@
 --------------------------------------------------------------*/
 
 /* Include normalize.css via NPM. */
-@import url("normalize.css");
-@import url("generic/box-sizing.css");
+@import "normalize.css";
+@import "generic/box-sizing.css";
 
 
 /*--------------------------------------------------------------
 # Elements - Unclassed HTML elements (type selectors).
 --------------------------------------------------------------*/
-@import url("elements/page.css");
-@import url("elements/blockquote.css");
-@import url("elements/buttons.css");
-@import url("elements/forms.css");
-@import url("elements/headings.css");
-@import url("elements/hr.css");
-@import url("elements/links.css");
-@import url("elements/lists.css");
-@import url("elements/media.css");
-@import url("elements/misc.css");
-@import url("elements/paragraph.css");
-@import url("elements/pre-code.css");
-@import url("elements/tables.css");
+@import "elements/page.css";
+@import "elements/blockquote.css";
+@import "elements/buttons.css";
+@import "elements/forms.css";
+@import "elements/headings.css";
+@import "elements/hr.css";
+@import "elements/links.css";
+@import "elements/lists.css";
+@import "elements/media.css";
+@import "elements/misc.css";
+@import "elements/paragraph.css";
+@import "elements/pre-code.css";
+@import "elements/tables.css";
 
 
 /*--------------------------------------------------------------
 # Objects - Undecorated design patterns.
 --------------------------------------------------------------*/
-@import url("objects/animations.css");
-@import url("objects/icons.css");
-@import url("objects/layouts.css");
-@import url("objects/wrappers.css");
+@import "objects/animations.css";
+@import "objects/icons.css";
+@import "objects/layouts.css";
+@import "objects/wrappers.css";
 
 
 /*--------------------------------------------------------------
 # Blocks - editor related styles.
 --------------------------------------------------------------*/
-@import url("blocks/core/button.css");
-@import url("blocks/core/columns.css");
-@import url("blocks/core/cover-image.css");
-@import url("blocks/core/embeds.css");
-@import url("blocks/core/file.css");
-@import url("blocks/core/gallery.css");
-@import url("blocks/core/latest-comments.css");
-@import url("blocks/core/latest-posts.css");
-@import url("blocks/core/paragraph.css");
-@import url("blocks/core/pullquote.css");
-@import url("blocks/core/quote.css");
-@import url("blocks/core/separator.css");
-@import url("blocks/core/subhead.css");
-@import url("blocks/blocks.css");
-@import url("blocks/color-palette.css");
+@import "blocks/core/button.css";
+@import "blocks/core/columns.css";
+@import "blocks/core/cover-image.css";
+@import "blocks/core/embeds.css";
+@import "blocks/core/file.css";
+@import "blocks/core/gallery.css";
+@import "blocks/core/latest-comments.css";
+@import "blocks/core/latest-posts.css";
+@import "blocks/core/paragraph.css";
+@import "blocks/core/pullquote.css";
+@import "blocks/core/quote.css";
+@import "blocks/core/separator.css";
+@import "blocks/core/subhead.css";
+@import "blocks/blocks.css";
+@import "blocks/color-palette.css";
 
 
 /*--------------------------------------------------------------
 # Components - specific UI components.
 --------------------------------------------------------------*/
-@import url("components/archives.css");
-@import url("components/comments.css");
-@import url("components/galleries.css");
-@import url("components/media.css");
-@import url("components/navigation.css");
-@import url("components/pagination.css");
-@import url("components/posts-and-pages.css");
-@import url("components/widgets.css");
+@import "components/archives.css";
+@import "components/comments.css";
+@import "components/galleries.css";
+@import "components/media.css";
+@import "components/navigation.css";
+@import "components/pagination.css";
+@import "components/posts-and-pages.css";
+@import "components/widgets.css";
 
 
 /*--------------------------------------------------------------
 # Utilities - Helpers and overrides.
 --------------------------------------------------------------*/
-@import url("utilities/accessibility.css");
-@import url("utilities/alignments.css");
-@import url("utilities/helpers.css");
+@import "utilities/accessibility.css";
+@import "utilities/alignments.css";
+@import "utilities/helpers.css";
