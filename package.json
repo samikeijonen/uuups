@@ -15,7 +15,7 @@
 		"i18n:textdomain": "npx wpi18n addtextdomain --exclude=vendor,node_modules",
 		"i18n:pot": "npx wpi18n makepot",
 		"lint": "npm run lint:styles && npm run lint:scripts && npm run lint:php",
-		"lint:styles": "cross-env stylelint './resources/css/**/*.scss' --syntax scss",
+		"lint:styles": "cross-env stylelint './resources/css/**/*.css'",
 		"lint:scripts": "cross-env eslint './resources/js/**/*.js'",
 		"lint:php": "cross-env ./vendor/bin/phpcs .",
 		"prod": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
@@ -38,7 +38,7 @@
 		"./resources/js/**/*.js": [
 			"npm run lint:scripts"
 		],
-		"./resources/css/**/*.scss": [
+		"./resources/css/**/*.css": [
 			"npm run lint:styles"
 		],
 		"./*.php": [
@@ -50,13 +50,13 @@
 		"browser-sync-webpack-plugin": "^2.2.2",
 		"copy-webpack-plugin": "^4.5.2",
 		"cross-env": "^5.2.0",
-		"eslint": "^5.5.0",
+		"eslint": "^5.6.0",
 		"eslint-config-wordpress": "^2.0.0",
-		"husky": "^1.0.0-rc.13",
+		"husky": "^1.0.0-rc.15",
 		"imagemin-mozjpeg": "^7.0.0",
-		"imagemin-webpack-plugin": "^2.2.0",
+		"imagemin-webpack-plugin": "^2.3.0",
 		"laravel-mix": "^2.1.14",
-		"lint-staged": "^7.2.2",
+		"lint-staged": "^7.3.0",
 		"node-wp-i18n": "^1.2.1",
 		"pa11y": "^5.0.4",
 		"postcss-import": "^12.0.0",
@@ -67,7 +67,7 @@
 		"stylelint": "^9.5.0",
 		"stylelint-a11y": "^1.1.7",
 		"stylelint-config-wordpress": "^13.1.0",
-		"theme-claim": "^0.1.10"
+		"theme-claim": "^0.1.11"
 	},
 	"dependencies": {
 		"normalize.css": "^8.0.0"
