@@ -1,7 +1,12 @@
 .wp-block-pullquote {
-	border-bottom: 0.25rem solid;
-	border-left: 0;
-	border-top: 0.25rem solid;
+	border-bottom: var(--spacing-unit-small) solid;
+	border-top: var(--spacing-unit-small) solid;
 	padding: var(--spacing-unit-4x) 0;
 	text-align: center;
+
+	blockquote {
+		border-left: 0;
+		margin-bottom: 0;
+		padding-left: 0;
+	}
 }
