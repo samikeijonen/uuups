@@ -23,7 +23,9 @@
 /*--------------------------------------------------------------
 # Generic - Ground-zero styles (resets, box-sizing, etc.).
 --------------------------------------------------------------*/
-@import url("generic/normalize.css");
+
+/* Include normalize.css via NPM. */
+@import url("normalize.css");
 @import url("generic/box-sizing.css");
 
 

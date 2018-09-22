@@ -69,5 +69,7 @@
 		"stylelint-config-wordpress": "^13.1.0",
 		"theme-claim": "^0.1.10"
 	},
-	"dependencies": {}
+	"dependencies": {
+		"normalize.css": "^8.0.0"
+	}
 }
