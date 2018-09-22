@@ -49,6 +49,11 @@ if ( process.env.export ) {
 const devPath  = 'resources';
 
 /*
+ * Disable success notifications in the browser.
+ */
+mix.disableSuccessNotifications();
+
+/*
  * Sets the path to the generated assets. By default, this is the `/dist` folder
  * in the theme. If doing something custom, make sure to change this everywhere.
  */
