@@ -1,1 +1,297 @@
-!function(e){var t={};function n(a){if(t[a])return t[a].exports;var s=t[a]={i:a,l:!1,exports:{}};return e[a].call(s.exports,s,s.exports,n),s.l=!0,s.exports}n.m=e,n.c=t,n.d=function(e,t,a){n.o(e,t)||Object.defineProperty(e,t,{configurable:!1,enumerable:!0,get:a})},n.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return n.d(t,"a",t),t},n.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},n.p="/",n(n.s=0)}({0:function(e,t,n){n("F1kH"),n("pbxF"),n("HMo2"),e.exports=n("V68N")},F1kH:function(e,t){!function(){var e,t,n,a,s,i,o,r,d;if((e=document.getElementById("js-menu--primary"))&&void 0!==(t=e.getElementsByTagName("button")[0]))if(void 0!==(n=e.getElementsByTagName("ul")[0])){for(n.setAttribute("aria-expanded","false"),n.classList.contains("js-nav-menu")||n.classList.add("js-nav-menu"),t.addEventListener("click",function(){u(),function(){if(!c())return;o=e.querySelectorAll(["a[href]","area[href]","input:not([disabled])","select:not([disabled])","textarea:not([disabled])","button:not([disabled])","iframe","object","embed","[contenteditable]",'[tabindex]:not([tabindex^="-"])']),r=o[0],(d=o[o.length-1]).addEventListener("keydown",function(e){9!==e.keyCode||e.shiftKey||(e.preventDefault(),t.focus())}),r.addEventListener("keydown",function(e){9===e.keyCode&&e.shiftKey&&(e.preventDefault(),t.focus())}),t.addEventListener("keydown",function(e){9===e.keyCode&&e.shiftKey&&(e.preventDefault(),d.focus())})}()}),document.addEventListener("keyup",function(e){27===e.keyCode&&c()&&(u(),t.focus())}),window.addEventListener("resize",function(){"none"===window.getComputedStyle(t,null).getPropertyValue("display")&&(t.setAttribute("aria-expanded","false"),n.setAttribute("aria-expanded","false"))}),s=0,i=(a=n.getElementsByTagName("a")).length;s<i;s++)a[s].addEventListener("focus",l,!0),a[s].addEventListener("blur",l,!0);!function(e){var t,n,a=e.querySelectorAll(".menu-item-has-children > a, .page_item_has_children > a");if("ontouchstart"in window)for(t=function(e){var t,n=this.parentNode;if(n.classList.contains("focus"))n.classList.remove("focus");else{for(e.preventDefault(),t=0;t<n.parentNode.children.length;++t)n!==n.parentNode.children[t]&&n.parentNode.children[t].classList.remove("focus");n.classList.add("focus")}},n=0;n<a.length;++n)a[n].addEventListener("touchstart",t,!1)}(e)}else t.style.display="none";function u(){e.classList.toggle("is-toggled");var a="false"===t.getAttribute("aria-expanded")?"true":"false";t.setAttribute("aria-expanded",a),n.setAttribute("aria-expanded",a)}function c(){return"false"!==t.getAttribute("aria-expanded")}function l(){for(var e=this;-1===e.className.indexOf("js-nav-menu");)"li"===e.tagName.toLowerCase()&&(-1!==e.className.indexOf("focus")?e.className=e.className.replace(" focus",""):e.className+=" focus"),e=e.parentElement}}()},HMo2:function(e,t){},V68N:function(e,t){},pbxF:function(e,t){}});
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, {
+/******/ 				configurable: false,
+/******/ 				enumerable: true,
+/******/ 				get: getter
+/******/ 			});
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "/";
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ })
+/************************************************************************/
+/******/ ({
+
+/***/ "./resources/css/customize-controls.css":
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./resources/css/style-editor.css":
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./resources/css/style.css":
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./resources/js/app.js":
+/***/ (function(module, exports) {
+
+/**
+ * File navigation.js.
+ *
+ * Handles toggling the navigation menu for small screens and enables TAB key
+ * navigation support for dropdown menus.
+ */
+(function () {
+	var container, button, menu, links, i, len, focusableElements, firstFocusableElement, lastFocusableElement;
+
+	container = document.getElementById('js-menu--primary');
+
+	// Bail if there is no menu.
+	if (!container) {
+		return;
+	}
+
+	button = container.getElementsByTagName('button')[0];
+	if ('undefined' === typeof button) {
+		return;
+	}
+
+	menu = container.getElementsByTagName('ul')[0];
+
+	// Hide menu toggle button if menu is empty and return early.
+	if ('undefined' === typeof menu) {
+		button.style.display = 'none';
+		return;
+	}
+
+	menu.setAttribute('aria-expanded', 'false');
+	if (!menu.classList.contains('js-nav-menu')) {
+		menu.classList.add('js-nav-menu');
+	}
+
+	button.addEventListener('click', function () {
+		toggleMenu();
+
+		setFocus();
+	});
+
+	// Close menu using Esc key.
+	document.addEventListener('keyup', function (event) {
+		if (27 === event.keyCode) {
+			if (isMenuOpen()) {
+				toggleMenu(); // Close menu.
+				button.focus();
+			}
+		}
+	});
+
+	// Remove ARIA when on "desktop".
+	window.addEventListener('resize', removeAria);
+
+	// Get all the link elements within the menu.
+	links = menu.getElementsByTagName('a');
+
+	// Each time a menu link is focused or blurred, toggle focus.
+	for (i = 0, len = links.length; i < len; i++) {
+		links[i].addEventListener('focus', toggleFocus, true);
+		links[i].addEventListener('blur', toggleFocus, true);
+	}
+
+	/**
+  * Toggle menu classes and ARIA.
+  */
+	function toggleMenu() {
+		container.classList.toggle('is-toggled');
+
+		var expanded = 'false' === button.getAttribute('aria-expanded') ? 'true' : 'false';
+		button.setAttribute('aria-expanded', expanded);
+		menu.setAttribute('aria-expanded', expanded);
+	}
+
+	/**
+  * Set focus when nav is open.
+  */
+	function setFocus() {
+
+		// Bail if menu is not open.
+		if (!isMenuOpen()) {
+			return;
+		}
+
+		// Set focusable elements inside main navigation.
+		focusableElements = container.querySelectorAll(['a[href]', 'area[href]', 'input:not([disabled])', 'select:not([disabled])', 'textarea:not([disabled])', 'button:not([disabled])', 'iframe', 'object', 'embed', '[contenteditable]', '[tabindex]:not([tabindex^="-"])']);
+		firstFocusableElement = focusableElements[0];
+		lastFocusableElement = focusableElements[focusableElements.length - 1];
+
+		// Redirect last Tab to first focusable element.
+		lastFocusableElement.addEventListener('keydown', function (e) {
+			if (9 === e.keyCode && !e.shiftKey) {
+				e.preventDefault();
+				button.focus(); // Set focus on first element - that's actually close menu button.
+			}
+		});
+
+		// Redirect first Shift+Tab to toggle button element.
+		firstFocusableElement.addEventListener('keydown', function (e) {
+			if (9 === e.keyCode && e.shiftKey) {
+				e.preventDefault();
+				button.focus(); // Set focus on first element.
+			}
+		});
+
+		// Redirect Shift+Tab from the toggle button to last focusable element.
+		button.addEventListener('keydown', function (e) {
+			if (9 === e.keyCode && e.shiftKey) {
+				e.preventDefault();
+				lastFocusableElement.focus(); // Set focus on last element.
+			}
+		});
+	}
+
+	/**
+  * Is menu open.
+  *
+  * @returns {boolean} True or false.
+  */
+	function isMenuOpen() {
+		var isMenuOpen = 'false' === button.getAttribute('aria-expanded') ? false : true;
+		return isMenuOpen;
+	}
+
+	/**
+  * Remove ARIA on "desktop".
+  */
+	function removeAria() {
+
+		// If menu toggle button have display: none css rule, we're on desktop.
+		if ('none' === window.getComputedStyle(button, null).getPropertyValue('display')) {
+			button.setAttribute('aria-expanded', 'false');
+			menu.setAttribute('aria-expanded', 'false');
+		}
+	}
+
+	/**
+  * Sets or removes .focus class on an element.
+  */
+	function toggleFocus() {
+		var self = this;
+
+		// Move up through the ancestors of the current link until we hit .js-nav-menu.
+		while (-1 === self.className.indexOf('js-nav-menu')) {
+
+			// On li elements toggle the class .focus.
+			if ('li' === self.tagName.toLowerCase()) {
+				if (-1 !== self.className.indexOf('focus')) {
+					self.className = self.className.replace(' focus', '');
+				} else {
+					self.className += ' focus';
+				}
+			}
+
+			self = self.parentElement;
+		}
+	}
+
+	/**
+  * Toggles `focus` class to allow submenu access on tablets.
+  */
+	(function (container) {
+		var touchStartFn,
+		    i,
+		    parentLink = container.querySelectorAll('.menu-item-has-children > a, .page_item_has_children > a');
+
+		if ('ontouchstart' in window) {
+			touchStartFn = function touchStartFn(e) {
+				var menuItem = this.parentNode,
+				    i;
+
+				if (!menuItem.classList.contains('focus')) {
+					e.preventDefault();
+					for (i = 0; i < menuItem.parentNode.children.length; ++i) {
+						if (menuItem === menuItem.parentNode.children[i]) {
+							continue;
+						}
+						menuItem.parentNode.children[i].classList.remove('focus');
+					}
+					menuItem.classList.add('focus');
+				} else {
+					menuItem.classList.remove('focus');
+				}
+			};
+
+			for (i = 0; i < parentLink.length; ++i) {
+				parentLink[i].addEventListener('touchstart', touchStartFn, false);
+			}
+		}
+	})(container);
+})();
+
+/***/ }),
+
+/***/ 0:
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__("./resources/js/app.js");
+__webpack_require__("./resources/css/style.css");
+__webpack_require__("./resources/css/style-editor.css");
+module.exports = __webpack_require__("./resources/css/customize-controls.css");
+
+
+/***/ })
+
+/******/ });
+//# sourceMappingURL=app.js.map
