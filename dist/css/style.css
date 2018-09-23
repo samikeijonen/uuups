@@ -612,8 +612,7 @@ h6 {
 }
 
 h1,
-.h1,
-h1.blocks-rich-text__tinymce.mce-content-body {
+.h1 {
 	font-size: 2rem;
 	font-size: var(--font-size-h1);
 	line-height: 1.25;
@@ -621,8 +620,7 @@ h1.blocks-rich-text__tinymce.mce-content-body {
 }
 
 h2,
-.h2,
-h2.blocks-rich-text__tinymce.mce-content-body {
+.h2 {
 	font-size: 1.5rem;
 	font-size: var(--font-size-h2);
 	line-height: 1.25;
@@ -630,29 +628,25 @@ h2.blocks-rich-text__tinymce.mce-content-body {
 }
 
 h3,
-.h3,
-h3.blocks-rich-text__tinymce.mce-content-body {
+.h3 {
 	font-size: 1.25rem;
 	font-size: var(--font-size-h3);
 }
 
 h4,
-.h4,
-h4.blocks-rich-text__tinymce.mce-content-body {
+.h4 {
 	font-size: 1rem;
 	font-size: var(--font-size-h4);
 }
 
 h5,
-.h5,
-h5.blocks-rich-text__tinymce.mce-content-body {
+.h5 {
 	font-size: 1rem;
 	font-size: var(--font-size-h5);
 }
 
 h6,
-.h6,
-h6.blocks-rich-text__tinymce.mce-content-body {
+.h6 {
 	font-size: 1rem;
 	font-size: var(--font-size-h6);
 }
@@ -1169,14 +1163,15 @@ td {
 		height: inherit;
 	}
 
-.wp-block-embed__wrapper {
+.is-type-video .wp-block-embed__wrapper,
+.is-video .wp-block-embed__wrapper {
 	height: 0;
 	overflow: hidden;
 	padding-top: 56.25%;
 	position: relative;
 }
 
-.wp-block-embed__wrapper iframe {
+.is-type-video .wp-block-embed__wrapper iframe, .is-video .wp-block-embed__wrapper iframe {
 		height: 100%;
 		max-width: 100%;
 		position: absolute;

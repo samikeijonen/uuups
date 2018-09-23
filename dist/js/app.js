@@ -287,8 +287,8 @@
 
 __webpack_require__("./resources/js/app.js");
 __webpack_require__("./resources/css/style.css");
-__webpack_require__("./resources/css/style-editor.css");
-module.exports = __webpack_require__("./resources/css/customize-controls.css");
+__webpack_require__("./resources/css/customize-controls.css");
+module.exports = __webpack_require__("./resources/css/style-editor.css");
 
 
 /***/ })
