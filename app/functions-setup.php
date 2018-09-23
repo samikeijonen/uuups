@@ -104,9 +104,6 @@ add_action( 'after_setup_theme', function() {
 
 	// Add support for align wide blocks.
 	add_theme_support( 'align-wide' );
-
-	// Add support for editor styles.
-	add_theme_support( 'editor-styles' );
 }, 5 );
 
 /**
