@@ -90,17 +90,7 @@ mix.js( `${devPath}/js/app.js`, 'js' )
  * @link https://laravel.com/docs/5.6/mix#postcss
  * @link https://laravel.com/docs/5.6/mix#url-processing
  */
-const cssOptions = {
-	stage: 0
-};
-
 mix.options( {
-	postCss: [
-		require( 'postcss-import' ),
-		require( 'postcss-preset-env' )( cssOptions ),
-		require( 'postcss-mixins' ),
-		require( 'postcss-nested' )
-	],
 	processCssUrls: false
 } );
 
@@ -112,11 +102,42 @@ mix.options( {
  * @link https://laravel.com/docs/5.6/mix#sass
  * @link https://github.com/sass/node-sass#options
  */
+const cssOptions = {
+	stage: 0
+};
 
-// Compile SASS/CSS.
-mix.postCss( `${devPath}/css/style.css`, 'css' )
-   .postCss( `${devPath}/css/style-editor.css`, 'css' )
-   .postCss( `${devPath}/css/customize-controls.css`, 'css' );
+// Default PostCSS plugins.
+const PostCssPlugins = [
+	require( 'postcss-import' ),
+	require( 'postcss-preset-env' )( cssOptions ),
+	require( 'postcss-mixins' ),
+	require( 'postcss-nested' )
+];
+
+// PostCSS plugins for editor only.
+const PostCssPluginsEditorOnly = [
+	require( 'postcss-prefix-selector' )({
+		prefix: '.edit-post-visual-editor .editor-block-list__block',
+		exclude: [
+			':root',
+			'.edit-post-visual-editor .editor-block-list__block',
+			'.editor-post-title__block .editor-post-title__input',
+			':root body.gutenberg-editor-page .editor-post-title__block',
+			':root body.gutenberg-editor-page .editor-default-block-appender',
+			':root body.gutenberg-editor-page .editor-block-list__block',
+			':root body.gutenberg-editor-page .editor-block-list__block[data-align="wide"]',
+			':root body.gutenberg-editor-page .editor-block-list__block[data-align="full"]'
+		]
+	})
+];
+
+// Merge default and editor PostCSS plugins.
+const PostCssPluginsEditor = PostCssPlugins.concat( PostCssPluginsEditorOnly );
+
+// Compile CSS.
+mix.postCss( `${devPath}/css/style.css`, 'css', PostCssPlugins )
+   .postCss( `${devPath}/css/customize-controls.css`, 'css', PostCssPlugins )
+   .postCss( `${devPath}/css/style-editor.css`, 'css', PostCssPluginsEditor );
 
 /*
  * Add custom Webpack configuration.

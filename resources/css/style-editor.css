@@ -55,11 +55,17 @@
 
 
 /*--------------------------------------------------------------
+# Utilities - Helpers and overrides.
+--------------------------------------------------------------*/
+@import "utilities/helpers.css";
+
+
+/*--------------------------------------------------------------
 # Editor related styles which overwrites above styles.
 --------------------------------------------------------------*/
 
-/* body converts to .editor-block-list__block in the editor. */
-body {
+/* Acts like a body of the editor. */
+.edit-post-visual-editor .editor-block-list__block {
 	@mixin typography;
 }
 
@@ -79,23 +85,24 @@ p {
 	margin-left: 0;
 }
 
-/* Main column width */
+/* Main column width. */
 :root body.gutenberg-editor-page .editor-post-title__block,
 :root body.gutenberg-editor-page .editor-default-block-appender,
 :root body.gutenberg-editor-page .editor-block-list__block {
 	max-width: calc(var(--max-width-2) + 2rem);
 }
 
-/* Width of "wide" blocks */
+/* Width of "wide" blocks. */
 :root body.gutenberg-editor-page .editor-block-list__block[data-align="wide"] {
 	max-width: var(--max-width-wide);
 }
 
-/* Width of "full-wide" blocks */
+/* Width of "full-wide" blocks. */
 :root body.gutenberg-editor-page .editor-block-list__block[data-align="full"] {
 	max-width: none;
 }
 
+/* For now we need this for overwriting Core line-height. */
 .editor-rich-text__tinymce.mce-content-body:not(.wp-block-cover-image-text):not(.wp-block-subhead):not(h2):not(h3) {
 	line-height: var(--line-height-global);
 }
