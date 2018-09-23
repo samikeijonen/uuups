@@ -1,6 +1,11 @@
 <?xml version="1.0"?>
 <ruleset name="WordPress Theme Coding Standards">
   <rule ref="Foxland-Default"/>
+
+	<!-- Exclude folders. -->
+	<!-- See: https://github.com/squizlabs/PHP_CodeSniffer/wiki/Advanced-Usage#ignoring-files-and-folders -->
+	<exclude-pattern>*/export/*</exclude-pattern>
+
 	<!-- Verify that the text_domain is set to the desired text-domain.
 			Multiple valid text domains can be provided as a new element. -->
 	<rule ref="WordPress.WP.I18n">
