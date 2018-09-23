@@ -36,6 +36,7 @@
 /*--------------------------------------------------------------
 # Blocks - editor related styles.
 --------------------------------------------------------------*/
+@import "blocks/core/audio.css";
 @import "blocks/core/button.css";
 @import "blocks/core/columns.css";
 @import "blocks/core/cover-image.css";
@@ -57,7 +58,8 @@
 # Editor related styles which overwrites above styles.
 --------------------------------------------------------------*/
 
-.edit-post-visual-editor {
+/* body converts to .editor-block-list__block in the editor. */
+body {
 	@mixin typography;
 }
 

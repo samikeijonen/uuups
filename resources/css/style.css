@@ -59,6 +59,7 @@
 /*--------------------------------------------------------------
 # Blocks - editor related styles.
 --------------------------------------------------------------*/
+@import "blocks/core/audio.css";
 @import "blocks/core/button.css";
 @import "blocks/core/columns.css";
 @import "blocks/core/cover-image.css";
