@@ -31,7 +31,7 @@
 }
 
 @define-mixin global-box-shadow {
-	box-shadow: 0 var(--spacing-unit-2x) var(--spacing-unit-4x) var(--color-grey-10);
+	box-shadow: 0 var(--spacing-unit) var(--spacing-unit-4x) var(--color-grey-10);
 }
 
 @define-mixin button-block {
