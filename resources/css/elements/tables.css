@@ -2,7 +2,6 @@ table {
 	border-collapse: separate;
 	border-spacing: 0;
 	margin: 0 0 var(--spacing-unit-4x);
-	table-layout: fixed;
 	width: 100%;
 }
 
