@@ -1,10 +1,9 @@
 @media (--breakpoint-1) {
 
 	@supports (grid-area: auto) {
-
 		.sidebar {
 			display: grid;
-			grid-gap: var(--spacing-unit-2x) * 4;
+			grid-gap: calc(var(--spacing-unit-2x) * 4);
 			grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
 		}
 
