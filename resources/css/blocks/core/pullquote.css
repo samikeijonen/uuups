@@ -9,4 +9,12 @@
 		margin-bottom: 0;
 		padding-left: 0;
 	}
+
+	&.alignfull {
+
+		& blockquote {
+			padding-left: var(--spacing-unit-2x);
+			padding-right: var(--spacing-unit-2x);
+		}
+	}
 }
