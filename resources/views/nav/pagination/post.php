@@ -5,7 +5,10 @@
  * @package Uuups
  */
 
-Hybrid\Pagination\display( 'post', [
-	'show_all'  => true,
-	'prev_next' => false,
-] );
+Hybrid\Pagination\display(
+	'post',
+	[
+		'show_all'  => true,
+		'prev_next' => false,
+	]
+);

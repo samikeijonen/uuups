@@ -20,14 +20,16 @@ endif
 	</button>
 
 	<?php
-	wp_nav_menu( [
-		'theme_location' => $data->name,
-		'container'      => '',
-		'menu_id'        => '',
-		'menu_class'     => 'menu__items menu__items--' . esc_attr( $data->name ) . ' animated fade-in-down',
-		'items_wrap'     => '<ul class="%2$s">%3$s</ul>',
-		'item_spacing'   => 'discard',
-	] );
+	wp_nav_menu(
+		[
+			'theme_location' => $data->name,
+			'container'      => '',
+			'menu_id'        => '',
+			'menu_class'     => 'menu__items menu__items--' . esc_attr( $data->name ) . ' animated fade-in-down',
+			'items_wrap'     => '<ul class="%2$s">%3$s</ul>',
+			'item_spacing'   => 'discard',
+		]
+	);
 	?>
 
 </nav>
