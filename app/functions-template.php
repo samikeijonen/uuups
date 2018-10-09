@@ -84,11 +84,16 @@ function post_thumbnail() {
 
 		<a class="post-thumbnail block mb-2" href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
 			<?php
-			the_post_thumbnail( 'post-thumbnail', [
-				'alt' => the_title_attribute( [
-					'echo' => false,
-				] ),
-			] );
+			the_post_thumbnail(
+				'post-thumbnail',
+				[
+					'alt' => the_title_attribute(
+						[
+							'echo' => false,
+						]
+					),
+				]
+			);
 			?>
 		</a>
 

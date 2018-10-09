@@ -25,19 +25,24 @@ namespace Uuups;
  * @param int      $depth Depth of menu item. Used for padding.
  * @return string  $attr
  */
-add_filter( 'nav_menu_link_attributes', function( $atts, $item, $args, $depth ) {
-	$atts['class'] = 'menu__anchor menu__anchor--' . $args->theme_location;
+add_filter(
+	'nav_menu_link_attributes',
+	function( $atts, $item, $args, $depth ) {
+		$atts['class'] = 'menu__anchor menu__anchor--' . $args->theme_location;
 
-	if ( in_array( 'current-menu-item', $item->classes, true ) ) {
-		$atts['class'] .= ' is-active';
-	}
+		if ( in_array( 'current-menu-item', $item->classes, true ) ) {
+			$atts['class'] .= ' is-active';
+		}
 
-	if ( in_array( 'button', $item->classes, true ) ) {
-		$atts['class'] .= ' menu__anchor--button';
-	}
+		if ( in_array( 'button', $item->classes, true ) ) {
+			$atts['class'] .= ' menu__anchor--button';
+		}
 
-	return $atts;
-}, 10, 4 );
+		return $atts;
+	},
+	10,
+	4
+);
 
 /**
  * Replaces "[...]" (appended to automatically generated excerpts) with ... and
