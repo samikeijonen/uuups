@@ -2,6 +2,12 @@
 <ruleset name="WordPress Theme Coding Standards">
   <rule ref="Foxland-Default"/>
 
+	<!-- Check all files in this directory and the directories below it. -->
+	<file>.</file>
+
+	<!-- Strip the filepaths down to the relevant bit. -->
+	<arg name="basepath" value="./"/>
+
 	<!-- Exclude folders. -->
 	<!-- See: https://github.com/squizlabs/PHP_CodeSniffer/wiki/Advanced-Usage#ignoring-files-and-folders -->
 	<exclude-pattern>*/export/*</exclude-pattern>
