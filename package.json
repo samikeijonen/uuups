@@ -42,7 +42,7 @@
 			"npm run lint:styles"
 		],
 		"./**/*.php": [
-			"npm run lint:php"
+			"./vendor/bin/phpcs --warning-severity=8"
 		]
 	},
 	"devDependencies": {
