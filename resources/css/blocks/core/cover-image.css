@@ -38,13 +38,46 @@
 	}
 
 	&.has-background-dim::before {
-		background-color: rgba(0, 0, 0, 0.5);
+		background-color: inherit;
 		content: "";
+		opacity: 0.5;
 		position: absolute;
 		top: 0;
 		left: 0;
 		bottom: 0;
 		right: 0;
+	}
+
+	&.has-main-background-color.has-background-dim-10::before {
+		opacity: 0.1;
+	}
+
+	&.has-main-background-color.has-background-dim-20::before {
+		opacity: 0.2;
+	}
+
+	&.has-main-background-color.has-background-dim-30::before {
+		opacity: 0.3;
+	}
+
+	&.has-main-background-color.has-background-dim-40::before {
+		opacity: 0.4;
+	}
+
+	&.has-main-background-color.has-background-dim-60::before {
+		opacity: 0.6;
+	}
+
+	&.has-main-background-color.has-background-dim-70::before {
+		opacity: 0.7;
+	}
+
+	&.has-main-background-color.has-background-dim-80::before {
+		opacity: 0.8;
+	}
+
+	&.has-main-background-color.has-background-dim-90::before {
+		opacity: 0.9;
 	}
 
 	&.components-placeholder {
