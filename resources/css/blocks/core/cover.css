@@ -16,7 +16,7 @@
 		text-align: center;
 
 		a {
-			color: var(--color-white);
+			color: inherit;
 		}
 	}
 
