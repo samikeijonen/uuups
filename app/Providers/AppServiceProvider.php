@@ -35,12 +35,15 @@ class AppServiceProvider extends ServiceProvider {
 		$this->app->singleton( Customize::class );
 
 		// Bind the Laravel Mix manifest for cache-busting.
-		$this->app->singleton( 'uuups/mix', function() {
+		$this->app->singleton(
+			'uuups/mix',
+			function() {
 
-			$file = get_theme_file_path( 'dist/mix-manifest.json' );
+				$file = get_theme_file_path( 'dist/mix-manifest.json' );
 
-			return file_exists( $file ) ? json_decode( file_get_contents( $file ), true ) : null;
-		} );
+				return file_exists( $file ) ? json_decode( file_get_contents( $file ), true ) : null;
+			}
+		);
 	}
 
 	/**

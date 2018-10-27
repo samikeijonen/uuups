@@ -12,7 +12,7 @@
  */
 
 // Import required packages.
-const { mix }           = require( 'laravel-mix' );
+const mix               = require( 'laravel-mix' );
 const ImageminPlugin    = require( 'imagemin-webpack-plugin' ).default;
 const CopyWebpackPlugin = require( 'copy-webpack-plugin' );
 const imageminMozjpeg   = require( 'imagemin-mozjpeg' );
@@ -49,21 +49,15 @@ if ( process.env.export ) {
 const devPath  = 'resources';
 
 /*
+ * Disable success notifications in the browser.
+ */
+mix.disableSuccessNotifications();
+
+/*
  * Sets the path to the generated assets. By default, this is the `/dist` folder
  * in the theme. If doing something custom, make sure to change this everywhere.
  */
 mix.setPublicPath( 'dist' );
-
-/*
- * Set Laravel Mix options.
- *
- * @link https://laravel.com/docs/5.6/mix#postcss
- * @link https://laravel.com/docs/5.6/mix#url-processing
- */
-mix.options( {
-	postCss: [ require( 'postcss-preset-env' )() ],
-	processCssUrls: false
-} );
 
 /*
  * Builds sources maps for assets.
@@ -88,7 +82,17 @@ mix.version();
  */
 mix.js( `${devPath}/js/app.js`, 'js' )
    .js( `${devPath}/js/customize-controls.js`, 'js' )
-   .js( `${devPath}/js/customize-preview.js`, 'js' );;
+   .js( `${devPath}/js/customize-preview.js`, 'js' );
+
+/*
+ * Set Laravel Mix options.
+ *
+ * @link https://laravel.com/docs/5.6/mix#postcss
+ * @link https://laravel.com/docs/5.6/mix#url-processing
+ */
+mix.options( {
+	processCssUrls: false
+} );
 
 /*
  * Compile CSS. Mix supports Sass, Less, Stylus, and plain CSS, and has functions
@@ -98,18 +102,42 @@ mix.js( `${devPath}/js/app.js`, 'js' )
  * @link https://laravel.com/docs/5.6/mix#sass
  * @link https://github.com/sass/node-sass#options
  */
-
-// Sass configuration.
-var sassConfig = {
-	outputStyle: 'expanded',
-	indentType: 'tab',
-	indentWidth: 1
+const cssOptions = {
+	stage: 0
 };
 
-// Compile SASS/CSS.
-mix.sass( `${devPath}/css/style.scss`, 'css', sassConfig )
-   .sass( `${devPath}/css/editor.scss`, 'css', sassConfig )
-   .sass( `${devPath}/css/customize-controls.scss`, 'css', sassConfig );
+// Default PostCSS plugins.
+const PostCssPlugins = [
+	require( 'postcss-import' ),
+	require( 'postcss-preset-env' )( cssOptions ),
+	require( 'postcss-mixins' ),
+	require( 'postcss-nested' )
+];
+
+// PostCSS plugins for editor only.
+const PostCssPluginsEditorOnly = [
+	require( 'postcss-prefix-selector' )({
+		prefix: '.edit-post-visual-editor .editor-block-list__block',
+		exclude: [
+			':root',
+			'.edit-post-visual-editor .editor-block-list__block',
+			'.editor-post-title__block .editor-post-title__input',
+			':root body.gutenberg-editor-page .editor-post-title__block',
+			':root body.gutenberg-editor-page .editor-default-block-appender',
+			':root body.gutenberg-editor-page .editor-block-list__block',
+			':root body.gutenberg-editor-page .editor-block-list__block[data-align="wide"]',
+			':root body.gutenberg-editor-page .editor-block-list__block[data-align="full"]'
+		]
+	})
+];
+
+// Merge default and editor PostCSS plugins.
+const PostCssPluginsEditor = PostCssPlugins.concat( PostCssPluginsEditorOnly );
+
+// Compile CSS.
+mix.postCss( `${devPath}/css/style.css`, 'css', PostCssPlugins )
+   .postCss( `${devPath}/css/customize-controls.css`, 'css', PostCssPlugins )
+   .postCss( `${devPath}/css/style-editor.css`, 'css', PostCssPluginsEditor );
 
 /*
  * Add custom Webpack configuration.

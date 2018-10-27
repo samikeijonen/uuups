@@ -1,0 +1,39 @@
+.has-main-color {
+	color: var(--color-base);
+}
+
+.has-main-background-color {
+	background-color: var(--color-base);
+}
+
+.has-dark-color {
+	color: var(--color-dark);
+}
+
+.has-dark-background-color {
+	background-color: var(--color-dark);
+}
+
+.has-grey-color {
+	color: var(--color-grey-60);
+}
+
+.has-grey-background-color {
+	background-color: var(--color-grey-60);
+}
+
+.has-white-color {
+	color: var(--color-white);
+}
+
+.has-white-background-color {
+	background-color: var(--color-white);
+}
+
+.has-light-color {
+	color: var(--color-light);
+}
+
+.has-light-background-color {
+	background-color: var(--color-light);
+}

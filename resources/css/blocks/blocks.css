@@ -1,0 +1,22 @@
+/* Font sizes. */
+.has-small-font-size {
+	font-size: var(--font-size-875);
+}
+
+.has-medium-font-size {
+	font-size: var(--font-size-125);
+}
+
+.has-large-font-size {
+	font-size: var(--font-size-h3);
+}
+
+.has-larger-font-size {
+	font-size: var(--font-size-h1);
+	line-height: var(--line-height-heading);
+}
+
+/* Has background blocks. */
+.has-background:not(.wp-block-button__link) {
+	padding: var(--spacing-unit-3x);
+}

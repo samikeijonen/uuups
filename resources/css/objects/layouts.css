@@ -1,0 +1,37 @@
+.flex {
+	display: flex;
+}
+
+.justify-between {
+	justify-content: space-between;
+}
+
+.items-center {
+	align-items: center;
+}
+
+@media (--breakpoint-1) {
+
+	@supports (grid-area: auto) {
+
+		.grid {
+			display: grid;
+			grid-gap: calc(var(--spacing-unit-2x) * 4);
+			grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+
+			&--blog {
+				grid-template-columns: repeat(6, 1fr);
+
+				> .entry {
+					grid-column: span 2;
+				}
+
+				> .archive-header,
+				.pagination {
+					grid-column: 1 / -1;
+				}
+			}
+		}
+
+	}
+}

@@ -21,15 +21,17 @@ if ( post_password_required() || ( ! have_comments() && ! comments_open() && ! p
 
 			<ol class="comments__list">
 				<?php
-				wp_list_comments( [
-					'style'        => 'ol',
-					'callback'     => function( $comment, $args, $depth ) {
-						Hybrid\View\display( 'comment', Hybrid\Comment\hierarchy(), compact( 'comment', 'args', 'depth' ) );
-					},
-					'end-callback' => function() {
-						echo '</li>';
-					},
-				] );
+				wp_list_comments(
+					[
+						'style'        => 'ol',
+						'callback'     => function( $comment, $args, $depth ) {
+							Hybrid\View\display( 'comment', Hybrid\Comment\hierarchy(), compact( 'comment', 'args', 'depth' ) );
+						},
+						'end-callback' => function() {
+							echo '</li>';
+						},
+					]
+				);
 				?>
 			</ol>
 

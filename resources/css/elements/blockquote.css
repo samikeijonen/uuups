@@ -1,0 +1,23 @@
+cite {
+	color: var(--color-grey-60);
+}
+
+blockquote {
+	border-left: 0.25rem solid;
+	font-style: italic;
+	margin: 0 0 var(--spacing-unit-4x);
+	padding-left: var(--spacing-unit-3x);
+
+	p {
+		font-size: var(--font-size-h3);
+	}
+
+	p:last-of-type {
+		margin-bottom: 0;
+	}
+
+	cite {
+		display: block;
+		margin-top: var(--spacing-unit-3x);
+	}
+}

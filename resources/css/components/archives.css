@@ -1,0 +1,7 @@
+.archive-header__description {
+	@mixin subheading;
+
+	:last-child {
+		margin-bottom: 0;
+	}
+}

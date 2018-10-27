@@ -1,0 +1,39 @@
+textarea {
+	/* Removes empty space under textarea. */
+	display: block;
+	min-height: calc(var(--spacing-unit-) * 13);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea,
+select {
+	background-color: var(--color-white);
+	border: 2px solid var(--color-base);
+	padding: var(--spacing-unit);
+	width: 100%;
+
+	&:focus {
+		box-shadow: 0 0 4px rgba(var(--color-base-rgb), 0.75);
+		/* Use transparent outline for Windows high contrast mode. */
+		outline: 2px solid transparent;
+	}
+}
+
+label {
+	display: block;
+	font-weight: 700;
+}

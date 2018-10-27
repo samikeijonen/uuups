@@ -1,0 +1,24 @@
+.wp-block-latest-posts {
+	&.is-grid {
+		list-style-type: none;
+		padding-left: 0;
+
+		li {
+			margin-bottom: var(--spacing-unit-3x);
+		}
+
+		@supports (grid-area: auto) {
+			display: grid;
+			grid-gap: var(--spacing-unit-3x);
+			grid-template-columns: repeat(auto-fill, minmax(calc(var(--spacing-unit) * 34), 1fr));
+
+			li {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	&__post-date {
+		display: block;
+	}
+}

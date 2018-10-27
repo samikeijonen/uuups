@@ -1,0 +1,3 @@
+p.wp-block-subhead {
+	@mixin subheading;
+}

@@ -1,0 +1,11 @@
+.has-drop-cap:not(:focus) {
+	&::first-letter {
+		font-size: var(--font-size-h1);
+		float: left;
+		font-style: normal;
+		font-family: serif;
+		font-weight: 600;
+		margin-right: var(--spacing-unit-2x);
+		text-transform: uppercase;
+	}
+}

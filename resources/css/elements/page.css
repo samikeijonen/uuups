@@ -1,0 +1,17 @@
+html {
+	font-size: 100%;
+}
+
+body,
+button,
+input,
+optgroup,
+select,
+textarea {
+	@mixin typography;
+}
+
+/* Fallback for when there is no custom background color defined. */
+body {
+	background: var(--color-white);
+}

@@ -9,6 +9,7 @@
 	},
 	"rules": {
 		"space-in-parens": 0,
-		"wrap-iife": 0
+		"wrap-iife": 0,
+		"lines-around-comment": 0
 	}
 }

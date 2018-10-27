@@ -39,6 +39,5 @@ array_map(
 		'functions-svg',
 		'functions-setup',
 		'functions-template',
-		'functions-video',
 	]
 );

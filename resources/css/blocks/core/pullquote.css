@@ -1,0 +1,33 @@
+.wp-block-pullquote {
+	border-bottom: var(--spacing-unit-small) solid;
+	border-top: var(--spacing-unit-small) solid;
+	padding: var(--spacing-unit-4x) 0;
+	text-align: center;
+
+	blockquote {
+		border-left: 0;
+		margin-bottom: 0;
+		padding-left: 0;
+	}
+
+	&.alignwide,
+	&.alignfull {
+		blockquote {
+			margin-left: auto;
+			margin-right: auto;
+			max-width: var(--max-width-2);
+			padding-bottom: calc(var(--spacing-unit-3x) * 2);
+			padding-top: calc(var(--spacing-unit-3x) * 2);
+		}
+	}
+
+	&.alignfull {
+		padding-left: var(--spacing-unit-2x);
+		padding-right: var(--spacing-unit-2x);
+
+		p {
+			font-size: var(--font-size-h2);
+		}
+	}
+
+}

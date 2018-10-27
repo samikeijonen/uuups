@@ -54,7 +54,7 @@ function site_description() {
 
 	if ( $description || is_customize_preview() ) :
 		?>
-			<p class="app-header__description color-grey-60 font-size-88 mb-0"><?php echo $description; // phpcs:ignore WordPress.XSS.EscapeOutput ?></p>
+			<p class="app-header__description color-grey-60 font-size-1 mb-0"><?php echo $description; // phpcs:ignore WordPress.XSS.EscapeOutput ?></p>
 		<?php
 	endif;
 }
@@ -84,11 +84,16 @@ function post_thumbnail() {
 
 		<a class="post-thumbnail block mb-2" href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
 			<?php
-			the_post_thumbnail( 'post-thumbnail', [
-				'alt' => the_title_attribute( [
-					'echo' => false,
-				] ),
-			] );
+			the_post_thumbnail(
+				'post-thumbnail',
+				[
+					'alt' => the_title_attribute(
+						[
+							'echo' => false,
+						]
+					),
+				]
+			);
 			?>
 		</a>
 

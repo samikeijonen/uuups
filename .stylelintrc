@@ -1,11 +1,13 @@
 {
-	"extends": "stylelint-config-wordpress/scss",
+	"extends": "stylelint-config-wordpress",
 	"plugins": ["stylelint-a11y"],
 	"rules": {
 		"at-rule-empty-line-before": null,
 		"at-rule-no-unknown": null,
-		"rule-empty-line-before": null,
+		"comment-empty-line-before": null,
 		"declaration-no-important": true,
+		"function-url-quotes": 'always',
+		"rule-empty-line-before": null,
 		"a11y/no-outline-none": true,
 		"a11y/selector-pseudo-class-focus": true,
 		"a11y/font-size-is-readable": [true, { "severity": "warning" }],
