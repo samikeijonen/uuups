@@ -62,7 +62,7 @@
 @import "blocks/core/audio.css";
 @import "blocks/core/button.css";
 @import "blocks/core/columns.css";
-@import "blocks/core/cover-image.css";
+@import "blocks/core/cover.css";
 @import "blocks/core/embeds.css";
 @import "blocks/core/file.css";
 @import "blocks/core/gallery.css";
@@ -73,6 +73,7 @@
 @import "blocks/core/quote.css";
 @import "blocks/core/separator.css";
 @import "blocks/core/subhead.css";
+@import "blocks/core/table.css";
 @import "blocks/blocks.css";
 @import "blocks/color-palette.css";
 
