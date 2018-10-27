@@ -1,4 +1,4 @@
-.wp-block-cover-image {
+.wp-block-cover {
 	align-items: center;
 	background-size: cover;
 	display: flex;
@@ -9,10 +9,15 @@
 
 	&-text {
 		font-size: var(--font-size-h1);
+		font-weight: 700;
 		color: var(--color-white);
 		z-index: 1;
 		padding: var(--spacing-unit-3x);
 		text-align: center;
+
+		a {
+			color: var(--color-white);
+		}
 	}
 
 	&.has-left-content {
@@ -48,40 +53,64 @@
 		right: 0;
 	}
 
-	&.has-main-background-color.has-background-dim-10::before {
+	&.has-background-dim-10::before {
 		opacity: 0.1;
 	}
 
-	&.has-main-background-color.has-background-dim-20::before {
+	&.has-background-dim-20::before {
 		opacity: 0.2;
 	}
 
-	&.has-main-background-color.has-background-dim-30::before {
+	&.has-background-dim-30::before {
 		opacity: 0.3;
 	}
 
-	&.has-main-background-color.has-background-dim-40::before {
+	&.has-background-dim-40::before {
 		opacity: 0.4;
 	}
 
-	&.has-main-background-color.has-background-dim-60::before {
+	&.has-background-dim-60::before {
 		opacity: 0.6;
 	}
 
-	&.has-main-background-color.has-background-dim-70::before {
+	&.has-background-dim-70::before {
 		opacity: 0.7;
 	}
 
-	&.has-main-background-color.has-background-dim-80::before {
+	&.has-background-dim-80::before {
 		opacity: 0.8;
 	}
 
-	&.has-main-background-color.has-background-dim-90::before {
+	&.has-background-dim-90::before {
 		opacity: 0.9;
+	}
+
+	&.has-background-dim-100::before {
+		opacity: 1;
 	}
 
 	&.components-placeholder {
 		height: inherit;
+	}
+
+	&__video-background {
+		height: 100%;
+		left: 50%;
+		object-fit: fill;
+		position: absolute;
+		top: 50%;
+		transform: translateX(-50%) translateY(-50%);
+		z-index: 1;
+		width: 100%;
+	}
+
+	&.alignwide,
+	&.alignfull {
+		.wp-block-cover-text {
+			margin-left: auto;
+			margin-right: auto;
+			max-width: var(--max-width-2);
+		}
 	}
 
 }
