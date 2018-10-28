@@ -47,3 +47,4 @@ script:
   - if [[ "$SNIFF" == "1" ]]; then vendor/bin/phpcs . --runtime-set ignore_warnings_on_exit 1; fi
   - if [[ "$SNIFF" == "1" ]]; then npm run lint:styles; fi
   - if [[ "$SNIFF" == "1" ]]; then npm run lint:scripts; fi
+  - if [[ "$SNIFF" == "1" ]]; then npm run build; fi
