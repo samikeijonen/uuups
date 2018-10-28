@@ -1,7 +1,8 @@
 .wp-block-separator {
+	@mixin hr-styles;
+
 	&.is-style-wide {
-		max-width: var(--max-width-2);
-		width: var(--max-width-2);
+		max-width: none;
 	}
 
 	&.is-style-dots {
