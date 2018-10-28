@@ -1,5 +1,4 @@
-.is-type-video .wp-block-embed__wrapper,
-.is-video .wp-block-embed__wrapper {
+.is-type-video .wp-block-embed__wrapper {
 	height: 0;
 	overflow: hidden;
 	padding-top: 56.25%;
