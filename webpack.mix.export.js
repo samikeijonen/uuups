@@ -54,7 +54,7 @@ files.forEach( file => {
 
 // Loop through the folders and copy them over.
 folders.forEach( folder => {
-	if ( fs.existsSync( file ) ) {
+	if ( fs.existsSync( folder ) ) {
 		mix.copyDirectory( folder, `${exportPath}/${folder}` );
 	}
 } );
