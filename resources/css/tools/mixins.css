@@ -70,3 +70,12 @@
 	font-style: normal;
 	text-align: center;
 }
+
+@define-mixin hr-styles {
+	background-color: var(--color-light);
+	border: 0;
+	height: var(--spacing-unit-small);
+	margin-bottom: calc(var(--spacing-unit) * 8);
+	margin-top: calc(var(--spacing-unit) * 8);
+	max-width: calc(var(--spacing-unit-2x) * 13);
+}
