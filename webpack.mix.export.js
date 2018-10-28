@@ -11,6 +11,7 @@
 // Import required packages.
 const { mix } = require( 'laravel-mix' );
 const rimraf  = require( 'rimraf' );
+const fs      = require( 'fs' );
 
 // Get theme name from package.json file.
 const packageJson = require('./package.json');
@@ -46,12 +47,16 @@ rimraf.sync( exportPath );
 
 // Loop through the root files and copy them over.
 files.forEach( file => {
-	mix.copy( file, `${exportPath}/${file}` );
+	if ( fs.existsSync( file ) ) {
+		mix.copy( file, `${exportPath}/${file}` );
+	}
 } );
 
 // Loop through the folders and copy them over.
 folders.forEach( folder => {
-	mix.copyDirectory( folder, `${exportPath}/${folder}` );
+	if ( fs.existsSync( file ) ) {
+		mix.copyDirectory( folder, `${exportPath}/${folder}` );
+	}
 } );
 
 // Delete the `vendor/bin` and `vendor/composer/installers` folder, which can
