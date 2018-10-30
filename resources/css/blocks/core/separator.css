@@ -2,7 +2,7 @@
 	@mixin hr-styles;
 
 	&.is-style-wide {
-		max-width: none;
+		max-width: var(--max-width-2);
 	}
 
 	&.is-style-dots {
