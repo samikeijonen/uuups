@@ -48,29 +48,29 @@
 	"devDependencies": {
 		"browser-sync": "^2.26.3",
 		"browser-sync-webpack-plugin": "^2.2.2",
-		"copy-webpack-plugin": "^4.5.3",
+		"copy-webpack-plugin": "^4.6.0",
 		"cross-env": "^5.2.0",
-		"eslint": "^5.7.0",
+		"eslint": "^5.9.0",
 		"eslint-config-wordpress": "^2.0.0",
-		"husky": "^1.1.2",
-		"imagemin-mozjpeg": "^7.0.0",
+		"husky": "^1.1.4",
+		"imagemin-mozjpeg": "^8.0.0",
 		"imagemin-webpack-plugin": "^2.3.0",
 		"laravel-mix": "^2.1.14",
-		"lint-staged": "^7.3.0",
+		"lint-staged": "^8.0.4",
 		"node-wp-i18n": "^1.2.1",
-		"pa11y": "^5.0.4",
-		"postcss-import": "^12.0.0",
+		"pa11y": "^5.1.0",
+		"postcss-import": "^12.0.1",
 		"postcss-mixins": "^6.2.0",
 		"postcss-nested": "^4.1.0",
 		"postcss-prefix-selector": "^1.6.0",
 		"postcss-preset-env": "^5.3.0",
 		"rimraf": "^2.6.2",
-		"stylelint": "^9.6.0",
-		"stylelint-a11y": "^1.1.8",
+		"stylelint": "^9.8.0",
+		"stylelint-a11y": "^1.1.9",
 		"stylelint-config-wordpress": "^13.1.0",
 		"theme-claim": "^0.1.11"
 	},
 	"dependencies": {
-		"normalize.css": "^8.0.0"
+		"normalize.css": "^8.0.1"
 	}
 }
