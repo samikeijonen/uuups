@@ -17,7 +17,6 @@ module.exports = ({ file, options, env }) => ({
 					':root',
 					'.editor-styles-wrapper'
 				]
-			} : false,
-		autoprefixer: 'production' === env
+			} : false
 	}
 });
