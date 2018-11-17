@@ -67,7 +67,7 @@
 --------------------------------------------------------------*/
 
 /* Acts like a body of the editor. */
-.edit-post-visual-editor .editor-block-list__block {
+.editor-styles-wrapper {
 	@mixin typography;
 }
 
@@ -79,7 +79,8 @@
 	text-align: center;
 }
 
-p {
+/* Paragraph needs more specifity. */
+.wp-block p {
 	font-size: var(--font-size-global);
 }
 
@@ -88,23 +89,21 @@ p {
 }
 
 /* Main column width. */
-:root body.gutenberg-editor-page .editor-post-title__block,
-:root body.gutenberg-editor-page .editor-default-block-appender,
-:root body.gutenberg-editor-page .editor-block-list__block {
+.wp-block {
 	max-width: calc(var(--max-width-2) + 2rem);
 }
 
 /* Width of "wide" blocks. */
-:root body.gutenberg-editor-page .editor-block-list__block[data-align="wide"] {
+.wp-block[data-align="wide"] {
 	max-width: var(--max-width-wide);
 }
 
 /* Width of "full-wide" blocks. */
-:root body.gutenberg-editor-page .editor-block-list__block[data-align="full"] {
+.wp-block[data-align="full"] {
 	max-width: none;
 }
 
 /* For now we need this for overwriting Core line-height. */
-.editor-rich-text__tinymce.mce-content-body:not(.wp-block-cover-image-text):not(.wp-block-subhead):not(h2):not(h3) {
+.mce-content-body:not(.wp-block-cover-image-text):not(.wp-block-subhead):not(h2):not(h3) {
 	line-height: var(--line-height-global);
 }
