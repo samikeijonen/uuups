@@ -18,7 +18,6 @@ module.exports = ({ file, options, env }) => ({
 					'.editor-styles-wrapper'
 				]
 			} : false,
-		autoprefixer: 'production' === env,
-		cssnano: 'production' === env
+		autoprefixer: 'production' === env
 	}
 });
