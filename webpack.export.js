@@ -52,7 +52,7 @@ files.forEach( file => {
 				return console.error( err );
 			}
 
-			console.log( 'Copied files successfully.' );
+			console.log( `File ${file} copied successfully.` );
 		} );
 	}
 } );
@@ -65,7 +65,7 @@ folders.forEach( folder => {
 				return console.error( err );
 			}
 
-			console.log( 'Copied folders successfully.' );
+			console.log( `Folder ${folder} copied successfully.` );
 		} );
 	}
 } );
