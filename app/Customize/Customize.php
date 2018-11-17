@@ -179,13 +179,6 @@ class Customize implements Bootable {
 			null,
 			true
 		);
-
-		wp_enqueue_style(
-			'uuups-customize-controls',
-			asset( 'css/customize-controls.css' ),
-			[],
-			null
-		);
 	}
 
 	/**
