@@ -174,7 +174,7 @@ class Customize implements Bootable {
 
 		wp_enqueue_script(
 			'uuups-customize-controls',
-			asset( 'js/customize-controls.js' ),
+			asset( 'js/customizeControls.js' ),
 			[ 'customize-controls' ],
 			null,
 			true
@@ -199,7 +199,7 @@ class Customize implements Bootable {
 
 		wp_enqueue_script(
 			'uuups-customize-preview',
-			asset( 'js/customize-preview.js' ),
+			asset( 'js/customizePreview.js' ),
 			[ 'customize-preview' ],
 			null,
 			true

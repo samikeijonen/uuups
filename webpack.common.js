@@ -13,6 +13,8 @@ const isProduction = 'production' === process.env.NODE_ENV;
 module.exports = {
 	entry: {
 		app: './resources/js/app.js',
+		customizeControls: './resources/js/customize-controls.js',
+		customizePreview: './resources/js/customize-preview.js',
 		style: './resources/css/style.css',
 		editor: './resources/css/editor.css'
 	},

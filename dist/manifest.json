@@ -1,5 +1,7 @@
 {
-  "js/app.js": "js/app.js?id=c4bd7f9c056509b722daf74245a63757",
-  "css/editor.css": "css/editor.css?id=01872d7384395d82509d7025424ca322",
-  "css/style.css": "css/style.css?id=34ae88c02c201435df1ec692a77c0807"
+  "js/app.js": "js/app.js?id=f844b3c7649668c95672b9169ca94e5e",
+  "js/customizeControls.js": "js/customizeControls.js?id=eb92f3c43260632229f210aabeaf8f91",
+  "js/customizePreview.js": "js/customizePreview.js?id=9860f94b696c145125df335b0ca3b43c",
+  "css/editor.css": "css/editor.css?id=73d0f323c5421b0e56703181a5991031",
+  "css/style.css": "css/style.css?id=39d2afd52a01838828ebf42caa7380b4"
 }
