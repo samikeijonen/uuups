@@ -61,7 +61,6 @@
 		"eslint-config-wordpress": "^2.0.0",
 		"friendly-errors-webpack-plugin": "^1.7.0",
 		"fs-extra": "^7.0.1",
-		"hard-source-webpack-plugin": "^0.12.0",
 		"husky": "^1.1.4",
 		"imagemin-mozjpeg": "^8.0.0",
 		"imagemin-webpack-plugin": "^2.3.0",

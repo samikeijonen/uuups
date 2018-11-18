@@ -159,4 +159,4 @@ const navigation = () => {
 	menuLinksFocused();
 };
 
-export { navigation };
+export default navigation;

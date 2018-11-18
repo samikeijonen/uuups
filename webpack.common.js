@@ -3,7 +3,6 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const FixStyleOnlyEntriesPlugin = require('webpack-fix-style-only-entries');
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
-const HardSourceWebpackPlugin = require('hard-source-webpack-plugin');
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const imageminMozjpeg = require('imagemin-mozjpeg');
 const ManifestPlugin = require('webpack-manifest-plugin');
@@ -162,13 +161,6 @@ module.exports = {
 				]
 			},
 			plugins: [ imageminMozjpeg({ quality: 75 }) ]
-		}),
-
-		// Cache for improved concurrent builds.
-		new HardSourceWebpackPlugin({
-			info: {
-				level: 'warn'
-			}
 		})
 	]
 };
