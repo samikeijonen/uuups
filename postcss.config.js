@@ -15,7 +15,15 @@ module.exports = ({ file, options, env }) => ({
 				prefix: '.editor-styles-wrapper',
 				exclude: [
 					':root',
-					'.editor-styles-wrapper'
+					'.edit-post-visual-editor.editor-styles-wrapper'
+				]
+			} : false,
+		// Minify style on production using cssano.
+		'cssnano': 'production' === env ?
+			{
+				'preset': [
+					'default',
+					{ 'discardComments': { 'removeAll': true } }
 				]
 			} : false
 	}
