@@ -67,8 +67,11 @@
 # Editor related styles which overwrites above styles.
 --------------------------------------------------------------*/
 
-/* Acts like a body of the editor. */
-.editor-styles-wrapper {
+/**
+ * Acts like a body of the editor.
+ * Give more specifity to overwrite Core style.
+ */
+.edit-post-visual-editor.editor-styles-wrapper {
 	@mixin typography;
 }
 
@@ -81,12 +84,8 @@
 }
 
 /* Paragraph needs more specifity. */
-.wp-block p {
+.wp-block p.wp-block-paragraph {
 	font-size: var(--font-size-global);
-}
-
-.wp-block-latest-posts.is-grid {
-	margin-left: 0;
 }
 
 /* Main column width. */
@@ -105,6 +104,6 @@
 }
 
 /* For now we need this for overwriting Core line-height. */
-.mce-content-body:not(.wp-block-cover-image-text):not(.wp-block-subhead):not(h2):not(h3) {
+.mce-content-body:not(.wp-block-cover-text):not(.wp-block-subhead):not(h2):not(h3) {
 	line-height: var(--line-height-global);
 }
