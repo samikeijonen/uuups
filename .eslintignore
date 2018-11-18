@@ -2,4 +2,3 @@ export
 dist/js/*.js
 docs
 .eslintrc.js
-webpack.mix.js
