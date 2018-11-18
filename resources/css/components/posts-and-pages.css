@@ -6,10 +6,6 @@
 	display: none;
 }
 
-.entry {
-	margin-bottom: var(--spacing-unit-2x) * 8;
-}
-
 .entry__header,
 .entry__summary,
 .entry__footer,
