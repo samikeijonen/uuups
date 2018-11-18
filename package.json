@@ -48,6 +48,7 @@
 	"devDependencies": {
 		"@babel/core": "^7.1.6",
 		"@babel/preset-env": "^7.1.6",
+		"@wordpress/browserslist-config": "^2.2.2",
 		"babel-loader": "^8.0.4",
 		"browser-sync": "^2.26.3",
 		"browser-sync-webpack-plugin": "^2.2.2",
@@ -89,5 +90,8 @@
 	},
 	"dependencies": {
 		"normalize.css": "^8.0.1"
-	}
+	},
+	"browserslist": [
+		"extends @wordpress/browserslist-config"
+	]
 }
