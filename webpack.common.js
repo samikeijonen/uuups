@@ -71,10 +71,7 @@ module.exports = {
 					{
 						loader: 'postcss-loader',
 						options: {
-							sourceMap: ! isProduction,
-							config: {
-								path: 'postcss.config.js'
-							}
+							sourceMap: ! isProduction
 						}
 					}
 				]
