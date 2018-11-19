@@ -103,7 +103,9 @@
 	max-width: none;
 }
 
-/* For now we need this for overwriting Core line-height. */
-.mce-content-body:not(.wp-block-cover-text):not(.wp-block-subhead):not(h2):not(h3) {
+/* For now we need this for overwriting Core line-height.
+ * Note that headings line-height is overwritten in elements/headings.css.
+ */
+.editor-rich-text__tinymce:not(.wp-block-cover-text):not(.wp-block-subhead):not(h2):not(h3) {
 	line-height: var(--line-height-global);
 }
