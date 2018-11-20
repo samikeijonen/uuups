@@ -2,6 +2,9 @@ const merge = require('webpack-merge');
 const common = require('./webpack.common.js');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 
+// Config files.
+const settings = require('./webpack.settings.js');
+
 module.exports = merge(common, {
 	mode: 'development',
 	devtool: 'inline-cheap-module-source-map',
@@ -9,20 +12,11 @@ module.exports = merge(common, {
 		// Run BrowserSync.
 		new BrowserSyncPlugin(
 			{
-				host: 'localhost',
-				port: 3000,
-				proxy: 'foxland-products.test',
-				open: false,
-				files: [
-					'*.php',
-					'app/**/*.php',
-					'resources/views/**/*.php',
-					'dist/js/**/*.js',
-					'dist/css/**/*.css',
-					'dist/svg/**/*.svg',
-					'dist/img/**/*.{jpg,jpeg,png,gif}',
-					'dist/fonts/**/*.{eot,ttf,woff,woff2,svg}'
-				]
+				host: settings.BrowserSyncConfig.host,
+				port: settings.BrowserSyncConfig.port,
+				proxy: settings.BrowserSyncConfig.proxy,
+				open: settings.BrowserSyncConfig.open,
+				files: settings.BrowserSyncConfig.files
 			},
 			{
 				injectCss: true,
