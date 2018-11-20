@@ -3,7 +3,7 @@
 // Webpack settings exports.
 module.exports = {
 	entries: {
-        'app': './resources/js/app.js',
+		'app': './resources/js/app.js',
 		'customizeControls': './resources/js/customize-controls.js',
 		'customizePreview': './resources/js/customize-preview.js',
 		'style': './resources/css/style.css',
