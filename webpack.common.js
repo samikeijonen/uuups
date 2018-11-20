@@ -9,17 +9,24 @@ const ManifestPlugin = require('webpack-manifest-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const isProduction = 'production' === process.env.NODE_ENV;
 
+// Config files.
+const settings = require('./webpack.settings.js');
+
+// Configure entries.
+const configureEntries = () => {
+	let entries = {};
+	for ( const [ key, value ] of Object.entries( settings.entries ) ) {
+		entries[key] = path.resolve(__dirname, value);
+	}
+
+	return entries;
+};
+
 module.exports = {
-	entry: {
-		app: './resources/js/app.js',
-		customizeControls: './resources/js/customize-controls.js',
-		customizePreview: './resources/js/customize-preview.js',
-		style: './resources/css/style.css',
-		editor: './resources/css/editor.css'
-	},
+	entry: configureEntries(),
 	output: {
-		path: path.resolve(__dirname, 'dist'),
-		filename: 'js/[name].js'
+		path: path.resolve(__dirname, settings.paths.dist.base),
+		filename: settings.filename.js
 	},
 
 	// Console stats output.
@@ -59,7 +66,7 @@ module.exports = {
 			// Styles.
 			{
 				test: /\.css$/,
-				include: path.resolve(__dirname, 'resources/css'),
+				include: path.resolve(__dirname, settings.paths.src.css),
 				use: [
 					MiniCssExtractPlugin.loader,
 					{
@@ -91,7 +98,7 @@ module.exports = {
 		}),
 
 		// Clean the `dist` folder on build.
-		new CleanWebpackPlugin(path.resolve(__dirname, 'dist'), {
+		new CleanWebpackPlugin(path.resolve(__dirname, settings.paths.dist.base), {
 			verbose: false
 		}),
 
@@ -110,16 +117,16 @@ module.exports = {
 
 		// Extract CSS into individual files.
 		new MiniCssExtractPlugin({
-			filename: 'css/[name].css',
+			filename: settings.filename.css,
 			chunkFilename: '[id].css'
 		}),
 
 		// Copy static assets to the `dist` folder.
 		new CopyWebpackPlugin([
 			{
-				from: '**/*.{jpg,jpeg,png,gif,svg,eot,ttf,woff,woff2}',
-				to: '[path][name].[ext]',
-				context: path.resolve(__dirname, './resources')
+				from: settings.copyWebpackConfig.from,
+				to: settings.copyWebpackConfig.to,
+				context: path.resolve(__dirname, settings.paths.src.base)
 			}
 		]),
 
