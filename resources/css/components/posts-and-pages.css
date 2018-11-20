@@ -14,6 +14,10 @@
 	max-width: var(--max-width-2);
 }
 
+.entry__content > h2 {
+	margin-top: calc(var(--spacing-unit-4x) * 2);
+}
+
 .entry__byline {
 	font-size: var(--font-size-1);
 }
