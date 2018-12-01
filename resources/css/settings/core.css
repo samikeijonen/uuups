@@ -41,6 +41,7 @@
 	--max-width-1: 78rem;
 	--max-width-2: 44rem;
 	--max-width-wide: 65rem;
+	--max-width-full: 125rem;
 
 	/* Transition. */
 	--transition-duration-1: 300ms;

@@ -6,6 +6,14 @@
 	max-width: var(--max-width-2);
 }
 
+.max-width-wide {
+	max-width: var(--max-width-wide);
+}
+
+.max-width-full {
+	max-width: var(--max-width-full);
+}
+
 .entry__content > * {
 	@mixin center;
 	max-width: var(--max-width-2);
