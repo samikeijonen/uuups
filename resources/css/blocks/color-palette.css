@@ -1,3 +1,14 @@
+/* Fallback for backgrounds. */
+.has-background {
+	background-color: var(--color-light);
+}
+
+.has-background:not(.wp-block-button__link),
+[class$="background-color"]:not(.wp-block-button__link) {
+	padding: var(--spacing-unit-3x);
+}
+
+/* Colors and background colors. */
 .has-main-color {
 	color: var(--color-base);
 }
