@@ -72,7 +72,7 @@ add_action(
 				[
 					'name'  => esc_html__( 'Light', 'uuups' ),
 					'slug'  => 'light',
-					'color' => '#ecebff',
+					'color' => '#f6f3ff',
 				],
 				[
 					'name'  => esc_html__( 'Grey', 'uuups' ),
