@@ -10,12 +10,18 @@ module.exports = ({ file, options, env }) => ({
 		'postcss-mixins': {},
 		'postcss-nested': {},
 		// Prefix editor styles with class `editor-styles-wrapper`.
-		'postcss-prefix-selector': 'editor.css' === file.basename ?
+		'postcss-editor-styles': 'editor.css' === file.basename ?
 			{
-				prefix: '.editor-styles-wrapper',
-				exclude: [
+				scopeTo: '.editor-styles-wrapper',
+				ignore: [
 					':root',
 					'.edit-post-visual-editor.editor-styles-wrapper'
+				],
+				remove: [
+					'html',
+					':disabled',
+					'[readonly]',
+					'[disabled]'
 				]
 			} : false,
 		// Minify style on production using cssano.
