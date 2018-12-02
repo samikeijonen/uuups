@@ -50,34 +50,40 @@ add_action(
 		// Add selective refresh for widgets.
 		add_theme_support( 'customize-selective-refresh-widgets' );
 
-		// Add support for editor color palette.
+		/**
+		 * Add support for editor color palette.
+		 *
+		 * Outputted class name are .has-{slug}-background-color and .has-{slug}-color.
+		 *
+		 * For example .has-main-background-color and .has-main-color.
+		 */
 		add_theme_support(
 			'editor-color-palette',
 			[
 				[
 					'name'  => esc_html__( 'Main', 'uuups' ),
 					'slug'  => 'main',
-					'color' => '#2516c7',
+					'color' => 'hsl(245, 80%, 43%)',
 				],
 				[
 					'name'  => esc_html__( 'Dark', 'uuups' ),
 					'slug'  => 'dark',
-					'color' => '#06031f',
+					'color' => 'hsl(245, 82%, 7%)',
 				],
 				[
 					'name'  => esc_html__( 'White', 'uuups' ),
 					'slug'  => 'white',
-					'color' => '#fff',
+					'color' => 'hsl(0, 0%, 100%)',
 				],
 				[
 					'name'  => esc_html__( 'Light', 'uuups' ),
 					'slug'  => 'light',
-					'color' => '#f6f3ff',
+					'color' => 'hsl(245, 20%, 97%)',
 				],
 				[
 					'name'  => esc_html__( 'Grey', 'uuups' ),
 					'slug'  => 'grey',
-					'color' => '#666',
+					'color' => 'hsla(0, 0%, 0%, 0.6)',
 				],
 			]
 		);
