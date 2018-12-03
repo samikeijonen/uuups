@@ -88,7 +88,13 @@ add_action(
 			]
 		);
 
-		// Add support for editor font sizes.
+		/**
+		 * Add support for editor font sizes.
+		 *
+		 * Outputted class name is .has-{slug}-font-size.
+		 *
+		 * For example .has-small-font-size.
+		 */
 		add_theme_support(
 			'editor-font-sizes',
 			[
