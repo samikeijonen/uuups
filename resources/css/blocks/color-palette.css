@@ -1,5 +1,6 @@
 /* Fallback for backgrounds. */
-.has-background {
+.has-background,
+[class$="background-color"] {
 	background-color: var(--color-light);
 }
 
