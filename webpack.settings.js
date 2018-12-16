@@ -36,6 +36,7 @@ module.exports = {
 		publicPath: '/dist/'
 	},
 	vars: {
+		colors: './config/colors.json',
         cssName: 'styles'
 	},
 	copyWebpackConfig: {

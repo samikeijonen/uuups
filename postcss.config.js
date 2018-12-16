@@ -1,3 +1,6 @@
+// Config files.
+const settings = require('./webpack.settings.js');
+
 /**
  * Exports the PostCSS configuration.
  */
@@ -9,6 +12,12 @@ module.exports = ({ file, options, env }) => ({
 		},
 		'postcss-mixins': {},
 		'postcss-nested': {},
+		'postcss-custom-properties': {
+			preserve: false,
+			importFrom: [
+				settings.vars.colors
+			]
+		},
 		// Prefix editor styles with class `editor-styles-wrapper`.
 		'postcss-editor-styles': 'editor.css' === file.basename ?
 			{

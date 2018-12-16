@@ -1,14 +1,3 @@
 :root {
-	--base-hue: 245;
-	--color-base-hsl: var(--base-hue), 80%, 43%;
-	--color-base: hsl(var(--color-base-hsl));
-	--color-dark: hsl(var(--base-hue), 82%, 7%);
-	--color-light: hsl(var(--base-hue), 20%, 97%);
-
-	--color-base-shadow: hsla(var(--color-base-hsl), 0.75);
-	--color-grey-60: hsla(0, 0%, 0%, 0.6);
-	--color-grey-10: hsla(0, 0%, 0%, 0.1);
-
-	--color-white: hsl(0, 0%, 100%);
-	--color-black: hsl(0, 0%, 0%);
+	/* How to get variables in here. */
 }
