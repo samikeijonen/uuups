@@ -15,8 +15,8 @@
 		"i18n:textdomain": "npx wpi18n addtextdomain --exclude=vendor,node_modules",
 		"i18n:pot": "npx wpi18n makepot",
 		"lint": "npm run lint:styles && npm run lint:scripts && npm run lint:php",
-		"lint:styles": "cross-env stylelint './resources/css/**/*.css'",
-		"lint:scripts": "cross-env eslint './resources/js/**/*.js'",
+		"lint:css": "cross-env stylelint './resources/css/**/*.css'",
+		"lint:js": "cross-env eslint './resources/js/**/*.js'",
 		"lint:php": "cross-env ./vendor/bin/phpcs .",
 		"prod": "cross-env NODE_ENV=production webpack --config webpack.prod.js",
 		"rename": "theme-claim",
@@ -36,10 +36,10 @@
 	},
 	"lint-staged": {
 		"./resources/js/**/*.js": [
-			"npm run lint:scripts"
+			"npm run lint:js"
 		],
 		"./resources/css/**/*.css": [
-			"npm run lint:styles"
+			"npm run lint:css"
 		],
 		"./**/*.php": [
 			"./vendor/bin/phpcs --warning-severity=8"
@@ -49,6 +49,7 @@
 		"@babel/core": "^7.1.6",
 		"@babel/preset-env": "^7.1.6",
 		"@wordpress/browserslist-config": "^2.2.2",
+		"@wordpress/eslint-plugin": "^1.0.0",
 		"babel-loader": "^8.0.4",
 		"browser-sync": "^2.26.3",
 		"browser-sync-webpack-plugin": "^2.2.2",
@@ -59,7 +60,6 @@
 		"css-loader": "^1.0.1",
 		"cssnano": "^4.1.7",
 		"eslint": "^5.9.0",
-		"eslint-config-wordpress": "^2.0.0",
 		"friendly-errors-webpack-plugin": "^1.7.0",
 		"fs-extra": "^7.0.1",
 		"husky": "^1.2.0",

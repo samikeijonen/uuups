@@ -14,19 +14,19 @@ const navigation = () => {
 	}
 
 	// Variables.
-	const button  = container.getElementsByTagName( 'button' )[0];
-	const menu    = container.getElementsByTagName( 'ul' )[0];
-	const links   = menu.getElementsByTagName( 'a' );
+	const button = container.getElementsByTagName( 'button' )[ 0 ];
+	const menu = container.getElementsByTagName( 'ul' )[ 0 ];
+	const links = menu.getElementsByTagName( 'a' );
 	let timeout;
 
 	/**
 	 * Is menu open.
 	 *
-	 * @returns {boolean} True or false.
+	 * @return {boolean} True or false.
 	 */
 	function isMenuOpen() {
-		let isMenuOpen = ( 'false' === button.getAttribute( 'aria-expanded' ) ) ? false : true;
-		return isMenuOpen;
+		const isMenuOpenCheck = ( 'false' === button.getAttribute( 'aria-expanded' ) ) ? false : true;
+		return isMenuOpenCheck;
 	}
 
 	/**
@@ -36,7 +36,7 @@ const navigation = () => {
 		container.classList.toggle( 'is-opened' );
 		menu.classList.toggle( 'is-opened' );
 
-		let expanded = ( 'false' === button.getAttribute( 'aria-expanded' ) ) ? 'true' : 'false';
+		const expanded = ( 'false' === button.getAttribute( 'aria-expanded' ) ) ? 'true' : 'false';
 		button.setAttribute( 'aria-expanded', expanded );
 	}
 
@@ -50,9 +50,9 @@ const navigation = () => {
 		}
 
 		// Set focusable elements inside main navigation.
-		const focusableElements     = container.querySelectorAll( [ 'a[href]', 'area[href]', 'input:not([disabled])', 'select:not([disabled])', 'textarea:not([disabled])', 'button:not([disabled])', 'iframe', 'object', 'embed', '[contenteditable]', '[tabindex]:not([tabindex^="-"])' ] );
-		const firstFocusableElement = focusableElements[0];
-		const lastFocusableElement  = focusableElements[focusableElements.length - 1];
+		const focusableElements = container.querySelectorAll( [ 'a[href]', 'area[href]', 'input:not([disabled])', 'select:not([disabled])', 'textarea:not([disabled])', 'button:not([disabled])', 'iframe', 'object', 'embed', '[contenteditable]', '[tabindex]:not([tabindex^="-"])' ] );
+		const firstFocusableElement = focusableElements[ 0 ];
+		const lastFocusableElement = focusableElements[ focusableElements.length - 1 ];
 
 		// Redirect last Tab to first focusable element.
 		lastFocusableElement.addEventListener( 'keydown', function( e ) {
@@ -121,13 +121,13 @@ const navigation = () => {
 		}
 
 		for ( let i = 0; i < links.length; i++ ) {
-			links[i].addEventListener( 'focus', toggleFocus, true );
-			links[i].addEventListener( 'blur', toggleFocus, true );
+			links[ i ].addEventListener( 'focus', toggleFocus, true );
+			links[ i ].addEventListener( 'blur', toggleFocus, true );
 		}
 	}
 
 	// Toggle menu on button click.
-	button.addEventListener( 'click', function( event ) {
+	button.addEventListener( 'click', function() {
 		toggleMenu();
 
 		setFocus();
@@ -142,10 +142,10 @@ const navigation = () => {
 	}, false );
 
 	// Reset menu when on "desktop".
-	window.addEventListener( 'resize', function( event ) {
+	window.addEventListener( 'resize', function() {
 		// Wait for a while before firing the event again.
 		if ( ! timeout ) {
-			timeout = setTimeout( function() {
+			timeout = setTimeout( function() { /* eslint-disable-line no-undef */
 				// Reset timeout
 				timeout = null;
 
