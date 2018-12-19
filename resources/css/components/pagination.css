@@ -1,7 +1,7 @@
 .pagination__items {
 	@mixin reset-list;
-	border-bottom: 1px solid var(--color-light);
-	border-top: 1px solid var(--color-light);
+	border-bottom: 1px solid var(--color-primary-100);
+	border-top: 1px solid var(--color-primary-100);
 	padding: var(--spacing-unit-4x);
 	display: flex;
 	flex-wrap: wrap;

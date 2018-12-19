@@ -14,7 +14,7 @@
 
 		&::before {
 			content: "\00b7 \00b7 \00b7";
-			color: var(--color-base);
+			color: var(--color-primary);
 			font-family: serif;
 			font-size: calc(var(--global-baseline) * 3);
 			letter-spacing: var(--spacing-unit-4x);

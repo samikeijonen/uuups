@@ -1,11 +1,11 @@
 a {
-	color: var(--color-base);
+	color: var(--color-primary);
 	@mixin global-transition;
 
 	&:hover,
 	&:focus,
 	&:active {
-		color: var(--color-dark);
+		color: var(--color-primary-900);
 	}
 
 	&:focus {

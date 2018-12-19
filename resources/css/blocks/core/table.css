@@ -5,7 +5,7 @@
 
 	&.is-style-stripes {
 		tr:nth-child(even) {
-			background-color: var(--color-light);
+			background-color: var(--color-primary-100);
 		}
 
 		th,

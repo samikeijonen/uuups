@@ -22,6 +22,14 @@ module.exports = ({ file, options, env }) => ({
 					':disabled',
 					'[readonly]',
 					'[disabled]'
+				],
+				tags: [
+					'button',
+					'input',
+					'label',
+					'select',
+					'textarea',
+					'form'
 				]
 			} : false,
 		// Minify style on production using cssano.

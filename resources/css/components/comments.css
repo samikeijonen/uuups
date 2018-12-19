@@ -27,7 +27,7 @@
 	margin-bottom: var(--spacing-unit-4x);
 
 	a {
-		color: var(--color-dark);
+		color: var(--color-primary-900);
 		text-decoration: none;
 
 		&:hover,
