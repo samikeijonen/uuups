@@ -1,3 +1,6 @@
+/* global console */
+/* eslint no-console: ["error", { allow: ["log", "error"] }] */
+
 /**
  * Theme Export Script
  *
@@ -10,73 +13,73 @@
 
 // Import required packages.
 const rimraf = require( 'rimraf' );
-const fs     = require( 'fs-extra' );
+const fs = require( 'fs-extra' );
 
 // Get theme name from package.json file.
-const packageJson = require('./package.json');
-const themeName   = packageJson.name;
+const packageJson = require( './package.json' );
+const themeName = packageJson.name;
 
 // Folder name to export the files in.
-let exportPath = `export/${themeName}`;
+const exportPath = `export/${ themeName }`;
 
 // Theme root-level files to include.
-let files = [
+const files = [
 	'changelog.md',
 	'functions.php',
 	'index.php',
 	'license.md',
 	'readme.md',
 	'screenshot.png',
-	'style.css'
+	'style.css',
 ];
 
 // Folders to include.
-let folders = [
+const folders = [
 	'app',
 	'dist',
-	'resources/css',   // Required for WordPress.org theme review.
+	'resources/css', // Required for WordPress.org theme review.
 	'resources/lang',
-	'resources/js',    // Required for WordPress.org theme review.
+	'resources/js', // Required for WordPress.org theme review.
 	'resources/views',
-	'vendor'
+	'vendor',
 ];
 
 // Delete the previous export to start clean.
 rimraf.sync( exportPath );
 
 // Loop through the root files and copy them over.
-files.forEach( file => {
+files.forEach( ( file ) => {
 	if ( fs.existsSync( file ) ) {
-		fs.copy( file, `${exportPath}/${file}`, err => {
+		fs.copy( file, `${ exportPath }/${ file }`, ( err ) => {
 			if ( err ) {
 				return console.error( err );
 			}
 
-			console.log( `File ${file} copied successfully.` );
+			console.log( `File ${ file } copied successfully.` );
 		} );
 	}
 } );
 
 // Loop through the folders and copy them over.
-folders.forEach( folder => {
+folders.forEach( ( folder ) => {
 	if ( fs.existsSync( folder ) ) {
-		fs.copy( folder, `${exportPath}/${folder}`, err => {
+		fs.copy( folder, `${ exportPath }/${ folder }`, ( err ) => {
 			if ( err ) {
 				return console.error( err );
 			}
 
-			console.log( `Folder ${folder} copied successfully.` );
+			console.log( `Folder ${ folder } copied successfully.` );
 		} );
 	}
 } );
 
 // Delete the `vendor/bin` and `vendor/composer/installers` folder, which can
 // get left over, even in production.
-let foldersRemoved = [
-	`${exportPath}/vendor/bin`,
-	`${exportPath}/vendor/composer/installers`
+const foldersRemoved = [
+	`${ exportPath }/vendor/bin`,
+	`${ exportPath }/vendor/composer/installers`,
 ];
 
-foldersRemoved.forEach( folderRemoved => {
+foldersRemoved.forEach( ( folderRemoved ) => {
 	rimraf.sync( folderRemoved );
 } );

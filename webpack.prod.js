@@ -1,13 +1,15 @@
-const merge = require('webpack-merge');
-const common = require('./webpack.common.js');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+/* global module */
 
-module.exports = merge(common, {
+const merge = require( 'webpack-merge' );
+const common = require( './webpack.common.js' );
+const UglifyJsPlugin = require( 'uglifyjs-webpack-plugin' );
+
+module.exports = merge( common, {
 	mode: 'production',
 
 	optimization: {
 		minimizer: [
-			new UglifyJsPlugin({
+			new UglifyJsPlugin( {
 				cache: true,
 				parallel: true,
 				sourceMap: false,
@@ -16,11 +18,11 @@ module.exports = merge(common, {
 					ecma: 5,
 					output: {
 						comments: false,
-						beautify: false
+						beautify: false,
 					},
-					warnings: false
-				}
-			})
-		]
-	}
-});
+					warnings: false,
+				},
+			} ),
+		],
+	},
+} );
