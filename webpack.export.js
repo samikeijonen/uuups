@@ -9,9 +9,8 @@
  */
 
 // Import required packages.
-const { mix } = require( 'laravel-mix' );
-const rimraf  = require( 'rimraf' );
-const fs      = require( 'fs' );
+const rimraf = require( 'rimraf' );
+const fs     = require( 'fs-extra' );
 
 // Get theme name from package.json file.
 const packageJson = require('./package.json');
@@ -48,28 +47,36 @@ rimraf.sync( exportPath );
 // Loop through the root files and copy them over.
 files.forEach( file => {
 	if ( fs.existsSync( file ) ) {
-		mix.copy( file, `${exportPath}/${file}` );
+		fs.copy( file, `${exportPath}/${file}`, err => {
+			if ( err ) {
+				return console.error( err );
+			}
+
+			console.log( `File ${file} copied successfully.` );
+		} );
 	}
 } );
 
 // Loop through the folders and copy them over.
 folders.forEach( folder => {
 	if ( fs.existsSync( folder ) ) {
-		mix.copyDirectory( folder, `${exportPath}/${folder}` );
+		fs.copy( folder, `${exportPath}/${folder}`, err => {
+			if ( err ) {
+				return console.error( err );
+			}
+
+			console.log( `Folder ${folder} copied successfully.` );
+		} );
 	}
 } );
 
 // Delete the `vendor/bin` and `vendor/composer/installers` folder, which can
 // get left over, even in production.
-mix.then( () => {
+let foldersRemoved = [
+	`${exportPath}/vendor/bin`,
+	`${exportPath}/vendor/composer/installers`
+];
 
-	let folders = [
-		'mix-manifest.json',
-		`${exportPath}/vendor/bin`,
-		`${exportPath}/vendor/composer/installers`
-	];
-
-	folders.forEach( folder => {
-		rimraf.sync( folder );
-	} );
+foldersRemoved.forEach( folderRemoved => {
+	rimraf.sync( folderRemoved );
 } );

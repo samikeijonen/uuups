@@ -121,7 +121,7 @@ Theme mostly follows [WordPress coding standards](https://make.wordpress.org/cor
 
 There is `pre-commit` hook which runs PHP, Style, and JavaScript linting before new commits can be pushed to repo.
 
-For example if there are changes in CSS files, it runs `npm run lint:styles` before the commit.
+For example if there are changes in CSS files, it runs `npm run lint:css` before the commit.
 
 You can use `--no-verify` flag to bypass linting check:
 
@@ -137,7 +137,7 @@ NPM task `npm run lint:php` checks PHP files using [WordPress coding standars](h
 
 ### Style linting
 
-NPM task `npm run lint:styles` checks SASS files using [stylelint](https://github.com/stylelint/stylelint).
+NPM task `npm run lint:css` checks SASS files using [stylelint](https://github.com/stylelint/stylelint).
 
 File `.stylelintrc` is the configuration file for stylelint.
 
@@ -145,7 +145,7 @@ I also recommend installing stylelint extension to your IDE, for example [vscode
 
 ### JavaScript linting
 
-NPM task `npm lint:scripts` checks SASS files using [ESLint](https://eslint.org/).
+NPM task `npm lint:js` checks SASS files using [ESLint](https://eslint.org/).
 
 File `.eslintrc.js` is the configuration file for ESLint. And `.eslintignore` file for what files to ignore from linting.
 

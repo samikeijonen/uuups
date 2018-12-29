@@ -7,20 +7,20 @@
 	"homepage": "https://github.com/samikeijonen/uuups#readme",
 	"main": "resources/js/app.js",
 	"scripts": {
-		"build": "npm run prod && npm run i18n && npm run export",
-		"dev": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-		"export": "composer install --no-dev && cross-env export=1 NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js && composer install",
+		"build": "npm run prod && npm run i18n",
+		"dev": "cross-env NODE_ENV=development webpack --config webpack.dev.js",
+		"export": "composer install --no-dev && cross-env node webpack.export.js && composer install",
 		"hot": "cross-env NODE_ENV=development webpack-dev-server --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
 		"i18n": "npm run i18n:textdomain && npm run i18n:pot",
 		"i18n:textdomain": "npx wpi18n addtextdomain --exclude=vendor,node_modules",
 		"i18n:pot": "npx wpi18n makepot",
-		"lint": "npm run lint:styles && npm run lint:scripts && npm run lint:php",
-		"lint:styles": "cross-env stylelint './resources/css/**/*.css'",
-		"lint:scripts": "cross-env eslint './resources/js/**/*.js'",
+		"lint": "npm run lint:css && npm run lint:js && npm run lint:php",
+		"lint:css": "cross-env stylelint './resources/css/**/*.css'",
+		"lint:js": "cross-env eslint './resources/js/**/*.js'",
 		"lint:php": "cross-env ./vendor/bin/phpcs .",
-		"prod": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+		"prod": "cross-env NODE_ENV=production webpack --config webpack.prod.js",
 		"rename": "theme-claim",
-		"watch": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+		"watch": "cross-env NODE_ENV=development webpack --watch --config webpack.dev.js"
 	},
 	"repository": {
 		"type": "git",
@@ -36,41 +36,61 @@
 	},
 	"lint-staged": {
 		"./resources/js/**/*.js": [
-			"npm run lint:scripts"
+			"npm run lint:js"
 		],
 		"./resources/css/**/*.css": [
-			"npm run lint:styles"
+			"npm run lint:css"
 		],
 		"./**/*.php": [
 			"./vendor/bin/phpcs --warning-severity=8"
 		]
 	},
 	"devDependencies": {
+		"@babel/core": "^7.1.6",
+		"@babel/preset-env": "^7.1.6",
+		"@wordpress/browserslist-config": "^2.2.2",
+		"@wordpress/eslint-plugin": "^1.0.0",
+		"babel-loader": "^8.0.4",
 		"browser-sync": "^2.26.3",
 		"browser-sync-webpack-plugin": "^2.2.2",
-		"copy-webpack-plugin": "^4.5.3",
+		"cache-loader": "^1.2.5",
+		"clean-webpack-plugin": "^1.0.0",
+		"copy-webpack-plugin": "^4.6.0",
 		"cross-env": "^5.2.0",
-		"eslint": "^5.7.0",
-		"eslint-config-wordpress": "^2.0.0",
-		"husky": "^1.1.2",
-		"imagemin-mozjpeg": "^7.0.0",
+		"css-loader": "^1.0.1",
+		"cssnano": "^4.1.7",
+		"eslint": "^5.9.0",
+		"friendly-errors-webpack-plugin": "^1.7.0",
+		"fs-extra": "^7.0.1",
+		"husky": "^1.2.0",
+		"imagemin-mozjpeg": "^8.0.0",
 		"imagemin-webpack-plugin": "^2.3.0",
-		"laravel-mix": "^2.1.14",
-		"lint-staged": "^7.3.0",
+		"lint-staged": "^8.1.0",
+		"mini-css-extract-plugin": "^0.4.5",
 		"node-wp-i18n": "^1.2.1",
-		"pa11y": "^5.0.4",
-		"postcss-import": "^12.0.0",
+		"pa11y": "^5.1.0",
+		"postcss-editor-styles": "^0.1.2",
+		"postcss-import": "^12.0.1",
+		"postcss-loader": "^3.0.0",
 		"postcss-mixins": "^6.2.0",
 		"postcss-nested": "^4.1.0",
-		"postcss-prefix-selector": "^1.6.0",
-		"postcss-preset-env": "^5.3.0",
+		"postcss-preset-env": "^6.4.0",
 		"rimraf": "^2.6.2",
-		"stylelint": "^9.6.0",
-		"stylelint-a11y": "^1.1.8",
+		"stylelint": "^9.9.0",
+		"stylelint-a11y": "^1.1.9",
 		"stylelint-config-wordpress": "^13.1.0",
-		"theme-claim": "^0.1.11"
+		"theme-claim": "^0.1.11",
+		"uglifyjs-webpack-plugin": "^2.0.1",
+		"webpack": "^4.26.1",
+		"webpack-cli": "^3.1.2",
+		"webpack-fix-style-only-entries": "^0.0.5",
+		"webpack-manifest-plugin": "^2.0.4",
+		"webpack-merge": "^4.1.4"
 	},
 	"dependencies": {
-		"normalize.css": "^8.0.0"
-	}
+		"normalize.css": "^8.0.1"
+	},
+	"browserslist": [
+		"extends @wordpress/browserslist-config"
+	]
 }

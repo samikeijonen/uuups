@@ -1,0 +1,7 @@
+{
+  "js/app.js": "js/app.js",
+  "js/customizeControls.js": "js/customizeControls.js",
+  "js/customizePreview.js": "js/customizePreview.js",
+  "css/editor.css": "css/editor.css",
+  "css/style.css": "css/style.css"
+}

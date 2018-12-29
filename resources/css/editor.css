@@ -7,6 +7,7 @@
 /*--------------------------------------------------------------
 # Settings - Global variables, config switches.
 --------------------------------------------------------------*/
+@import "settings/media-queries.css";
 @import "settings/core.css";
 @import "settings/fonts.css";
 @import "settings/colors.css";
@@ -22,6 +23,8 @@
 # Elements - Unclassed HTML elements (type selectors).
 --------------------------------------------------------------*/
 @import "elements/blockquote.css";
+@import "elements/buttons.css";
+@import "elements/forms.css";
 @import "elements/headings.css";
 @import "elements/hr.css";
 @import "elements/links.css";
@@ -38,7 +41,7 @@
 --------------------------------------------------------------*/
 @import "blocks/core/audio.css";
 @import "blocks/core/button.css";
-@import "blocks/core/columns.css";
+/* @import "blocks/core/columns.css"; */
 @import "blocks/core/cover.css";
 @import "blocks/core/embeds.css";
 @import "blocks/core/file.css";
@@ -52,7 +55,7 @@
 @import "blocks/core/separator.css";
 @import "blocks/core/subhead.css";
 @import "blocks/core/table.css";
-@import "blocks/blocks.css";
+@import "blocks/font-sizes.css";
 @import "blocks/color-palette.css";
 
 
@@ -65,9 +68,11 @@
 /*--------------------------------------------------------------
 # Editor related styles which overwrites above styles.
 --------------------------------------------------------------*/
-
-/* Acts like a body of the editor. */
-.edit-post-visual-editor .editor-block-list__block {
+/**
+ * Acts like a body of the editor.
+ * Give more specifity to overwrite Core style.
+ */
+.edit-post-visual-editor.editor-styles-wrapper {
 	@mixin typography;
 }
 
@@ -79,32 +84,29 @@
 	text-align: center;
 }
 
-p {
+/* Paragraph needs more specifity. */
+.wp-block p.wp-block-paragraph {
 	font-size: var(--font-size-global);
 }
 
-.wp-block-latest-posts.is-grid {
-	margin-left: 0;
-}
-
 /* Main column width. */
-:root body.gutenberg-editor-page .editor-post-title__block,
-:root body.gutenberg-editor-page .editor-default-block-appender,
-:root body.gutenberg-editor-page .editor-block-list__block {
+.wp-block {
 	max-width: calc(var(--max-width-2) + 2rem);
 }
 
 /* Width of "wide" blocks. */
-:root body.gutenberg-editor-page .editor-block-list__block[data-align="wide"] {
+.wp-block[data-align="wide"] {
 	max-width: var(--max-width-wide);
 }
 
 /* Width of "full-wide" blocks. */
-:root body.gutenberg-editor-page .editor-block-list__block[data-align="full"] {
+.wp-block[data-align="full"] {
 	max-width: none;
 }
 
-/* For now we need this for overwriting Core line-height. */
-.editor-rich-text__tinymce.mce-content-body:not(.wp-block-cover-image-text):not(.wp-block-subhead):not(h2):not(h3) {
+/* For now we need this for overwriting Core line-height.
+ * Note that headings line-height is overwritten in elements/headings.css.
+ */
+.editor-rich-text__tinymce:not(.wp-block-cover-text):not(.wp-block-subhead):not(h2):not(h3) {
 	line-height: var(--line-height-global);
 }

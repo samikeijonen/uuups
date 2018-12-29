@@ -1,28 +1,3 @@
-# Exclude from release archives.
-# This will also make them unavailable when using Composer with `--prefer-dist`.
-# If you develop for this package using Composer, use `--prefer-source`.
-# https://www.reddit.com/r/PHP/comments/2jzp6k/i_dont_need_your_tests_in_my_production
-# https://blog.madewithlove.be/post/gitattributes/
-
-# Exclude from release archives.
-
-/.*                     export-ignore
-/*.lock                 export-ignore
-/*.log                  export-ignore
-/*.xml                  export-ignore
-/*.xml.dist             export-ignore
-/bin/                   export-ignore
-/package.json           export-ignore
-/package-lock.json      export-ignore
-/resources/fonts        export-ignore
-/resources/img          export-ignore
-/resources/js           export-ignore
-/resources/scss         export-ignore
-/resources/svg          export-ignore
-/tests/                 export-ignore
-/webpack.mix.js         export-ignore
-/webpack.mix.export.js  export-ignore
-
 # Handle line endings.
 # See https://help.github.com/articles/dealing-with-line-endings/
 

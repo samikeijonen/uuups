@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Uuups 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/uuups\n"
-"POT-Creation-Date: 2018-10-27 15:26:35+00:00\n"
+"POT-Creation-Date: 2018-12-29 12:20:28+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -33,55 +33,55 @@ msgstr ""
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr ""
 
-#: app/functions-setup.php:58
+#: app/functions-setup.php:64
 msgid "Main"
 msgstr ""
 
-#: app/functions-setup.php:63
+#: app/functions-setup.php:69
 msgid "Dark"
 msgstr ""
 
-#: app/functions-setup.php:68
+#: app/functions-setup.php:74
 msgid "White"
 msgstr ""
 
-#: app/functions-setup.php:73
+#: app/functions-setup.php:79
 msgid "Light"
 msgstr ""
 
-#: app/functions-setup.php:78
+#: app/functions-setup.php:84
 msgid "Grey"
 msgstr ""
 
-#: app/functions-setup.php:90
+#: app/functions-setup.php:102
 msgid "Small"
 msgstr ""
 
-#: app/functions-setup.php:91
+#: app/functions-setup.php:103
 msgid "S"
 msgstr ""
 
-#: app/functions-setup.php:96
+#: app/functions-setup.php:108
 msgid "Medium"
 msgstr ""
 
-#: app/functions-setup.php:98
+#: app/functions-setup.php:110
 msgid "M"
 msgstr ""
 
-#: app/functions-setup.php:102
+#: app/functions-setup.php:114
 msgid "Large"
 msgstr ""
 
-#: app/functions-setup.php:104
+#: app/functions-setup.php:116
 msgid "L"
 msgstr ""
 
-#: app/functions-setup.php:108
+#: app/functions-setup.php:120
 msgid "Larger"
 msgstr ""
 
-#: app/functions-setup.php:110
+#: app/functions-setup.php:122
 msgid "XL"
 msgstr ""
 
@@ -162,7 +162,7 @@ msgstr ""
 msgid "Posts Navigation"
 msgstr ""
 
-#: vendor/justintadlock/hybrid-core/src/Comment/functions-comment.php:227
+#: vendor/justintadlock/hybrid-core/src/Comment/functions-comment.php:229
 msgid "Edit"
 msgstr ""
 
@@ -256,17 +256,17 @@ msgctxt "Karla font: on or off"
 msgid "on"
 msgstr ""
 
-#: app/functions-setup.php:155
+#: app/functions-setup.php:167
 msgctxt "nav menu location"
 msgid "Primary"
 msgstr ""
 
-#: app/functions-setup.php:156
+#: app/functions-setup.php:168
 msgctxt "nav menu location"
 msgid "Social Links"
 msgstr ""
 
-#: app/functions-setup.php:201
+#: app/functions-setup.php:213
 msgctxt "sidebar"
 msgid "Primary"
 msgstr ""
@@ -276,7 +276,7 @@ msgctxt "meta separator"
 msgid "&middot;"
 msgstr ""
 
-#: vendor/justintadlock/hybrid-core/src/Post/functions-post.php:327
+#: vendor/justintadlock/hybrid-core/src/Post/functions-post.php:328
 #. Translators: Separates tags, categories, etc. when displaying a post.
 msgctxt "taxonomy terms separator"
 msgid ", "

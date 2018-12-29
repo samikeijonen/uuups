@@ -6,16 +6,16 @@
 	display: none;
 }
 
-.entry {
-	margin-bottom: var(--spacing-unit-2x) * 8;
-}
-
 .entry__header,
 .entry__summary,
 .entry__footer,
 .comments-template {
 	@mixin center;
 	max-width: var(--max-width-2);
+}
+
+.entry__content > h2 {
+	margin-top: calc(var(--spacing-unit-4x) * 2);
 }
 
 .entry__byline {
@@ -48,7 +48,7 @@
 		&:hover,
 		&:focus,
 		&:active {
-			color: var(--color-dark);
+			color: var(--color-primary-900);
 			text-decoration: underline;
 		}
 	}

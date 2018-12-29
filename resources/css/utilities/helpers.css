@@ -20,7 +20,7 @@
 }
 
 .color-dark {
-	color: var(--color-dark);
+	color: var(--color-primary-900);
 }
 
 .font-size-1 {

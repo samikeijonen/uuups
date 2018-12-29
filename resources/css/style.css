@@ -9,6 +9,7 @@
 /*--------------------------------------------------------------
 # Settings - Global variables, config switches.
 --------------------------------------------------------------*/
+@import "settings/media-queries.css";
 @import "settings/core.css";
 @import "settings/fonts.css";
 @import "settings/colors.css";
@@ -75,7 +76,7 @@
 @import "blocks/core/separator.css";
 @import "blocks/core/subhead.css";
 @import "blocks/core/table.css";
-@import "blocks/blocks.css";
+@import "blocks/font-sizes.css";
 @import "blocks/color-palette.css";
 
 

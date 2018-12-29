@@ -8,4 +8,6 @@
  * @package Uuups
  */
 
-import { customHeader } from './customize-preview/custom-header';
+import customHeader from './customize-preview/custom-header';
+
+customHeader();

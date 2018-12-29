@@ -19,7 +19,7 @@ acronym {
 
 mark,
 ins {
-	background-color: var(--color-light);
+	background-color: var(--color-primary-100);
 	text-decoration: none;
 }
 

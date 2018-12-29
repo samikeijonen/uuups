@@ -41,13 +41,13 @@
 		text-decoration: none;
 
 		&.is-active {
-			color: var(--color-dark);
+			color: var(--color-primary-900);
 		}
 	}
 
 	/* Social menu links. */
 	&--social {
-		color: var(--color-dark);
+		color: var(--color-primary-900);
 		padding: var(--spacing-unit);
 
 		&:hover,
@@ -76,7 +76,7 @@
 /* Menu toggle. */
 .menu-toggle {
 	background-color: transparent;
-	color: var(--color-dark);
+	color: var(--color-primary-900);
 	cursor: pointer;
 	height: calc(var(--spacing-unit) * 8);
 	margin-left: var(--spacing-unit);
@@ -87,7 +87,7 @@
 	&:focus,
 	&:active {
 		background-color: transparent;
-		color: var(--color-dark);
+		color: var(--color-primary-900);
 	}
 
 	&:focus {
@@ -98,7 +98,7 @@
 .menu-toggle__icon {
 	display: inline-block;
 	fill: currentColor;
-	stroke: var(--color-dark);
+	stroke: var(--color-primary-900);
 	stroke-width: 2;
 	transition: all var(--transition-duration-1);
 }
