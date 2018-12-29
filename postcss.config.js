@@ -1,11 +1,13 @@
 /**
  * Exports the PostCSS configuration.
+ *
+ * @return {string} PostCSS options.
  */
-module.exports = ({ file, options, env }) => ({
+module.exports = ( { file, options, env } ) => ( { /* eslint-disable-line */
 	plugins: {
 		'postcss-import': {},
 		'postcss-preset-env': {
-			stage: 0
+			stage: 0,
 		},
 		'postcss-mixins': {},
 		'postcss-nested': {},
@@ -15,13 +17,13 @@ module.exports = ({ file, options, env }) => ({
 				scopeTo: '.editor-styles-wrapper',
 				ignore: [
 					':root',
-					'.edit-post-visual-editor.editor-styles-wrapper'
+					'.edit-post-visual-editor.editor-styles-wrapper',
 				],
 				remove: [
 					'html',
 					':disabled',
 					'[readonly]',
-					'[disabled]'
+					'[disabled]',
 				],
 				tags: [
 					'button',
@@ -29,16 +31,16 @@ module.exports = ({ file, options, env }) => ({
 					'label',
 					'select',
 					'textarea',
-					'form'
-				]
+					'form',
+				],
 			} : false,
 		// Minify style on production using cssano.
-		'cssnano': 'production' === env ?
+		cssnano: 'production' === env ?
 			{
-				'preset': [
+				preset: [
 					'default',
-					{ 'discardComments': { 'removeAll': true } }
-				]
-			} : false
-	}
-});
+					{ discardComments: { removeAll: true } },
+				],
+			} : false,
+	},
+} );
