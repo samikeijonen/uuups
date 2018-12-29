@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Uuups 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/uuups\n"
-"POT-Creation-Date: 2018-11-16 13:34:43+00:00\n"
+"POT-Creation-Date: 2018-12-29 12:20:28+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "X-Generator: node-wp-i18n 1.2.1\n"
 
-#: app/bootstrap-compat.php:32 export/uuups/app/bootstrap-compat.php:32
+#: app/bootstrap-compat.php:32
 #. translators: %1$s is supported WordPress version, and %2$s is WordPress
 #. version used.
 msgid ""
@@ -21,236 +21,202 @@ msgid ""
 "%2$s. Please upgrade and try again."
 msgstr ""
 
-#: app/bootstrap-compat.php:41 export/uuups/app/bootstrap-compat.php:41
+#: app/bootstrap-compat.php:41
 #. translators: %1$s is supported PHP version, and %2$s is PHP version used.
 msgid ""
 "Theme requires at least PHP version %1$s. You are running version %2$s. "
 "Please upgrade and try again."
 msgstr ""
 
-#: app/functions-filters.php:63 export/uuups/app/functions-filters.php:63
+#: app/functions-filters.php:63
 #. translators: %s: Name of current post
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr ""
 
-#: app/functions-setup.php:58 export/uuups/app/functions-setup.php:58
+#: app/functions-setup.php:64
 msgid "Main"
 msgstr ""
 
-#: app/functions-setup.php:63 export/uuups/app/functions-setup.php:63
+#: app/functions-setup.php:69
 msgid "Dark"
 msgstr ""
 
-#: app/functions-setup.php:68 export/uuups/app/functions-setup.php:68
+#: app/functions-setup.php:74
 msgid "White"
 msgstr ""
 
-#: app/functions-setup.php:73 export/uuups/app/functions-setup.php:73
+#: app/functions-setup.php:79
 msgid "Light"
 msgstr ""
 
-#: app/functions-setup.php:78 export/uuups/app/functions-setup.php:78
+#: app/functions-setup.php:84
 msgid "Grey"
 msgstr ""
 
-#: app/functions-setup.php:90 export/uuups/app/functions-setup.php:90
+#: app/functions-setup.php:102
 msgid "Small"
 msgstr ""
 
-#: app/functions-setup.php:91 export/uuups/app/functions-setup.php:91
+#: app/functions-setup.php:103
 msgid "S"
 msgstr ""
 
-#: app/functions-setup.php:96 export/uuups/app/functions-setup.php:96
+#: app/functions-setup.php:108
 msgid "Medium"
 msgstr ""
 
-#: app/functions-setup.php:98 export/uuups/app/functions-setup.php:98
+#: app/functions-setup.php:110
 msgid "M"
 msgstr ""
 
-#: app/functions-setup.php:102 export/uuups/app/functions-setup.php:102
+#: app/functions-setup.php:114
 msgid "Large"
 msgstr ""
 
-#: app/functions-setup.php:104 export/uuups/app/functions-setup.php:104
+#: app/functions-setup.php:116
 msgid "L"
 msgstr ""
 
-#: app/functions-setup.php:108 export/uuups/app/functions-setup.php:108
+#: app/functions-setup.php:120
 msgid "Larger"
 msgstr ""
 
-#: app/functions-setup.php:110 export/uuups/app/functions-setup.php:110
+#: app/functions-setup.php:122
 msgid "XL"
 msgstr ""
 
-#: app/functions-svg.php:27 export/uuups/app/functions-svg.php:27
+#: app/functions-svg.php:27
 msgid "Please define default parameters in the form of an array."
 msgstr ""
 
-#: app/functions-svg.php:32 export/uuups/app/functions-svg.php:32
+#: app/functions-svg.php:32
 msgid "Please define an SVG icon filename."
 msgstr ""
 
-#: export/uuups/resources/views/comment/default.php:27
-#: export/uuups/resources/views/comment/ping.php:19
 #: resources/views/comment/default.php:27 resources/views/comment/ping.php:19
 #. Translators: 1 is the comment date and 2 is the time.
 msgid "%1$s at %2$s"
 msgstr ""
 
-#: export/uuups/resources/views/comment/default.php:43
 #: resources/views/comment/default.php:43
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: export/uuups/resources/views/comments/default.php:43
 #: resources/views/comments/default.php:43
 msgid "Comments are closed."
 msgstr ""
 
-#: export/uuups/resources/views/content/404.php:12
 #: resources/views/content/404.php:12
 msgid "Oops! That page can&rsquo;t be found."
 msgstr ""
 
-#: export/uuups/resources/views/content/404.php:16
 #: resources/views/content/404.php:16
 msgid "It looks like nothing was found at this location. Maybe try search?"
 msgstr ""
 
-#: export/uuups/resources/views/entry/single/post.php:32
 #: resources/views/entry/single/post.php:32
 msgid "Categories:"
 msgstr ""
 
-#: export/uuups/resources/views/entry/single/post.php:40
 #: resources/views/entry/single/post.php:40
 msgid "Tags:"
 msgstr ""
 
-#: export/uuups/resources/views/footer/default.php:15
 #: resources/views/footer/default.php:15
 msgid "Powered by crazy ideas and passion"
 msgstr ""
 
-#: export/uuups/resources/views/footer/default.php:19
 #: resources/views/footer/default.php:19
 #. translators: %1$s is theme name, and %2$s is link to theme site.
 msgid "Theme %1$s by %2$s"
 msgstr ""
 
-#: export/uuups/resources/views/header/default.php:24
 #: resources/views/header/default.php:24
 msgid "Skip to content"
 msgstr ""
 
-#: export/uuups/resources/views/nav/menu/default.php:13
 #: resources/views/nav/menu/default.php:13
 msgid "Top"
 msgstr ""
 
-#: export/uuups/resources/views/nav/menu/social.php:13
 #: resources/views/nav/menu/social.php:13
 msgid "Social"
 msgstr ""
 
-#: export/uuups/resources/views/nav/pagination/comments.php:11
-#: export/uuups/resources/views/nav/pagination/posts.php:11
 #: resources/views/nav/pagination/comments.php:11
 #: resources/views/nav/pagination/posts.php:11
 msgid "Previous page"
 msgstr ""
 
-#: export/uuups/resources/views/nav/pagination/comments.php:12
-#: export/uuups/resources/views/nav/pagination/posts.php:12
 #: resources/views/nav/pagination/comments.php:12
 #: resources/views/nav/pagination/posts.php:12
 msgid "Next page"
 msgstr ""
 
-#: export/uuups/resources/views/nav/pagination/comments.php:13
-#: export/uuups/resources/views/nav/pagination/posts.php:13
 #: resources/views/nav/pagination/comments.php:13
 #: resources/views/nav/pagination/posts.php:13
 msgid "Page"
 msgstr ""
 
-#: export/uuups/resources/views/nav/pagination/posts.php:14
 #: resources/views/nav/pagination/posts.php:14
 msgid "Posts Navigation"
 msgstr ""
 
-#: export/uuups/vendor/justintadlock/hybrid-core/src/Comment/functions-comment.php:227
-#: vendor/justintadlock/hybrid-core/src/Comment/functions-comment.php:227
+#: vendor/justintadlock/hybrid-core/src/Comment/functions-comment.php:229
 msgid "Edit"
 msgstr ""
 
-#: export/uuups/vendor/justintadlock/hybrid-core/src/Media/Meta.php:179
-#: export/uuups/vendor/justintadlock/hybrid-core/src/Media/functions-media.php:203
 #: vendor/justintadlock/hybrid-core/src/Media/Meta.php:179
 #: vendor/justintadlock/hybrid-core/src/Media/functions-media.php:203
 #. Translators: Media dimensions - 1 is width and 2 is height.
 msgid "%1$s &#215; %2$s"
 msgstr ""
 
-#: export/uuups/vendor/justintadlock/hybrid-core/src/Media/Meta.php:272
 #: vendor/justintadlock/hybrid-core/src/Media/Meta.php:272
 #. Translators: %s is the focal length of a camera.
 msgid "%s mm"
 msgstr ""
 
-#: export/uuups/vendor/justintadlock/hybrid-core/src/Media/Meta.php:364
 #: vendor/justintadlock/hybrid-core/src/Media/Meta.php:364
 #. Translators: %s is the shutter speed of a camera.
 msgid "%s sec"
 msgstr ""
 
-#: export/uuups/vendor/justintadlock/hybrid-core/src/Pagination/Pagination.php:526
 #: vendor/justintadlock/hybrid-core/src/Pagination/Pagination.php:526
 msgid "&hellip;"
 msgstr ""
 
-#: export/uuups/vendor/justintadlock/hybrid-core/src/Site/functions-site.php:186
 #: vendor/justintadlock/hybrid-core/src/Site/functions-site.php:186
 msgid "https://wordpress.org"
 msgstr ""
 
-#: export/uuups/vendor/justintadlock/hybrid-core/src/Site/functions-site.php:187
 #: vendor/justintadlock/hybrid-core/src/Site/functions-site.php:187
 msgid "WordPress"
 msgstr ""
 
-#: export/uuups/vendor/justintadlock/hybrid-core/src/Util/Title.php:97
 #: vendor/justintadlock/hybrid-core/src/Util/Title.php:97
 msgid "Archives"
 msgstr ""
 
-#: export/uuups/vendor/justintadlock/hybrid-core/src/Util/Title.php:150
 #: vendor/justintadlock/hybrid-core/src/Util/Title.php:150
 #. Translators: %s is the search query.
 msgid "Search results for: %s"
 msgstr ""
 
-#: export/uuups/vendor/justintadlock/hybrid-core/src/Util/Title.php:164
 #: vendor/justintadlock/hybrid-core/src/Util/Title.php:164
 msgid "404 Not Found"
 msgstr ""
 
-#: export/uuups/vendor/justintadlock/hybrid-core/src/Util/Title.php:238
 #: vendor/justintadlock/hybrid-core/src/Util/Title.php:238
 #. Translators: 1 is the week number and 2 is the year.
 msgid "Week %1$s of %2$s"
 msgstr ""
 
-#: export/uuups/vendor/justintadlock/hybrid-core/src/Util/Title.php:279
 #: vendor/justintadlock/hybrid-core/src/Util/Title.php:279
 #. Translators: Minute archive title. %s is the minute time format.
 msgid "Minute %s"
 msgstr ""
 
-#: export/uuups/vendor/justintadlock/hybrid-core/src/functions-filters.php:209
 #: vendor/justintadlock/hybrid-core/src/functions-filters.php:209
 #. Translators: Used as a placeholder for untitled posts on non-singular views.
 msgid "(Untitled)"
@@ -276,80 +242,72 @@ msgstr ""
 msgid "https://foxland.fi"
 msgstr ""
 
-#: app/functions-fonts.php:23 export/uuups/app/functions-fonts.php:23
+#: app/functions-fonts.php:23
 #. Translators: If there are characters in your language that are not supported
 #. by Lora, translate this to 'off'. Do not translate into your own language.
 msgctxt "Lora font: on or off"
 msgid "on"
 msgstr ""
 
-#: app/functions-fonts.php:32 export/uuups/app/functions-fonts.php:32
+#: app/functions-fonts.php:32
 #. Translators: If there are characters in your language that are not supported
 #. by Karla, translate this to 'off'. Do not translate into your own language.
 msgctxt "Karla font: on or off"
 msgid "on"
 msgstr ""
 
-#: app/functions-setup.php:155 export/uuups/app/functions-setup.php:155
+#: app/functions-setup.php:167
 msgctxt "nav menu location"
 msgid "Primary"
 msgstr ""
 
-#: app/functions-setup.php:156 export/uuups/app/functions-setup.php:156
+#: app/functions-setup.php:168
 msgctxt "nav menu location"
 msgid "Social Links"
 msgstr ""
 
-#: app/functions-setup.php:201 export/uuups/app/functions-setup.php:201
+#: app/functions-setup.php:213
 msgctxt "sidebar"
 msgid "Primary"
 msgstr ""
 
-#: app/functions-template.php:26 export/uuups/app/functions-template.php:26
+#: app/functions-template.php:26
 msgctxt "meta separator"
 msgid "&middot;"
 msgstr ""
 
-#: export/uuups/vendor/justintadlock/hybrid-core/src/Post/functions-post.php:327
-#: vendor/justintadlock/hybrid-core/src/Post/functions-post.php:327
+#: vendor/justintadlock/hybrid-core/src/Post/functions-post.php:328
 #. Translators: Separates tags, categories, etc. when displaying a post.
 msgctxt "taxonomy terms separator"
 msgid ", "
 msgstr ""
 
-#: export/uuups/vendor/justintadlock/hybrid-core/src/Util/Title.php:224
-#: export/uuups/vendor/justintadlock/hybrid-core/src/Util/Title.php:240
 #: vendor/justintadlock/hybrid-core/src/Util/Title.php:224
 #: vendor/justintadlock/hybrid-core/src/Util/Title.php:240
 msgctxt "yearly archives date format"
 msgid "Y"
 msgstr ""
 
-#: export/uuups/vendor/justintadlock/hybrid-core/src/Util/Title.php:239
 #: vendor/justintadlock/hybrid-core/src/Util/Title.php:239
 msgctxt "weekly archives date format"
 msgid "W"
 msgstr ""
 
-#: export/uuups/vendor/justintadlock/hybrid-core/src/Util/Title.php:253
 #: vendor/justintadlock/hybrid-core/src/Util/Title.php:253
 msgctxt "daily archives date format"
 msgid "F j, Y"
 msgstr ""
 
-#: export/uuups/vendor/justintadlock/hybrid-core/src/Util/Title.php:265
 #: vendor/justintadlock/hybrid-core/src/Util/Title.php:265
 msgctxt "hour archives time format"
 msgid "g a"
 msgstr ""
 
-#: export/uuups/vendor/justintadlock/hybrid-core/src/Util/Title.php:280
 #: vendor/justintadlock/hybrid-core/src/Util/Title.php:280
 msgctxt "minute archives time format"
 msgid "i"
 msgstr ""
 
-#: export/uuups/vendor/justintadlock/hybrid-core/src/Util/Title.php:293
 #: vendor/justintadlock/hybrid-core/src/Util/Title.php:293
 msgctxt "minute and hour archives time format"
 msgid "g:i a"
