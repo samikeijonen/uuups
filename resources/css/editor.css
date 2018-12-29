@@ -23,6 +23,8 @@
 # Elements - Unclassed HTML elements (type selectors).
 --------------------------------------------------------------*/
 @import "elements/blockquote.css";
+@import "elements/buttons.css";
+@import "elements/forms.css";
 @import "elements/headings.css";
 @import "elements/hr.css";
 @import "elements/links.css";
