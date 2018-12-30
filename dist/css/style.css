@@ -1550,7 +1550,7 @@ td {
 	}
 
 .wp-block-separator.is-style-dots::before {
-			content: "\B7   \B7   \B7";
+			content: "\00b7 \00b7 \00b7";
 			color: hsl(245, 80%, 43%);
 			color: var(--color-primary);
 			font-family: serif;
@@ -2067,7 +2067,7 @@ p.wp-block-subhead {
 }
 
 .pagination__item:not(:last-child)::after {
-		content: "/";
+		content: "\002F";
 		padding: 0 1rem;
 		padding: 0 var(--spacing-unit-2x);
 	}

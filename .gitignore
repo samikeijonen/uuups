@@ -1,6 +1,6 @@
-/export/
 /logs/
 /node_modules/
+/releases/
 /vendor/
 .vscode
 /composer.lock

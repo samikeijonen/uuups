@@ -960,7 +960,7 @@
 	}
 
 .editor-styles-wrapper .wp-block-separator.is-style-dots::before {
-			content: "\B7   \B7   \B7";
+			content: "\00b7 \00b7 \00b7";
 			color: hsl(245, 80%, 43%);
 			color: var(--color-primary);
 			font-family: serif;

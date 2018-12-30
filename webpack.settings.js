@@ -68,4 +68,20 @@ module.exports = {
 	manifestConfig: {
 		basePath: '',
 	},
+	release: {
+		folder: './releases',
+		files: [
+			'changelog.md',
+			'functions.php',
+			'index.php',
+			'license.md',
+			'readme.md',
+			'screenshot.png',
+			'style.css',
+			'{app,dist,resources}/**',
+			'vendor/autoload.php',
+			'vendor/composer/*.php',
+			'vendor/justintadlock/hybrid-core/**',
+		],
+	},
 };
