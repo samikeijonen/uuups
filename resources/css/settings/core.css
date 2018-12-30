@@ -22,9 +22,9 @@
 	--font-size-h1: 2rem;
 	--font-size-h2: 1.5rem;
 	--font-size-h3: 1.25rem;
-	--font-size-h4: 1rem;
-	--font-size-h5: 1rem;
-	--font-size-h6: 1rem;
+	--font-size-h4: var(--font-size-global);
+	--font-size-h5: var(--font-size-global);
+	--font-size-h6: var(--font-size-global);
 	--font-size-1: 1rem;
 	--font-size-125: 1.25rem;
 	--font-size-875: 0.875rem;
@@ -33,8 +33,6 @@
 		--font-size-h1: 2.5rem;
 		--font-size-h2: 2rem;
 		--font-size-h3: 1.5rem;
-		--font-size-h4: 1.125rem;
-		--font-size-h5: 1.125rem;
 	}
 
 	/* Max widths. */

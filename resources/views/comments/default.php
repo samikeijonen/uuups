@@ -17,7 +17,10 @@ if ( post_password_required() || ( ! have_comments() && ! comments_open() && ! p
 
 			<h2 class="comments__title"><?php comments_number(); ?></h2>
 
-			<?php Hybrid\View\display( 'nav/pagination', 'comments' ); ?>
+			<?php
+				// Replaces the_comments_pagination function.
+				Hybrid\View\display( 'nav/pagination', 'comments' );
+			?>
 
 			<ol class="comments__list">
 				<?php

@@ -55,9 +55,9 @@ I recommend also [aXe browser add-on](https://www.deque.com/aXe/) or [aXe-CLI](h
 
 More info about [Frontend checks for web accessibility](https://make.wordpress.org/accessibility/handbook/best-practices/test-for-web-accessibility/test-for-web-accessibility-frontend-code/).
 
-## SASS and CSS structure
+## CSS structure
 
-SASS and CSS structure is probably one of
+CSS structure is probably one of
 the biggest aspects of the front-end and theming.
 It should have scalable and modular architecture.
 
@@ -66,7 +66,7 @@ There are two separate stylesheets
 which are automatically compiled to `dist/css`:
 
 - `style.scss` &ndash; Main stylesheet for the theme.
-- `editor.scss` &ndash; Stylesheet only for the new editor (Gutenberg).
+- `editor.scss` &ndash; Stylesheet only for the block editor (Gutenberg).
 
 ### Main stylesheet
 
@@ -85,20 +85,10 @@ it's that important.
 ### Styles for the editor
 
 `editor.scss` tries to put all the necessary styles
-to the new editor.
+to the new editor without re-writing front-end styles.
 
 Note a little trick where we prefix all the styles
-with class `edit-post-visual-editor`:
-
-```css
-// Editor styles.
-.edit-post-visual-editor {
-	// Write custom CSS.
-	// Or import parts of the SASS.
-	// @import "elements/blockquote";
-	// @import "elements/hr";
-}
-```
+with class `editor-styles-wrapper` using `postcss-editor-styles` plugin.
 
 ## New editor (Gutenberg) support
 
@@ -133,11 +123,11 @@ All lints can be run by command `npm run lint`. Or use any of the following lint
 
 ### PHP linting
 
-NPM task `npm run lint:php` checks PHP files using [WordPress coding standars](https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards). In `phpcs.xml` there is custom PHP rulesets (sniffs) which are based on Underscores rulesets.
+NPM task `npm run lint:php` checks PHP files using [WordPress coding standars (WPCS)](https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards). In `.phpcs.xml.dist` there is custom PHP ruleset `Foxland-Default` which extends `WPCS`. This is loaded via [composer package](https://packagist.org/packages/samikeijonen/phpcs-composer).
 
 ### Style linting
 
-NPM task `npm run lint:css` checks SASS files using [stylelint](https://github.com/stylelint/stylelint).
+NPM task `npm run lint:css` checks CSS files using [stylelint](https://github.com/stylelint/stylelint).
 
 File `.stylelintrc` is the configuration file for stylelint.
 
@@ -145,7 +135,7 @@ I also recommend installing stylelint extension to your IDE, for example [vscode
 
 ### JavaScript linting
 
-NPM task `npm lint:js` checks SASS files using [ESLint](https://eslint.org/).
+NPM task `npm lint:js` checks JS files using [ESLint](https://eslint.org/).
 
 File `.eslintrc.js` is the configuration file for ESLint. And `.eslintignore` file for what files to ignore from linting.
 
@@ -155,11 +145,27 @@ I also recommend installing ESLint extension to your IDE, for example [VS Code E
 
 When you commit changes in Github, let [Travis CI](https://travis-ci.org/) run and test your code.
 
-File `.travis.yml` is the configuration file for setting up Travis. It's also based on Underscores configuration.
+File `.travis.yml` is the configuration file for setting up Travis.
 
 ### Editorconfig
 
 Theme has an `.editorconfig` file that sets your code editor settings accordingly. [Download the extension to your editor](http://editorconfig.org/#download). The settings will automatically be applied when you edit code when you have the extension.
+
+## New version
+
+Generate `.zip` file using command:
+
+```
+npm run release --  --version={version-number}
+```
+
+For example:
+
+```
+npm run release --  --version=1.0.0
+```
+
+This will generate zip file `releases/uuups-1.0.0.zip`.
 
 ## SVG system
 
