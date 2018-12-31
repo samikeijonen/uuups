@@ -49,8 +49,11 @@ add_action(
 add_action(
 	'enqueue_block_editor_assets',
 	function() {
-		// Main block styles.
-		wp_enqueue_style( 'uuups-blocks', asset( 'css/editor.css' ), null, null );
+		// Add custom fonts.
+		wp_enqueue_style( 'uuups-fonts', fonts_url(), null, null );
+
+		// Main editor styles.
+		wp_enqueue_style( 'uuups-editor', asset( 'css/editor.css' ), null, null );
 
 		// Overwrite Core block styles with empty styles.
 		wp_deregister_style( 'wp-block-library' );
