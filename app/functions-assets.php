@@ -52,8 +52,21 @@ add_action(
 		// Add custom fonts.
 		wp_enqueue_style( 'uuups-fonts', fonts_url(), null, null );
 
-		// Main editor styles.
+		// Editor styles.
 		wp_enqueue_style( 'uuups-editor', asset( 'css/editor.css' ), null, null );
+
+		// Editor scripts.
+		wp_enqueue_script(
+			'uuups-editor-scripts',
+			asset( 'js/editorScripts.js' ),
+			[
+				'wp-i18n',
+				'wp-blocks',
+				'wp-dom-ready',
+			],
+			null,
+			true
+		);
 
 		// Overwrite Core block styles with empty styles.
 		wp_deregister_style( 'wp-block-library' );
