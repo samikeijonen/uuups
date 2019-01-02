@@ -4,6 +4,7 @@
 module.exports = {
 	entries: {
 		app: './resources/js/app.js',
+		editorScripts: './resources/js/editor.js',
 		customizeControls: './resources/js/customize-controls.js',
 		customizePreview: './resources/js/customize-preview.js',
 		style: './resources/css/style.css',

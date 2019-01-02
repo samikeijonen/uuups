@@ -26,21 +26,32 @@
 	}
 }
 
-/**
- * Need these outside, otherwise nesting in Gutenberg doesn't work.
- * .is-style-outline & outputs wrong nesting:
- * .is-style-outline .edit-post-visual-editor .wp-block-button__link.
- */
+/* Style variations. */
 .is-style-squared .wp-block-button__link {
-	border-radius: calc(var(--spacing-unit) * 12);
+	border-radius: 0;
 }
 
-.is-style-outline .wp-block-button__link {
+.is-style-outline .wp-block-button__link,
+.is-style-outline-rounded .wp-block-button__link {
 	@mixin button-block-outline;
 
 	&:hover,
 	&:focus,
 	&:active {
 		@mixin button-block-outline-hover;
+	}
+}
+
+.is-style-outline-rounded .wp-block-button__link { /* stylelint-disable-line no-descending-specificity */
+	border-radius: calc(var(--spacing-unit) * 12);
+}
+
+.is-style-underlined .wp-block-button__link { /* stylelint-disable-line no-descending-specificity */
+	@mixin button-block-underlined;
+
+	&:hover,
+	&:focus,
+	&:active {
+		@mixin button-block-underlined-hover;
 	}
 }

@@ -37,8 +37,9 @@
 @define-mixin button-block {
 	background-color: var(--color-primary);
 	border: none;
-	border-radius: 0;
+	border-radius: calc(var(--spacing-unit) * 12);
 	color: var(--color-white);
+	font-weight: 700;
 	padding: calc(var(--spacing-unit) * 1.5) calc(var(--spacing-unit-2x) * 1.25);
 }
 
@@ -51,6 +52,7 @@
 @define-mixin button-block-outline {
 	background-color: transparent;
 	border: 2px solid;
+	border-radius: 0;
 	color: var(--color-primary-900);
 }
 
@@ -58,6 +60,18 @@
 	background-color: var(--color-primary-900);
 	border-color: var(--color-primary-900);
 	color: var(--color-white);
+}
+
+@define-mixin button-block-underlined {
+	background-color: transparent;
+	border-bottom: 2px solid;
+	border-radius: 0;
+	color: var(--color-primary);
+	padding: 0;
+}
+
+@define-mixin button-block-underlined-hover {
+	color: var(--color-primary-900);
 }
 
 @define-mixin global-focus-styles {
