@@ -1,5 +1,9 @@
 # Change Log
 
+## [1.0.0] - January 15, 2019
+
+* Use my own stylelint rules from NPM.
+
 ## [1.0.0-beta2] - January 2, 2019
 
 * Add support for underlined and outline rounded button style variants.
