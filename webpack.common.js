@@ -43,7 +43,7 @@ module.exports = {
 
 	// Performance settings.
 	performance: {
-		hints: false,
+		maxAssetSize: 100000,
 	},
 
 	// Build rules to handle asset files.
