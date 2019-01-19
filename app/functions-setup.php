@@ -99,28 +99,24 @@ add_action(
 			'editor-font-sizes',
 			[
 				[
-					'name'      => esc_html__( 'Small', 'uuups' ),
-					'shortName' => esc_html__( 'S', 'uuups' ),
-					'size'      => 14,
-					'slug'      => 'small',
+					'name' => esc_html__( 'Small', 'uuups' ),
+					'size' => 14,
+					'slug' => 'small',
 				],
 				[
-					'name'      => esc_html__( 'Medium', 'uuups' ),
-					'size'      => 20,
-					'shortName' => esc_html__( 'M', 'uuups' ),
-					'slug'      => 'medium',
+					'name' => esc_html__( 'Medium', 'uuups' ),
+					'size' => 20,
+					'slug' => 'medium',
 				],
 				[
-					'name'      => esc_html__( 'Large', 'uuups' ),
-					'size'      => 24,
-					'shortName' => esc_html__( 'L', 'uuups' ),
-					'slug'      => 'large',
+					'name' => esc_html__( 'Large', 'uuups' ),
+					'size' => 24,
+					'slug' => 'large',
 				],
 				[
-					'name'      => esc_html__( 'Larger', 'uuups' ),
-					'size'      => 40,
-					'shortName' => esc_html__( 'XL', 'uuups' ),
-					'slug'      => 'larger',
+					'name' => esc_html__( 'Larger', 'uuups' ),
+					'size' => 40,
+					'slug' => 'larger',
 				],
 			]
 		);
