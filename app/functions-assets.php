@@ -63,6 +63,7 @@ add_action(
 				'wp-i18n',
 				'wp-blocks',
 				'wp-dom-ready',
+				'wp-edit-post',
 			],
 			null,
 			true
