@@ -37,7 +37,7 @@
 @define-mixin button-block {
 	background-color: var(--color-primary);
 	border: none;
-	border-radius: calc(var(--spacing-unit) * 12);
+	border-radius: 0;
 	color: var(--color-white);
 	font-weight: 700;
 	padding: calc(var(--spacing-unit) * 1.5) calc(var(--spacing-unit-2x) * 1.25);
