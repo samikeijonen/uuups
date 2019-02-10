@@ -85,7 +85,7 @@
 }
 
 /* Paragraph needs more specifity. */
-.wp-block p.wp-block-paragraph {
+.wp-block-paragraph {
 	font-size: var(--font-size-global);
 }
 
