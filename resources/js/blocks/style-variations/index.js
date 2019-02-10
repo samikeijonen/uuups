@@ -18,4 +18,14 @@ wp.domReady( () => {
 		name: 'outline-rounded',
 		label: __( 'Outline rounded', 'uuups' ),
 	} );
+
+	wp.blocks.registerBlockStyle( 'core/paragraph', {
+		name: 'ingress',
+		label: __( 'Ingress', 'uuups' ),
+	} );
+
+	wp.blocks.registerBlockStyle( 'core/paragraph', {
+		name: 'highlight',
+		label: __( 'Highlight', 'uuups' ),
+	} );
 } );

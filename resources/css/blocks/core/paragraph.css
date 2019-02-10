@@ -9,3 +9,16 @@
 		text-transform: uppercase;
 	}
 }
+
+.is-style-ingress,
+.is-style-ingress.wp-block-paragraph {
+	font-size: var(--font-size-h3);
+	color: var(--color-grey-60);
+	text-align: center;
+}
+
+.is-style-highlight,
+.is-style-highlight.wp-block-paragraph {
+	background-color: var(--color-primary-100);
+	padding: var(--spacing-unit-3x);
+}
