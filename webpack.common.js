@@ -34,7 +34,7 @@ module.exports = {
 
 	// Console stats output.
 	// @link https://webpack.js.org/configuration/stats/#stats
-	stats: 'minimal',
+	stats: settings.stats,
 
 	// External objects.
 	externals: {
