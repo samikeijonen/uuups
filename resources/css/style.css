@@ -100,3 +100,4 @@
 @import "utilities/accessibility.css";
 @import "utilities/alignments.css";
 @import "utilities/helpers.css";
+@import "utilities/prefers-reduced-motion.css";

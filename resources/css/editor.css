@@ -64,6 +64,7 @@
 # Utilities - Helpers and overrides.
 --------------------------------------------------------------*/
 @import "utilities/helpers.css";
+@import "utilities/prefers-reduced-motion.css";
 
 
 /*--------------------------------------------------------------
