@@ -33,9 +33,9 @@
 	/* Primary menu links. */
 	&--primary {
 		color: var(--color-grey-60);
+		display: block;
 		font-size: var(--font-size-1);
 		font-weight: 700;
-		display: block;
 		padding-bottom: var(--spacing-unit);
 		padding-top: var(--spacing-unit);
 		text-decoration: none;

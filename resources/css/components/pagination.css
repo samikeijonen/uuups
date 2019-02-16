@@ -6,10 +6,10 @@
 	@mixin reset-list;
 	border-bottom: 1px solid var(--color-primary-100);
 	border-top: 1px solid var(--color-primary-100);
-	padding: var(--spacing-unit-4x);
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
+	padding: var(--spacing-unit-4x);
 }
 
 .pagination__item:not(:last-child) {

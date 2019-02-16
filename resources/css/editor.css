@@ -138,9 +138,9 @@
 		@mixin global-focus-styles;
 	}
 
+	display: inline-block;
 	font-family: inherit;
 	font-size: inherit;
-	display: inline-block;
 }
 
 .wp-block-search__button .wp-block-search__button-rich-text {

@@ -48,7 +48,7 @@
 	"devDependencies": {
 		"@babel/core": "^7.2.2",
 		"@babel/preset-env": "^7.2.3",
-		"@foxland/stylelint-config": "^1.0.2",
+		"@foxland/stylelint-config": "^1.1.0",
 		"@wordpress/browserslist-config": "^2.2.3",
 		"@wordpress/eslint-plugin": "^1.0.1",
 		"archiver": "^3.0.0",
@@ -80,9 +80,6 @@
 		"postcss-nested": "^4.1.1",
 		"postcss-preset-env": "^6.5.0",
 		"rimraf": "^2.6.3",
-		"stylelint": "^9.9.0",
-		"stylelint-a11y": "^1.1.9",
-		"stylelint-config-wordpress": "^13.1.0",
 		"theme-claim": "^0.1.11",
 		"uglifyjs-webpack-plugin": "^2.1.1",
 		"webpack": "^4.28.4",

@@ -1,9 +1,9 @@
 .has-drop-cap:not(:focus) {
 	&::first-letter {
-		font-size: var(--font-size-h1);
 		float: left;
-		font-style: normal;
 		font-family: serif;
+		font-size: var(--font-size-h1);
+		font-style: normal;
 		font-weight: 600;
 		margin-right: var(--spacing-unit-2x);
 		text-transform: uppercase;
@@ -12,8 +12,8 @@
 
 .is-style-ingress,
 .is-style-ingress.wp-block-paragraph {
-	font-size: var(--font-size-h3);
 	color: var(--color-grey-60);
+	font-size: var(--font-size-h3);
 	text-align: center;
 }
 
