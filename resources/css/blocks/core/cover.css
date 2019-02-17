@@ -8,12 +8,12 @@
 	position: relative;
 
 	&-text {
+		color: var(--color-white);
 		font-size: var(--font-size-h1);
 		font-weight: 700;
-		color: var(--color-white);
-		z-index: 1;
 		padding: var(--spacing-unit-3x);
 		text-align: center;
+		z-index: 1;
 
 		a {
 			color: inherit;
@@ -44,13 +44,13 @@
 
 	&.has-background-dim::before {
 		background-color: inherit;
+		bottom: 0;
 		content: "";
+		left: 0;
 		opacity: 0.5;
 		position: absolute;
-		top: 0;
-		left: 0;
-		bottom: 0;
 		right: 0;
+		top: 0;
 	}
 
 	&.has-background-dim-10::before {
@@ -100,8 +100,8 @@
 		position: absolute;
 		top: 50%;
 		transform: translateX(-50%) translateY(-50%);
-		z-index: 1;
 		width: 100%;
+		z-index: 1;
 	}
 
 	&.alignwide,

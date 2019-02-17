@@ -34,7 +34,7 @@ module.exports = {
 
 	// Console stats output.
 	// @link https://webpack.js.org/configuration/stats/#stats
-	stats: 'minimal',
+	stats: settings.stats,
 
 	// External objects.
 	externals: {
@@ -43,7 +43,7 @@ module.exports = {
 
 	// Performance settings.
 	performance: {
-		hints: false,
+		maxAssetSize: 100000,
 	},
 
 	// Build rules to handle asset files.

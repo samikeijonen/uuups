@@ -1,4 +1,5 @@
-.wp-block-latest-posts {
+.wp-block-latest-posts,
+.wp-block-rss {
 	&.is-grid {
 		list-style-type: none;
 		padding-left: 0;
@@ -20,5 +21,10 @@
 
 	&__post-date {
 		display: block;
+	}
+
+	&__item-excerpt {
+		margin-bottom: var(--spacing-unit-3x);
+		margin-top: var(--spacing-unit-3x);
 	}
 }

@@ -52,6 +52,7 @@
 @import "blocks/core/paragraph.css";
 @import "blocks/core/pullquote.css";
 @import "blocks/core/quote.css";
+@import "blocks/core/search.css";
 @import "blocks/core/separator.css";
 @import "blocks/core/subhead.css";
 @import "blocks/core/table.css";
@@ -63,11 +64,13 @@
 # Utilities - Helpers and overrides.
 --------------------------------------------------------------*/
 @import "utilities/helpers.css";
+@import "utilities/prefers-reduced-motion.css";
 
 
 /*--------------------------------------------------------------
 # Editor related styles which overwrites above styles.
 --------------------------------------------------------------*/
+
 /**
  * Acts like a body of the editor.
  * Give more specifity to overwrite Core style.
@@ -85,7 +88,7 @@
 }
 
 /* Paragraph needs more specifity. */
-.wp-block p.wp-block-paragraph {
+.wp-block-paragraph {
 	font-size: var(--font-size-global);
 }
 
@@ -109,4 +112,37 @@
  */
 .editor-rich-text__tinymce:not(.wp-block-cover-text):not(.wp-block-subhead):not(h2):not(h3) {
 	line-height: var(--line-height-global);
+}
+
+/* Search styles. */
+.wp-block-search__input {
+	font-family: inherit;
+	font-size: inherit;
+}
+
+.wp-block-search__label {
+	font-weight: 700;
+}
+
+.wp-block-search__button {
+	@mixin button-block;
+	@mixin global-transition;
+
+	&:hover,
+	&:active,
+	&:focus {
+		@mixin button-block-hover;
+	}
+
+	&:focus {
+		@mixin global-focus-styles;
+	}
+
+	display: inline-block;
+	font-family: inherit;
+	font-size: inherit;
+}
+
+.wp-block-search__button .wp-block-search__button-rich-text {
+	padding: 0;
 }

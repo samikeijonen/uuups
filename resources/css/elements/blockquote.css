@@ -18,6 +18,5 @@ blockquote {
 
 	cite {
 		display: block;
-		margin-top: var(--spacing-unit-3x);
 	}
 }

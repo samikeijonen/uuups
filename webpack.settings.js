@@ -36,6 +36,20 @@ module.exports = {
 		critical: 'http://example.test/',
 		publicPath: '/dist/',
 	},
+	stats: {
+		// Copied from `'minimal'`.
+		all: false,
+		errors: true,
+		maxModules: 0,
+		modules: true,
+		warnings: true,
+		// Our additional options.
+		assets: true,
+		errorDetails: true,
+		excludeAssets: /\.(jpe?g|png|gif|svg)$/i,
+		moduleTrace: true,
+		performance: true,
+	},
 	vars: {
 		cssName: 'styles',
 	},

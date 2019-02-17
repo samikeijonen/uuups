@@ -27,8 +27,9 @@
 }
 
 /* Style variations. */
-.is-style-squared .wp-block-button__link {
-	border-radius: 0;
+.is-style-rounded .wp-block-button__link,
+.is-style-default .wp-block-button__link {
+	border-radius: calc(var(--spacing-unit) * 12);
 }
 
 .is-style-outline .wp-block-button__link,
