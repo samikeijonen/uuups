@@ -9,7 +9,6 @@
 	"scripts": {
 		"build": "npm run prod && npm run i18n",
 		"dev": "cross-env NODE_ENV=development webpack --config webpack.dev.js",
-		"hot": "cross-env NODE_ENV=development webpack-dev-server --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
 		"i18n": "npm run i18n:textdomain && npm run i18n:pot",
 		"i18n:textdomain": "npx wpi18n addtextdomain --exclude=vendor,node_modules",
 		"i18n:pot": "npx wpi18n makepot",
