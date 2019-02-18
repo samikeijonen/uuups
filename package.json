@@ -34,13 +34,13 @@
 		}
 	},
 	"lint-staged": {
-		"./resources/js/**/*.js": [
-			"npm run lint:js"
+		"*.js": [
+			"eslint"
 		],
-		"./resources/css/**/*.css": [
-			"npm run lint:css"
+		"*.css": [
+			"stylelint"
 		],
-		"./**/*.php": [
+		"*.php": [
 			"./vendor/bin/phpcs --warning-severity=8"
 		]
 	},
