@@ -53,6 +53,7 @@
 
 /* karla-regular - latin */
 @font-face {
+	font-display: swap;
 	font-family: "Karla";
 	font-style: normal;
 	font-weight: 400;
@@ -65,6 +66,7 @@
 
 /* karla-italic - latin */
 @font-face {
+	font-display: swap;
 	font-family: "Karla";
 	font-style: italic;
 	font-weight: 400;
@@ -77,6 +79,7 @@
 
 /* karla-700 - latin */
 @font-face {
+	font-display: swap;
 	font-family: "Karla";
 	font-style: normal;
 	font-weight: 700;
@@ -89,6 +92,7 @@
 
 /* karla-700italic - latin */
 @font-face {
+	font-display: swap;
 	font-family: "Karla";
 	font-style: italic;
 	font-weight: 700;
