@@ -71,7 +71,14 @@ module.exports = {
 				test: /\.css$/,
 				include: path.resolve( __dirname, settings.paths.src.css ),
 				use: [
-					MiniCssExtractPlugin.loader,
+					{
+						loader: MiniCssExtractPlugin.loader,
+						options: {
+							// This is needed for fonts URL for example.
+							// url( 'fonts/' ) becomes url( '../fonts/' ) in dist/css/style.css.
+							publicPath: '../',
+						},
+					},
 					{
 						loader: 'css-loader',
 						options: {
