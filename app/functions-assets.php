@@ -22,9 +22,6 @@ add_action(
 		// Main scripts.
 		wp_enqueue_script( 'uuups-app', asset( 'js/app.js' ), null, null, true );
 
-		// Add custom fonts.
-		wp_enqueue_style( 'uuups-fonts', fonts_url(), null, null );
-
 		// Main styles.
 		wp_enqueue_style( 'uuups-style', asset( 'css/style.css' ), null, null );
 
@@ -49,9 +46,6 @@ add_action(
 add_action(
 	'enqueue_block_editor_assets',
 	function() {
-		// Add custom fonts.
-		wp_enqueue_style( 'uuups-fonts', fonts_url(), null, null );
-
 		// Editor styles.
 		wp_enqueue_style( 'uuups-editor', asset( 'css/editor.css' ), null, null );
 
