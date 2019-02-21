@@ -35,7 +35,6 @@ array_map(
 	[
 		'functions-assets',
 		'functions-filters',
-		'functions-fonts',
 		'functions-svg',
 		'functions-setup',
 		'functions-template',
