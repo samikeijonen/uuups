@@ -134,7 +134,7 @@ module.exports = {
 				// Add hash details on production for cache busting.
 				return {
 					name: file.path,
-					path: isProduction ? `${ file.path }?id=${ file.chunk.hash }` : file.path,
+					path: isProduction && file.chunk ? `${ file.path }?id=${ file.chunk.hash }` : file.path,
 				};
 			},
 		} ),
