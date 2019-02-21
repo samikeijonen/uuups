@@ -22,6 +22,7 @@ module.exports = {
 		},
 		dist: {
 			base: './dist/',
+			fonts: './fonts/',
 			clean: [
 				'./img',
 				'./css',
@@ -54,7 +55,7 @@ module.exports = {
 		cssName: 'styles',
 	},
 	copyWebpackConfig: {
-		from: '**/*.{jpg,jpeg,png,gif,svg,eot,ttf,woff,woff2}',
+		from: '**/*.{jpg,jpeg,png,gif,svg}',
 		to: '[path][name].[ext]',
 	},
 	BrowserSyncConfig: {
