@@ -16,15 +16,17 @@ wp.domReady( () => {
 	wp.blocks.unregisterBlockStyle( 'core/button', 'default' );
 	wp.blocks.unregisterBlockStyle( 'core/button', 'squared' );
 
+	// This is squared.
+	wp.blocks.registerBlockStyle( 'core/button', {
+		name: 'default',
+		label: __( 'Default', 'uuups' ),
+		isDefault: true,
+	} );
+
+	// This was originally default by Core.
 	wp.blocks.registerBlockStyle( 'core/button', {
 		name: 'rounded',
 		label: __( 'Rounded', 'uuups' ),
-	} );
-
-	wp.blocks.registerBlockStyle( 'core/button', {
-		name: 'squared',
-		label: __( 'Squared', 'uuups' ),
-		isDefault: true,
 	} );
 
 	wp.blocks.registerBlockStyle( 'core/button', {
