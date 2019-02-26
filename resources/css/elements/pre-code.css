@@ -1,4 +1,5 @@
-pre {
+pre,
+.wp-block-code {
 	background-color: var(--color-primary-100);
 	font-family: $font-pre;
 	margin: 0 0 var(--spacing-unit-4x);
