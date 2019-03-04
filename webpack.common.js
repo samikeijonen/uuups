@@ -73,36 +73,19 @@ module.exports = {
 				use: [
 					{
 						loader: MiniCssExtractPlugin.loader,
-						options: {
-							// This is needed for fonts URL for example.
-							// url( 'fonts/' ) becomes url( '../fonts/' ) in dist/css/style.css.
-							publicPath: '../',
-						},
 					},
 					{
 						loader: 'css-loader',
 						options: {
 							sourceMap: ! isProduction,
+							// We copy fonts etc. using CopyWebpackPlugin.
+							url: false,
 						},
 					},
 					{
 						loader: 'postcss-loader',
 						options: {
 							sourceMap: ! isProduction,
-						},
-					},
-				],
-			},
-
-			// Fonts.
-			{
-				test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
-				use: [
-					{
-						loader: 'file-loader',
-						options: {
-							name: '[name].[ext]',
-							outputPath: settings.paths.dist.fonts,
 						},
 					},
 				],

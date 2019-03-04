@@ -22,7 +22,6 @@ module.exports = {
 		},
 		dist: {
 			base: './dist/',
-			fonts: './fonts/',
 			clean: [
 				'./img',
 				'./css',
@@ -47,7 +46,7 @@ module.exports = {
 		// Our additional options.
 		assets: true,
 		errorDetails: true,
-		excludeAssets: /\.(jpe?g|png|gif|svg)$/i,
+		excludeAssets: /\.(jpe?g|png|gif|svg|woff|woff2)$/i,
 		moduleTrace: true,
 		performance: true,
 	},
@@ -55,7 +54,7 @@ module.exports = {
 		cssName: 'styles',
 	},
 	copyWebpackConfig: {
-		from: '**/*.{jpg,jpeg,png,gif,svg}',
+		from: '**/*.{jpg,jpeg,png,gif,svg,eot,ttf,woff,woff2}',
 		to: '[path][name].[ext]',
 	},
 	BrowserSyncConfig: {
