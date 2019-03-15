@@ -3,7 +3,7 @@
 [class$="background-color"] {
 	background-color: var(--color-primary-100);
 
-	& a {
+	& a:not(.wp-block-button__link) {
 		color: inherit;
 	}
 }

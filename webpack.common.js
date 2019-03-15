@@ -71,11 +71,15 @@ module.exports = {
 				test: /\.css$/,
 				include: path.resolve( __dirname, settings.paths.src.css ),
 				use: [
-					MiniCssExtractPlugin.loader,
+					{
+						loader: MiniCssExtractPlugin.loader,
+					},
 					{
 						loader: 'css-loader',
 						options: {
 							sourceMap: ! isProduction,
+							// We copy fonts etc. using CopyWebpackPlugin.
+							url: false,
 						},
 					},
 					{
@@ -113,7 +117,7 @@ module.exports = {
 				// Add hash details on production for cache busting.
 				return {
 					name: file.path,
-					path: isProduction ? `${ file.path }?id=${ file.chunk.hash }` : file.path,
+					path: isProduction && file.chunk ? `${ file.path }?id=${ file.chunk.hash }` : file.path,
 				};
 			},
 		} ),

@@ -146,3 +146,10 @@
 .wp-block-search__button .wp-block-search__button-rich-text {
 	padding: 0;
 }
+
+/* Code. */
+.wp-block-code textarea {
+	background-color: inherit;
+	color: inherit;
+	font-size: inherit;
+}

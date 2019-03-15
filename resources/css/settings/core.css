@@ -13,6 +13,12 @@
 	--spacing-unit-4x: 2rem;
 	--spacing-unit-small: 4px;
 
+	/* Font families. */
+	--font-main: "Karla", sans-serif;
+	--font-heading: "Lora", serif;
+	--font-code: "Monaco", "Consolas", "Andale Mono", "DejaVu Sans Mono", monospace;
+	--font-pre: "Courier 10 Pitch", "Courier", monospace;
+
 	/* Base typographical styles. */
 	--font-size-global: 1.125rem;
 	--line-height-global: 1.5;

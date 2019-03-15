@@ -5,15 +5,19 @@
 	justify-content: center;
 	margin-bottom: var(--spacing-unit-4x);
 	min-height: calc(var(--spacing-unit) * 60);
+	padding: var(--spacing-unit-2x);
 	position: relative;
 
-	&-text {
+	&-text,
+	&__inner-container {
 		color: var(--color-white);
-		font-size: var(--font-size-h1);
-		font-weight: 700;
-		padding: var(--spacing-unit-3x);
+		max-width: var(--max-width-2);
 		text-align: center;
 		z-index: 1;
+
+		.wp-block-paragraph {
+			font-size: var(--font-size-h3);
+		}
 
 		a {
 			color: inherit;

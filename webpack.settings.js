@@ -46,7 +46,7 @@ module.exports = {
 		// Our additional options.
 		assets: true,
 		errorDetails: true,
-		excludeAssets: /\.(jpe?g|png|gif|svg)$/i,
+		excludeAssets: /\.(jpe?g|png|gif|svg|woff|woff2)$/i,
 		moduleTrace: true,
 		performance: true,
 	},

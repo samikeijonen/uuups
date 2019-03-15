@@ -1,6 +1,104 @@
-:root {
-	--font-main: "Karla", sans-serif;
-	--font-heading: "Lora", serif;
-	--font-code: "Monaco", "Consolas", "Andale Mono", "DejaVu Sans Mono", monospace;
-	--font-pre: "Courier 10 Pitch", "Courier", monospace;
+/* lora-regular - latin */
+/* stylelint-disable font-family-name-quotes */
+@font-face {
+	font-display: swap;
+	font-family: "Lora";
+	font-style: normal;
+	font-weight: 400;
+	src:
+		local("Lora Regular"),
+		local("Lora-Regular"),
+		url("../fonts/lora-v12-latin-regular.woff2") format("woff2"),
+		url("../fonts/lora-v12-latin-regular.woff") format("woff");
+}
+
+/* lora-italic - latin */
+@font-face {
+	font-display: swap;
+	font-family: "Lora";
+	font-style: italic;
+	font-weight: 400;
+	src:
+		local("Lora Italic"),
+		local("Lora-Italic"),
+		url("../fonts/lora-v12-latin-italic.woff2") format("woff2"),
+		url("../fonts/lora-v12-latin-italic.woff") format("woff");
+}
+
+/* lora-700 - latin */
+@font-face {
+	font-display: swap;
+	font-family: "Lora";
+	font-style: normal;
+	font-weight: 700;
+	src:
+		local("Lora Bold"),
+		local("Lora-Bold"),
+		url("../fonts/lora-v12-latin-700.woff2") format("woff2"),
+		url("../fonts/lora-v12-latin-700.woff") format("woff");
+}
+
+/* lora-700italic - latin */
+@font-face {
+	font-display: swap;
+	font-family: "Lora";
+	font-style: italic;
+	font-weight: 700;
+	src:
+		local("Lora Bold Italic"),
+		local("Lora-BoldItalic"),
+		url("../fonts/lora-v12-latin-700italic.woff2") format("woff2"),
+		url("../fonts/lora-v12-latin-700italic.woff") format("woff");
+}
+
+/* karla-regular - latin */
+@font-face {
+	font-display: swap;
+	font-family: "Karla";
+	font-style: normal;
+	font-weight: 400;
+	src:
+		local("Karla"),
+		local("Karla-Regular"),
+		url("../fonts/karla-v6-latin-regular.woff2") format("woff2"),
+		url("../fonts/karla-v6-latin-regular.woff") format("woff");
+}
+
+/* karla-italic - latin */
+@font-face {
+	font-display: swap;
+	font-family: "Karla";
+	font-style: italic;
+	font-weight: 400;
+	src:
+		local("Karla Italic"),
+		local("Karla-Italic"),
+		url("../fonts/karla-v6-latin-italic.woff2") format("woff2"),
+		url("../fonts/karla-v6-latin-italic.woff") format("woff");
+}
+
+/* karla-700 - latin */
+@font-face {
+	font-display: swap;
+	font-family: "Karla";
+	font-style: normal;
+	font-weight: 700;
+	src:
+		local("Karla Bold"),
+		local("Karla-Bold"),
+		url("../fonts/karla-v6-latin-700.woff2") format("woff2"),
+		url("../fonts/karla-v6-latin-700.woff") format("woff");
+}
+
+/* karla-700italic - latin */
+@font-face {
+	font-display: swap;
+	font-family: "Karla";
+	font-style: italic;
+	font-weight: 700;
+	src:
+		local("Karla Bold Italic"),
+		local("Karla-BoldItalic"),
+		url("../fonts/karla-v6-latin-700italic.woff2") format("woff2"),
+		url("../fonts/karla-v6-latin-700italic.woff") format("woff");
 }
