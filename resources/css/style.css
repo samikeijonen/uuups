@@ -14,12 +14,10 @@
 @import "settings/fonts.css";
 @import "settings/colors.css";
 
-
 /*--------------------------------------------------------------
 # Tools - Default mixins and functions.
 --------------------------------------------------------------*/
 @import "tools/mixins.css";
-
 
 /*--------------------------------------------------------------
 # Generic - Ground-zero styles (resets, box-sizing, etc.).
@@ -28,7 +26,6 @@
 /* Include normalize.css via NPM. */
 @import "normalize.css";
 @import "generic/box-sizing.css";
-
 
 /*--------------------------------------------------------------
 # Elements - Unclassed HTML elements (type selectors).
@@ -47,7 +44,6 @@
 @import "elements/pre-code.css";
 @import "elements/tables.css";
 
-
 /*--------------------------------------------------------------
 # Objects - Undecorated design patterns.
 --------------------------------------------------------------*/
@@ -55,7 +51,6 @@
 @import "objects/icons.css";
 @import "objects/layouts.css";
 @import "objects/wrappers.css";
-
 
 /*--------------------------------------------------------------
 # Blocks - editor related styles.
@@ -67,6 +62,7 @@
 @import "blocks/core/embeds.css";
 @import "blocks/core/file.css";
 @import "blocks/core/gallery.css";
+@import "blocks/core/group.css";
 @import "blocks/core/latest-comments.css";
 @import "blocks/core/latest-posts.css";
 @import "blocks/core/media-text.css";
@@ -80,7 +76,6 @@
 @import "blocks/font-sizes.css";
 @import "blocks/color-palette.css";
 
-
 /*--------------------------------------------------------------
 # Components - specific UI components.
 --------------------------------------------------------------*/
@@ -92,7 +87,6 @@
 @import "components/pagination.css";
 @import "components/posts-and-pages.css";
 @import "components/widgets.css";
-
 
 /*--------------------------------------------------------------
 # Utilities - Helpers and overrides.
