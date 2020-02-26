@@ -41,6 +41,8 @@ add_action(
 				'comment-list',
 				'gallery',
 				'search-form',
+				'script',
+				'style',
 			]
 		);
 
