@@ -48,4 +48,7 @@ wp.domReady( () => {
 		name: 'highlight',
 		label: __( 'Highlight', 'uuups' ),
 	} );
+
+	wp.blocks.unregisterBlockStyle( 'core/social-links', 'logos-only' );
+	wp.blocks.unregisterBlockStyle( 'core/social-links', 'pill-shape' );
 } );
