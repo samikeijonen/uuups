@@ -1,4 +1,4 @@
-.alignleft {
+figure.alignleft {
 	@media (--breakpoint-1) {
 		float: left;
 		margin-bottom: var(--spacing-unit-3x);
@@ -8,7 +8,7 @@
 	}
 }
 
-.alignright {
+figure.alignright {
 	@media (--breakpoint-1) {
 		float: right;
 		margin-bottom: var(--spacing-unit-3x);

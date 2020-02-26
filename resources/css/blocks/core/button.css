@@ -1,6 +1,19 @@
-.wp-block-button {
-	margin-bottom: var(--spacing-unit-4x);
+.wp-block-buttons {
+	display: flex;
+	flex-wrap: wrap;
 
+	&.aligncenter {
+		display: flex;
+		justify-content: center;
+	}
+
+	&.alignright {
+		display: flex;
+		justify-content: flex-end;
+	}
+}
+
+.wp-block-button {
 	&.aligncenter {
 		text-align: center;
 	}
@@ -8,21 +21,30 @@
 	&.alignright {
 		text-align: right;
 	}
+}
 
-	&__link {
-		@mixin button-block;
-		display: inline-block;
-		text-decoration: none;
+.wp-block-buttons .wp-block-button {
+	margin-right: var(--spacing-unit-4x);
+	margin-top: var(--spacing-unit-3x);
+}
 
-		&:visited {
-			color: var(--color-white);
-		}
+.wp-block-buttons .wp-block-button:last-child {
+	margin-right: 0;
+}
 
-		&:hover,
-		&:focus,
-		&:active {
-			@mixin button-block-hover;
-		}
+.wp-block-button__link {
+	@mixin button-block;
+	display: inline-block;
+	text-decoration: none;
+
+	&:visited {
+		color: var(--color-white);
+	}
+
+	&:hover,
+	&:focus,
+	&:active {
+		@mixin button-block-hover;
 	}
 }
 
