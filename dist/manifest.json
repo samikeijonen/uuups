@@ -2,7 +2,5 @@
   "js/app.js": "js/app.js",
   "js/customizeControls.js": "js/customizeControls.js",
   "js/customizePreview.js": "js/customizePreview.js",
-  "css/editor.css": "css/editor.css",
-  "js/editorScripts.js": "js/editorScripts.js",
-  "css/style.css": "css/style.css"
+  "js/editorScripts.js": "js/editorScripts.js"
 }
