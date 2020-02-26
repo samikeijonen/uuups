@@ -1,4 +1,4 @@
-/* global console, process, process.cwd() */
+/* global console, process */
 /* eslint no-console: ["error", { allow: ["log", "error"] }] */
 
 /**

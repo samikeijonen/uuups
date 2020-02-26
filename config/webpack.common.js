@@ -1,4 +1,4 @@
-/* global process.cwd(), process, module */
+/* global process, module */
 
 const path = require( 'path' );
 const { CleanWebpackPlugin } = require( 'clean-webpack-plugin' );
