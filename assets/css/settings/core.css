@@ -1,0 +1,56 @@
+/**
+ * Baseline grid lines height is so called 8 point grid.
+ * Every spacing metric should be based on this.
+ * Inspired by inuitcss.
+ * @link: https://github.com/inuitcss/inuitcss
+ */
+
+:root {
+	/* Spacing. */
+	--spacing-unit: 0.5rem;
+	--spacing-unit-2x: 1rem;
+	--spacing-unit-3x: 1.5rem;
+	--spacing-unit-4x: 2rem;
+	--spacing-unit-5x: 2.5rem;
+	--spacing-unit-6x: 3rem;
+	--spacing-unit-7x: 3.5rem;
+	--spacing-unit-8x: 4rem;
+	--spacing-unit-small: 4px;
+
+	/* Font families. */
+	--font-main: "Karla", sans-serif;
+	--font-heading: "Lora", serif;
+	--font-code: "Monaco", "Consolas", "Andale Mono", "DejaVu Sans Mono", monospace;
+	--font-pre: "Courier 10 Pitch", "Courier", monospace;
+
+	/* Base typographical styles. */
+	--font-size-global: 1.125rem;
+	--line-height-global: 1.5;
+	--line-height-heading: 1.25;
+
+	/* Headings. */
+	--font-size-h1: 2rem;
+	--font-size-h2: 1.5rem;
+	--font-size-h3: 1.25rem;
+	--font-size-h4: var(--font-size-global);
+	--font-size-h5: var(--font-size-global);
+	--font-size-h6: var(--font-size-global);
+	--font-size-1: 1rem;
+	--font-size-125: 1.25rem;
+	--font-size-875: 0.875rem;
+
+	@media (--breakpoint-1) {
+		--font-size-h1: 2.5rem;
+		--font-size-h2: 2rem;
+		--font-size-h3: 1.5rem;
+	}
+
+	/* Max widths. */
+	--max-width-1: 78rem;
+	--max-width-2: 44rem;
+	--max-width-wide: 65rem;
+	--max-width-full: 125rem;
+
+	/* Transition. */
+	--transition-duration-1: 300ms;
+}

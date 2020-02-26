@@ -1,0 +1,50 @@
+/* Fallback for backgrounds. */
+.has-background,
+[class$="background-color"] {
+	background-color: var(--color-primary-100);
+
+	& a:not(.wp-block-button__link) {
+		color: inherit;
+	}
+}
+
+/* Colors and background colors. */
+.has-main-color {
+	color: var(--color-primary);
+}
+
+.has-main-background-color {
+	background-color: var(--color-primary);
+}
+
+.has-dark-color {
+	color: var(--color-primary-900);
+}
+
+.has-dark-background-color {
+	background-color: var(--color-primary-900);
+}
+
+.has-grey-color {
+	color: var(--color-grey-60);
+}
+
+.has-grey-background-color {
+	background-color: var(--color-grey-60);
+}
+
+.has-white-color {
+	color: var(--color-white);
+}
+
+.has-white-background-color {
+	background-color: var(--color-white);
+}
+
+.has-light-color {
+	color: var(--color-primary-100);
+}
+
+.has-light-background-color {
+	background-color: var(--color-primary-100);
+}

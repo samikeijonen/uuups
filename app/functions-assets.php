@@ -62,7 +62,20 @@ add_action(
 			null,
 			true
 		);
+	},
+	10
+);
 
+/**
+ * Enqueue editor and frontend scripts/styles.
+ *
+ * @since  1.2.0
+ * @access public
+ * @return void
+ */
+add_action(
+	'enqueue_block_assets',
+	function() {
 		// Overwrite Core block styles with empty styles.
 		wp_deregister_style( 'wp-block-library' );
 		wp_register_style( 'wp-block-library', '' );

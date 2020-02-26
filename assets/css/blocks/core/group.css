@@ -1,0 +1,4 @@
+.wp-block-group > * {
+	@mixin center;
+	max-width: var(--max-width-2);
+}

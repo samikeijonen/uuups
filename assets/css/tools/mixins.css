@@ -1,0 +1,95 @@
+@define-mixin typography {
+	color: var(--color-primary-900);
+	font-family: var(--font-main);
+	font-size: var(--font-size-global);
+	line-height: var(--line-height-global);
+	word-wrap: break-word;
+}
+
+@define-mixin center {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@define-mixin center-block {
+	display: block;
+	@mixin center;
+}
+
+@define-mixin reset-margin-padding {
+	margin: 0;
+	padding: 0;
+}
+
+@define-mixin reset-list {
+	@mixin reset-margin-padding;
+	list-style-type: none;
+}
+
+@define-mixin global-transition {
+	transition: all var(--transition-duration-1) ease-in-out;
+}
+
+@define-mixin global-box-shadow {
+	box-shadow: 0 var(--spacing-unit) var(--spacing-unit-4x) var(--color-grey-10);
+}
+
+@define-mixin button-block {
+	background-color: var(--color-primary);
+	border: 2px solid transparent;
+	border-radius: 0;
+	color: var(--color-white);
+	font-weight: 700;
+	padding: calc(var(--spacing-unit) * 1.5) calc(var(--spacing-unit-2x) * 1.25);
+}
+
+@define-mixin button-block-hover {
+	background-color: var(--color-primary-900);
+	color: var(--color-white);
+	outline-offset: -2px;
+}
+
+@define-mixin button-block-outline {
+	background-color: transparent;
+	border: 2px solid;
+	border-radius: 0;
+	color: var(--color-primary-900);
+}
+
+@define-mixin button-block-outline-hover {
+	background-color: var(--color-primary-900);
+	border-color: var(--color-primary-900);
+	color: var(--color-white);
+}
+
+@define-mixin button-block-underlined {
+	background-color: transparent;
+	border-bottom: 2px solid;
+	border-radius: 0;
+	color: var(--color-primary);
+	padding: 0;
+}
+
+@define-mixin button-block-underlined-hover {
+	color: var(--color-primary-900);
+}
+
+@define-mixin global-focus-styles {
+	outline: thin dotted;
+}
+
+@define-mixin subheading {
+	color: var(--color-grey-60);
+	font-size: var(--font-size-h3);
+	font-style: normal;
+	text-align: center;
+}
+
+@define-mixin hr-styles {
+	background-color: var(--color-primary-100);
+	border: 0;
+	height: var(--spacing-unit-small);
+	margin-bottom: calc(var(--spacing-unit) * 8);
+	margin-top: calc(var(--spacing-unit) * 8);
+	max-width: calc(var(--spacing-unit-2x) * 13);
+}

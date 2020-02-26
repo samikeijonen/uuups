@@ -1,0 +1,201 @@
+.menu ul {
+	@mixin reset-list;
+}
+
+.menu__items--primary {
+	display: none;
+
+	&.is-opened {
+		background-color: var(--color-white);
+		@mixin global-box-shadow;
+		display: block;
+		left: var(--spacing-unit-2x);
+		margin-top: var(--spacing-unit-2x);
+		padding: var(--spacing-unit-2x);
+		position: absolute;
+		right: var(--spacing-unit-2x);
+		text-align: center;
+		z-index: 1000;
+	}
+}
+
+.menu__items--social {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.menu__anchor--primary {
+	color: var(--color-grey-60);
+	display: block;
+	font-size: var(--font-size-1);
+	font-weight: 700;
+	padding-bottom: var(--spacing-unit);
+	padding-top: var(--spacing-unit);
+	text-decoration: none;
+
+	&.is-active {
+		color: var(--color-primary-900);
+	}
+}
+
+.menu__anchor--social {
+	color: var(--color-primary-900);
+	padding: var(--spacing-unit);
+
+	&:hover,
+	&:focus,
+	&:active {
+		color: var(--color-grey-60);
+	}
+
+	& .svg {
+		height: 1.5em;
+		width: 1.5em;
+	}
+}
+
+.menu__anchor.menu__anchor--button {
+	@mixin button-block;
+
+	&:hover,
+	&:active,
+	&:focus {
+		@mixin button-block-hover;
+	}
+}
+
+/* Menu toggle. */
+.menu-toggle {
+	background-color: transparent;
+	color: var(--color-primary-900);
+	cursor: pointer;
+	height: calc(var(--spacing-unit) * 8);
+	margin-left: var(--spacing-unit);
+	padding: var(--spacing-unit);
+	width: calc(var(--spacing-unit) * 8);
+
+	&:hover,
+	&:focus,
+	&:active {
+		background-color: transparent;
+		color: var(--color-primary-900);
+	}
+
+	&:focus {
+		outline: 1px dotted;
+	}
+}
+
+.menu-toggle__icon {
+	display: inline-block;
+	fill: currentColor;
+	stroke: var(--color-primary-900);
+	stroke-width: 2;
+	transition: all var(--transition-duration-1);
+}
+
+.menu-toggle__line {
+	transition: all var(--transition-duration-1);
+}
+
+.is-opened {
+	& .menu-toggle__line--1 {
+		transform: translateX(14px) translateY(-3px) rotate(45deg);
+	}
+
+	& .menu-toggle__line--2 {
+		opacity: 0;
+	}
+
+	& .menu-toggle__line--3 {
+		transform: translateX(-14px) translateY(14px) rotate(-45deg);
+	}
+}
+
+/* Show menu when there is no js, and hide menu toggle. */
+.no-js {
+	& .menu-toggle {
+		display: none;
+	}
+
+	& .menu__items {
+		display: block;
+	}
+}
+
+@media (--breakpoint-1) {
+
+	.menu-toggle {
+		display: none;
+	}
+
+	.menu__item {
+		position: relative;
+	}
+
+	.menu__items {
+		&--primary {
+			&,
+			&.is-opened {
+				align-items: center;
+				display: flex;
+				flex-wrap: wrap;
+			}
+
+			& > li:not(:last-child) {
+				margin-right: var(--spacing-unit-3x);
+			}
+
+			& ul {
+				background-color: var(--color-white);
+				@mixin global-box-shadow;
+				left: -999em;
+				opacity: 0;
+				position: absolute;
+				top: 100%;
+				transform: translateY(-var(--spacing-unit-2x));
+				transition: transform var(--transition-duration-1), opacity var(--transition-duration-1);
+				width: calc(var(--spacing-unit) * 25);
+				z-index: 99999;
+
+				& ul {
+					top: 0;
+				}
+
+				/**
+				 * Class "focus" is added by Javascript which enables
+				 * keyboard focus to submenu items.
+				 */
+				/* stylelint-disable a11y/selector-pseudo-class-focus */
+				& .focus > ul,
+				& li:hover > ul {
+					left: auto;
+					right: 100%;
+				}
+				/* stylelint-enable */
+
+				& a {
+					padding: var(--spacing-unit) var(--spacing-unit-2x);
+				}
+
+				& .svg {
+					position: absolute;
+					right: var(--spacing-unit-2x);
+					top: calc(50% - 0.5em);
+					transform: rotate(-90deg);
+				}
+			}
+
+			/* stylelint-disable no-descending-specificity,
+			a11y/selector-pseudo-class-focus */
+			& .focus > ul,
+			& li:hover > ul {
+				left: -50%;
+				opacity: 1;
+				transform: translateY(0);
+			}
+			/* stylelint-enable */
+		}
+	}
+}

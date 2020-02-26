@@ -1,0 +1,79 @@
+.wp-block-buttons {
+	display: flex;
+	flex-wrap: wrap;
+
+	&.aligncenter {
+		display: flex;
+		justify-content: center;
+	}
+
+	&.alignright {
+		display: flex;
+		justify-content: flex-end;
+	}
+}
+
+.wp-block-button {
+	&.aligncenter {
+		text-align: center;
+	}
+
+	&.alignright {
+		text-align: right;
+	}
+}
+
+.wp-block-buttons .wp-block-button {
+	margin-right: var(--spacing-unit-4x);
+	margin-top: var(--spacing-unit-3x);
+}
+
+.wp-block-buttons .wp-block-button:last-child {
+	margin-right: 0;
+}
+
+.wp-block-button__link {
+	@mixin button-block;
+	display: inline-block;
+	text-decoration: none;
+
+	&:visited {
+		color: var(--color-white);
+	}
+
+	&:hover,
+	&:focus,
+	&:active {
+		@mixin button-block-hover;
+	}
+}
+
+/* Style variations. */
+.is-style-rounded .wp-block-button__link {
+	border-radius: calc(var(--spacing-unit) * 12);
+}
+
+.is-style-outline .wp-block-button__link,
+.is-style-outline-rounded .wp-block-button__link {
+	@mixin button-block-outline;
+
+	&:hover,
+	&:focus,
+	&:active {
+		@mixin button-block-outline-hover;
+	}
+}
+
+.is-style-outline-rounded .wp-block-button__link { /* stylelint-disable-line no-descending-specificity */
+	border-radius: calc(var(--spacing-unit) * 12);
+}
+
+.is-style-underlined .wp-block-button__link { /* stylelint-disable-line no-descending-specificity */
+	@mixin button-block-underlined;
+
+	&:hover,
+	&:focus,
+	&:active {
+		@mixin button-block-underlined-hover;
+	}
+}
