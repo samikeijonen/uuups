@@ -11,7 +11,7 @@ endif
 ?>
 
 <nav class="menu menu--<?= esc_attr( $data->name ) ?>" id="js-menu--<?= esc_attr( $data->name ) ?>" aria-label="<?php esc_attr_e( 'Top', 'uuups' ); ?>">
-	<button id="menu-toggle" class="menu-toggle" aria-label=<?= esc_html( 'Menu', 'uuups' ); ?> aria-expanded="false">
+	<button id="menu-toggle" class="menu-toggle" aria-label=<?= esc_html__( 'Menu', 'uuups' ); ?> aria-expanded="false">
 		<svg class="menu-toggle__icon" aria-hidden="true" focusable="false" viewBox="0 0 40 40">
 			<line class="menu-toggle__line menu-toggle__line--1" x1="0" y1="12" x2="40" y2="12"></line>
 			<line class="menu-toggle__line menu-toggle__line--2" x1="0" y1="20" x2="40" y2="20"></line>
