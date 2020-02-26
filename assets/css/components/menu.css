@@ -2,64 +2,56 @@
 	@mixin reset-list;
 }
 
-.menu__items {
-	/* Primary menu. */
-	&--primary {
-		display: none;
+.menu__items--primary {
+	display: none;
 
-		&.is-opened {
-			background-color: var(--color-white);
-			@mixin global-box-shadow;
-			display: block;
-			left: var(--spacing-unit-2x);
-			margin-top: var(--spacing-unit-2x);
-			padding: var(--spacing-unit-2x);
-			position: absolute;
-			right: var(--spacing-unit-2x);
-			text-align: center;
-			z-index: 1000;
-		}
-	}
-
-	/* Social links menu. */
-	&--social {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
+	&.is-opened {
+		background-color: var(--color-white);
+		@mixin global-box-shadow;
+		display: block;
+		left: var(--spacing-unit-2x);
+		margin-top: var(--spacing-unit-2x);
+		padding: var(--spacing-unit-2x);
+		position: absolute;
+		right: var(--spacing-unit-2x);
+		text-align: center;
+		z-index: 1000;
 	}
 }
 
-.menu__anchor {
-	/* Primary menu links. */
-	&--primary {
-		color: var(--color-grey-60);
-		display: block;
-		font-size: var(--font-size-1);
-		font-weight: 700;
-		padding-bottom: var(--spacing-unit);
-		padding-top: var(--spacing-unit);
-		text-decoration: none;
+.menu__items--social {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
 
-		&.is-active {
-			color: var(--color-primary-900);
-		}
+.menu__anchor--primary {
+	color: var(--color-grey-60);
+	display: block;
+	font-size: var(--font-size-1);
+	font-weight: 700;
+	padding-bottom: var(--spacing-unit);
+	padding-top: var(--spacing-unit);
+	text-decoration: none;
+
+	&.is-active {
+		color: var(--color-primary-900);
+	}
+}
+
+.menu__anchor--social {
+	color: var(--color-primary-900);
+	padding: var(--spacing-unit);
+
+	&:hover,
+	&:focus,
+	&:active {
+		color: var(--color-grey-60);
 	}
 
-	/* Social menu links. */
-	&--social {
-		color: var(--color-primary-900);
-		padding: var(--spacing-unit);
-
-		&:hover,
-		&:focus,
-		&:active {
-			color: var(--color-grey-60);
-		}
-
-		& .svg {
-			height: 1.5em;
-			width: 1.5em;
-		}
+	& .svg {
+		height: 1.5em;
+		width: 1.5em;
 	}
 }
 

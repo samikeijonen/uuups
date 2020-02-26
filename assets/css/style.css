@@ -1,7 +1,9 @@
 /**
- * Blocks stylesheet for the theme.
+ * Main stylesheet for the theme.
  *
- * This is for the editor.
+ * Theme styles follow http://cssguidelin.es/ and are organized according to
+ * Inverted Triangle CSS (ITCSS) principles put forth by Harry Roberts. In
+ * short, each layer of CSS gets more specific as you move down this page.
  */
 
 /*--------------------------------------------------------------
@@ -20,8 +22,17 @@
 
 
 /*--------------------------------------------------------------
+# Generic - Ground-zero styles (resets, box-sizing, etc.).
+--------------------------------------------------------------*/
+/* Include normalize.css via NPM. */
+@import "normalize.css";
+@import "generic/box-sizing.css";
+
+
+/*--------------------------------------------------------------
 # Elements - Unclassed HTML elements (type selectors).
 --------------------------------------------------------------*/
+@import "elements/page.css";
 @import "elements/blockquote.css";
 @import "elements/buttons.css";
 @import "elements/forms.css";
@@ -37,18 +48,30 @@
 
 
 /*--------------------------------------------------------------
+# Objects - Undecorated design patterns.
+--------------------------------------------------------------*/
+@import "objects/animations.css";
+@import "objects/flow-spacing.css";
+@import "objects/icons.css";
+@import "objects/layouts.css";
+@import "objects/wrappers.css";
+
+
+/*--------------------------------------------------------------
 # Blocks - editor related styles.
 --------------------------------------------------------------*/
 @import "blocks/core/audio.css";
 @import "blocks/core/button.css";
-/* @import "blocks/core/columns.css"; */
+@import "blocks/core/columns.css";
 @import "blocks/core/cover.css";
 @import "blocks/core/embeds.css";
 @import "blocks/core/file.css";
 @import "blocks/core/gallery.css";
+@import "blocks/core/group.css";
 @import "blocks/core/latest-comments.css";
 @import "blocks/core/latest-posts.css";
 @import "blocks/core/media-text.css";
+@import "blocks/core/navigation.css";
 @import "blocks/core/paragraph.css";
 @import "blocks/core/pullquote.css";
 @import "blocks/core/quote.css";
@@ -62,95 +85,22 @@
 
 
 /*--------------------------------------------------------------
-# Utilities - Helpers and overrides.
+# Components - specific UI components.
 --------------------------------------------------------------*/
-@import "utilities/helpers.css";
-@import "utilities/prefers-reduced-motion.css";
+@import "components/archives.css";
+@import "components/comments.css";
+@import "components/galleries.css";
+@import "components/media.css";
+@import "components/menu.css";
+@import "components/pagination.css";
+@import "components/posts-and-pages.css";
+@import "components/widgets.css";
 
 
 /*--------------------------------------------------------------
-# Editor related styles which overwrites above styles.
+# Utilities - Helpers and overrides.
 --------------------------------------------------------------*/
-
-/**
- * Acts like a body of the editor.
- * Give more specifity to overwrite Core style.
- */
-.edit-post-visual-editor.editor-styles-wrapper {
-	@mixin typography;
-}
-
-/* Post title. */
-.editor-post-title__block .editor-post-title__input {
-	font-family: var(--font-heading);
-	font-size: var(--font-size-h1);
-	min-height: auto;
-	text-align: center;
-}
-
-/* Paragraph needs more specifity. */
-.wp-block-paragraph {
-	font-size: var(--font-size-global);
-}
-
-/* Main column width. */
-.wp-block {
-	max-width: calc(var(--max-width-2) + 2rem);
-}
-
-/* Width of "wide" blocks. */
-.wp-block[data-align="wide"] {
-	max-width: var(--max-width-wide);
-}
-
-/* Width of "full-wide" blocks. */
-.wp-block[data-align="full"] {
-	max-width: none;
-}
-
-/* For now we need this for overwriting Core line-height.
- * Note that headings line-height is overwritten in elements/headings.css.
- */
-.editor-rich-text__tinymce:not(.wp-block-cover-text):not(.wp-block-subhead):not(h2):not(h3) {
-	line-height: var(--line-height-global);
-}
-
-/* Search styles. */
-.wp-block-search__input {
-	font-family: inherit;
-	font-size: inherit;
-}
-
-.wp-block-search__label {
-	font-weight: 700;
-}
-
-.wp-block-search__button {
-	@mixin button-block;
-	@mixin global-transition;
-
-	&:hover,
-	&:active,
-	&:focus {
-		@mixin button-block-hover;
-	}
-
-	&:focus {
-		@mixin global-focus-styles;
-	}
-
-	display: inline-block;
-	font-family: inherit;
-	font-size: inherit;
-}
-
-.wp-block-search__button .wp-block-search__button-rich-text {
-	padding: 0;
-}
-
-/* Code. */
-.wp-block-code textarea {
-	background-color: inherit;
-	color: inherit;
-	font-size: inherit;
-}
+@import "utilities/accessibility.css";
+@import "utilities/alignments.css";
+@import "utilities/helpers.css";
+@import "utilities/prefers-reduced-motion.css";
