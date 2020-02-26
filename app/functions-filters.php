@@ -66,3 +66,17 @@ function excerpt_more( $link ) {
 	return ' &hellip; ' . $link;
 }
 add_filter( 'excerpt_more', __NAMESPACE__ . '\excerpt_more' );
+
+/**
+ * Changes the theme template path to the `public/views` folder.
+ *
+ * @since  2.0.0
+ * @access public
+ * @return string
+ */
+add_filter(
+	'hybrid/template/path',
+	function() {
+		return 'views';
+	}
+);

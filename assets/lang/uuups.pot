@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Uuups 1.2.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/uuups\n"
-"POT-Creation-Date: 2020-02-26 17:49:54+00:00\n"
+"POT-Creation-Date: 2020-02-26 08:18:33+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -33,39 +33,39 @@ msgstr ""
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr ""
 
-#: app/functions-setup.php:66
+#: app/functions-setup.php:64
 msgid "Main"
 msgstr ""
 
-#: app/functions-setup.php:71
+#: app/functions-setup.php:69
 msgid "Dark"
 msgstr ""
 
-#: app/functions-setup.php:76
+#: app/functions-setup.php:74
 msgid "White"
 msgstr ""
 
-#: app/functions-setup.php:81
+#: app/functions-setup.php:79
 msgid "Light"
 msgstr ""
 
-#: app/functions-setup.php:86
+#: app/functions-setup.php:84
 msgid "Grey"
 msgstr ""
 
-#: app/functions-setup.php:104
+#: app/functions-setup.php:102
 msgid "Small"
 msgstr ""
 
-#: app/functions-setup.php:109
+#: app/functions-setup.php:107
 msgid "Medium"
 msgstr ""
 
-#: app/functions-setup.php:114
+#: app/functions-setup.php:112
 msgid "Large"
 msgstr ""
 
-#: app/functions-setup.php:119
+#: app/functions-setup.php:117
 msgid "Larger"
 msgstr ""
 
@@ -75,6 +75,75 @@ msgstr ""
 
 #: app/functions-svg.php:32
 msgid "Please define an SVG icon filename."
+msgstr ""
+
+#: resources/views/comment/default.php:27 resources/views/comment/ping.php:19
+#. Translators: 1 is the comment date and 2 is the time.
+msgid "%1$s at %2$s"
+msgstr ""
+
+#: resources/views/comment/default.php:43
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: resources/views/comments/default.php:46
+msgid "Comments are closed."
+msgstr ""
+
+#: resources/views/content/404.php:12
+msgid "Oops! That page can&rsquo;t be found."
+msgstr ""
+
+#: resources/views/content/404.php:16
+msgid "It looks like nothing was found at this location. Maybe try search?"
+msgstr ""
+
+#: resources/views/entry/single/post.php:32
+msgid "Categories:"
+msgstr ""
+
+#: resources/views/entry/single/post.php:40
+msgid "Tags:"
+msgstr ""
+
+#: resources/views/footer/default.php:15
+msgid "Powered by crazy ideas and passion"
+msgstr ""
+
+#: resources/views/footer/default.php:19
+#. translators: %1$s is theme name, and %2$s is link to theme site.
+msgid "Theme %1$s by %2$s"
+msgstr ""
+
+#: resources/views/header/default.php:22
+msgid "Skip to content"
+msgstr ""
+
+#: resources/views/nav/menu/default.php:13
+msgid "Top"
+msgstr ""
+
+#: resources/views/nav/menu/social.php:13
+msgid "Social"
+msgstr ""
+
+#: resources/views/nav/pagination/comments.php:11
+#: resources/views/nav/pagination/posts.php:11
+msgid "Previous page"
+msgstr ""
+
+#: resources/views/nav/pagination/comments.php:12
+#: resources/views/nav/pagination/posts.php:12
+msgid "Next page"
+msgstr ""
+
+#: resources/views/nav/pagination/comments.php:13
+#: resources/views/nav/pagination/posts.php:13
+msgid "Page"
+msgstr ""
+
+#: resources/views/nav/pagination/posts.php:14
+msgid "Posts Navigation"
 msgstr ""
 
 #: vendor/justintadlock/hybrid-core/src/Comment/functions-comment.php:229
@@ -137,72 +206,6 @@ msgstr ""
 msgid "(Untitled)"
 msgstr ""
 
-#: views/comment/default.php:27 views/comment/ping.php:19
-#. Translators: 1 is the comment date and 2 is the time.
-msgid "%1$s at %2$s"
-msgstr ""
-
-#: views/comment/default.php:43
-msgid "Your comment is awaiting moderation."
-msgstr ""
-
-#: views/comments/default.php:46
-msgid "Comments are closed."
-msgstr ""
-
-#: views/content/404.php:12
-msgid "Oops! That page can&rsquo;t be found."
-msgstr ""
-
-#: views/content/404.php:16
-msgid "It looks like nothing was found at this location. Maybe try search?"
-msgstr ""
-
-#: views/entry/single/post.php:32
-msgid "Categories:"
-msgstr ""
-
-#: views/entry/single/post.php:40
-msgid "Tags:"
-msgstr ""
-
-#: views/footer/default.php:15
-msgid "Powered by crazy ideas and passion"
-msgstr ""
-
-#: views/footer/default.php:19
-#. translators: %1$s is theme name, and %2$s is link to theme site.
-msgid "Theme %1$s by %2$s"
-msgstr ""
-
-#: views/header/default.php:23
-msgid "Skip to content"
-msgstr ""
-
-#: views/nav/menu/default.php:13
-msgid "Top"
-msgstr ""
-
-#: views/nav/menu/social.php:13
-msgid "Social"
-msgstr ""
-
-#: views/nav/pagination/comments.php:11 views/nav/pagination/posts.php:11
-msgid "Previous page"
-msgstr ""
-
-#: views/nav/pagination/comments.php:12 views/nav/pagination/posts.php:12
-msgid "Next page"
-msgstr ""
-
-#: views/nav/pagination/comments.php:13 views/nav/pagination/posts.php:13
-msgid "Page"
-msgstr ""
-
-#: views/nav/pagination/posts.php:14
-msgid "Posts Navigation"
-msgstr ""
-
 #. Theme Name of the plugin/theme
 msgid "Uuups"
 msgstr ""
@@ -223,17 +226,17 @@ msgstr ""
 msgid "https://foxland.fi"
 msgstr ""
 
-#: app/functions-setup.php:165
+#: app/functions-setup.php:163
 msgctxt "nav menu location"
 msgid "Primary"
 msgstr ""
 
-#: app/functions-setup.php:166
+#: app/functions-setup.php:164
 msgctxt "nav menu location"
 msgid "Social Links"
 msgstr ""
 
-#: app/functions-setup.php:211
+#: app/functions-setup.php:209
 msgctxt "sidebar"
 msgid "Primary"
 msgstr ""

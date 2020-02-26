@@ -3,12 +3,12 @@
 // Webpack settings exports.
 module.exports = {
 	entries: {
-		app: './resources/js/app.js',
-		editorScripts: './resources/js/editor.js',
-		customizeControls: './resources/js/customize-controls.js',
-		customizePreview: './resources/js/customize-preview.js',
-		style: './resources/css/style.css',
-		editor: './resources/css/editor.css',
+		app: './assets/js/app.js',
+		editorScripts: './assets/js/editor.js',
+		customizeControls: './assets/js/customize-controls.js',
+		customizePreview: './assets/js/customize-preview.js',
+		style: './assets/css/style.css',
+		editor: './assets/css/editor.css',
 	},
 	filename: {
 		js: 'js/[name].js',
@@ -16,9 +16,9 @@ module.exports = {
 	},
 	paths: {
 		src: {
-			base: './resources/',
-			css: './resources/css/',
-			js: './resources/js/',
+			base: './assets/',
+			css: './assets/css/',
+			js: './assets/js/',
 		},
 		dist: {
 			base: './dist/',
@@ -65,7 +65,7 @@ module.exports = {
 		files: [
 			'*.php',
 			'app/**/*.php',
-			'resources/views/**/*.php',
+			'assets/views/**/*.php',
 			'dist/js/**/*.js',
 			'dist/css/**/*.css',
 			'dist/svg/**/*.svg',
@@ -93,7 +93,7 @@ module.exports = {
 			'readme.md',
 			'screenshot.png',
 			'style.css',
-			'{app,dist,resources}/**',
+			'{app,dist,assets}/**',
 			'vendor/autoload.php',
 			'vendor/composer/*.php',
 			'vendor/justintadlock/hybrid-core/**',
