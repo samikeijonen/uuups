@@ -1,4 +1,4 @@
-/* global __dirname, process, module */
+/* global process.cwd(), process, module */
 
 const path = require( 'path' );
 const { CleanWebpackPlugin } = require( 'clean-webpack-plugin' );
@@ -19,7 +19,7 @@ const configureEntries = () => {
 	const entries = {};
 
 	for ( const [ key, value ] of Object.entries( settings.entries ) ) {
-		entries[ key ] = path.resolve( __dirname, value );
+		entries[ key ] = path.resolve( process.cwd(), value );
 	}
 
 	return entries;
@@ -28,7 +28,7 @@ const configureEntries = () => {
 module.exports = {
 	entry: configureEntries(),
 	output: {
-		path: path.resolve( __dirname, settings.paths.dist.base ),
+		path: path.resolve( process.cwd(), settings.paths.dist.base ),
 		filename: settings.filename.js,
 	},
 
@@ -69,7 +69,7 @@ module.exports = {
 			// Styles.
 			{
 				test: /\.css$/,
-				include: path.resolve( __dirname, settings.paths.src.css ),
+				include: path.resolve( process.cwd(), settings.paths.src.css ),
 				use: [
 					{
 						loader: MiniCssExtractPlugin.loader,
@@ -133,7 +133,7 @@ module.exports = {
 			{
 				from: settings.copyWebpackConfig.from,
 				to: settings.copyWebpackConfig.to,
-				context: path.resolve( __dirname, settings.paths.src.base ),
+				context: path.resolve( process.cwd(), settings.paths.src.base ),
 			},
 		] ),
 

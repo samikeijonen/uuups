@@ -1,4 +1,4 @@
-/* global console, process, __dirname */
+/* global console, process, process.cwd() */
 /* eslint no-console: ["error", { allow: ["log", "error"] }] */
 
 /**
@@ -29,8 +29,8 @@ const argv = require( 'minimist' )( process.argv.slice( 2 ), {
 
 console.log( argv );
 
-const styleFile = path.join( __dirname, './style.css' );
-const packageJson = path.join( __dirname, './package.json' );
+const styleFile = path.join( process.cwd(), './style.css' );
+const packageJson = path.join( process.cwd(), './package.json' );
 let version = argv.version;
 
 if ( ! version ) {
@@ -45,7 +45,7 @@ replaceInFile( styleFile, /(Version:[\s]+).+/, `\$1${ version }` )
 
 function compress( slug, versionNumber, files ) {
 	return new Promise( ( resolve, reject ) => {
-		const dist = path.join( __dirname, settings.release.folder );
+		const dist = path.join( process.cwd(), settings.release.folder );
 
 		try {
 			fs.mkdirSync( dist );
