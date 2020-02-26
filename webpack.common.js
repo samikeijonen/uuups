@@ -1,7 +1,7 @@
 /* global __dirname, process, module */
 
 const path = require( 'path' );
-const CleanWebpackPlugin = require( 'clean-webpack-plugin' );
+const { CleanWebpackPlugin } = require( 'clean-webpack-plugin' );
 const CopyWebpackPlugin = require( 'copy-webpack-plugin' );
 const FixStyleOnlyEntriesPlugin = require( 'webpack-fix-style-only-entries' );
 const FriendlyErrorsWebpackPlugin = require( 'friendly-errors-webpack-plugin' );
@@ -105,8 +105,8 @@ module.exports = {
 		} ),
 
 		// Clean the `dist` folder on build.
-		new CleanWebpackPlugin( path.resolve( __dirname, settings.paths.dist.base ), {
-			verbose: false,
+		new CleanWebpackPlugin( {
+			cleanStaleWebpackAssets: false,
 		} ),
 
 		// Create our cache busting asset manifest.

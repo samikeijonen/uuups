@@ -1,17 +1,17 @@
-# <!=Copyright (C) 2018 Sami Keijonen
+# <!=Copyright (C) 2020 Sami Keijonen
 # This file is distributed under the GNU General Public License v2.0 or later.=!>
 msgid ""
 msgstr ""
-"Project-Id-Version: Uuups 1.0.0\n"
+"Project-Id-Version: Uuups 1.2.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/uuups\n"
-"POT-Creation-Date: 2018-12-29 12:20:28+00:00\n"
+"POT-Creation-Date: 2020-02-26 08:18:33+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2018-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2020-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"X-Generator: node-wp-i18n 1.2.1\n"
+"X-Generator: node-wp-i18n 1.2.3\n"
 
 #: app/bootstrap-compat.php:32
 #. translators: %1$s is supported WordPress version, and %2$s is WordPress
@@ -57,32 +57,16 @@ msgstr ""
 msgid "Small"
 msgstr ""
 
-#: app/functions-setup.php:103
-msgid "S"
-msgstr ""
-
-#: app/functions-setup.php:108
+#: app/functions-setup.php:107
 msgid "Medium"
 msgstr ""
 
-#: app/functions-setup.php:110
-msgid "M"
-msgstr ""
-
-#: app/functions-setup.php:114
+#: app/functions-setup.php:112
 msgid "Large"
 msgstr ""
 
-#: app/functions-setup.php:116
-msgid "L"
-msgstr ""
-
-#: app/functions-setup.php:120
+#: app/functions-setup.php:117
 msgid "Larger"
-msgstr ""
-
-#: app/functions-setup.php:122
-msgid "XL"
 msgstr ""
 
 #: app/functions-svg.php:27
@@ -102,7 +86,7 @@ msgstr ""
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: resources/views/comments/default.php:43
+#: resources/views/comments/default.php:46
 msgid "Comments are closed."
 msgstr ""
 
@@ -131,7 +115,7 @@ msgstr ""
 msgid "Theme %1$s by %2$s"
 msgstr ""
 
-#: resources/views/header/default.php:24
+#: resources/views/header/default.php:22
 msgid "Skip to content"
 msgstr ""
 
@@ -242,31 +226,17 @@ msgstr ""
 msgid "https://foxland.fi"
 msgstr ""
 
-#: app/functions-fonts.php:23
-#. Translators: If there are characters in your language that are not supported
-#. by Lora, translate this to 'off'. Do not translate into your own language.
-msgctxt "Lora font: on or off"
-msgid "on"
-msgstr ""
-
-#: app/functions-fonts.php:32
-#. Translators: If there are characters in your language that are not supported
-#. by Karla, translate this to 'off'. Do not translate into your own language.
-msgctxt "Karla font: on or off"
-msgid "on"
-msgstr ""
-
-#: app/functions-setup.php:167
+#: app/functions-setup.php:163
 msgctxt "nav menu location"
 msgid "Primary"
 msgstr ""
 
-#: app/functions-setup.php:168
+#: app/functions-setup.php:164
 msgctxt "nav menu location"
 msgid "Social Links"
 msgstr ""
 
-#: app/functions-setup.php:213
+#: app/functions-setup.php:209
 msgctxt "sidebar"
 msgid "Primary"
 msgstr ""
