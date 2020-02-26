@@ -16,6 +16,7 @@
 </head>
 
 <body <?php Hybrid\Attr\display( 'body' ); ?>>
+<?php wp_body_open(); ?>
 
 <div class="app mx-auto max-width-full">
 	<header class="app-header flex justify-between items-center mx-auto max-width-1 px-2 py-4">
